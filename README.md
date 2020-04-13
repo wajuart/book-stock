@@ -37,6 +37,7 @@ DB ・MySQL(5.6)
 インフラ・開発環境等 ・CircleCI (CI/CD) ・Rubocop ・RSpec ・Capistrano ・AWS(Route53, ALB, ACM, VPC, EC2, S3)
 
 # 制作背景
+リアルな本だけでなく、電子書籍、Paperwhiteなど様々の媒体で読書をする時代となった今、手持ちの本を誰もが1つのアプリで見える化し一元管理出来ると便利であると思い制作しました。
 
 # 工夫した点
 
@@ -62,6 +63,9 @@ DB ・MySQL(5.6)
 ### Association
 - belongs_to :user
 - has_many :comments
+- has_one :memo
+- has_many  :category-tags,  through:  :registers_category-tags
+- has_many  :status-tags,  through:  :registers_status-tags
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -72,3 +76,49 @@ DB ・MySQL(5.6)
 ### Association
 - belongs_to :user
 - belongs_to :register
+
+## memosテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|register_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :register
+
+## registers_category-tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|register_id|integer|null: false, foreign_key: true|
+|category-tag_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :register
+- belongs_to :category-tag
+
+## category-tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|register_id|integer|null: false, foreign_key: true|
+### Association
+- has_many  :registers,  through:  :registers_category-tags
+
+## registers_status-tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|register_id|integer|null: false, foreign_key: true|
+|status-tag_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :register
+- belongs_to :status-tag
+
+## status-tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|register_id|integer|null: false, foreign_key: true|
+### Association
+- has_many  :registers,  through:  :registers_status-tags
