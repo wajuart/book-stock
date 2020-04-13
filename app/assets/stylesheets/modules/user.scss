@@ -1,0 +1,149 @@
+.account-page {
+  .account-page__inner {
+    width: 500px;
+    font-family: Didot;
+    margin: 50px auto;
+    padding: 30px 60px;
+    background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
+    border: outset #ddd;
+    border-radius: 10px;
+    
+    .account-page__inner--top, .account-page__inner--main {
+      width: 70%;
+    }
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+
+  .account-page__header {
+    h2 {
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+      font-size: 47px;
+      font-weight: 200;
+      &:after {
+        content: '';
+        display: block;
+        width: 60px;
+        margin-top: 5px;
+      }
+    }
+
+    h5 {
+      margin-bottom: 35px;
+      font-size: 13px;
+      font-weight: 200;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      color: white;
+      background-color: #ccc;
+      font-size: 16px;
+    }
+  }
+
+  .field {
+    margin-bottom: 30px;
+
+    .field-label {
+      padding: 10px 0;
+      letter-spacing: 1px;
+      font-size: 16px;
+      font-weight: 200;
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    .field-input {
+      input {
+        width: 100%;
+        padding: 10px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    height: 50px;
+    padding: 0 30px;
+    line-height: 50px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    // margin-left: 125px;
+    &:hover {
+      opacity: 0.8;
+    }       
+    cursor: pointer;
+  }
+
+  input[type='submit'] {
+    font-size: 23px;
+    margin: 30px auto 0;
+    color: #fff;
+    display: block;
+    border: outset 2px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.39);
+    background-color: rgb(50, 177, 134);
+  }
+
+  .field-label {
+    .field_with_errors {
+      display: inline-block;
+      color: #d65f4c;
+      font-weight: 400;
+    }
+  }
+
+  .field-input {
+    .field_with_errors {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #d65f4c;
+      }
+    }
+  }
+}
+
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: inset 1px #ddd;
+  border-radius: 2px;
+
+  h2 {
+    margin-bottom: 10px;
+    color: #d65f4c;
+    font-size: 14px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 17px;
+    list-style: square;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+}
+

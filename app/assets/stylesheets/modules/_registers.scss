@@ -28,7 +28,8 @@
         font-weight: bold;
         margin-bottom: 40px;
         .title {
-          background-color: rgb(226, 174, 62);
+          background-color: white;
+          // color: white;
           color: rgb(27, 53, 59);
           font-family: Papyrus;
           font-size: 30px;
@@ -158,42 +159,41 @@
           display: flex;
           justify-content: space-around;
           &__text {
-            &__1 {
-              color: silver;
-              cursor: pointer;
-              &:hover {
-                text-decoration: underline;
-              }
-            }  
-            &__2 {
-              color: silver;
-              cursor: pointer;
-              &:hover {
-                text-decoration: underline;
-              }              
-            }
-            &__3 {
-              color: silver;
-              cursor: pointer;
-              &:hover {
+            color: silver;
+            cursor: pointer;
+            &:hover {
               text-decoration: underline;
-              }           
             }
-            &__4 {
-              color: silver;
-              cursor: pointer;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-            &__5 {
-              color: silver;
-              cursor: pointer;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-          }
+          }  
+            // &__2 {
+            //   color: silver;
+            //   cursor: pointer;
+            //   &:hover {
+            //     text-decoration: underline;
+            //   }              
+            // }
+            // &__3 {
+            //   color: silver;
+            //   cursor: pointer;
+            //   &:hover {
+            //   text-decoration: underline;
+            //   }           
+            // }
+            // &__4 {
+            //   color: silver;
+            //   cursor: pointer;
+            //   &:hover {
+            //     text-decoration: underline;
+            //   }
+            // }
+            // &__5 {
+            //   color: silver;
+            //   cursor: pointer;
+            //   &:hover {
+            //     text-decoration: underline;
+            //   }
+            // }
+          
         }   
       }          
       .main-second-header {
@@ -204,6 +204,15 @@
         justify-content: space-between;
         border-bottom: solid 1px #eeeeee; 
         line-height: 50px;
+        &__user-name {
+          height: 30px;
+          width: 170px;
+          font-size: 15px;
+          line-height: 30px;
+          text-align: center;
+          border: outset 2px;
+          margin: 10px 0 0 50px;
+        }
         &__content__search-box {
           width: 450px;
           margin-left: 100px;
@@ -264,7 +273,7 @@
               .title {
                 font-family: ヒラギノ明朝 ProN;
                 letter-spacing: 5px;
-                font-size: 25px;
+                font-size: 22px;
                 line-height: 30px;
                 padding: 0 12px 0 12px;
                 border: outset 1px;
@@ -281,7 +290,7 @@
                 
                 &__first {
                   border: outset 1px;
-                  background-color: yellow;
+                  background-color: white;
                   padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
@@ -291,7 +300,8 @@
                 &__second {
                   margin: 0 10px;
                   border: outset 1px;
-                  background-color: lightgreen;
+                  color: white;
+                  background-color: #434A54;
                   padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
@@ -300,7 +310,8 @@
                 }
                 &__third {
                   border: outset 1px;
-                  background-color: salmon;
+                  color: white;
+                  background-color: black;
                   padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
@@ -444,7 +455,7 @@
                 text-align: center;
                 line-height: 27px;
                 border: inset;
-                background-color: silver;
+                background-color: mintcream;
               }
             }
         }

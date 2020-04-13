@@ -3,18 +3,23 @@
     .main-header__logo-box
       Book Stock      
     .main-header__conent__box
-      .main-header__conent__box__text__1
-        登録一覧
-      .main-header__conent__box__text__2
+      .main-header__conent__box__text
+        登録本一覧
+      .main-header__conent__box__text
         新規登録
-      .main-header__conent__box__text__3
+      .main-header__conent__box__text
         ログイン  
-      .main-header__conent__box__text__4
-        ログアウト
-      .main-header__conent__box__text__5
+      .main-header__conent__box__text
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      .main-header__conent__box__text
+        = link_to edit_user_path(current_user) do
+          ユーザー編集    
+      .main-header__conent__box__text
         よくあるご質問  
 
   .main-second-header
+    .main-second-header__user-name
+      = current_user.name 
     .main-second-header__content__search-box
       本を検索 【　　　　　】
     .main-second-header__content__btn-box
