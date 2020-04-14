@@ -36,25 +36,32 @@
           margin: 60px 0 80px;
           border: inset 2px;
         }
-        .register-book {
-          width: 180px;
-          margin: 0 auto;
-          font-family: 游明朝体;
-          font-size: 20px;
-          margin-bottom: 60px;
-          border: outset;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            opacity: 0.8;
-          }  
-          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));   
-          &__sub-name  {
-            color: #434A54;           
-            font-size: 13px;
+        a { 
+          color: black;
+          .register-book-btn { 
+            height: 55px;
+            width: 180px;
+            font-size: 20px;
+            font-family: 游明朝体;
+            border: outset white;
+            border-radius: 15px;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            cursor: pointer;
+            &:hover {
+              background-color: #FFF;
+            }
+            background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
+            &__name {
+              
+            }
+            &__sub-name {
+              color: #434A54;
+              font-size: 13px;
+            } 
           }
-        }
-        .registered-book {
+        }       
+        .registered-book-btn {
           width: 180px;
           margin: 0 auto;
           font-family: 游明朝体;
@@ -64,61 +71,7 @@
           border-radius: 15px;
           cursor: pointer;
           &:hover {
-            opacity: 0.8;
-          }  
-          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));  
-          &__sub-name {
-            color: #434A54;
-            font-size: 13px;
-          }
-        }
-        .category {
-          width: 180px;
-          margin: 0 auto;
-          font-family: 游明朝体;
-          font-size: 20px;
-          margin-bottom: 60px;
-          border: outset;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            opacity: 0.8;
-          }  
-          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));   
-          &__sub-name {
-            color: #434A54;
-            font-size: 13px;
-          }
-        }
-        .status {
-          width: 180px;
-          margin: 0 auto;
-          font-family: 游明朝体;
-          font-size: 20px;
-          margin-bottom: 60px;
-          border: outset;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            opacity: 0.8;
-          }  
-          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));   
-          &__sub-name {
-            color: #434A54;
-            font-size: 13px;
-          }
-        }
-        .reading-history {
-          width: 180px;
-          margin: 0 auto;
-          font-family: 游明朝体;
-          font-size: 20px;
-          margin-bottom: 60px;
-          border: outset;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            opacity: 0.8;
+            background-color: #FFF;
           }  
           background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));  
           &__sub-name {
@@ -126,8 +79,60 @@
             font-size: 13px;
           }
         }
-
-        
+        .category-btn {
+          width: 180px;
+          margin: 0 auto;
+          font-family: 游明朝体;
+          font-size: 20px;
+          margin-bottom: 60px;
+          border: outset;
+          border-radius: 15px;
+          cursor: pointer;
+          &:hover {
+            background-color: #FFF;
+          }  
+          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));   
+          &__sub-name {
+            color: #434A54;
+            font-size: 13px;
+          }
+        }
+        .status-btn {
+          width: 180px;
+          margin: 0 auto;
+          font-family: 游明朝体;
+          font-size: 20px;
+          margin-bottom: 60px;
+          border: outset;
+          border-radius: 15px;
+          cursor: pointer;
+          &:hover {
+            background-color: #FFF;
+          }   
+          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));   
+          &__sub-name {
+            color: #434A54;
+            font-size: 13px;
+          }
+        }
+        .reading-history-btn {
+          width: 180px;
+          margin: 0 auto;
+          font-family: 游明朝体;
+          font-size: 20px;
+          margin-bottom: 60px;
+          border: outset;
+          border-radius: 15px;
+          cursor: pointer;
+          &:hover {
+            background-color: #FFF;
+          }  
+          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));  
+          &__sub-name {
+            color: #434A54;
+            font-size: 13px;
+          }
+        }
 
       }
     }
@@ -161,7 +166,15 @@
           &__text {
             color: silver;
             cursor: pointer;
+            a {
+              color: silver;
+              &:hover {
+                color: black;
+                text-decoration: underline;
+              }
+            }  
             &:hover {
+              color: black;
               text-decoration: underline;
             }
           }  
@@ -278,9 +291,6 @@
                 padding: 0 12px 0 12px;
                 border: outset 1px;
                 background-color: powderblue;
-                &:hover {
-                  text-decoration: underline;
-                }
               }       
               .genre-tag-box {
                 font-family: Arial, Helvetica, sans-serif;
@@ -292,25 +302,33 @@
                   width: 54px;
                   text-align: center;
                   border: outset 1px;
-                  background-color: white;
+                  background-color: #FFF;
                   padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
-                    opacity: 0.7;
-                  }    
+                    background-color: black;
+                    color: #FFF;
+                  }
+                  // &:hover {
+                  //   opacity: 0.7;
+                  // }    
                 }
                 &__second {
                   width: 54px;
                   text-align: center;
                   margin: 0 10px;
                   border: outset 1px;
-                  color: white;
+                  color: #FFF;
                   background-color: #434A54;
                   padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
-                    opacity: 0.7;
-                  }    
+                    background-color: #FFF;
+                    color: #434A54;
+                  }
+                  // &:hover {
+                  //   opacity: 0.7;
+                  // }    
                 }
                 &__third {
                   width: 54px;
@@ -321,8 +339,12 @@
                   padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
-                    opacity: 0.7;
-                  }    
+                    background-color: #FFF;
+                    color: black;
+                  }
+                  // &:hover {
+                  //   opacity: 0.7;
+                  // }    
 
                 }
               }
@@ -337,7 +359,7 @@
                 height: 250px;
                 width: 180px;
                 cursor: pointer;
-                box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2); 
+                box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
                 &:hover {
                   opacity: 0.8;
                 }            
@@ -398,7 +420,7 @@
                 background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
                 height: 250px;
                 width: 180px;
-                box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2); 
+                box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
                 cursor: pointer;
                 &:hover {
                   opacity: 0.8;
@@ -516,7 +538,6 @@
   }
 }
 
-.chat-side a {
-  color: #ffffff;
+.wrapper a {
   text-decoration: none;
 }
