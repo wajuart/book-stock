@@ -20,10 +20,11 @@
 
   .account-page__header {
     h2 {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       letter-spacing: 3px;
       font-size: 47px;
       font-weight: 200;
+      text-align: center;
       &:after {
         content: '';
         display: block;
@@ -37,27 +38,37 @@
       font-size: 13px;
       font-weight: 200;
       letter-spacing: 1px;
+      text-align: center;
+    }
+    h6 {
+      margin-top: -10px;
+      text-align: center;
+      font-size: 11px;
+      font-weight: 200;
+      letter-spacing: 1px;
     }
 
     .btn {
       margin-top: 20px;
+      width: 130px;
+      text-align: center;
       color: white;
       background-color: #ccc;
       font-size: 16px;
+      display: block;
     }
   }
 
   .field {
-    margin-bottom: 30px;
-
+    margin-bottom: 15px;
     .field-label {
       padding: 10px 0;
       letter-spacing: 1px;
       font-size: 16px;
-      font-weight: 200;
+      font-weight: 200px;
 
       i {
-        font-size: 18px;
+        font-size: 10px;
       }
     }
 
@@ -79,7 +90,6 @@
     border: none;
     border-radius: 5px;
     margin: 0 auto;
-    // margin-left: 125px;
     &:hover {
       opacity: 0.8;
     }       
@@ -88,7 +98,7 @@
 
   input[type='submit'] {
     font-size: 23px;
-    margin: 30px auto 0;
+    margin: 40px auto 0;
     color: #fff;
     display: block;
     border: outset 2px;
@@ -100,7 +110,7 @@
     .field_with_errors {
       display: inline-block;
       color: #d65f4c;
-      font-weight: 400;
+      font-weight: 400px;
     }
   }
 
