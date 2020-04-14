@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   
   root "registers#index"
   resources :users, only: [:edit, :update]
+    resources :registers, only: [:index, :new, :create, :show, :edit, :update, :delete]
   # resources :users, only: [:index, :edit, :update]
-
+  # resources :groups, only: [:new, :create, :edit, :update] do
+    
+  
 end
