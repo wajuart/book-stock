@@ -1,0 +1,15 @@
+.notification {
+  .notice {
+    font-size: 17px;
+    background-color: $Light_Sea_Green;
+    color: $white;
+    text-align: center;
+  }
+
+  .alert {
+    font-size: 17px;
+    background-color: $alert_Salmon;
+    color: $white;
+    text-align: center;
+  }
+}
