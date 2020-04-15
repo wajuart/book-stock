@@ -1,0 +1,163 @@
+投稿ページ
+
+.main-display
+  .main-header
+    .main-header__logo-box
+      Book Stock      
+    .main-header__conent__box
+      .main-header__conent__box__text
+        登録本一覧
+      .main-header__conent__box__text
+        新規登録
+      .main-header__conent__box__text
+        ログイン  
+      .main-header__conent__box__text
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      .main-header__conent__box__text
+        = link_to edit_user_path(current_user) do
+          ユーザー編集    
+      .main-header__conent__box__text
+        よくあるご質問  
+
+  .main-second-header
+    .main-second-header__user-name
+      = current_user.name 
+    .main-second-header__content__search-box
+      本を検索 【　　　　　】
+    .main-second-header__content__btn-box
+      = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
+        = icon('fab', 'facebook-square',  class: "content__btn__icon")
+        facebook
+      = link_to "https://twitter.com/", class: "content__btn content__btn__twitter" do
+        = icon('fab', 'twitter', class: "content__btn__icon")
+        twitter
+      = link_to "https://www.instagram.com/", class: "content__btn content__btn__instagram" do
+        = icon('fab', 'instagram', class: "content__btn__icon")
+        instagram
+
+  .main-registers
+    .registers-box
+      .title-box
+        .title
+          登録本一覧 
+        .genre-tag-box
+          .genre-tag-box__first
+            すべて       
+          .genre-tag-box__second
+            読書済
+          .genre-tag-box__third
+            積読    
+      .books-box-top
+        .book-list
+          .book-image
+            .book-category-tag
+              ビジネス
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            ビジネスの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              マネー
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            マネーの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              自己啓発
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            自己啓発の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              健康
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            健康の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              スポーツ
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            スポーツの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              料理
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            料理の神様  
+      .books-box-bottom
+        .book-list
+          .book-image
+            .book-category-tag
+              ビジネス
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            ビジネスの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              マネー
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            マネーの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              自己啓発
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            自己啓発の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              健康
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            健康の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              スポーツ
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            スポーツの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              料理
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            料理の神様    
+      .bottom-space
+        .pages
+          page1    
+                  
