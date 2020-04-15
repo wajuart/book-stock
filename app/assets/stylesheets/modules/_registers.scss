@@ -52,8 +52,7 @@
               background-color: #FFF;
             }
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
-            &__name {
-              
+            &__name {          
             }
             &__sub-name {
               color: #434A54;
@@ -277,7 +276,8 @@
         height: calc(100vh - 160px);
         background-image: url(https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_1280.jpg);
         .registers-box {
-          height: 100%;         
+          height: 100%;
+          width: 100%;         
           padding: 20px 80px; 
             .title-box {  
               height: 30px;
@@ -309,9 +309,6 @@
                     background-color: black;
                     color: #FFF;
                   }
-                  // &:hover {
-                  //   opacity: 0.7;
-                  // }    
                 }
                 &__second {
                   width: 54px;
@@ -326,9 +323,6 @@
                     background-color: #FFF;
                     color: #434A54;
                   }
-                  // &:hover {
-                  //   opacity: 0.7;
-                  // }    
                 }
                 &__third {
                   width: 54px;
@@ -342,10 +336,6 @@
                     background-color: #FFF;
                     color: black;
                   }
-                  // &:hover {
-                  //   opacity: 0.7;
-                  // }    
-
                 }
               }
             }
@@ -405,6 +395,7 @@
                   height: 60px;
                   background-color: #ffffff;
                   line-height: 60px;
+                  font-size: 16px;
                   font-family: クレー;
                   padding: 0 13px;
                   text-align: center;
@@ -467,12 +458,12 @@
                   height: 60px;
                   background-color: #ffffff;
                   line-height: 60px;
+                  font-size: 16px;
                   font-family: クレー;
                   padding: 0 13px;
                   text-align: center;
                 }
-              }
-               
+              }              
             }
             .bottom-space {
               height: 27px;

@@ -1,0 +1,84 @@
+.main-display
+  .main-header
+    .main-header__logo-box
+      Book Stock      
+    .main-header__conent__box
+      .main-header__conent__box__text
+        登録本一覧
+      .main-header__conent__box__text
+        新規登録
+      .main-header__conent__box__text
+        ログイン  
+      .main-header__conent__box__text
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      .main-header__conent__box__text
+        = link_to edit_user_path(current_user) do
+          ユーザー編集    
+      .main-header__conent__box__text
+        よくあるご質問  
+
+  .main-second-header
+    .main-second-header__user-name
+      = current_user.name 
+    .main-second-header__content__search-box
+      本を検索 【　　　　　】
+    .main-second-header__content__btn-box
+      = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
+        = icon('fab', 'facebook-square',  class: "content__btn__icon")
+        facebook
+      = link_to "https://twitter.com/", class: "content__btn content__btn__twitter" do
+        = icon('fab', 'twitter', class: "content__btn__icon")
+        twitter
+      = link_to "https://www.instagram.com/", class: "content__btn content__btn__instagram" do
+        = icon('fab', 'instagram', class: "content__btn__icon")
+        instagram
+
+  .main-registers
+    .registers-box
+      .content-name
+        本を登録する
+      .book-image-box
+        写真
+      .book-items-box
+        .book-items-box__top
+          .book-items-box__top__left
+            .book-items-box__top__left__name
+              タイトル
+            .book-items-box__top__left__input-box
+          .book-items-box__top__right
+            .book-items-box__top__right__name
+              著者
+            .book-items-box__top__right__input-box
+
+        .book-items-box__middle
+          .book-items-box__middle__left
+            .book-items-box__middle__left__name
+              読書履歴
+            .book-items-box__middle__left__input-box  
+          .book-items-box__middle__right
+            .book-items-box__middle__right__name
+              ジャンル
+            .book-items-box__middle__right__input-box
+
+        .book-items-box__bottom 
+          .book-items-box__bottom__left
+            .book-items-box__bottom__left__name
+              読書媒体
+            .book-items-box__bottom__left__input-box 
+          .book-items-box__bottom__right
+            .book-items-box__bottom__right__name
+              購入日
+            .book-items-box__bottom__right__input-box 
+        .impression-box
+          .impression-box__title
+            感想／メモ     
+          .impression-box__input-box
+        .btn-box  
+          .register-btn
+            登録する
+          = link_to "戻る", :back, class: 'btn'  
+          -# .return-btn
+            
+     
+                
+            

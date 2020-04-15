@@ -1,0 +1,236 @@
+.main-display
+  .main-header
+    .main-header__logo-box
+      Book Stock      
+    .main-header__conent__box
+      .main-header__conent__box__text
+        登録本一覧
+      .main-header__conent__box__text
+        新規登録
+      .main-header__conent__box__text
+        ログイン  
+      .main-header__conent__box__text
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      .main-header__conent__box__text
+        = link_to edit_user_path(current_user) do
+          ユーザー編集    
+      .main-header__conent__box__text
+        よくあるご質問  
+
+  .main-second-header
+    .main-second-header__user-name
+      = current_user.name 
+    .main-second-header__content__search-box
+      本を検索 【　　　　　】
+    .main-second-header__content__btn-box
+      = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
+        = icon('fab', 'facebook-square',  class: "content__btn__icon")
+        facebook
+      = link_to "https://twitter.com/", class: "content__btn content__btn__twitter" do
+        = icon('fab', 'twitter', class: "content__btn__icon")
+        twitter
+      = link_to "https://www.instagram.com/", class: "content__btn content__btn__instagram" do
+        = icon('fab', 'instagram', class: "content__btn__icon")
+        instagram
+
+  .main-registers
+    .registers-box
+      .title-box
+        .title
+          登録本一覧 
+        .genre-tag-box
+          .genre-tag-box__first
+            すべて       
+          .genre-tag-box__second
+            読書済
+          .genre-tag-box__third
+            積読    
+      .books-box-top
+        .book-list
+          .book-image
+            .book-category-tag
+              ビジネス
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            ビジネスの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              マネー
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            マネーの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              自己啓発
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            自己啓発の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              健康
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            健康の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              スポーツ
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            スポーツの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              料理
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            料理の神様  
+      .books-box-bottom
+        .book-list
+          .book-image
+            .book-category-tag
+              ビジネス
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            ビジネスの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              マネー
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            マネーの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              自己啓発
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            自己啓発の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              健康
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            健康の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              スポーツ
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            スポーツの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              料理
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            料理の神様    
+      .bottom-space
+        .pages
+          page1
+
+
+
+
+
+-# = form_with(model: @book, local: true) do |f|
+-#   .book-image
+-#     .book-image__top.form-content
+-#       写真のアップロード
+-#     .book-image__photo
+-#       = f.file_field :image
+-#   .book-detail
+-#     .book-detail__top.form-content
+-#       タイトル
+-#     .book-detail__title-input
+-#       = f.text_field :title, placeholder: "> book title", class:"text-input"
+-#     .error-text
+-#       - @book.errors.full_messages_for(:title).each do |message|
+-#         %div
+-#           = message
+-#     .book-detail__top.form-content
+-#       著者
+-#     .book-detail__author-input
+-#       = f.text_field :author, placeholder: "> book author", class:"text-input"
+-#     .error-text
+-#       - @book.errors.full_messages_for(:author).each do |message|
+-#         %div
+-#           = message
+-#     .book-detail__top.form-content
+-#       出版社
+-#     .book-detail__publisher-input
+-#       = f.text_field :publisher, placeholder: "> book publisher", class:"text-input"
+-#     .error-text
+-#       - @book.errors.full_messages_for(:publisher).each do |message|
+-#         %div
+-#           = message
+-#     .book-detail__top.form-content
+-#       ジャンル
+-#     .book-detail__category-input
+-#       = f.select :category, options_for_select(Book.categories.keys.map {|k| [I18n.t("enums.book.category.#{k}"), k]}, selected: @book.category), {}, {class: 'select-box'}
+-#     .error-text
+-#       - @book.errors.full_messages_for(:category).each do |message|
+-#         %div
+-#           = message
+-#     - if params[:controller] == "books" && params[:action] == "new" || params[:controller] == "books" && params[:action] == "create"
+-#       .book-detail__top.form-content
+-#         購入日
+-#       .book-detail__buydate-input
+-#         != sprintf(f.date_select(:buy_date, prefix:'buy_date', with_css_classes:'select-box', selected: Date.today,use_month_numbers:true, start_year:Time.now.year, end_year:Time.now.year-10, date_separator:'%s'),'年','月')+'日'
+-#       .error-text
+-#         - @book.errors.full_messages_for(:buy_date).each do |message|
+-#           %div
+-#             = message
+-#     - else
+-#       .book-detail__top.form-content
+-#         購入日
+-#       .book-detail__buydate-input
+-#         != sprintf(f.date_select(:buy_date, prefix:'buy_date', with_css_classes:'select-box', selected: @book.buy_date,use_month_numbers:true, start_year:Time.now.year, end_year:Time.now.year-10, date_separator:'%s'),'年','月')+'日'
+-#       .error-text
+-#         - @book.errors.full_messages_for(:buy_date).each do |message|
+-#           %div
+-#             = message
+-#   - if params[:controller] == "books" && params[:action] == "new" || params[:controller] == "books" && params[:action] == "create"
+-#     .btn-box
+-#       .btn-box__book-new
+-#         = f.submit " 本を登録する ", class: "submit-btn text-line-none"
+-#       .btn-box__back
+-#         = link_to :back, class: "white-btn margin-left-40 text-line-none" do
+-#           もどる
+-#   - else
+-#     .btn-box
+-#       .btn-box__book-new
+-#         = f.submit " 編集を登録する ", class: "submit-btn text-line-none"
+-#       .btn-box__back
+-#         = link_to :back, class: "white-btn margin-left-40 text-line-none" do
+-#           もどる

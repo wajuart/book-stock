@@ -3,7 +3,7 @@
     .contents
       .title
         My Page
-      = link_to new_register_path(current_user) do   
+      = link_to new_book_path(current_user) do   
         .register-book-btn
           .register-book-btn-name      
             本を登録
@@ -14,9 +14,9 @@
         .registered-book-btn__sub-name
           Registered books
       .category-btn
-        カテゴリー別
+        ジャンル別
         .category-btn__sub-name
-          Category
+          Genre
       .status-btn
         ステータス別
         .status-btn__sub-name
