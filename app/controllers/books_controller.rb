@@ -10,11 +10,11 @@ class BooksController < ApplicationController
   end  
 
   def create
-    @register = @user.registers.new(register_params)
-    if @register.save
-      redirect_to user_registers_path(@user), notice: '本が登録されました。'
+    @book = @user.books.new(book_params)
+    if @book.save
+      redirect_to user_books_path(@user), notice: '本が登録されました。'
     else
-      @registers = @user.registers.includes(:user)
+      @books = @user.books.includes(:user)
       flash.now[:alert] = '本のタイトルまたは画像を入力してください。'
       render :index
     end
@@ -34,8 +34,8 @@ class BooksController < ApplicationController
 
   private
 
-  def register_params
-    params.require(:register).permit(:content, :image).merge(user_id: current_user.id)
+  def book_params
+    params.require(:book).permit(:content, :image).merge(user_id: current_user.id)
   end
 
   def set_user
