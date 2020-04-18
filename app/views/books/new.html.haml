@@ -30,6 +30,31 @@
         = icon('fab', 'instagram', class: "content__btn__icon")
         instagram
 
+  .mypage-header 
+    .title
+      .title__icon
+        .fa.fa-home
+      .title__name  
+        My Page
+    .mypage-top
+      トップ
+    = link_to new_book_path(current_user) do
+      .register-book
+        本を登録
+    = link_to books_path(current_user) do
+      .registered-book
+        マイブック
+    = link_to books_path(current_user) do    
+      .genre-book
+        ジャンル
+    = link_to books_path(current_user) do   
+      .status-book
+        読書ステータス別
+    = link_to books_path(current_user) do
+      .reading-history 
+        読書履歴
+
+
   .form
     = form_for [@book] do |f|
       .input-box    
@@ -41,6 +66,8 @@
         .book_image
           .fa.fa-book.fa-8x.fa-spin 
         .book_image-title
+        -#   = type="file" onchange="previewFile()"
+        -# = src="" height="200" alt="Image preview..."  
           = f.label :本のイメージ  
         = f.file_field :image, class: 'input_image', placeholder: 'image'
         .book-items-box

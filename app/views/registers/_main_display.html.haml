@@ -22,9 +22,16 @@
   .main-second-header
     .main-second-header__user-name
       = current_user.name
-    -# = f.text_field :content, class: 'search_books', placeholder: '-- 本を検索する --' 
+    -# = form_with(url: search_books_path, local: true, method: :get, class: "search-form") do |form|  
+    -#   = f.text_field :content, class: 'search_books', placeholder: '-- 本を検索する --' 
     .main-second-header__content__search-box
-      本を検索 
+    -# = form_tag(url: search_books_path, local: true, method: :get, class: "search-form") do |form|
+    -#   = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
+    -#   = form.submit "検索", class: "search-btn"
+      -# = form.label :title, 'タイトル'
+      -# = form.text_field :title
+      -# = form.submit '検索する'
+      -# 本を検索 
     .main-second-header__content__btn-box
       = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
         = icon('fab', 'facebook-square',  class: "content__btn__icon")
@@ -40,7 +47,10 @@
     .registers-box
       .registers-top
         .title
-          登録本一覧 
+          .title__icon
+            .fa.fa-book
+          .title__name
+            登録本一覧 
         .tag-box
           .tag-box__left
             最新順
@@ -228,8 +238,7 @@
     .logo
       Book Stock
     .sub
-      Copyright &copy; Kazuki Kouno All rights reserved        
-                  
+      Copyright &copy; Kazuki Kouno All rights reserved
 
 
       

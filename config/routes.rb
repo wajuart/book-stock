@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   
   root "registers#index"
   resources :users, only: [:show, :edit, :update]
-    resources :books, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+    resources :books do
+      collection do
+        get 'search'
+      end
+    end  
+
+    # resources :books, only: [:index, :new, :create, :show, :edit, :update, :destroy]
     resources :registers, only: [:index, :new, :create, :show, :edit, :update, :destroy]
     
     post "books/creat" => "books#creat"

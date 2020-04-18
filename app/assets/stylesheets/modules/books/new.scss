@@ -329,6 +329,98 @@
       }
     }
   }
+
+  .mypage-header {
+    background-color: #eaf6fd;;   
+    height: 50px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px #eeeeee;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+    .title {
+      font-family: ヒラギノ明朝 ProN;
+      letter-spacing: 2px;
+      font-size: 23px;
+      line-height: 50px;
+      margin-right: 20px;
+      display: flex;
+      &__icon {
+        margin-right: 5px;
+      }
+      &__name {
+      }
+    }
+    .mypage-top {
+      color: #444444;
+      font-size: 16px;
+      line-height: 50px;
+      margin: 0 60px;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    } 
+    .register-book {
+      color: #444444;
+      font-size: 16px;
+      line-height: 50px;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    } 
+    .registered-book {
+      color: #444444;
+      font-size: 16px;
+      line-height: 50px;
+      margin: 0 60px;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+    .genre-book {  
+      color: #444444;
+      font-size: 16px;
+      line-height: 50px;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    } 
+    .status-book {
+      color: #444444;
+      font-size: 16px;
+      line-height: 50px;
+      margin: 0 60px;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+    .reading-history {
+      color: #444444;
+      font-size: 16px;
+      line-height: 50px;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }         
   .footer {
     background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
     height: 60px;
