@@ -1,1 +1,244 @@
-book
+.main-display
+  .main-header
+    .main-header__logo-box
+      Book Stock      
+    .main-header__conent__box
+      .main-header__conent__box__text
+        = link_to root_path(current_user) do
+          トップページ
+      -# .main-header__conent__box__text
+      -#   新規登録
+      -# .main-header__conent__box__text
+      -#   ログイン  
+      .main-header__conent__box__text
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      .main-header__conent__box__text
+        = link_to edit_user_path(current_user) do
+          ユーザー編集    
+      .main-header__conent__box__text
+        よくあるご質問  
+
+  .main-second-header
+    .main-second-header__user-name
+      = current_user.name 
+    .main-second-header__content__search-box
+      本を検索する 
+    .main-second-header__content__btn-box
+      = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
+        = icon('fab', 'facebook-square',  class: "content__btn__icon")
+        facebook
+      = link_to "https://twitter.com/", class: "content__btn content__btn__twitter" do
+        = icon('fab', 'twitter', class: "content__btn__icon")
+        twitter
+      = link_to "https://www.instagram.com/", class: "content__btn content__btn__instagram" do
+        = icon('fab', 'instagram', class: "content__btn__icon")
+        instagram
+  .mypage-header 
+    .title
+      My Page
+    .mypage-top
+      トップ
+    = link_to new_book_path(current_user) do
+      .register-book
+        本を登録
+    .registered-book
+      マイブック
+    .genre-book
+      ジャンル
+    .status-book
+      読書ステータス別
+    .reading-history 
+      読書履歴 
+
+
+  .main-registers
+    .registers-box
+      .title-box
+        .title
+          登録本一覧 
+        .status-tag-box
+          .status-tag-box__first
+            すべて       
+          .status-tag-box__second
+            読書済
+          .status-tag-box__third
+            未読 
+          .status-tag-box__fourth
+            興味有り         
+      .books-box-top
+        .book-list
+          .book-image
+            .book-category-tag
+              ビジネス
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            ビジネスの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              マネー
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            マネーの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              自己啓発
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            自己啓発の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              健康
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            健康の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              スポーツ
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            スポーツの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              料理
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            料理の神様    
+
+      .books-box-middle
+        .book-list
+          .book-image
+            .book-category-tag
+              ビジネス
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            ビジネスの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              マネー
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            マネーの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              自己啓発
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            自己啓発の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              健康
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            健康の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              スポーツ
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            スポーツの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              料理
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            料理の神様
+      .books-box-bottom
+        .book-list
+          .book-image
+            .book-category-tag
+              ビジネス
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            ビジネスの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              マネー
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            マネーの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              自己啓発
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            自己啓発の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              健康
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            健康の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              スポーツ
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            スポーツの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              料理
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            料理の神様              
+      .bottom-space
+        .pages
+          page1
+        = link_to "戻る", :back, class: 'btn'            
+  .footer
+    .logo
+      Book Stock
+    .sub
+      Copyright &copy; Kazuki Kouno All rights reserved   
+                
+            

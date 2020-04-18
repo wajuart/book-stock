@@ -27,19 +27,22 @@
       font-size: 15px;
       letter-spacing: 2px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       &__text {
         color: silver;
+        margin: 0 80px;
         cursor: pointer;
         a {
           color: silver;
           &:hover {
             color: black;
+            font-weight: bold;
             text-decoration: underline;
           }
         }  
         &:hover {
           color: black;
+          font-weight: bold;
           text-decoration: underline;
         }
       }  
@@ -62,7 +65,7 @@
       border: outset 2px;
       margin: 10px 0 0 50px;
     }
-    &__content__search-box {
+    .search_books {
       width: 450px;
       margin-left: 100px;
       padding: 0 20px;
@@ -109,30 +112,54 @@
       }
     } 
   }
-  .main-registers {
+  .form {
     height: calc(100vh - 220px);
     font-family: ヒラギノ明朝 ProN;
     font-size: 13px;
-    .registers-box {
+    .input-box {
       height: 100%;           
       width: 670px;
       margin: 0 auto;
       padding: 20px;
-      .content-name {
+      &__content-name-box {
         height: 30px;
         letter-spacing: 2px;
         font-size: 22px;
         line-height: 30px;
         padding: 0 12px 0 12px;
         margin-bottom: 15px;
+        display: flex;
+        .icon {
+          margin-right: 8px;
+        }
+        .name{
+        }
       }       
-      .book-image-box {
-        height: 160px;
-        width: 130px;
-        border: solid 2px gray;
+      .book_image {
+        height: 140px;
+        width: 120px;
+        border: double 3px gray;
         margin: 0 auto;
-        font-size: 13px;
+        font-size: 5px;
+        line-height: 160px; 
+        text-align: center;
         margin-bottom: 10px;
+      }  
+      .book_image-title {
+        margin: 0 auto;
+        font-size: 8px;
+        text-align: center;
+        margin-bottom: 10px;    
+      }
+      .input_image {
+        display: block;
+        font-size: 11px;
+        text-align: center;
+        height: 25px;
+        width: 230px;
+        margin: 0 auto;
+        border: inset #dbedf0 2px;
+        padding: 0 8px;
       }
       .book-items-box {
         height: 400px;
@@ -140,88 +167,103 @@
         padding: 15px 30px;
         &__top {
           display: flex;
-          justify-content: space-around;
           margin-bottom: 20px;
           &__left {
             &__name {
               height: 20px;
               width: 100px;
-              margin-bottom: 6px;
+              margin-right: 220px;
+              margin-bottom: 30px;
             }
-            &__input-box {
+            .book_title {
               height: 30px;
               width: 250px;
               border: inset #dbedf0 2px;
+              border-radius: 5px;
+              padding: 0 8px;
             }
           }
           &__right {
             &__name {
               height: 20px;
               width: 100px;
-              margin-bottom: 6px;
+              margin-bottom: 30px;
             }
-            &__input-box {
+            .book_author {
               height: 30px;
               width: 250px;
               border: inset #dbedf0 2px;
+              border-radius: 5px;
+              padding: 0 8px;
             }
           }        
         }
         &__middle {
           display: flex;
-          justify-content: space-around;
           margin-bottom: 20px;
           &__left {
             &__name {
               height: 20px;
               width: 100px;
-              margin-bottom: 6px;
+              margin-right: 220px;
+              margin-bottom: 30px;
             }
-            &__input-box {
+            .book_status {
+              background-color: white;
               height: 30px;
               width: 250px;
               border: inset #dbedf0 2px;
+              padding: 0 8px;
             }
           }
           &__right {
             &__name {
               height: 20px;
               width: 100px;
+              margin-right: 220px;
               margin-bottom: 6px;
             }
-            &__input-box {
+            .book_genre {
+              background-color: white;
               height: 30px;
               width: 250px;
               border: inset #dbedf0 2px;
+              padding: 0 8px;
             }
           }
         }
         &__bottom {
           display: flex;
-          justify-content: space-around;
           margin-bottom: 28px;
           &__left {
             &__name {
               height: 20px;
               width: 100px;
-              margin-bottom: 6px;
+              margin-right: 220px;
+              margin-bottom: 30px;
             }
-            &__input-box {
+            .book_item {
+              background-color: white;
               height: 30px;
               width: 250px;
               border: inset #dbedf0 2px;
+              padding: 0 8px;
             }
           }
           &__right {
             &__name {
               height: 20px;
               width: 100px;
-              margin-bottom: 6px;
+              margin-right: 220px;
+              margin-bottom: 30px;
             }
-            &__input-box {
+            .book_purchase-date {
+              background-color: white;
               height: 30px;
               width: 250px;
               border: inset #dbedf0 2px;
+              border-radius: 5px;
+              padding: 0 8px;
             }
           }         
         }
@@ -229,12 +271,12 @@
           margin: 0 auto;
           padding: 0 10px;
           &__title {
-            margin-bottom: 6px
           }
-          &__input-box {
+          .book_impression {
             height: 70px;
             width: 550px;
             border: inset #dbedf0 2px;
+            padding: 0 8px;
           }
         }
       }
@@ -242,7 +284,6 @@
         height: 100px;
         margin-top: 5px;
         padding-top: 25px;
-        color: #eeeeee;
         font-size: 20px;
         text-align: center;
         letter-spacing: 3px;
@@ -253,7 +294,8 @@
           background-color: #04a711;
           height: 50px;
           width: 180px;
-          margin-right: 50px;
+          color: #eeeeee;
+          margin-right: 60px;
           border: outset 2px;
           border-radius: 20px;
           cursor: pointer;
@@ -288,9 +330,23 @@
     }
   }
   .footer {
-    background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575)); 
+    background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
     height: 60px;
+    text-align: center;
+    color: #363333;
+    padding: 15px 0;
     border-top: solid 1px #dad8d8;
+    .logo {
+      height: 10px;
+      font-size: 20px;
+      font-family: fantasy;
+    }
+    .sub {
+      height: 10px;
+      margin-top: 13px;
+      font-size: 6px;
+    }
+    
   }  
 }
 

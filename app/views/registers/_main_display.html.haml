@@ -3,12 +3,14 @@
     .main-header__logo-box
       Book Stock      
     .main-header__conent__box
+      -# .main-header__conent__box__text
+      -#   トップページ
       .main-header__conent__box__text
-        登録本一覧
+        = link_to new_user_session_path do
+          ユーザー新規登録
       .main-header__conent__box__text
-        新規登録
-      .main-header__conent__box__text
-        ログイン  
+        = link_to user_session_path do
+          ログイン  
       .main-header__conent__box__text
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
       .main-header__conent__box__text
@@ -19,9 +21,10 @@
 
   .main-second-header
     .main-second-header__user-name
-      = current_user.name 
+      = current_user.name
+    -# = f.text_field :content, class: 'search_books', placeholder: '-- 本を検索する --' 
     .main-second-header__content__search-box
-      本を検索 【　　　　　】
+      本を検索 
     .main-second-header__content__btn-box
       = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
         = icon('fab', 'facebook-square',  class: "content__btn__icon")
@@ -35,17 +38,79 @@
 
   .main-registers
     .registers-box
-      .title-box
+      .registers-top
         .title
           登録本一覧 
-        .genre-tag-box
-          .genre-tag-box__first
-            すべて       
-          .genre-tag-box__second
-            読書済
-          .genre-tag-box__third
-            積読    
+        .tag-box
+          .tag-box__left
+            最新順
+          .tag-box__center
+            イイね数
+          .tag-box__right
+            コメント数
+        .genre-box
+          .name
+            ジャンル
+          .select-box
+            = select_tag 'book[genre]', options_for_select(["--選択してください--","ビジネス", "自己啓発", "マネー", "政治／経済", "勉強／スキル", "料理", "趣味", "健康", "スポーツ", "子育て", "小説", "漫画", "生活", "その他"])
       .books-box-top
+        .book-list
+          .book-image
+            .book-category-tag
+              -# ビジネス
+            .book-status
+              .book-status__title
+                -# 読書済
+          .book-title
+            -# ビジネスの神様
+
+        .book-list
+          .book-image
+            .book-category-tag
+              -# マネー
+            .book-status
+              .book-status__title
+                -# 読書済
+          .book-title
+            -# マネーの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              自己啓発
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            自己啓発の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              健康
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            健康の神様
+        .book-list
+          .book-image
+            .book-category-tag
+              スポーツ
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            スポーツの神様
+        .book-list
+          .book-image
+            .book-category-tag
+              料理
+            .book-status
+              .book-status__title
+                読書済
+          .book-title
+            料理の神様
+
+      .books-box-middle
         .book-list
           .book-image
             .book-category-tag
@@ -99,7 +164,8 @@
               .book-status__title
                 読書済
           .book-title
-            料理の神様  
+            料理の神様            
+
       .books-box-bottom
         .book-list
           .book-image
@@ -154,10 +220,15 @@
               .book-status__title
                 読書済
           .book-title
-            料理の神様    
+            料理の神様         
       .bottom-space
         .pages
-          page1    
+          page1
+  .footer
+    .logo
+      Book Stock
+    .sub
+      Copyright &copy; Kazuki Kouno All rights reserved        
                   
 
 

@@ -4,11 +4,8 @@
       Book Stock      
     .main-header__conent__box
       .main-header__conent__box__text
-        登録本一覧
-      .main-header__conent__box__text
-        新規登録
-      .main-header__conent__box__text
-        ログイン  
+        = link_to root_path(current_user) do
+          トップページ
       .main-header__conent__box__text
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
       .main-header__conent__box__text
@@ -21,7 +18,7 @@
     .main-second-header__user-name
       = current_user.name 
     .main-second-header__content__search-box
-      本を検索 【　　　　　】
+      本を検索する 
     .main-second-header__content__btn-box
       = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
         = icon('fab', 'facebook-square',  class: "content__btn__icon")
@@ -33,52 +30,79 @@
         = icon('fab', 'instagram', class: "content__btn__icon")
         instagram
 
-  .main-registers
-    .registers-box
-      .content-name
-        本を登録する
-      .book-image-box
-        写真
-      .book-items-box
-        .book-items-box__top
-          .book-items-box__top__left
-            .book-items-box__top__left__name
-              タイトル
-            .book-items-box__top__left__input-box
-          .book-items-box__top__right
-            .book-items-box__top__right__name
-              著者
-            .book-items-box__top__right__input-box
+  .form
+    = form_for [@book] do |f|
+      .input-box    
+        .input-box__content-name-box
+          .icon
+            .fa.fa-book
+          .name
+            本を登録する
+        .book_image
+          .fa.fa-book.fa-8x.fa-spin 
+        .book_image-title
+          = f.label :本のイメージ  
+        = f.file_field :image, class: 'input_image', placeholder: 'image'
+        .book-items-box
+          .book-items-box__top
+            .book-items-box__top__left
+              .book-items-box__top__left__name
+                = f.label :タイトル 
+                = f.text_field :image, class: 'book_title', placeholder: '-- type a title --'   
+              -# .book-items-box__top__left__input-box
+              
+              -# = f.text_field :title, class: "hogehoge"
+                -# = f.file_field :image
+              -#   = f.text_field :content, class: 'book-items-box__top__left__input-box', placeholder: 'type a message'
+            .book-items-box__top__right
+              .book-items-box__top__right__name
+                = f.label :著者
+                = f.text_field :image, class: 'book_author', placeholder: '-- type a author --'
+              -# .book-items-box__top__right__input-box
 
-        .book-items-box__middle
-          .book-items-box__middle__left
-            .book-items-box__middle__left__name
-              読書履歴
-            .book-items-box__middle__left__input-box  
-          .book-items-box__middle__right
-            .book-items-box__middle__right__name
-              ジャンル
-            .book-items-box__middle__right__input-box
+          .book-items-box__middle
+            .book-items-box__middle__left
+              .book-items-box__middle__left__name
+                = f.label :読書ステータス
+                = f.select :status, [["-- 選択して下さい --","-- 選択して下さい --"], ["読書済み","読書済み"], ["読書中","読書中"], ["未読","未読"], ["興味有り","興味あり"]], {}, class: 'book_status'
+                -# = f.text_field :image, class: 'book_status', placeholder: '-- choice history -'
+              -# .book-items-box__middle__left__input-box  
+            .book-items-box__middle__right
+              .book-items-box__middle__right__name
+                = f.label :ジャンル
+                = f.select :genre, [["-- 選択して下さい --","-- 選択して下さい --"], ["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'book_genre'
+                -# = f.text_field :image, class: 'book_genre', placeholder: '-- type a genre --'
+              -# .book-items-box__middle__right__input-box
 
-        .book-items-box__bottom 
-          .book-items-box__bottom__left
-            .book-items-box__bottom__left__name
-              読書媒体
-            .book-items-box__bottom__left__input-box 
-          .book-items-box__bottom__right
-            .book-items-box__bottom__right__name
-              購入日
-            .book-items-box__bottom__right__input-box 
-        .impression-box
-          .impression-box__title
-            感想／メモ     
-          .impression-box__input-box
-        .btn-box  
-          .register-btn
-            登録する
-          = link_to "戻る", :back, class: 'btn'  
-          -# .return-btn
+          .book-items-box__bottom 
+            .book-items-box__bottom__left
+              .book-items-box__bottom__left__name
+                = f.label :読書媒体
+                -# = f.label :item, "読書媒体", class: 'book_item', placeholder: '-- choice item --'
+                = f.select :item, [["-- 選択して下さい --","-- 選択して下さい --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'book_item'
+                -# = f.text_field :image, class: 'book_item', placeholder: '-- choice item --'
+              -# .book-items-box__bottom__left__input-box 
+            .book-items-box__bottom__right
+              .book-items-box__bottom__right__name
+                = f.label :購入日
+                = f.date_field :image, class: 'book_purchase-date', placeholder: '-- type purchase date --'
+              -# .book-items-box__bottom__right__input-box 
+          .impression-box
+            .impression-box__title
+              = f.label :感想／メモ
+            = f.text_area :image, class: 'book_impression', placeholder: '-- type impressions or memos --'     
+            -# .impression-box__input-box
+          .btn-box
+            = f.submit '登録する', class: 'register-btn'  
+            -# .register-btn
+              登録する
+            = link_to "戻る", :back, class: 'btn'  
+            -# .return-btn
             
-  .footer   
+  .footer
+    .logo
+      Book Stock
+    .sub
+      Copyright &copy; Kazuki Kouno All rights reserved   
                 
             
