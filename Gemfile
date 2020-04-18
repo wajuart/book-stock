@@ -60,3 +60,8 @@ gem 'devise'
 
 gem 'rails-i18n', '~> 5.0'
 
+gem 'carrierwave'
+
+gem 'mini_magick'
+
+gem 'kaminari'

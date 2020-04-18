@@ -1,29 +1,37 @@
 .mypage-side      
   .contents-var
     .contents
-      .title
-        My Page
-      -# .mypage-top
-      .register-book
-        本を登録
-        -# .mypage-top__sub-name  
-        .register-book__sub-name
-          Register books
-          -# My page top  
-      .registered-book
-        マイブック
-        .registered-book__sub-name
-          Registered books
-      .category
-        カテゴリー別
-        .category__sub-name
-          Category
-      .status
-        ステータス別
-        .status__sub-name
-          Status             
-      .reading-history
-        読書履歴
-        .reading-history__sub-name
-          Reading history
+      = link_to (current_user) do
+        .my-page-btn
+          My Page
+      = link_to new_book_path(current_user) do   
+        .register-book-btn
+          .register-book-btn-name      
+            本を登録
+          .register-book-btn__sub-name
+            Register Books
+      = link_to books_path(current_user) do      
+        .registered-book-btn
+          .registered-book-btn-name
+            マイブック
+          .registered-book-btn__sub-name
+            Registered Books
+      = link_to books_path(current_user) do      
+        .genre-btn
+          .genre-btn-name
+            ジャンル別
+          .genre-btn__sub-name
+            Genre of Books
+      = link_to books_path(current_user) do      
+        .status-btn
+          .status-btn-name
+            ステータス別
+          .status-btn__sub-name
+            Status of Reading
+      = link_to books_path(current_user) do                  
+        .reading-history-btn
+          .reading-history-btn-name
+            読書履歴
+          .reading-history-btn__sub-name
+            Reading History
       
