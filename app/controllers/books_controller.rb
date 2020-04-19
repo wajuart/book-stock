@@ -26,13 +26,14 @@ class BooksController < ApplicationController
     # @book = Book.new(book_params)
     
     # respond_to do |format|
-    binding.pry
+    # binding.pry
     if @book.save
       
       # notice = Notice.new
       # redirect_to user.books_path(@user), notice: '本が登録されました。'
+      flash.now[:notice] = '本が登録されました。'
       # redirect_to user_path(@book.user_id)
-      render :index
+      render :new
     else
       # @books = @books.includes(:user)
       # @books = @user.books.includes(:user)
