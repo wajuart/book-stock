@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :set_current_user
 
   def index
-    @book = Book.all
+    @books = Book.all
     # @books = @books.includes(:user)
     # @books = @user.books.includes(:user)
   end
@@ -17,19 +17,22 @@ class BooksController < ApplicationController
     #   user_id: @current_user.id
     # )
     
-    # binding.pry
+    
     # params[:book][:buydate] = @buy_date.to_s
     @book = Book.new(book_params)
+    
     # if params[:commit]
     #   @book.user = current_user
     # @book = Book.new(book_params)
     
     # respond_to do |format|
-    # binding.pry
+    binding.pry
     if @book.save
-      notice = Notice.new
-      redirect_to user.books_path(@user), notice: '本が登録されました。'
-      redirect_to user_path(@book.user_id)
+      
+      # notice = Notice.new
+      # redirect_to user.books_path(@user), notice: '本が登録されました。'
+      # redirect_to user_path(@book.user_id)
+      render :index
     else
       # @books = @books.includes(:user)
       # @books = @user.books.includes(:user)
