@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
   
+  # get 'home/index'
+
+  root "home#index"
+  resources :home, only: [:index] do
+    collection do
+      get 'app_description'
+    end  
+  end  
+
   # get 'registers/index'
-  
-  root "registers#index"
+
+  # root "registers#index"
   resources :users, only: [:show, :edit, :update]
     resources :books do
       collection do
