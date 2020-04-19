@@ -284,7 +284,7 @@
           display: flex;
           justify-content: space-around;
           .book-list {
-            background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+            // background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
             height: 250px;
             width: 180px;
             box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
@@ -337,6 +337,7 @@
               font-family: クレー;
               padding: 0 13px;
               text-align: center;
+              border-top: solid 1px #e4e2e2;
             }
           }                        
         }

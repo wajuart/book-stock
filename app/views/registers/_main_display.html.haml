@@ -17,7 +17,8 @@
         = link_to edit_user_path(current_user) do
           ユーザー編集    
       .main-header__conent__box__text
-        よくあるご質問  
+        = link_to home_index_path(current_user) do
+          よくあるご質問  
 
   .main-second-header
     .main-second-header__user-name
@@ -66,7 +67,7 @@
       .books-box-top
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               -# ビジネス
             .book-status
               .book-status__title
