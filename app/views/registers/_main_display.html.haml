@@ -1,7 +1,8 @@
 .main-display
   .main-header
     .main-header__logo-box
-      Book Stock      
+      = link_to home_index_path(current_user) do
+        Book Stock     
     .main-header__conent__box
       -# .main-header__conent__box__text
       -#   トップページ
@@ -66,17 +67,18 @@
       .books-box-top
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               -# ビジネス
             .book-status
               .book-status__title
                 -# 読書済
           .book-title
+            -# = @books.title
             -# ビジネスの神様
 
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               -# マネー
             .book-status
               .book-status__title
@@ -85,16 +87,16 @@
             -# マネーの神様
         .book-list
           .book-image
-            .book-category-tag
-              自己啓発
+            .book-genre-tag
+              -# 自己啓発
             .book-status
               .book-status__title
-                読書済
+                -# 読書済
           .book-title
-            自己啓発の神様
+            -# 自己啓発の神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               健康
             .book-status
               .book-status__title
@@ -103,7 +105,7 @@
             健康の神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               スポーツ
             .book-status
               .book-status__title
@@ -112,7 +114,7 @@
             スポーツの神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               料理
             .book-status
               .book-status__title
@@ -123,7 +125,7 @@
       .books-box-middle
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               ビジネス
             .book-status
               .book-status__title
@@ -132,7 +134,7 @@
             ビジネスの神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               マネー
             .book-status
               .book-status__title
@@ -141,7 +143,7 @@
             マネーの神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               自己啓発
             .book-status
               .book-status__title
@@ -150,7 +152,7 @@
             自己啓発の神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               健康
             .book-status
               .book-status__title
@@ -159,7 +161,7 @@
             健康の神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               スポーツ
             .book-status
               .book-status__title
@@ -168,7 +170,7 @@
             スポーツの神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               料理
             .book-status
               .book-status__title
@@ -179,7 +181,7 @@
       .books-box-bottom
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               ビジネス
             .book-status
               .book-status__title
@@ -188,7 +190,7 @@
             ビジネスの神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               マネー
             .book-status
               .book-status__title
@@ -197,7 +199,7 @@
             マネーの神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               自己啓発
             .book-status
               .book-status__title
@@ -206,7 +208,7 @@
             自己啓発の神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               健康
             .book-status
               .book-status__title
@@ -215,7 +217,7 @@
             健康の神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               スポーツ
             .book-status
               .book-status__title
@@ -224,7 +226,7 @@
             スポーツの神様
         .book-list
           .book-image
-            .book-category-tag
+            .book-genre-tag
               料理
             .book-status
               .book-status__title

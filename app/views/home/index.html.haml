@@ -1,7 +1,8 @@
 .main-display
   .main-header
     .main-header__logo-box
-      Book Stock      
+      = link_to home_index_path(current_user) do
+        Book Stock      
     .main-header__conent__box
       -# .main-header__conent__box__text
       -#   = link_to registers_path(current_user) do
@@ -19,9 +20,11 @@
       .logo
         Book Stock
       .text
-        %p「Book Stock」は、皆さんがお持ちの本を一元管理してくれるアプリです。
-        %br本には、内容以外にも様々なステータスが存在します。
-        %br沢山のステータスを持つ沢山の本を、1つのアプリで
+        %p「Book Stock」は、皆さんがお持ちの本を視覚的に
+        %p一元管理してくれるアプリです。
+        %br本は、読む人によって内容以外にも様々な" 要素 "を
+        %p持ちます。
+        %br沢山の要素を持つ沢山の本を、この1つのアプリで
         %p効率良く管理してみましょう！
       .btn_box
         = link_to registers_path(current_user) do   
