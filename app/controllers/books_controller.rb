@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :set_current_user
 
   def index
-    @book = Book.all
+    @books = Book.all
     # @books = @books.includes(:user)
     # @books = @user.books.includes(:user)
   end
@@ -27,9 +27,10 @@ class BooksController < ApplicationController
     # respond_to do |format|
     # binding.pry
     if @book.save
-      notice = Notice.new
-      redirect_to user.books_path(@user), notice: '本が登録されました。'
-      redirect_to user_path(@book.user_id)
+      # notice = Notice.new
+      # redirect_to user.books_path(@user), notice: '本が登録されました。'
+      # redirect_to user_path(@book.user_id)
+      render :index
     else
       # @books = @books.includes(:user)
       # @books = @user.books.includes(:user)
@@ -90,7 +91,7 @@ class BooksController < ApplicationController
       :buydate,
       :impression
     ).merge(user_id: current_user.id)
-    # params.require(:book).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:book).permit(:content, :image).merge(user_id: current_user.id)
   end
 
   # def set_books
