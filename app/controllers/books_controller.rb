@@ -20,6 +20,7 @@ class BooksController < ApplicationController
     # binding.pry
     # params[:book][:buydate] = @buy_date.to_s
     @book = Book.new(book_params)
+      flash.now[:notice] = '本が登録されました。'
     # if params[:commit]
     #   @book.user = current_user
     # @book = Book.new(book_params)
@@ -91,7 +92,7 @@ class BooksController < ApplicationController
       :buydate,
       :impression
     ).merge(user_id: current_user.id)
-    params.require(:book).permit(:content, :image).merge(user_id: current_user.id)
+    # params.require(:book).permit(:content, :image).merge(user_id: current_user.id)
   end
 
   # def set_books
@@ -104,4 +105,5 @@ class BooksController < ApplicationController
   end
 
 end
+
 

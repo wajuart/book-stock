@@ -69,13 +69,13 @@
         -#   = type="file" onchange="previewFile()"
         -# = src="" height="200" alt="Image preview..."  
           = f.label :本のイメージ  
-        = f.file_field :image, class: 'input_image', placeholder: 'image'
+        = f.file_field :image, class: 'input_image', placeholder: '-- upload a image --'
         .book-items-box
           .book-items-box__top
             .book-items-box__top__left
               .book-items-box__top__left__name
                 = f.label :タイトル 
-                = f.text_field :image, class: 'book_title', placeholder: '-- type a title --'   
+                = f.text_field :title, class: 'book_title', placeholder: '-- type a title --'   
               -# .book-items-box__top__left__input-box
               
               -# = f.text_field :title, class: "hogehoge"
@@ -84,7 +84,7 @@
             .book-items-box__top__right
               .book-items-box__top__right__name
                 = f.label :著者
-                = f.text_field :image, class: 'book_author', placeholder: '-- type a author --'
+                = f.text_field :author, class: 'book_author', placeholder: '-- type a author --'
               -# .book-items-box__top__right__input-box
 
           .book-items-box__middle
@@ -112,12 +112,12 @@
             .book-items-box__bottom__right
               .book-items-box__bottom__right__name
                 = f.label :購入日
-                = f.date_field :image, class: 'book_purchase-date', placeholder: '-- type purchase date --'
+                = f.date_field :buydate, class: 'book_purchase-date', placeholder: '-- type purchase date --'
               -# .book-items-box__bottom__right__input-box 
           .impression-box
             .impression-box__title
               = f.label :感想／メモ
-            = f.text_area :image, class: 'book_impression', placeholder: '-- type impressions or memos --'     
+            = f.text_area :impression, class: 'book_impression', placeholder: '-- type impressions or memos --'     
             -# .impression-box__input-box
           .btn-box
             = f.submit '登録する', class: 'register-btn'  
