@@ -25,14 +25,16 @@
       = current_user.name
     -# = form_with(url: search_books_path, local: true, method: :get, class: "search-form") do |form|  
     -#   = f.text_field :content, class: 'search_books', placeholder: '-- 本を検索する --' 
-    .main-second-header__content__search-box
+    .main-second-header__search-box
+      .box
+    
     -# = form_tag(url: search_books_path, local: true, method: :get, class: "search-form") do |form|
     -#   = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
     -#   = form.submit "検索", class: "search-btn"
       -# = form.label :title, 'タイトル'
       -# = form.text_field :title
       -# = form.submit '検索する'
-      -# 本を検索 
+      本を検索 
     .main-second-header__content__btn-box
       = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
         = icon('fab', 'facebook-square',  class: "content__btn__icon")
@@ -68,32 +70,34 @@
         .book-list
           .book-image
             .book-genre-tag
-              -# ビジネス
+              ビジネス
             .book-status
               .book-status__title
-                -# 読書済
+                読書済
           .book-title
-            -# = @books.title
-            -# ビジネスの神様
+            -# - @books.each do |book|
+            -#   = book.title
+            -# = @book.title
+            ビジネスの神様
 
         .book-list
           .book-image
             .book-genre-tag
-              -# マネー
+              マネー
             .book-status
               .book-status__title
-                -# 読書済
+                読書済
           .book-title
-            -# マネーの神様
+            マネーの神様
         .book-list
           .book-image
             .book-genre-tag
-              -# 自己啓発
+              自己啓発
             .book-status
               .book-status__title
-                -# 読書済
+                読書済
           .book-title
-            -# 自己啓発の神様
+            自己啓発の神様
         .book-list
           .book-image
             .book-genre-tag

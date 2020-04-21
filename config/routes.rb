@@ -3,10 +3,18 @@ Rails.application.routes.draw do
   
   # get 'home/index'
 
+  # root "home#index"
+  # resources :home, only: [:index] do
+  #   collection do
+  #     get 'app_description'
+  #   end  
+  # end  
+
   root "home#index"
   resources :home, only: [:index] do
     collection do
       get 'app_description'
+      get 'app_question'
     end  
   end  
 
@@ -21,7 +29,7 @@ Rails.application.routes.draw do
     end  
 
     # resources :books, only: [:index, :new, :create, :show, :edit, :update, :destroy]
-    resources :registers, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+    resources :registers, only: [:index, :new, :create, :show, :edit, :update, :destroy,]
     
     post "books/creat" => "books#creat"
     get "books/:id" => "books#show"

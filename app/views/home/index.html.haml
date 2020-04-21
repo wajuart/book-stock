@@ -14,7 +14,8 @@
         = link_to user_session_path do
           ログイン
       .main-header__conent__box__text
-        よくあるご質問
+        = link_to app_question_home_index_path(current_user) do
+          よくあるご質問
   .middle-display
     .introduction_box
       .logo

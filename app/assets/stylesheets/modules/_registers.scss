@@ -208,10 +208,20 @@
           border: outset 2px;
           margin: 10px 0 0 50px;
         }
-        .search_books {
-          width: 450px;
-          margin-left: 100px;
-          padding: 0 20px;
+        &__search-box {
+          .box {
+            background-color: #ffffff;
+            height: 30px;
+            width: 350px;
+            margin-top: 8px;
+            margin-left: 100px;
+            padding: 0 20px;
+            border: inset #eeeeee 2px;
+            border-radius: 20px;
+            position: relative;
+            .search-icon {
+            }
+          }
         }
         &__content__btn-box {          
           width: 500px;
@@ -362,7 +372,7 @@
                   opacity: 0.8;
                 }            
                 .book-image {
-                  // background-image: url(https://images-na.ssl-images-amazon.com/images/I/51jPX80edlL._SX352_BO1,204,203,200_.jpg);
+                  background-image: url(https://images-na.ssl-images-amazon.com/images/I/51jPX80edlL._SX352_BO1,204,203,200_.jpg);
                   background-size: 100%;
                   height: 190px;
                   padding: 20px;
@@ -493,7 +503,7 @@
                   height: 190px;
                   padding: 20px;
                   position: relative;
-                  .book-category-tag {
+                  .book-genre-tag {
                     position: absolute;
                     top: 0;
                     left: 0;
