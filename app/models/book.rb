@@ -5,6 +5,12 @@ class Book < ApplicationRecord
   has_many  :genre_tags,  through:  :books_genre__tags
   has_many  :status_tags,  through:  :books_status_tags
 
+  def self.search(search)
+    return Book.all unless search
+    Book.where('text LIKE(?)', "%#{search}%")
+  end
+
+
   validates :title, :author, :status, :genre, presence: true, unless: :image?
 
   mount_uploader :image, ImageUploader

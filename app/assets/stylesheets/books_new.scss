@@ -2,16 +2,16 @@
   box-sizing: border-box;
 }
  
-.main-display {
+.MainDisplay {
   background-color: #ffffff;
   height: 100vh;
   width: 100vw;
-  .main-header {
+  .MainHeader {
     background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
     height: 110px;
     padding: 0 40px;
     border-bottom: solid 1px #eeeeee;                         
-    &__logo-box { 
+    .logo-box { 
       height: 50px;  
       width: 200px;
       color: white;
@@ -22,15 +22,15 @@
       margin: 0 auto;
       cursor: pointer;
     }  
-    &__conent__box {
+    .conent-list {
       margin-top: 28px;
       font-size: 15px;
       letter-spacing: 2px;
       display: flex;
       justify-content: center;
-      &__text {
+      &__item {
         color: silver;
-        margin: 0 80px;
+        margin: 0 70px;
         cursor: pointer;
         a {
           color: silver;
@@ -48,7 +48,7 @@
       }  
     }   
   }          
-  .main-second-header {
+  .MainSecondHeader {
     background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
     height: 50px;
     padding: 0 40px;
@@ -56,27 +56,53 @@
     justify-content: space-between;
     border-bottom: solid 1px #eeeeee; 
     line-height: 50px;
-    &__user-name {
-      height: 30px;
-      width: 170px;
-      font-size: 15px;
-      line-height: 30px;
-      text-align: center;
-      border: outset 2px;
-      margin: 10px 0 0 50px;
-    }
-    .search_books {
-      width: 450px;
-      margin-left: 100px;
-      padding: 0 20px;
-    }
-    &__content__btn-box {          
-      width: 500px;
-      padding-left: 120px;
-      &--icon{
-        padding-right:20px;
+    .name-box {
+      height: 50px;
+      width: 200px;
+      margin: 7px 240px 7px 50px;
+      .user-name {
+        height: 35px;
+        font-size: 15px;
+        line-height: 35px;
+        text-align: center;
+        border: outset 2px;
       }
-      .content__btn__facebook {
+    }  
+    .search-box {
+      height: 100%;
+      width: 600px;
+      display: flex;
+      
+      &__input {
+        background-color: #ffffff;
+        height: 35px;
+        width: 350px;
+        color: #555555;
+        font-size: 14px;
+        margin-top: 8px;
+        padding: 0 90px 0 20px;
+        border: inset #eeeeee 2px;
+        border-radius: 20px;
+        line-height: 35px;
+        position: relative;
+      }  
+      .search-btn {
+        background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
+        font-size: 13px;
+        color: #ffffff;
+        margin-top: 15px;
+        padding: 0 10px;
+        border: outset thin;
+        border-radius: 5px;
+        &:hover {
+        opacity: 0.7;
+        }
+      }  
+    }
+    &__social-btn {          
+      width: 600px;
+      padding-left: 120px;
+      .social-btn__facebook {
         color: #ffffff;
         font-size: 15px;
         text-decoration: none;
@@ -87,7 +113,7 @@
           opacity: 0.7;
         }  
       }
-      .content__btn__twitter {
+      .social-btn__twitter {
         color: #ffffff;
         font-size: 15px;
         text-decoration: none;
@@ -99,7 +125,7 @@
           opacity: 0.7;
         }
       }
-      .content__btn__instagram {
+      .social-btn__instagram {
         color: #ffffff;
         font-size: 15px;
         text-decoration: none;
@@ -112,8 +138,7 @@
       }
     } 
   }
-
-  .mypage-header {
+  .MypageHeader {
     background-color: #eaf6fd;;   
     height: 50px;
     padding: 0 40px;
@@ -134,7 +159,7 @@
       &__name {
       }
     }
-    .mypage-top {
+    .Mypage-top {
       color: #444444;
       font-size: 16px;
       line-height: 50px;
@@ -206,32 +231,27 @@
   }  
   
   .form {
-    height: calc(100vh - 220px);
+    height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
     font-size: 13px;
     .input-box {
       height: 100%;           
-      width: 670px;
+      width: 1200px;
       margin: 0 auto;
       padding: 20px;
-      &__content-name-box {
-        height: 30px;
+      &__content-name {
         letter-spacing: 2px;
         font-size: 22px;
         line-height: 30px;
-        padding: 0 12px 0 12px;
-        margin-bottom: 15px;
         display: flex;
         .icon {
           margin-right: 8px;
         }
-        .name{
-        }
       }       
       .book_image {
-        height: 140px;
-        width: 120px;
-        border: double 3px gray;
+        height: 170px;
+        width: 150px;
+        border: outset 3px rgb(190, 199, 223);
         margin: 0 auto;
         font-size: 5px;
         line-height: 160px; 
@@ -260,12 +280,14 @@
         padding: 15px 30px;
         &__top {
           display: flex;
+          justify-content: space-evenly;
           margin-bottom: 20px;
+          padding: 0 50px;
           &__left {
             &__name {
               height: 20px;
               width: 100px;
-              margin-right: 220px;
+              margin-right: 155px;
               margin-bottom: 30px;
             }
             .book_title {
@@ -276,7 +298,7 @@
               padding: 0 8px;
             }
           }
-          &__right {
+          &__center {
             &__name {
               height: 20px;
               width: 100px;
@@ -289,16 +311,12 @@
               border-radius: 5px;
               padding: 0 8px;
             }
-          }        
-        }
-        &__middle {
-          display: flex;
-          margin-bottom: 20px;
-          &__left {
+          }
+          &__right {
             &__name {
               height: 20px;
               width: 100px;
-              margin-right: 220px;
+              margin-right: 155px;
               margin-bottom: 30px;
             }
             .book_status {
@@ -308,13 +326,19 @@
               border: inset #dbedf0 2px;
               padding: 0 8px;
             }
-          }
-          &__right {
+          }        
+        }
+        &__lower {
+          display: flex;
+          justify-content: space-evenly;
+          margin-bottom: 20px;
+          padding: 0 50px;
+          &__left {
             &__name {
               height: 20px;
               width: 100px;
-              margin-right: 220px;
-              margin-bottom: 6px;
+              margin-right: 155px;
+              margin-bottom: 30px;
             }
             .book_genre {
               background-color: white;
@@ -324,15 +348,11 @@
               padding: 0 8px;
             }
           }
-        }
-        &__bottom {
-          display: flex;
-          margin-bottom: 28px;
-          &__left {
+          &__center {
             &__name {
               height: 20px;
               width: 100px;
-              margin-right: 220px;
+              margin-right: 155px;
               margin-bottom: 30px;
             }
             .book_item {
@@ -347,7 +367,7 @@
             &__name {
               height: 20px;
               width: 100px;
-              margin-right: 220px;
+              margin-right: 155px;
               margin-bottom: 30px;
             }
             .book_purchase-date {
@@ -358,16 +378,17 @@
               border-radius: 5px;
               padding: 0 8px;
             }
-          }         
+          }   
         }
+
         .impression-box {
-          margin: 0 auto;
+          margin-left: 100px;
           padding: 0 10px;
           &__title {
           }
           .book_impression {
-            height: 70px;
-            width: 550px;
+            height: 110px;
+            width: 89%;
             border: inset #dbedf0 2px;
             padding: 0 8px;
           }
@@ -407,17 +428,6 @@
           &:hover {
             background-color: rgb(88, 83, 83);
           }
-          // .return-btn {
-            // background-color: black;
-            // height: 50px;
-            // width: 130px;
-            // border: outset 2px;
-            // border-radius: 20px;
-            // cursor: pointer;
-            // &:hover {
-            //   background-color: rgb(88, 83, 83);
-            // }  
-          // }
         }  
       }
     }

@@ -1,5 +1,6 @@
 class RegistersController < ApplicationController
   before_action :set_user
+  before_action :authenticate_user!, only: [:show]
 
   def index
     # @register = Register.new

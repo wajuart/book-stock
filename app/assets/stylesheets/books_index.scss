@@ -2,16 +2,16 @@
   box-sizing: border-box;
 }
  
-.main-display {
+.MainDisplay {
   background-color: #ffffff;
   height: 100vh;
   width: 100vw;
-  .main-header {
+  .MainHeader {
     background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
     height: 110px;
     padding: 0 40px;
     border-bottom: solid 1px #eeeeee;                         
-    &__logo-box { 
+    .logo-box { 
       height: 50px;  
       width: 200px;
       color: white;
@@ -22,30 +22,33 @@
       margin: 0 auto;
       cursor: pointer;
     }  
-    &__conent__box {
+    .conent-list {
       margin-top: 28px;
       font-size: 15px;
       letter-spacing: 2px;
       display: flex;
       justify-content: center;
-      &__text {
+      &__item {
         color: silver;
+        margin: 0 70px;
         cursor: pointer;
         a {
           color: silver;
           &:hover {
             color: black;
+            font-weight: bold;
             text-decoration: underline;
           }
         }  
         &:hover {
           color: black;
+          font-weight: bold;
           text-decoration: underline;
         }
       }  
     }   
-  }
-  .main-second-header {
+  }          
+  .MainSecondHeader {
     background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
     height: 50px;
     padding: 0 40px;
@@ -53,27 +56,52 @@
     justify-content: space-between;
     border-bottom: solid 1px #eeeeee; 
     line-height: 50px;
-    &__user-name {
-      height: 30px;
-      width: 170px;
-      font-size: 15px;
-      line-height: 30px;
-      text-align: center;
-      border: outset 2px;
-      margin: 10px 0 0 50px;
-    }
-    .search_books {
-      width: 450px;
-      margin-left: 100px;
-      padding: 0 20px;
-    }
-    &__content__btn-box {          
-      width: 500px;
-      padding-left: 120px;
-      &--icon{
-        padding-right:20px;
+    .name-box {
+      height: 50px;
+      width: 200px;
+      margin: 7px 240px 7px 50px;
+      .user-name {
+        height: 35px;
+        font-size: 15px;
+        line-height: 35px;
+        text-align: center;
+        border: outset 2px;
       }
-      .content__btn__facebook {
+    }  
+    .search-box {
+      height: 100%;
+      width: 600px;
+      display: flex;
+      &__input {
+        background-color: #ffffff;
+        height: 35px;
+        width: 350px;
+        color: #555555;
+        font-size: 14px;
+        margin-top: 8px;
+        padding: 0 90px 0 20px;
+        border: inset #eeeeee 2px;
+        border-radius: 20px;
+        line-height: 35px;
+        position: relative;
+      }  
+      .search-btn {
+        background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
+        font-size: 13px;
+        color: #ffffff;
+        margin-top: 15px;
+        padding: 0 10px;
+        border: outset thin;
+        border-radius: 5px;
+        &:hover {
+        opacity: 0.7;
+        }
+      }  
+    }
+    &__social-btn {          
+      width: 600px;
+      padding-left: 120px;
+      .social-btn__facebook {
         color: #ffffff;
         font-size: 15px;
         text-decoration: none;
@@ -84,7 +112,7 @@
           opacity: 0.7;
         }  
       }
-      .content__btn__twitter {
+      .social-btn__twitter {
         color: #ffffff;
         font-size: 15px;
         text-decoration: none;
@@ -96,7 +124,7 @@
           opacity: 0.7;
         }
       }
-      .content__btn__instagram {
+      .social-btn__instagram {
         color: #ffffff;
         font-size: 15px;
         text-decoration: none;
@@ -108,10 +136,10 @@
         }      
       }
     } 
-  } 
-  .mypage-header {
+  }
+  .MypageHeader {
     background-color: #eaf6fd;;   
-    height: 60px;
+    height: 50px;
     padding: 0 40px;
     display: flex;
     justify-content: center;
@@ -119,9 +147,9 @@
     box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
     .title {
       font-family: ヒラギノ明朝 ProN;
-      letter-spacing: 5px;
-      font-size: 25px;
-      line-height: 60px;
+      letter-spacing: 2px;
+      font-size: 23px;
+      line-height: 50px;
       margin-right: 20px;
       display: flex;
       &__icon {
@@ -130,10 +158,10 @@
       &__name {
       }
     }
-    .mypage-top {
+    .Mypage-top {
       color: #444444;
       font-size: 16px;
-      line-height: 60px;
+      line-height: 50px;
       margin: 0 60px;
       cursor: pointer;
       &:hover {
@@ -145,7 +173,7 @@
     .register-book {
       color: #444444;
       font-size: 16px;
-      line-height: 60px;
+      line-height: 50px;
       cursor: pointer;
       &:hover {
         color: black;
@@ -156,7 +184,7 @@
     .registered-book {
       color: #444444;
       font-size: 16px;
-      line-height: 60px;
+      line-height: 50px;
       margin: 0 60px;
       cursor: pointer;
       &:hover {
@@ -168,7 +196,7 @@
     .genre-book {  
       color: #444444;
       font-size: 16px;
-      line-height: 60px;
+      line-height: 50px;
       cursor: pointer;
       &:hover {
         color: black;
@@ -179,7 +207,7 @@
     .status-book {
       color: #444444;
       font-size: 16px;
-      line-height: 60px;
+      line-height: 50px;
       margin: 0 60px;
       cursor: pointer;
       &:hover {
@@ -191,7 +219,7 @@
     .reading-history {
       color: #444444;
       font-size: 16px;
-      line-height: 60px;
+      line-height: 50px;
       cursor: pointer;
       &:hover {
         color: black;
@@ -211,6 +239,11 @@
           display: flex;
           margin-bottom: 60px;
           padding-left: 30px;
+          .icon {
+            font-size: 25px;
+            line-height: 30px;
+            margin-right: 8px;
+          }
           .title {
             font-family: ヒラギノ明朝 ProN;
             letter-spacing: 5px;
@@ -227,7 +260,7 @@
               width: 54px;
               text-align: center;
               border: outset 1px;
-              background-color: #FFF;
+              background-color: rgb(238, 238, 238);
               padding: 3px 5px 0 5px;
               cursor: pointer;
               &:hover {
@@ -282,7 +315,7 @@
           height: 300px;
           padding: 10px;
           display: flex;
-          justify-content: space-around;
+          justify-content: space-evenly;
           .book-list {
             background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
             height: 250px;
@@ -293,8 +326,7 @@
               opacity: 0.8;
             }                 
             .book-image {
-              background-image: url(https://images-na.ssl-images-amazon.com/images/I/51jPX80edlL._SX352_BO1,204,203,200_.jpg);
-              // background-image: url(https://m.media-amazon.com/images/I/51d6oIi6W-L._SY346_.jpg);
+              // background-image: url(https://images-na.ssl-images-amazon.com/images/I/51jPX80edlL._SX352_BO1,204,203,200_.jpg);
               background-size: 100%;
               height: 190px;
               padding: 20px;
@@ -305,7 +337,7 @@
                 left: 0;
                 height: 20px;
                 width: 70px;
-                background-color: slateblue;
+                // background-color: slateblue;
                 font-size: 11px;     
                 text-align: center;
                 color: #fff;                   
@@ -315,8 +347,8 @@
                 top: 0;
                 right: 0;
                 z-index: 2;
-                border-top: 30px solid #4ca53ad7;
-                border-right: 30px solid #4ca53ad7;
+                // border-top: 30px solid #4ca53ad7;
+                // border-right: 30px solid #4ca53ad7;
                 border-bottom: 30px solid transparent;
                 border-left: 30px solid transparent;
                 &__title {
@@ -334,6 +366,7 @@
             .book-title {
               height: 60px;
               background-color: #ffffff;
+              color: #000000;
               line-height: 60px;
               font-size: 16px;
               font-family: クレー;
@@ -359,7 +392,7 @@
             }                 
             .book-image {
               // background-image: url(https://images-na.ssl-images-amazon.com/images/I/51jPX80edlL._SX352_BO1,204,203,200_.jpg);
-              background-image: url(https://m.media-amazon.com/images/I/51d6oIi6W-L._SY346_.jpg);background-size: 100%;
+              // background-image: url(https://m.media-amazon.com/images/I/51d6oIi6W-L._SY346_.jpg);background-size: 100%;
               height: 190px;
               padding: 20px;
               position: relative;
@@ -369,7 +402,7 @@
                 left: 0;
                 height: 20px;
                 width: 70px;
-                background-color: teal;
+                // background-color: teal;
                 font-size: 11px;     
                 text-align: center;
                 color: #fff;                   
@@ -379,8 +412,8 @@
                 top: 0;
                 right: 0;
                 z-index: 2;
-                border-top: 30px solid #4ca53ad7;
-                border-right: 30px solid #4ca53ad7;
+                // border-top: 30px solid #4ca53ad7;
+                // border-right: 30px solid #4ca53ad7;
                 border-bottom: 30px solid transparent;
                 border-left: 30px solid transparent;
                 &__title {
@@ -422,7 +455,7 @@
             opacity: 0.8;
           }                 
           .book-image {
-            background-image: url(https://m.media-amazon.com/images/I/51d6oIi6W-L._SY346_.jpg);
+            // background-image: url(https://m.media-amazon.com/images/I/51d6oIi6W-L._SY346_.jpg);
             background-size: 100%;
             height: 190px;
             padding: 20px;
@@ -443,8 +476,8 @@
               top: 0;
               right: 0;
               z-index: 2;
-              border-top: 30px solid #4ca53ad7;
-              border-right: 30px solid #4ca53ad7;
+              // border-top: 30px solid #4ca53ad7;
+              // border-right: 30px solid #4ca53ad7;
               border-bottom: 30px solid transparent;
               border-left: 30px solid transparent;
               &__title {

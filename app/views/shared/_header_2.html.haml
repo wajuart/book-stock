@@ -1,0 +1,36 @@
+.MainHeader
+  .logo-box
+    = link_to home_index_path(current_user) do
+      Book Stock     
+  %ul.conent-list
+    %li.conent-list__item
+      = link_to registers_path(current_user) do
+        トップページ 
+    %li.conent-list__item
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+    %li.conent-list__item
+      = link_to edit_user_path(current_user) do
+        アカウント編集    
+    %li.conent-list__item
+      = link_to home_index_path(current_user) do
+        アプリについて 
+
+.MainSecondHeader
+  .name-box
+    .user-name
+      = current_user.name
+  .search-box
+    = form_tag(search_books_path, method: 'get') do      
+      = text_field_tag :search , '', placeholder: "本を検索する", class: "search-box__input" 
+      = submit_tag '検索', class: "search-btn" , name: nil
+    
+  .MainSecondHeader__social-btn
+    = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
+      = icon('fab', 'facebook-square',  class: "content__btn__icon")
+      facebook
+    = link_to "https://twitter.com/", class: "social-btn social-btn__twitter" do
+      = icon('fab', 'twitter', class: "content__btn__icon")
+      twitter
+    = link_to "https://www.instagram.com/", class: "social-btn social-btn__instagram" do
+      = icon('fab', 'instagram', class: "social-btn__icon")
+      instagram

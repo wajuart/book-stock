@@ -1,63 +1,13 @@
-.main-display
-  .main-header
-    .main-header__logo-box
-      Book Stock      
-    .main-header__conent__box
-      .main-header__conent__box__text
-        = link_to registers_path(current_user) do
-          トップページ
-      .main-header__conent__box__text
-        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
-      .main-header__conent__box__text
-        = link_to edit_user_path(current_user) do
-          ユーザー編集    
-      .main-header__conent__box__text
-        よくあるご質問  
-
-  .main-second-header
-    .main-second-header__user-name
-      = current_user.name 
-    .main-second-header__content__search-box
-      本を検索する 
-    .main-second-header__content__btn-box
-      = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
-        = icon('fab', 'facebook-square',  class: "content__btn__icon")
-        facebook
-      = link_to "https://twitter.com/", class: "content__btn content__btn__twitter" do
-        = icon('fab', 'twitter', class: "content__btn__icon")
-        twitter
-      = link_to "https://www.instagram.com/", class: "content__btn content__btn__instagram" do
-        = icon('fab', 'instagram', class: "content__btn__icon")
-        instagram
-
-  .mypage-header 
-    .title
-      .title__icon
-        .fa.fa-home
-      .title__name  
-        My Page
-    .mypage-top
-      トップ
-    = link_to new_book_path(current_user) do
-      .register-book
-        本を登録
-    = link_to books_path(current_user) do
-      .registered-book
-        マイブック
-    = link_to books_path(current_user) do    
-      .genre-book
-        ジャンル
-    = link_to books_path(current_user) do   
-      .status-book
-        読書ステータス別
-    = link_to books_path(current_user) do
-      .reading-history 
-        読書履歴
+.MainDisplay
+  = render partial: 'shared/header_1' 
 
 
   .book_detail
-    .content_title
-      本の詳細
+    .title-box
+      .icon
+        .fa.fa-book
+      .content-title
+        本の詳細
     .upper_box
       .upper_left_box
         .title
@@ -91,19 +41,11 @@
           最高に面白い
 
     .btn-box
-      -# = f.submit '登録する', class: 'register-btn'  
-      .register-btn
-        編集する
+      = link_to edit_book_path do 
+        .register-btn
+          編集画面へ
       = link_to "戻る", :back, class: 'btn'  
-      -# .return-btn
 
-    .bottom_box  
-      .comments
-
-  .footer
-    .logo
-      Book Stock
-    .sub
-      Copyright &copy; Kazuki Kouno All rights reserved   
+  = render partial: 'shared/footer_1' 
                 
             

@@ -1,0 +1,60 @@
+.MainHeader
+  .logo-box
+    Book Stock     
+  %ul.conent-list
+    .conent-list__item
+      = link_to registers_path(current_user) do
+        トップページ 
+    .conent-list__item
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+    .conent-list__item
+      = link_to edit_user_path(current_user) do
+        アカウント編集    
+    .conent-list__item
+      = link_to home_index_path(current_user) do
+        アプリについて  
+
+.MainSecondHeader
+  .name-box
+    .user-name
+      = current_user.name
+  .search-box
+    = form_tag(search_books_path, method: 'get') do      
+      = text_field_tag :search , '', placeholder: "本を検索する", class: "search-box__input" 
+      = submit_tag '検索', class: "search-btn" , name: nil
+    
+  .MainSecondHeader__social-btn
+    = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
+      = icon('fab', 'facebook-square',  class: "content__btn__icon")
+      facebook
+    = link_to "https://twitter.com/", class: "social-btn social-btn__twitter" do
+      = icon('fab', 'twitter', class: "content__btn__icon")
+      twitter
+    = link_to "https://www.instagram.com/", class: "social-btn social-btn__instagram" do
+      = icon('fab', 'instagram', class: "social-btn__icon")
+      instagram
+
+.MypageHeader 
+  .title
+    .title__icon
+      .fa.fa-home
+    .title__name  
+      My Page
+  = link_to user_path(current_user) do    
+    .Mypage-top
+      ＴＯＰ
+  = link_to new_book_path(current_user) do
+    .register-book
+      本を登録
+  = link_to books_path(current_user) do
+    .registered-book
+      マイブック
+  = link_to books_path(current_user) do    
+    .genre-book
+      ジャンル
+  = link_to books_path(current_user) do   
+    .status-book
+      読書ステータス別
+  = link_to books_path(current_user) do
+    .reading-history 
+      読書履歴 

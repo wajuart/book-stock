@@ -1,3 +1,5 @@
+= render partial: 'shared/header_3'
+
 #account-page.account-page
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
@@ -17,5 +19,6 @@
             = f.label :email
           .field-input
             = f.email_field :email
-        .actions
-          = f.submit "Update", class: 'btn'
+        = link_to registers_path(current_user) do
+          .actions
+            = f.submit "Update", class: 'btn'

@@ -2,16 +2,16 @@
   box-sizing: border-box;
 }
  
-.main-display {
+.MainDisplay {
   background-color: #ffffff;
   height: 100vh;
   width: 100vw;
-  .main-header {
+  .MainHeader {
     background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
     height: 110px;
     padding: 0 40px;
     border-bottom: solid 1px #eeeeee;                         
-    &__logo-box { 
+    .logo-box { 
       height: 50px;  
       width: 200px;
       color: white;
@@ -22,15 +22,15 @@
       margin: 0 auto;
       cursor: pointer;
     }  
-    &__conent__box {
+    .conent-list {
       margin-top: 28px;
       font-size: 15px;
       letter-spacing: 2px;
       display: flex;
       justify-content: center;
-      &__text {
+      &__item {
         color: silver;
-        margin: 0 80px;
+        margin: 0 70px;
         cursor: pointer;
         a {
           color: silver;
@@ -79,16 +79,17 @@
       .btn_box {
         margin-top: 30px;
         display: flex;
-        justify-content: center;
-      a {   
-        .app_btn { 
+        justify-content: space-evenly;
+      a {
+        margin-top: 30px;   
+        .btn { 
           color: #eeeeee;
           background-color: black;
           height: 45px;
           width: 130px;
           text-align: center;
           line-height: 45px;
-          margin: 30px 40px 0 0;
+          margin: 0 auto;
           border: outset 2px;
           border-radius: 20px;
           cursor: pointer;
@@ -96,21 +97,6 @@
             background-color: rgb(88, 83, 83);
           }
         }
-        .description_btn {
-          color: #eeeeee;
-          background-color: black;
-          height: 45px;
-          width: 130px;
-          text-align: center;
-          line-height: 45px;
-          margin-top: 30px;
-          border: outset 2px;
-          border-radius: 20px;
-          cursor: pointer;
-          &:hover {
-            background-color: rgb(88, 83, 83);
-          }
-      }
       }
       }
     }
