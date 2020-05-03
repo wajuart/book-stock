@@ -1,5 +1,8 @@
 .MainDisplay
-  = render partial: 'shared/header_2'
+  - if user_signed_in?
+    = render partial: 'shared/header_1'
+  - else
+    = render partial: 'shared/header_2'
 
   .main-registers
     .registers-box

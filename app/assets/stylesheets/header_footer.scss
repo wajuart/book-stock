@@ -138,90 +138,34 @@
   width: 100vw;
   padding: 0 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   border-bottom: solid 1px #eeeeee;
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-  .title {
+  .content-title {
     font-family: ヒラギノ明朝 ProN;
     letter-spacing: 2px;
     font-size: 23px;
     line-height: 50px;
     margin-right: 20px;
     display: flex;
-    &__icon {
+    .title-icon {
       margin-right: 5px;
     }
-    &__name {
-    }
-  }
-  .Mypage-top {
-    color: #444444;
-    font-size: 16px;
-    line-height: 50px;
-    margin: 0 60px;
-    cursor: pointer;
-    &:hover {
-      color: black;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-  } 
-  .register-book {
-    color: #444444;
-    font-size: 16px;
-    line-height: 50px;
-    cursor: pointer;
-    &:hover {
-      color: black;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-  } 
-  .registered-book {
-    color: #444444;
-    font-size: 16px;
-    line-height: 50px;
-    margin: 0 60px;
-    cursor: pointer;
-    &:hover {
-      color: black;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-  }
-  .genre-book {  
-    color: #444444;
-    font-size: 16px;
-    line-height: 50px;
-    cursor: pointer;
-    &:hover {
-      color: black;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-  } 
-  .status-book {
-    color: #444444;
-    font-size: 16px;
-    line-height: 50px;
-    margin: 0 60px;
-    cursor: pointer;
-    &:hover {
-      color: black;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-  }
-  .reading-history {
-    color: #444444;
-    font-size: 16px;
-    line-height: 50px;
-    cursor: pointer;
-    &:hover {
-      color: black;
-      font-weight: bold;
-      text-decoration: underline;
-    }
+  }  
+  .content-list {
+    display: flex;
+    a {
+      color: #444444;
+      font-size: 16px;
+      line-height: 50px;
+      margin: 0 35px ;
+      cursor: pointer;
+      &:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+      }     
+    }    
   }
 }
 .footer {

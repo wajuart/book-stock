@@ -2,15 +2,15 @@
   .logo-box
     Book Stock     
   %ul.conent-list
-    .conent-list__item
+    %li.conent-list__item
       = link_to registers_path(current_user) do
         トップページ 
-    .conent-list__item
+    %li.conent-list__item
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
-    .conent-list__item
+    %li.conent-list__item
       = link_to edit_user_path(current_user) do
         アカウント編集    
-    .conent-list__item
+    %li.conent-list__item
       = link_to home_index_path(current_user) do
         アプリについて  
 
@@ -35,26 +35,27 @@
       instagram
 
 .MypageHeader 
-  .title
-    .title__icon
+  %ul.content-title
+    %li.title-icon
       .fa.fa-home
-    .title__name  
+    %li.title-name  
       My Page
-  = link_to user_path(current_user) do    
-    .Mypage-top
-      ＴＯＰ
-  = link_to new_book_path(current_user) do
-    .register-book
-      本を登録
-  = link_to books_path(current_user) do
-    .registered-book
-      マイブック
-  = link_to books_path(current_user) do    
-    .genre-book
-      ジャンル
-  = link_to books_path(current_user) do   
-    .status-book
-      読書ステータス別
-  = link_to books_path(current_user) do
-    .reading-history 
-      読書履歴 
+  %ul.content-list    
+    = link_to user_path(current_user) do    
+      %li.content-list__item
+        ＴＯＰ
+    = link_to new_book_path(current_user) do
+      %li.content-list__item
+        本を登録
+    = link_to books_path(current_user) do
+      %li.content-list__item
+        マイブック
+    = link_to books_path(current_user) do    
+      %li.content-list__item
+        ジャンル
+    = link_to books_path(current_user) do   
+      %li.content-list__item
+        読書ステータス別
+    = link_to books_path(current_user) do
+      %li.content-list__item
+        読書履歴 
