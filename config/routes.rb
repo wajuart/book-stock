@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'items/create'
+
+  get 'statuses/create'
+
+  get 'genres/create'
+
   devise_for :users, controllers: {   registrations: 'users/registrations',
                                       sessions: 'users/sessions' } 
   # get 'home/index'

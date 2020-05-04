@@ -24,14 +24,14 @@ class BooksController < ApplicationController
     # binding.pry
     # params[:book][:buydate] = @buy_date.to_s
     @book = Book.new(book_params)
-      flash.now[:notice] = '本が登録されました。'
     # if params[:commit]
     #   @book.user = current_user
     # @book = Book.new(book_params)
     
     # respond_to do |format|
     # binding.pry
-    if @book.save
+    if @book.save!
+      flash.now[:notice] = '本が登録されました。'
       # notice = Notice.new
       # redirect_to user.books_path(@user), notice: '本が登録されました。'
       # redirect_to user_path(@book.user_id)
@@ -45,16 +45,7 @@ class BooksController < ApplicationController
       # render 'new'
       render :new
     end
-    # @book = Book.new(book_params)
 
-    # @book = @books.new(book_params)
-    # if @book.save
-    #   redirect_to books_path(@user), notice: '本が登録されました。'
-    # else
-    #   @books = @books.includes(:user)
-    #   flash.now[:alert] = '本のタイトルまたは画像を入力してください。'
-    #   render :index
-    # end
   end
 
   def show

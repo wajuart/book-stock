@@ -31,13 +31,13 @@
             .book-items-box__top__right
               .book-items-box__top__left__name
                 = f.label :読書ステータス
-                = f.select :status, [["-- 選択して下さい --","-- 選択して下さい --"], ["読書済み","読書済み"], ["読書中","読書中"], ["未読","未読"], ["興味有り","興味あり"]], {}, class: 'book_status'
+                = f.select :status_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["読書済み","読書済み"], ["読書中","読書中"], ["未読","未読"], ["興味有り","興味あり"]], {}, class: 'book_status'
                
           .book-items-box__lower  
             .book-items-box__lower__left
               .book-items-box__lower__left__name
                 = f.label :ジャンル
-                = f.select :genre, [["-- 選択して下さい --","-- 選択して下さい --"], ["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'book_genre'
+                = f.select :genre_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'book_genre'
                 -# = f.text_field :image, class: 'book_genre', placeholder: '-- type a genre --'
               -# .book-items-box__middle__right__input-box
  
@@ -45,7 +45,7 @@
               .book-items-box__lower__center__name
                 = f.label :読書媒体
                 -# = f.label :item, "読書媒体", class: 'book_item', placeholder: '-- choice item --'
-                = f.select :item, [["-- 選択して下さい --","-- 選択して下さい --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'book_item'
+                = f.select :item_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'book_item'
                 -# = f.text_field :image, class: 'book_item', placeholder: '-- choice item --'
               -# .book-items-box__bottom__left__input-box 
             .book-items-box__lower__right
