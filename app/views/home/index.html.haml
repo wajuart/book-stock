@@ -1,21 +1,16 @@
-.main-display
-  .main-header
-    .main-header__logo-box
+.MainDisplay
+  .MainHeader
+    .logo-box
       = link_to home_index_path(current_user) do
-        Book Stock      
-    .main-header__conent__box
-      -# .main-header__conent__box__text
-      -#   = link_to registers_path(current_user) do
-      -#     トップページ
-      .main-header__conent__box__text
+        Book Stock     
+    %ul.conent-list
+      %li.conent-list__item
         = link_to new_user_session_path do
-          ユーザー新規登録
-      .main-header__conent__box__text
+          新規登録 
+      %li.conent-list__item
         = link_to user_session_path do
-          ログイン
-      .main-header__conent__box__text
-        = link_to app_question_home_index_path(current_user) do
-          よくあるご質問
+          ログイン   
+
   .middle-display
     .introduction_box
       .logo
@@ -29,13 +24,9 @@
         %p効率良く管理してみましょう！
       .btn_box
         = link_to registers_path(current_user) do   
-          .app_btn
+          .btn
             Appを使う
         = link_to registers_path(current_user) do    
-          .description_btn 
+          .btn 
             Appの解説         
-  .footer
-    .logo
-      Book Stock
-    .sub
-      Copyright &copy; Kazuki Kouno All rights reserved            
+  = render partial: 'shared/footer_1'           

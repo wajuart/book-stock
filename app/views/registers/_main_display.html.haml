@@ -1,32 +1,39 @@
-.main-display
-  .main-header
-    .main-header__logo-box
+.MainDisplay
+  .MainHeader
+    .logo-box
       = link_to home_index_path(current_user) do
         Book Stock     
-    .main-header__conent__box
-      -# .main-header__conent__box__text
-      -#   トップページ
-      .main-header__conent__box__text
+    %ul.conent-list
+      .conent-list__item
         = link_to new_user_session_path do
-          ユーザー新規登録
-      .main-header__conent__box__text
+          新規登録
+      .conent-list__item
         = link_to user_session_path do
           ログイン  
-      .main-header__conent__box__text
+      .conent-list__item
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
-      .main-header__conent__box__text
+      .conent-list__item
         = link_to edit_user_path(current_user) do
-          ユーザー編集    
-      .main-header__conent__box__text
-        よくあるご質問  
+          アカウント編集
+      .conent-list__item
+        = link_to user_session_path do
+          アプリについて           
 
-  .main-second-header
-    .main-second-header__user-name
-      = current_user.name
-    -# = form_with(url: search_books_path, local: true, method: :get, class: "search-form") do |form|  
-    -#   = f.text_field :content, class: 'search_books', placeholder: '-- 本を検索する --' 
-    .main-second-header__search-box
-      .box
+  .MainSecondHeader
+    .name-box
+      .user-name
+        = current_user.name
+    .search-box
+      = form_tag(search_books_path, method: 'get') do      
+        = text_field_tag :search , '', placeholder: "本を検索する", class: "search-box__input" 
+        = submit_tag '検索', class: "search-btn" , name: nil
+        -# .search-icon
+        -#   .fa.fa-search
+      -# .search-btn
+        -# .fa.fa-search
+        -# = link_to search_books_path do
+            
+          
     
     -# = form_tag(url: search_books_path, local: true, method: :get, class: "search-form") do |form|
     -#   = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
@@ -35,208 +42,136 @@
       -# = form.text_field :title
       -# = form.submit '検索する'
       本を検索 
-    .main-second-header__content__btn-box
-      = link_to "https://www.facebook.com/", class: "content__btn content__btn__facebook" do
+    .MainSecondHeader__social-btn
+      = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
         = icon('fab', 'facebook-square',  class: "content__btn__icon")
         facebook
-      = link_to "https://twitter.com/", class: "content__btn content__btn__twitter" do
+      = link_to "https://twitter.com/", class: "social-btn social-btn__twitter" do
         = icon('fab', 'twitter', class: "content__btn__icon")
         twitter
-      = link_to "https://www.instagram.com/", class: "content__btn content__btn__instagram" do
-        = icon('fab', 'instagram', class: "content__btn__icon")
+      = link_to "https://www.instagram.com/", class: "social-btn social-btn__instagram" do
+        = icon('fab', 'instagram', class: "social-btn__icon")
         instagram
 
-  .main-registers
-    .registers-box
-      .registers-top
+  .MainRegisters
+    .Registers-box
+      .Registers-top
         .title
           .title__icon
             .fa.fa-book
           .title__name
             登録本一覧 
-        .tag-box
-          .tag-box__left
+        %ul.tag-box
+          %li.tag-box__left
             最新順
-          .tag-box__center
+          %li.tag-box__center
             イイね数
-          .tag-box__right
+          %li.tag-box__right
             コメント数
         .genre-box
           .name
             ジャンル
           .select-box
-            = select_tag 'book[genre]', options_for_select(["--選択してください--","ビジネス", "自己啓発", "マネー", "政治／経済", "勉強／スキル", "料理", "趣味", "健康", "スポーツ", "子育て", "小説", "漫画", "生活", "その他"])
+            = select_tag 'book[genre]', options_for_select(["-- 選択してください --","ビジネス", "自己啓発", "マネー", "政治／経済", "勉強／スキル", "料理", "趣味", "健康", "スポーツ", "子育て", "小説", "漫画", "生活", "その他"])
       .books-box-top
         .book-list
           .book-image
             .book-genre-tag
-              ビジネス
             .book-status
               .book-status__title
-                読書済
           .book-title
             -# - @books.each do |book|
             -#   = book.title
             -# = @book.title
-            ビジネスの神様
 
         .book-list
           .book-image
             .book-genre-tag
-              マネー
             .book-status
               .book-status__title
-                読書済
           .book-title
-            マネーの神様
         .book-list
           .book-image
             .book-genre-tag
-              自己啓発
             .book-status
               .book-status__title
-                読書済
           .book-title
-            自己啓発の神様
         .book-list
           .book-image
             .book-genre-tag
-              健康
             .book-status
               .book-status__title
-                読書済
           .book-title
-            健康の神様
         .book-list
           .book-image
             .book-genre-tag
-              スポーツ
             .book-status
               .book-status__title
-                読書済
           .book-title
-            スポーツの神様
-        .book-list
-          .book-image
-            .book-genre-tag
-              料理
-            .book-status
-              .book-status__title
-                読書済
-          .book-title
-            料理の神様
 
       .books-box-middle
         .book-list
           .book-image
             .book-genre-tag
-              ビジネス
             .book-status
               .book-status__title
-                読書済
           .book-title
-            ビジネスの神様
         .book-list
           .book-image
             .book-genre-tag
-              マネー
             .book-status
               .book-status__title
-                読書済
           .book-title
-            マネーの神様
         .book-list
           .book-image
             .book-genre-tag
-              自己啓発
             .book-status
-              .book-status__title
-                読書済
+              .book-status__title 
           .book-title
-            自己啓発の神様
         .book-list
           .book-image
             .book-genre-tag
-              健康
             .book-status
               .book-status__title
-                読書済
           .book-title
-            健康の神様
         .book-list
           .book-image
             .book-genre-tag
-              スポーツ
             .book-status
               .book-status__title
-                読書済
-          .book-title
-            スポーツの神様
-        .book-list
-          .book-image
-            .book-genre-tag
-              料理
-            .book-status
-              .book-status__title
-                読書済
-          .book-title
-            料理の神様            
+          .book-title 
 
       .books-box-bottom
         .book-list
           .book-image
             .book-genre-tag
-              ビジネス
             .book-status
               .book-status__title
-                読書済
           .book-title
-            ビジネスの神様
         .book-list
           .book-image
             .book-genre-tag
-              マネー
             .book-status
               .book-status__title
-                読書済
           .book-title
-            マネーの神様
         .book-list
           .book-image
             .book-genre-tag
-              自己啓発
             .book-status
               .book-status__title
-                読書済
           .book-title
-            自己啓発の神様
         .book-list
           .book-image
             .book-genre-tag
-              健康
             .book-status
               .book-status__title
-                読書済
           .book-title
-            健康の神様
         .book-list
           .book-image
             .book-genre-tag
-              スポーツ
             .book-status
               .book-status__title
-                読書済
           .book-title
-            スポーツの神様
-        .book-list
-          .book-image
-            .book-genre-tag
-              料理
-            .book-status
-              .book-status__title
-                読書済
-          .book-title
-            料理の神様         
       .bottom-space
         .pages
           page1
@@ -244,7 +179,7 @@
     .logo
       Book Stock
     .sub
-      Copyright &copy; Kazuki Kouno All rights reserved
+      Copyright &copy; Kazuki Kouno All rights reserved 
 
 
       

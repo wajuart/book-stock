@@ -1,8 +1,12 @@
 class BooksController < ApplicationController
   before_action :set_current_user
+  # before_action :set_tweet, only: [:edit, :show]
+  # before_action :move_to_index, except: [:index, :show, :search]
+  before_action :authenticate_user!
 
   def index
-    @books = Book.all
+    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    # @books = Book.all
     # @books = @books.includes(:user)
     # @books = @user.books.includes(:user)
   end
@@ -20,14 +24,14 @@ class BooksController < ApplicationController
     # binding.pry
     # params[:book][:buydate] = @buy_date.to_s
     @book = Book.new(book_params)
-      flash.now[:notice] = '本が登録されました。'
     # if params[:commit]
     #   @book.user = current_user
     # @book = Book.new(book_params)
     
     # respond_to do |format|
     # binding.pry
-    if @book.save
+    if @book.save!
+      flash.now[:notice] = '本が登録されました。'
       # notice = Notice.new
       # redirect_to user.books_path(@user), notice: '本が登録されました。'
       # redirect_to user_path(@book.user_id)
@@ -41,16 +45,7 @@ class BooksController < ApplicationController
       # render 'new'
       render :new
     end
-    # @book = Book.new(book_params)
 
-    # @book = @books.new(book_params)
-    # if @book.save
-    #   redirect_to books_path(@user), notice: '本が登録されました。'
-    # else
-    #   @books = @books.includes(:user)
-    #   flash.now[:alert] = '本のタイトルまたは画像を入力してください。'
-    #   render :index
-    # end
   end
 
   def show
@@ -66,6 +61,12 @@ class BooksController < ApplicationController
 
   def delete
   end
+
+  def search
+    #Viewのformで取得したパラメータをモデルに渡す
+    @books = Book.search(params[:search])
+  end
+
 
   def ensure_correct_user
     @book = Book.find_by(id:params[:id])
