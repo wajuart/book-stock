@@ -60,9 +60,8 @@ DB ・MySQL(5.6)
 ## booksテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|bigint|null: false, foreign_key: true|
 |title|string|null: false|
-|image|string|null: false|
+|image|string|
 |author|string|
 |publisher|string|
 |status|integer|null: false|
@@ -72,6 +71,7 @@ DB ・MySQL(5.6)
 |impression|text|
 |evaluation|integer|
 |buy_date|date|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :comments

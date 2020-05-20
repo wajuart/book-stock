@@ -1,9 +1,9 @@
 class CreateBooks < ActiveRecord::Migration[5.0]
   def change
     create_table :books do |t|
-      t.bigint :user_id, null: false, foreign_key: true
+      t.bigint :user_id, null: false
       t.string :title, null: false
-      t.string :image, null: false
+      t.string :image
       t.string :author
       t.string :publisher
       t.integer :status, null: false
