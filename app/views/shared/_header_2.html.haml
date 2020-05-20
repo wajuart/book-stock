@@ -4,7 +4,7 @@
       Book Stock     
   %ul.conent-list
     %li.conent-list__item
-      = link_to registers_path(current_user) do
+      = link_to books_path(current_user) do
         トップページ 
     %li.conent-list__item
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'

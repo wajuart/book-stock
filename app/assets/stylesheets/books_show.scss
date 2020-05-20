@@ -3,233 +3,6 @@
 }
  
 .MainDisplay {
-  background-color: #ffffff;
-  height: 100vh;
-  width: 100vw;
-  .MainHeader {
-    background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-    height: 110px;
-    padding: 0 40px;
-    border-bottom: solid 1px #eeeeee;                         
-    .logo-box { 
-      height: 50px;  
-      width: 200px;
-      color: white;
-      font-size: 35px;
-      font-family: fantasy;
-      letter-spacing: 1px;
-      padding-top: 10px;
-      margin: 0 auto;
-      cursor: pointer;
-    }  
-    .conent-list {
-      margin-top: 28px;
-      font-size: 15px;
-      letter-spacing: 2px;
-      display: flex;
-      justify-content: center;
-      &__item {
-        color: silver;
-        margin: 0 70px;
-        cursor: pointer;
-        a {
-          color: silver;
-          &:hover {
-            color: black;
-            font-weight: bold;
-            text-decoration: underline;
-          }
-        }  
-        &:hover {
-          color: black;
-          font-weight: bold;
-          text-decoration: underline;
-        }
-      }  
-    }   
-  }          
-  .MainSecondHeader {
-    background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
-    height: 50px;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid 1px #eeeeee; 
-    line-height: 50px;
-    .name-box {
-      height: 50px;
-      width: 200px;
-      margin: 7px 240px 7px 50px;
-      .user-name {
-        height: 35px;
-        font-size: 15px;
-        line-height: 35px;
-        text-align: center;
-        border: outset 2px;
-      }
-    }  
-    .search-box {
-      height: 100%;
-      width: 600px;
-      display: flex;
-      
-      &__input {
-        background-color: #ffffff;
-        height: 35px;
-        width: 350px;
-        color: #555555;
-        font-size: 14px;
-        margin-top: 8px;
-        padding: 0 90px 0 20px;
-        border: inset #eeeeee 2px;
-        border-radius: 20px;
-        line-height: 35px;
-        position: relative;
-      }  
-      .search-btn {
-        background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-        font-size: 13px;
-        color: #ffffff;
-        margin-top: 15px;
-        padding: 0 10px;
-        border: outset thin;
-        border-radius: 5px;
-        &:hover {
-        opacity: 0.7;
-        }
-      }  
-    }
-    &__social-btn {          
-      width: 600px;
-      padding-left: 120px;
-      .social-btn__facebook {
-        color: #ffffff;
-        font-size: 15px;
-        text-decoration: none;
-        background-color: #4169e1;
-        border-radius: 3px;
-        padding: 4px 8px;
-        &:hover {
-          opacity: 0.7;
-        }  
-      }
-      .social-btn__twitter {
-        color: #ffffff;
-        font-size: 15px;
-        text-decoration: none;
-        background-color: #00bfff;
-        margin: 0 15px;
-        border-radius: 3px;
-        padding: 4px 8px;
-        &:hover {
-          opacity: 0.7;
-        }
-      }
-      .social-btn__instagram {
-        color: #ffffff;
-        font-size: 15px;
-        text-decoration: none;
-        background-color: #fc76bf;
-        border-radius: 3px;
-        padding: 4px 8px;
-        &:hover {
-          opacity: 0.7;
-        }      
-      }
-    } 
-  }
-
-  .mypage-header {
-    background-color: #eaf6fd;;   
-    height: 50px;
-    padding: 0 40px;
-    display: flex;
-    justify-content: center;
-    border-bottom: solid 1px #eeeeee;
-    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-    .title {
-      font-family: ヒラギノ明朝 ProN;
-      letter-spacing: 2px;
-      font-size: 23px;
-      line-height: 50px;
-      margin-right: 20px;
-      display: flex;
-      &__icon {
-        margin-right: 5px;
-      }
-      &__name {
-      }
-    }
-    .mypage-top {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      margin: 0 60px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    } 
-    .register-book {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    } 
-    .registered-book {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      margin: 0 60px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }
-    .genre-book {  
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    } 
-    .status-book {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      margin: 0 60px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }
-    .reading-history {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }
-  }
   .book_detail {
     height: calc(100vh - 270px);
     .title-box { 
@@ -339,7 +112,7 @@
           height: 150px;
           width: 470px;
           color: #000;
-          border: solid 2px;
+          border: inset 2px;
           padding: 5px 15px;
         }
       }  
@@ -353,7 +126,7 @@
       display: flex;
       justify-content: center;
       .register-btn {
-        background-color: #04a711;
+        background-color: #1e3ea5;
         height: 50px;
         width: 180px;
         color: #eeeeee;
@@ -362,7 +135,7 @@
         border-radius: 20px;
         cursor: pointer;
         &:hover {
-          background-color: #05800f;
+          background-color: #1e3ea5b2;
         }  
       }
       .btn { 
@@ -380,25 +153,6 @@
     }
   }
   }
-  .footer {
-    background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
-    height: 60px;
-    text-align: center;
-    color: #363333;
-    padding: 15px 0;
-    border-top: solid 1px #dad8d8;
-    .logo {
-      height: 10px;
-      font-size: 20px;
-      font-family: fantasy;
-    }
-    .sub {
-      height: 10px;
-      margin-top: 13px;
-      font-size: 6px;
-    }
-  }
-
 
 a {
   text-decoration: none;

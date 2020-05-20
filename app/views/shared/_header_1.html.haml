@@ -3,7 +3,7 @@
     Book Stock     
   %ul.conent-list
     %li.conent-list__item
-      = link_to registers_path(current_user) do
+      = link_to books_path(current_user) do
         トップページ 
     %li.conent-list__item
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
@@ -19,8 +19,12 @@
     .user-name
       = current_user.name
   .search-box
+    -# = form_with url: search_books_path, local: true, method: :get, class: "search-box" do |f|
+    -#   = f.text_field :keyword, placeholder: "本を検索する", class: "search-box__input"
+    -#   = button_tag type: 'submit', class: 'search-btn' do
+
     = form_tag(search_books_path, method: 'get') do      
-      = text_field_tag :search , '', placeholder: "本を検索する", class: "search-box__input" 
+      = text_field_tag :search, '', placeholder: "本を検索する", class: "search-box__input" 
       = submit_tag '検索', class: "search-btn" , name: nil
     
   .MainSecondHeader__social-btn
@@ -53,9 +57,6 @@
     = link_to books_path(current_user) do    
       %li.content-list__item
         ジャンル
-    = link_to books_path(current_user) do   
-      %li.content-list__item
-        読書ステータス別
     = link_to books_path(current_user) do
       %li.content-list__item
-        読書履歴 
+        読書媒体 

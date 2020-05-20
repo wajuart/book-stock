@@ -6,68 +6,8 @@
   background-color: #ffffff;
   height: 100vh;
   width: 100vw;
-  .MainHeader {
-    background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-    height: 110px;
-    padding: 0 40px;
-    border-bottom: solid 1px #eeeeee;                         
-    .logo-box { 
-      height: 50px;  
-      width: 200px;
-      color: white;
-      font-size: 35px;
-      font-family: fantasy;
-      letter-spacing: 1px;
-      padding-top: 10px;
-      margin: 0 auto;
-      cursor: pointer;
-    }  
-    .conent-list {
-      margin-top: 28px;
-      font-size: 15px;
-      letter-spacing: 2px;
-      display: flex;
-      justify-content: center;
-      &__item {
-        color: silver;
-        margin: 0 70px;
-        cursor: pointer;
-        a {
-          color: silver;
-          &:hover {
-            color: black;
-            font-weight: bold;
-            text-decoration: underline;
-          }
-        }  
-        &:hover {
-          color: black;
-          font-weight: bold;
-          text-decoration: underline;
-        }
-      }  
-    }   
-  }          
+  
   .MainSecondHeader {
-    background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
-    height: 50px;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid 1px #eeeeee; 
-    line-height: 50px;
-    .name-box {
-      height: 50px;
-      width: 200px;
-      margin: 7px 240px 7px 50px;
-      .user-name {
-        height: 35px;
-        font-size: 15px;
-        line-height: 35px;
-        text-align: center;
-        border: outset 2px;
-      }
-    }  
     .search-box {
       height: 100%;
       width: 600px;
@@ -84,7 +24,6 @@
         border: inset #eeeeee 2px;
         border-radius: 20px;
         line-height: 35px;
-        
       }  
       .search-btn {
         position: absolute;
@@ -102,153 +41,80 @@
         }
       }  
     }
-    &__social-btn {          
-      width: 600px;
-      padding-left: 120px;
-      .social-btn__facebook {
-        color: #ffffff;
-        font-size: 15px;
-        text-decoration: none;
-        background-color: #4169e1;
-        border-radius: 3px;
-        padding: 4px 8px;
-        &:hover {
-          opacity: 0.7;
-        }  
-      }
-      .social-btn__twitter {
-        color: #ffffff;
-        font-size: 15px;
-        text-decoration: none;
-        background-color: #00bfff;
-        margin: 0 15px;
-        border-radius: 3px;
-        padding: 4px 8px;
-        &:hover {
-          opacity: 0.7;
+    
+  }
+}  
+.UserDetails {
+  height: calc(100vh - 270px);
+  .DetailsContainer {
+    height: 100%;
+    width: 100%;         
+    padding: 20px 80px; 
+      .title-box {  
+        height: 30px;
+        display: flex;
+        margin: 20px 0 40px 60px;
+        padding-left: 30px;
+        .icon {
+          font-size: 25px;
+          line-height: 30px;
+          margin-right: 8px;
         }
+        .title {
+          font-family: ヒラギノ明朝 ProN;
+          letter-spacing: 5px;
+          font-size: 25px;
+          line-height: 30px;
+          padding: 0 12px ;
+        }        
       }
-      .social-btn__instagram {
-        color: #ffffff;
-        font-size: 15px;
-        text-decoration: none;
-        background-color: #fc76bf;
-        border-radius: 3px;
-        padding: 4px 8px;
-        &:hover {
-          opacity: 0.7;
-        }      
+      .Details-upper {
+        // background-color: #fafdea;
+        height: 280px;
+        padding: 0 180px;
+        display: flex;
+        justify-content: space-evenly;
+        &__left {
+          // background-color: #fcdcdc;
+          width: 100%;
+          .user-icon {
+            background-color: #ffffff;
+            background-image: url(https://pics.prcm.jp/dona1118/82181124/png/82181124.png);
+            background-size: 100%;
+            height: 180px;
+            width: 180px;
+            border: groove;
+            border-radius: 50%;
+            margin: 15px 0 15px 300px;
+          }
+          .user-nickname {
+            font-size: 20px;
+            margin-top: 30px;
+            margin: 30px 0 0 330px;
+          }
+        }  
+        &__right {
+          // background-color: #e3eaff;
+          width: 100%;
+          padding: 20px 20px;
+          ul {
+           li {
+             font-size: 17px;
+             margin: 30px 0;
+           } 
+          } 
+        }                        
       }
-    } 
+      .Details-lower {
+        // background-color: #eeffdd;
+        height: 250px;
+        padding: 15px 180px;
+        .user-introduction {
+          height: 100%;
+          width: 600px;
+          border: inset;
+          margin: 0 auto;
+        }
+      }  
   }
-  .MypageHeader {
-    background-color: #eaf6fd;;   
-    height: 50px;
-    padding: 0 40px;
-    display: flex;
-    justify-content: center;
-    border-bottom: solid 1px #eeeeee;
-    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-    .title {
-      font-family: ヒラギノ明朝 ProN;
-      letter-spacing: 2px;
-      font-size: 23px;
-      line-height: 50px;
-      margin-right: 20px;
-      display: flex;
-      &__icon {
-        margin-right: 5px;
-      }
-      &__name {
-      }
-    }
-    .Mypage-top {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      margin: 0 60px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    } 
-    .register-book {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    } 
-    .registered-book {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      margin: 0 60px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }
-    .genre-book {  
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    } 
-    .status-book {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      margin: 0 60px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }
-    .reading-history {
-      color: #444444;
-      font-size: 16px;
-      line-height: 50px;
-      cursor: pointer;
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }
-  }
-  
-  .footer {
-    background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
-    height: 60px;
-    text-align: center;
-    color: #363333;
-    padding: 15px 0;
-    border-top: solid 1px #dad8d8;
-    .logo {
-      height: 10px;
-      font-size: 20px;
-      font-family: fantasy;
-    }
-    .sub {
-      height: 10px;
-      margin-top: 13px;
-      font-size: 6px;
-    }
-  }  
 }  

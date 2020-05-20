@@ -11,105 +11,25 @@
           .fa.fa-search
         .title
           検索結果  
-
-      .books-box-top
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title    
-
-      .books-box-middle
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title    
-
-      .books-box-bottom
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title
-        = link_to book_path(current_user) do
-          .book-list
-            .book-image
-              .book-genre-tag
-              .book-status
-                .book-status__title
-            .book-title    
+      .books-box
+        - @books.each do |book|
+          = link_to book_path(book) do
+            .book-list
+              .book-image
+                = image_tag book.image.to_s  
+                .book-genre-tag
+                  = book.genre
+                .book-status
+                  .book-status__title
+                    = book.status
+              .book-title
+                = book.title
         
       .bottom-space
         .pages
           page1
         = link_to "戻る", :back, class: 'btn'            
-  .footer
-    .logo
-      Book Stock
-    .sub
-      Copyright &copy; Kazuki Kouno All rights reserved   
+  
+  = render partial: 'shared/footer_1'  
                 
             
