@@ -15,7 +15,7 @@
     // background-image: url(https://www.pakutaso.com/shared/img/thumb/PPP_mokumecyou_TP_V.jpg);
     // background-size: 1100%;
     // background:linear-gradient(#F89174, #FFC778);
-    background-size: 390%; 
+    background-size: 400%; 
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
     border: outset 2px; 
     height: 1320px;
@@ -34,14 +34,15 @@
             color: rgb(11, 54, 29);
             font-family: Papyrus;
             font-size: 30px;
-            margin: 60px 0 80px;
-            border: inset rgb(124, 123, 123) 4px;
+            margin: 40px 0 100px;
+            border: outset #ffffff 4px;
+            border-radius: 3px;
             cursor: pointer;     
           }
         }
         a { 
           color: black;
-          .register-book-btn { 
+          .content-btn { 
             height: 55px;
             width: 180px;
             font-size: 20px;
@@ -49,100 +50,21 @@
             border: outset white;
             border-radius: 15px;
             margin: 0 auto;
-            margin-bottom: 80px;
+            margin-bottom: 100px;
             cursor: pointer;
             &:hover {
               background-color: #FFF;
             }
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
-            &__name {          
+            .content-name {          
             }
-            &__sub-name {
+            .content-sub-name {
               color: #434A54;
               font-size: 13px;
             } 
           }
         }       
-        a { 
-          .registered-book-btn {
-          width: 180px;
-          margin: 0 auto;
-          font-family: 游明朝体;
-          font-size: 20px;
-          margin-bottom: 80px;
-          border: outset white;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            background-color: #FFF;
-          }  
-          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));  
-          &__sub-name {
-            color: #434A54;
-            font-size: 13px;
-          }
-          }
-        }  
-        a {
-          .genre-btn {
-          width: 180px;
-          margin: 0 auto;
-          font-family: 游明朝体;
-          font-size: 20px;
-          margin-bottom: 80px;
-          border: outset white;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            background-color: #FFF;
-          }  
-          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));   
-          &__sub-name {
-            color: #434A54;
-            font-size: 13px;
-          }
-          }
-        }  
-        a { 
-          .status-btn {
-          width: 180px;
-          margin: 0 auto;
-          font-family: 游明朝体;
-          font-size: 20px;
-          margin-bottom: 80px;
-          border: outset white;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            background-color: #FFF;
-          }   
-          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));   
-          &__sub-name {
-            color: #434A54;
-            font-size: 13px;
-          }
-          }
-        }  
-        a { 
-          .reading-history-btn {
-          width: 180px;
-          margin: 0 auto;
-          font-family: 游明朝体;
-          font-size: 20px;
-          margin-bottom: 60px;
-          border: outset white;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            background-color: #FFF;
-          }  
-          background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));  
-          &__sub-name {
-            color: #434A54;
-            font-size: 13px;
-          }
-          }
-        }
+        
       }
     }
     }

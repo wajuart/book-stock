@@ -47,78 +47,41 @@ DB ・MySQL(5.6)
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|nickname|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|name|string|null: false|
+|user_image|string|
+|birthday|date|
+|introduction|string|
 ### Association
-- has_many :registers
+- has_many :books
 - has_many :comments
 
-## registersテーブル
+## booksテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
-|text|text||
-|user_id|integer|null: false, foreign_key: true|
+|user_id|bigint|null: false, foreign_key: true|
+|title|string|null: false|
+|image|string|null: false|
+|author|string|
+|publisher|string|
+|status|integer|null: false|
+|genre|integer|null: false|
+|item|integer|
+|memo|text|
+|impression|text|
+|evaluation|integer|
+|buy_date|date|
 ### Association
 - belongs_to :user
 - has_many :comments
-- has_one :memo
-- has_many  :category-tags,  through:  :registers_category-tags
-- has_many  :status-tags,  through:  :registers_status-tags
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|register_id|integer|null: false, foreign_key: true|
+|book_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :register
-
-## memosテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|register_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :register
-
-## registers_category-tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|register_id|integer|null: false, foreign_key: true|
-|category-tag_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :register
-- belongs_to :category-tag
-
-## category-tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|register_id|integer|null: false, foreign_key: true|
-### Association
-- has_many  :registers,  through:  :registers_category-tags
-
-## registers_status-tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|register_id|integer|null: false, foreign_key: true|
-|status-tag_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :register
-- belongs_to :status-tag
-
-## status-tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|register_id|integer|null: false, foreign_key: true|
-### Association
-- has_many  :registers,  through:  :registers_status-tags
+- belongs_to :book

@@ -1,6 +1,7 @@
 .MainDisplay
   = render partial: 'shared/header_1' 
   
+  
   .form
     = form_for [@book] do |f|
       .input-box    
@@ -15,55 +16,51 @@
         -#   = type="file" onchange="previewFile()"
         -# = src="" height="200" alt="Image preview..."  
           = f.label :本のイメージ  
-        = f.file_field :image, class: 'input_image', placeholder: '-- upload a image --'
+        = f.file_field :image, class: 'input_image', placeholder: '-- upload a image --', required:''
         .book-items-box
           .book-items-box__top
             .book-items-box__top__left
               .book-items-box__top__left__name
                 = f.label :タイトル 
-                = f.text_field :title, class: 'book_title', placeholder: '-- type a title --'   
+                = f.text_field :title, class: 'book_title', placeholder: '-- type a title --', required:''   
               
             .book-items-box__top__center
               .book-items-box__top__right__name
                 = f.label :著者
-                = f.text_field :author, class: 'book_author', placeholder: '-- type a author --'
+                = f.text_field :author, class: 'book_author', placeholder: '-- type a author --', required:''
              
             .book-items-box__top__right
               .book-items-box__top__left__name
                 = f.label :読書ステータス
-                = f.select :status_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["読書済み","読書済み"], ["読書中","読書中"], ["未読","未読"], ["興味有り","興味あり"]], {}, class: 'book_status'
+                = f.select :status_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["読書済み","読書済み"], ["読書中","読書中"], ["未読","未読"], ["興味有り","興味あり"]], {}, class: 'book_status', required:''
+                -# = f.collection_select :status_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["読書済み","読書済み"], ["読書中","読書中"], ["未読","未読"], ["興味有り","興味あり"]], {}, class: 'book_status'
                
           .book-items-box__lower  
             .book-items-box__lower__left
               .book-items-box__lower__left__name
                 = f.label :ジャンル
-                = f.select :genre_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'book_genre'
-                -# = f.text_field :image, class: 'book_genre', placeholder: '-- type a genre --'
-              -# .book-items-box__middle__right__input-box
+                = f.select :genre_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'book_genre', required:''
+                -# = f.collecton_select :genre_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'book_genre'
  
             .book-items-box__lower__center
               .book-items-box__lower__center__name
                 = f.label :読書媒体
-                -# = f.label :item, "読書媒体", class: 'book_item', placeholder: '-- choice item --'
                 = f.select :item_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'book_item'
-                -# = f.text_field :image, class: 'book_item', placeholder: '-- choice item --'
-              -# .book-items-box__bottom__left__input-box 
+                -# = f.collection_select :item_id, [["-- 選択して下さい --","-- 選択して下さい --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'book_item'
+            
             .book-items-box__lower__right
               .book-items-box__lower__right__name
                 = f.label :購入日
                 = f.date_field :buydate, class: 'book_purchase-date', placeholder: '-- type purchase date --'
-              -# .book-items-box__bottom__right__input-box 
+  
           .impression-box
             .impression-box__title
               = f.label :感想／メモ
             = f.text_area :impression, class: 'book_impression', placeholder: '-- type impressions or memos --'     
-            -# .impression-box__input-box
+            
           .btn-box
-            = f.submit '登録する', class: 'register-btn'  
-            -# .register-btn
-              登録する
-            = link_to "戻る", :back, class: 'btn'  
-            -# .return-btn
+            = f.submit '登録する', class: 'register-btn', data: { confirm: "この内容で登録しますか？"}  
+            = link_to "戻る", :back, class: 'btn' 
             
   = render partial: 'shared/footer_1'  
                 

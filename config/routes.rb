@@ -5,12 +5,12 @@ Rails.application.routes.draw do
 
   get 'genres/create'
 
-  devise_for :users, controllers: {   registrations: 'users/registrations',
-                                      sessions: 'users/sessions' } 
+  devise_for :users, controllers: {registrations: 'users/registrations', sessions: 'users/sessions' } 
   # get 'home/index'
   # root 'books#edit'
 
   root to: "home#index"
+
   resources :home, only: [:index] do
     collection do
       get 'app_description'
@@ -19,14 +19,15 @@ Rails.application.routes.draw do
   end  
 
   resources :users, only: [:show, :edit, :update]
-    resources :books do
-      collection do
-        get 'search'
-      end
-    end  
+  
+  resources :books, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
+    collection do
+      get 'search'
+    end
+  end  
 
     # resources :books, only: [:index, :new, :create, :show, :edit, :update, :destroy]
-    resources :registers, only: [:index, :new, :create, :show, :edit, :update, :destroy,]
+    # resources :registers, only: [:index, :new, :create, :show, :edit, :update, :destroy,]
     
     post "books/creat" => "books#creat"
     get "books/:id" => "books#show"

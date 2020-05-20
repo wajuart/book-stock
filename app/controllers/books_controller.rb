@@ -3,6 +3,8 @@ class BooksController < ApplicationController
   # before_action :set_tweet, only: [:edit, :show]
   # before_action :move_to_index, except: [:index, :show, :search]
   before_action :authenticate_user!
+  # before_action :set_user
+  # before_action :authenticate_user!, only: [:show]
 
   def index
     @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(5)
@@ -50,20 +52,27 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find_by(id: params[:id])
-    @user = User.find_by(id: @book.user_id)
+    # @user = User.find_by(id: @book.user_id)
   end
+
 
   def edit
+    @book = Book.find(id: params[:id])
   end
+
 
   def update
+    book = Book.find(params[:id])
+    book.update(book_params)
+  end
+  
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
   end
 
-  def delete
-  end
 
   def search
-    #Viewのformで取得したパラメータをモデルに渡す
     @books = Book.search(params[:search])
   end
 
