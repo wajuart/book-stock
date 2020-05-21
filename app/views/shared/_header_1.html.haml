@@ -45,7 +45,7 @@
     %li.title-name  
       My Page
   %ul.content-list    
-    = link_to user_path(current_user) do    
+    = link_to my_page_user_path(current_user) do    
       %li.content-list__item
         ＴＯＰ
     = link_to new_book_path(current_user) do

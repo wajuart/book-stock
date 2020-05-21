@@ -10,28 +10,28 @@ class Book < ApplicationRecord
 
   enum status: {
     "-- 選択して下さい --": 0,
-    読書済み: 1,
-    読書中: 2,
-    未読: 3,
-    興味有り:4
+    read_books: 1,
+    reading_books: 2,
+    will_read_books: 3,
+    interested:4
   }, _prefix: true
 
   enum genre: {
     "-- 選択して下さい --": 0,
-    ビジネス: 1,
-    自己啓発: 2,
-    マネー: 3,
-    政治／経済: 4,
-    勉強／スキル: 5,
-    料理: 6,
-    趣味: 7,
-    健康: 8,
-    スポーツ: 9,
-    子育て: 10,
-    小説: 11,
-    漫画: 12,
-    生活: 13,
-    その他: 14
+    business: 1,
+    self_enlightenment: 2,
+    money: 3,
+    politics_economy: 4,
+    study_skill: 5,
+    cooking: 6,
+    hobby: 7,
+    health: 8,
+    sports: 9,
+    parenting: 10,
+    novel: 11,
+    comic: 12,
+    life: 13,
+    etc: 14
   }, _prefix: true
 
   enum item: {

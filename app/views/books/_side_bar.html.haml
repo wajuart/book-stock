@@ -1,7 +1,7 @@
 .mypage-side      
   .contents-var
     %ul.contents
-      = link_to (current_user) do
+      = link_to my_page_user_path(current_user) do
         %li.my-page-btn
           My Page
       = link_to new_book_path(current_user) do   

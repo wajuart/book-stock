@@ -16,7 +16,7 @@
         -#   = type="file" onchange="previewFile()"
         -# = src="" height="200" alt="Image preview..."  
           = f.label :本のイメージ  
-        = f.file_field :image, class: 'input_image', placeholder: '-- upload a image --', required:''
+        = f.file_field :image, class: 'input_image', placeholder: '-- upload a image --'
         .book-items-box
           .book-items-box__top
             .book-items-box__top__left
@@ -27,7 +27,7 @@
             .book-items-box__top__center
               .book-items-box__top__right__name
                 = f.label :著者
-                = f.text_field :author, class: 'book_author', placeholder: '-- type a author --', required:''
+                = f.text_field :author, class: 'book_author', placeholder: '-- type a author --'
              
             .book-items-box__top__right
               .book-items-box__top__left__name
@@ -51,7 +51,7 @@
             .book-items-box__lower__right
               .book-items-box__lower__right__name
                 = f.label :購入日
-                = f.date_field :buydate, class: 'book_purchase-date', placeholder: '-- type purchase date --'
+                = f.date_field :buy_date, class: 'book_purchase-date', placeholder: '-- type purchase date --'
   
           .impression-box
             .impression-box__title

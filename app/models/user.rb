@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :comments
          
 
-  validates :name, presence: true, uniqueness: true 
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: true 
+
+  mount_uploader :user_image, ImageUploader
 
 end

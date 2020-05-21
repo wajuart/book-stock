@@ -9,6 +9,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :encrypted_password, null: false, default: "", unique: true
       t.string :user_image
       t.date :birth_day
+      t.string :favorite_auther
+      t.string :favorite_genre
+      t.string :favorite_book
       t.text :introduction
 
       ## Recoverable
