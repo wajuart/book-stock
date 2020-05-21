@@ -41,11 +41,11 @@ Rails.application.routes.draw do
       get 'novel'
       get 'comic'
       get 'life'
-      get 'ect'
+      get 'etc'
       get 'item'
       get 'real_book'
       get 'e_book'
-      get 'Paper_white'
+      get 'paper_white'
     end  
   end
 

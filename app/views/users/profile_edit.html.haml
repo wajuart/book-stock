@@ -17,19 +17,20 @@
           .name-box
             .current-name
               = current_user.name
-            = f.text_field :name, class: 'name-form', placeholder: 'type new nickname'
+            = f.text_field :name, class: 'name-form', placeholder: '-- new nickname --'
         .profile-middle
           .favorite-left
             .form_1
               = f.label :誕生日
-              = f.date_field :birth_day, class: 'birth_day', placeholder: '-- type birth_day --'
+              = f.date_field :birth_day, class: 'birth_day'
             .form_2
               = f.label :好きな著者
               = f.text_field :favorite_auther, class: 'f_auther-form', placeholder: '-- favorite author --'
           .favorite-right    
             .form_3
               = f.label :好きなジャンル
-              = f.text_field :favorite_genre, class: 'f_genre-form', placeholder: '-- favorite genre --'  
+              -# = f.text_field :favorite_genre, class: 'f_genre-form', placeholder: '-- favorite genre --'
+              = f.select :favorite_genre, [["-- 選択して下さい --","-- 選択して下さい --"], ["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'f_genre-form'
             .form_4
               = f.label :愛読書
               = f.text_field :favorite_book, class: 'f_book-form', placeholder: '-- favorite book --'
