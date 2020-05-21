@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+}
+
+.MypageView {
+  background-color: #f1f1f1;
+  height: 1200px; 
+  .MypageContainer {
+    margin: 0 auto;
+    height: 1000px;
+    width: 1350px;
+    display: flex;
+    .Side-var {
+      width: 300px;
+      margin: 40px 40px 0 0;
+      .Mypage-nav { 
+        &__list {
+          &__item-top {
+            background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            height: 48px;
+            width: 100%;
+            padding: 16px;
+            list-style: none;
+            &:hover {
+              background-color: rgba(60, 201, 206, 0.514);
+              font-weight: bold;
+            }
+          }  
+          &__item {
+            background-color: #ffffff;
+            font-size: 14px;
+            height: 48px;
+            width: 100%;
+            padding: 16px;
+            display: flex;
+            border-bottom: solid thin #ebebeb;
+            position: relative;
+            &:hover {
+              background-color: #f8f8f8;
+              color:rgb(42, 84, 167);
+              font-weight: bold;
+            }  
+            .icon-arrow-right {
+              position: absolute;
+              top: 50%;
+              right: 16px;
+              color: #ccc;
+              transform: translate(0, -50%);
+              }
+          }
+        }
+        &__head {
+          color: rgb(42, 84, 167);
+          font-weight: bold;
+          font-size: 18px;
+          height: 48px;
+          width: 100%;
+          margin-top: 18px;
+          padding: 16px;
+        }
+      }  
+    }
+    .Main-content {
+      width: 100%;
+      margin-top: 40px;
+      .user-icon-box {
+        background-color: #e6edfc;;
+        height: 200px;
+        margin-bottom: 20px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        .user-icon {
+          background-color: rgb(255, 246, 246);
+          height: 120px;
+          width: 120px;
+          margin: 20px 100px;
+          padding: 3px;
+          border: solid thin;
+          img {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            object-fit: contain;
+          }
+        }
+        .trade-info {
+          width: 300px;
+          margin-left: 40px;
+          &__nickname {
+            width: 100%;
+            font-size: 24px;
+            margin: 24px 0 30px;
+            text-align: center;
+          }
+          &__count {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            &__sell-title {
+              font-size: 18px;
+            }  
+            &__sell-count {
+              font-size: 20px;
+              margin-right: 30px;
+            }
+            &__buy-title {
+              font-size: 18px;
+            }  
+            &__buy-count {
+              font-size: 20px;
+            }
+          }  
+        }
+      }
+      .trade-tab { 
+        display: flex;
+      }  
+      .trade-tab li {
+        background-color: rgb(146, 158, 212);
+        height: 60px;
+        width: 220px;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 60px;
+        text-align: center;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      .trade-tab li.active {
+        background-color: #ffffff;
+        color: #3CCACE;
+        cursor: auto;
+      }
+      .books-area {
+        background-color: #ffffff;
+        height: 800px;
+        padding: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        .book-list {
+          // background-image: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+          background-color: rgb(223, 251, 252);
+          height: 250px;
+          width: 180px;
+          box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
+          cursor: pointer;
+          &:hover {
+            opacity: 0.8;
+          }                 
+          .book-image {
+            background-image: url(https://images-na.ssl-images-amazon.com/images/I/51jPX80edlL._SX352_BO1,204,203,200_.jpg);
+            background-size: 100%;
+            height: 190px;
+            padding: 20px;
+            position: relative;
+            .book-genre-tag {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 20px;
+              width: 70px;
+              background-color: slateblue;
+              color: #000;
+              font-size: 11px;     
+              text-align: center;
+              // color: #fff;                   
+            }
+            .book-status {
+              position: absolute;
+              top: 0;
+              right: 0;
+              z-index: 2;
+              color: #000;
+              border-top: 30px solid #4ca53ad7;
+              border-right: 30px solid #4ca53ad7;
+              border-bottom: 30px solid transparent;
+              border-left: 30px solid transparent;
+              &__title {
+                color: white;
+                font-weight: bold;
+                position: absolute;
+                top: -18px;
+                left: -10px;
+                width: 40px;
+                font-size: 12px;
+                transform: rotate(45deg);
+              }
+            }
+          }
+          .book-title {
+            height: 60px;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 60px;
+            font-size: 16px;
+            font-family: クレー;
+            padding: 0 13px;
+            text-align: center;
+          }
+        }                      
+      }
+      .tab-area ul {
+        display: none;
+      }
+      .tab-area ul.list-show {
+        display: block;
+      }
+  }
+}
+
+.mypage-nav a {
+  color: #222222;
+  text-decoration: none;
+}
+
+.list-show a {
+  color: #222222;
+  text-decoration: none;
+  line-height: 45px;
+}
+
+.user-icon-box a {
+  color: #000;
+}
+
+}
+// .MainDisplay {
+//   background-color: #ffffff;
+//   height: 100vh;
+//   width: 100vw;
+  
+//   .MainSecondHeader {
+//     .search-box {
+//       height: 100%;
+//       width: 600px;
+//       display: flex;
+//       position: relative;
+//       &__input {
+//         background-color: #ffffff;
+//         height: 35px;
+//         width: 350px;
+//         color: #555555;
+//         font-size: 14px;
+//         margin-top: 8px;
+//         padding: 0 90px 0 20px;
+//         border: inset #eeeeee 2px;
+//         border-radius: 20px;
+//         line-height: 35px;
+//       }  
+//       .search-btn {
+//         position: absolute;
+//         left: 280px;
+//         input {
+//           background-color: #7699b6;
+//           font-size: 13px;
+//           color: #000000;
+//           padding: 0 10px;
+//           border: outset thin;
+//           border-radius: 5px;
+//           &:hover {
+//             opacity: 0.7;
+//           }
+//         }
+//       }  
+//     }
+    
+//   }
+// }  
+// .UserDetails {
+//   height: calc(100vh - 270px);
+//   .DetailsContainer {
+//     height: 100%;
+//     width: 100%;         
+//     padding: 20px 80px; 
+//       .title-box {  
+//         height: 30px;
+//         display: flex;
+//         margin: 20px 0 40px 60px;
+//         padding-left: 30px;
+//         .icon {
+//           font-size: 25px;
+//           line-height: 30px;
+//           margin-right: 8px;
+//         }
+//         .title {
+//           font-family: ヒラギノ明朝 ProN;
+//           letter-spacing: 5px;
+//           font-size: 25px;
+//           line-height: 30px;
+//           padding: 0 12px ;
+//         }        
+//       }
+//       .Details-upper {
+//         // background-color: #fafdea;
+//         height: 280px;
+//         padding: 0 180px;
+//         display: flex;
+//         justify-content: space-evenly;
+//         &__left {
+//           // background-color: #fcdcdc;
+//           width: 100%;
+//           .user-icon {
+//             background-color: #ffffff;
+//             background-image: url(https://pics.prcm.jp/dona1118/82181124/png/82181124.png);
+//             background-size: 100%;
+//             height: 180px;
+//             width: 180px;
+//             border: groove;
+//             border-radius: 50%;
+//             margin: 15px 0 15px 300px;
+//           }
+//           .user-nickname {
+//             font-size: 20px;
+//             margin-top: 30px;
+//             margin: 30px 0 0 330px;
+//           }
+//         }  
+//         &__right {
+//           // background-color: #e3eaff;
+//           width: 100%;
+//           padding: 20px 20px;
+//           ul {
+//            li {
+//              font-size: 17px;
+//              margin: 30px 0;
+//            } 
+//           } 
+//         }                        
+//       }
+//       .Details-lower {
+//         // background-color: #eeffdd;
+//         height: 250px;
+//         padding: 15px 180px;
+//         .user-introduction {
+//           height: 100%;
+//           width: 600px;
+//           border: inset;
+//           margin: 0 auto;
+//         }
+//       }  
+//   }
+// }  

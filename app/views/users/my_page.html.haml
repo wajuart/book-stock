@@ -1,0 +1,196 @@
+.MainDisplay
+  = render partial: 'shared/header_1'
+
+  .MypageView  
+    .MypageContainer
+      .Side-var
+        .Mypage-nav
+          %ul.Mypage-nav__list
+          
+            %li.Mypage-nav__list__item-top マイページ
+          = link_to profile_edit_user_path(current_user) do
+            %li.Mypage-nav__list__item
+              .item-name プロフィール
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+          = link_to new_book_path(current_user) do
+            %li.Mypage-nav__list__item
+              .item-name 本を登録
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+          = link_to all_books_user_path(current_user) do
+            %li.Mypage-nav__list__item
+              .item-name マイブック
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+
+          %h3.Mypage-nav__head ジャンル
+          %ul.Mypage-nave__list
+            
+            %li.Mypage-nav__list__item
+              .item-name ビジネス
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x 
+          
+            %li.Mypage-nav__list__item
+              .item-name 自己啓発
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+
+            %li.Mypage-nav__list__item
+              .item-name マネー
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x      
+
+            %li.Mypage-nav__list__item
+              .item-name 政治／経済
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+          
+            %li.Mypage-nav__list__item
+              .item-name 勉強／スキル
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x 
+          
+            %li.Mypage-nav__list__item
+              .item-name 料理
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+          
+            %li.Mypage-nav__list__item
+              .item-name 趣味
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+          
+            %li.Mypage-nav__list__item
+              .item-name 健康
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x 
+          
+            %li.Mypage-nav__list__item
+              .item-name 子育て
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+            %li.Mypage-nav__list__item
+              .item-name 小説
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+            %li.Mypage-nav__list__item
+              .item-name 漫画
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+            %li.Mypage-nav__list__item
+              .item-name 生活
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+            %li.Mypage-nav__list__item
+              .item-name その他
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x 
+          -# = link_to destroy_user_session_path, method: :delete do   
+          -#   %li.Mypage-nav__list__item
+          -#     .item-name ログアウト
+          -#     .icon-arrow-right
+          -#       .fa.fa-caret-right.fa-2x
+          %h3.Mypage-nav__head 読書媒体
+          %ul.Mypage-nave__list
+            
+            %li.Mypage-nav__list__item
+              .item-name リアル本
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x
+            %li.Mypage-nav__list__item
+              .item-name 電子書籍
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x  
+            %li.Mypage-nav__list__item
+              .item-name Paperwhite
+              .icon-arrow-right
+                .fa.fa-caret-right.fa-2x  
+
+      .Main-content
+        .user-icon-box
+          = link_to profile_edit_user_path(current_user) do
+            .user-icon
+              = image_tag current_user.user_image.url
+          .trade-info
+            .trade-info__nickname
+              = current_user.name
+            .trade-info__count  
+              .trade-info__count__sell-title 登録数
+              .trade-info__count__sell-count 25      
+              .trade-info__count__buy-title 購入数
+              .trade-info__count__buy-count 17
+        %ul.trade-tab
+          %li.active すべて
+          %li 読書済み
+          %li 読書中
+          %li 未読
+          %li 興味有り
+
+        .books-area 
+          = link_to book_path(current_user) do
+            .book-list
+              .book-image
+                .book-genre-tag スポーツ
+                .book-status
+                  .book-status__title 未読
+              .book-title 
+                AAA
+          = link_to book_path(current_user) do
+            .book-list
+              .book-image
+                .book-genre-tag スポーツ
+                .book-status
+                  .book-status__title 未読
+              .book-title 
+                AAA
+          = link_to book_path(current_user) do
+            .book-list
+              .book-image
+                .book-genre-tag スポーツ
+                .book-status
+                  .book-status__title 未読
+              .book-title 
+                AAA
+          = link_to book_path(current_user) do
+            .book-list
+              .book-image
+                .book-genre-tag スポーツ
+                .book-status
+                  .book-status__title 未読
+              .book-title 
+                AAA
+          
+          
+       
+
+           
+                    
+
+
+  -# .UserDetails
+  -#   .DetailsContainer
+  -#     .title-box
+  -#       .icon
+  -#         .fa.fa-user
+  -#       .title
+  -#         ユーザー情報
+  -#     .Details-upper
+  -#       .Details-upper__left
+  -#         .user-icon
+
+  -#         .user-nickname
+  -#           ニックネーム
+  -#       .Details-upper__right
+  -#         %ul.regdister-info
+  -#           %li.list 登録数 :
+  -#           %li.list 登録ジャンル :
+  -#           %li.list アプリ使用開始日 :
+  -#     .Details-lower
+  -#       .user-introduction
+  -#     .Bottom-space       
+
+  = render partial: 'shared/footer_1'
+
+

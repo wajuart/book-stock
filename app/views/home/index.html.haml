@@ -23,10 +23,10 @@
         %br沢山の要素を持つ沢山の本を、この1つのアプリで
         %p効率良く管理してみましょう！
       .btn_box
-        = link_to registers_path(current_user) do   
+        = link_to books_path(current_user) do   
           .btn
             Appを使う
-        = link_to registers_path(current_user) do    
+        = link_to books_path(current_user) do    
           .btn 
             Appの解説         
   = render partial: 'shared/footer_1'           
