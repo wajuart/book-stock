@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     member do
       get 'my_page'
       get 'profile_edit'
+      get 'my_books_show'
       get 'all_books'
       get 'read_books'
       get 'reading_books'

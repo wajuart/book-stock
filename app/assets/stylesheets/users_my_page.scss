@@ -7,7 +7,6 @@
   height: 1200px; 
   .MypageContainer {
     margin: 0 auto;
-    height: 1000px;
     width: 1350px;
     display: flex;
     .Side-var {
@@ -85,6 +84,9 @@
               margin: 20px 0;
               padding: 3px;
               border: solid thin;
+              &:hover {
+                opacity: 0.8;
+              }     
               img {
                 height: 100%;
                 width: 100%;
@@ -148,26 +150,28 @@
       }
       .books-area {
         background-color: #ffffff;
-        height: 800px;
-        padding: 30px;
+        height: 880px;
+        padding: 0 18px;
         display: flex;
-        justify-content: space-evenly;
-        .book-list {
-          // background-image: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+        flex-wrap: wrap;
+        .book-list { 
+          background-image: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
           background-color: rgb(223, 251, 252);
-          height: 250px;
           width: 180px;
+          margin: 22px 43px;
           box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
           cursor: pointer;
           &:hover {
             opacity: 0.8;
-          }                 
+          }
           .book-image {
-            background-image: url(https://images-na.ssl-images-amazon.com/images/I/51jPX80edlL._SX352_BO1,204,203,200_.jpg);
-            background-size: 100%;
             height: 190px;
-            padding: 20px;
+            padding: 3px;
             position: relative;
+            img {
+              height: 100%;
+              width: 100%;
+            }
             .book-genre-tag {
               position: absolute;
               top: 0;
@@ -178,7 +182,7 @@
               color: #000;
               font-size: 11px;     
               text-align: center;
-              // color: #fff;                   
+              color: #fff;                   
             }
             .book-status {
               position: absolute;
@@ -197,8 +201,9 @@
                 top: -18px;
                 left: -10px;
                 width: 40px;
-                font-size: 12px;
+                font-size: 10px;
                 transform: rotate(45deg);
+                text-align: center;
               }
             }
           }
@@ -211,6 +216,7 @@
             font-family: クレー;
             padding: 0 13px;
             text-align: center;
+            overflow: hidden;
           }
         }                      
       }

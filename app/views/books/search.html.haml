@@ -10,7 +10,7 @@
         .icon
           .fa.fa-search
         .title
-          検索結果  
+          = "' #{params[:keyword]} ' の検索結果"
       .books-box
         - @books.each do |book|
           = link_to book_path(book) do

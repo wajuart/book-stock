@@ -6,7 +6,6 @@
       .Side-var
         .Mypage-nav
           %ul.Mypage-nav__list
-          
             %li.Mypage-nav__list__item-top マイページ
           = link_to profile_edit_user_path(current_user) do
             %li.Mypage-nav__list__item
@@ -119,7 +118,7 @@
           .user-icon-box
             = link_to profile_edit_user_path(current_user) do
               .user-icon
-                = image_tag current_user.user_image.url
+                = image_tag current_user.user_image.url, class: "user-image_set"
           .trade-info
             .trade-info__nickname
               = current_user.name
@@ -136,38 +135,18 @@
           %li 興味有り
 
         .books-area 
-          = link_to book_path(current_user) do
+          - @books.each do |book|
             .book-list
-              .book-image
-                .book-genre-tag スポーツ
-                .book-status
-                  .book-status__title 未読
-              .book-title 
-                AAA
-          = link_to book_path(current_user) do
-            .book-list
-              .book-image
-                .book-genre-tag スポーツ
-                .book-status
-                  .book-status__title 未読
-              .book-title 
-                AAA
-          = link_to book_path(current_user) do
-            .book-list
-              .book-image
-                .book-genre-tag スポーツ
-                .book-status
-                  .book-status__title 未読
-              .book-title 
-                AAA
-          = link_to book_path(current_user) do
-            .book-list
-              .book-image
-                .book-genre-tag スポーツ
-                .book-status
-                  .book-status__title 未読
-              .book-title 
-                AAA
+              = link_to my_books_show_user_path(book) do
+                .book-image
+                  = image_tag book.image.to_s  
+                  .book-genre-tag
+                    = book.genre
+                  .book-status
+                    .book-status__title
+                      = book.status
+                .book-title
+                  = book.title
           
           
        

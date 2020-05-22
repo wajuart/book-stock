@@ -7,7 +7,9 @@ class BooksController < ApplicationController
   # before_action :authenticate_user!, only: [:show]
 
   def index
-    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    @books = Book.page(params[:page]).order(created_at: :asc)
+    # @books = Book.includes(:images).order('created_at DESC').limit(3)
+    # @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     # @books = Book.all
     # @books = @books.includes(:user)
     # @books = @user.books.includes(:user)
@@ -47,12 +49,11 @@ class BooksController < ApplicationController
       # render 'new'
       render :new
     end
-
   end
 
   def show
     @book = Book.find_by(id: params[:id])
-    # @user = User.find_by(id: @book.user_id)
+    @user = User.find_by(id: @book.user_id)
   end
 
 
@@ -73,7 +74,7 @@ class BooksController < ApplicationController
 
 
   def search
-    @books = Book.search(params[:search])
+    @books = Book.search(params[:keyword])
   end
 
 
@@ -93,14 +94,17 @@ class BooksController < ApplicationController
     p "**********"
     p params
     params.require(:book).permit(
-      :image,
       :title,
+      :image,
       :author,
+      :publisher,
       :status,
       :genre,
       :item,
-      :buydate,
-      :impression
+      :memo,
+      :impression,
+      :evaluation,
+      :buy_date,
     ).merge(user_id: current_user.id)
     # params.require(:book).permit(:content, :image).merge(user_id: current_user.id)
   end

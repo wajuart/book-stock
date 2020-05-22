@@ -6,173 +6,110 @@
   background-color: #ffffff;
   height: 100vh;
   width: 100vw;
-  
   .form {
     height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
     font-size: 13px;
-    .input-box {
-      height: 100%;           
-      width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      &__content-name {
-        letter-spacing: 2px;
-        font-size: 22px;
-        line-height: 30px;
-        display: flex;
-        .icon {
-          margin-right: 8px;
+    padding: 0 150px;
+    .registers-box {
+      display: flex;
+      .Left-side { 
+        height: 650px;
+        width: 1200px;
+        padding: 30px 100px 0 270px;
+        .Left-upper_form {
+          display: flex;
+          .image-form {
+            height: 190px;
+            width: 160px;
+            border: outset 3px rgb(190, 199, 223);
+            margin: 0 auto;
+            font-size: 5px;
+            line-height: 160px; 
+            text-align: center;
+            margin-bottom: 60px;
+          }
+          .evaluation-form {
+            .evaluation_form {
+              background-color: #ffffff;
+              height: 100px;
+              width: 130px;
+              font-size: 20px;
+              margin-right: 20px;
+              display: inline-block;
+            }
+          }  
         }
-      }       
-      .book_image {
-        height: 170px;
-        width: 150px;
-        border: outset 3px rgb(190, 199, 223);
-        margin: 0 auto;
-        font-size: 5px;
-        line-height: 160px; 
-        text-align: center;
-        margin-bottom: 10px;
       }  
-      .book_image-title {
-        margin: 0 auto;
-        font-size: 8px;
-        text-align: center;
-        margin-bottom: 10px;    
+      .Right-side { 
+        height: 650px;
+        width: 100%;
+        padding: 25px 70px 15px 50px;
+        .upper-box {
+          margin-bottom: 35px;
+          display: flex;
+        }
+        .lower-box {
+          margin-bottom: 35px;
+          display: flex;
+        }
       }
-      .input_image {
-        display: block;
-        font-size: 11px;
-        text-align: center;
-        height: 25px;
-        width: 230px;
-        margin: 0 auto;
+      .left-input_form {
+        height: 50px;
+        width: 100%;
+        font-size: 22px;
         border: inset #dbedf0 2px;
-        padding: 0 8px;
+        margin-bottom: 43px;
+        padding: 0 15px;
       }
-      .book-items-box {
-        height: 400px;
-        margin: 0 auto;
-        padding: 15px 30px;
-        &__top {
-          display: flex;
-          justify-content: space-evenly;
-          margin-bottom: 20px;
-          padding: 0 50px;
-          &__left {
-            &__name {
-              height: 20px;
-              width: 100px;
-              margin-right: 155px;
-              margin-bottom: 30px;
-            }
-            .book_title {
-              height: 30px;
-              width: 250px;
-              border: inset #dbedf0 2px;
-              border-radius: 5px;
-              padding: 0 8px;
-            }
-          }
-          &__center {
-            &__name {
-              height: 20px;
-              width: 100px;
-              margin-bottom: 30px;
-            }
-            .book_author {
-              height: 30px;
-              width: 250px;
-              border: inset #dbedf0 2px;
-              border-radius: 5px;
-              padding: 0 8px;
-            }
-          }
-          &__right {
-            &__name {
-              height: 20px;
-              width: 100px;
-              margin-right: 155px;
-              margin-bottom: 30px;
-            }
-            .book_status {
-              background-color: white;
-              height: 30px;
-              width: 250px;
-              border: inset #dbedf0 2px;
-              padding: 0 8px;
-            }
-          }        
-        }
-        &__lower {
-          display: flex;
-          justify-content: space-evenly;
-          margin-bottom: 20px;
-          padding: 0 50px;
-          &__left {
-            &__name {
-              height: 20px;
-              width: 100px;
-              margin-right: 155px;
-              margin-bottom: 30px;
-            }
-            .book_genre {
-              background-color: white;
-              height: 30px;
-              width: 250px;
-              border: inset #dbedf0 2px;
-              padding: 0 8px;
-            }
-          }
-          &__center {
-            &__name {
-              height: 20px;
-              width: 100px;
-              margin-right: 155px;
-              margin-bottom: 30px;
-            }
-            .book_item {
-              background-color: white;
-              height: 30px;
-              width: 250px;
-              border: inset #dbedf0 2px;
-              padding: 0 8px;
-            }
-          }
-          &__right {
-            &__name {
-              height: 20px;
-              width: 100px;
-              margin-right: 155px;
-              margin-bottom: 30px;
-            }
-            .book_purchase-date {
-              background-color: white;
-              height: 30px;
-              width: 250px;
-              border: inset #dbedf0 2px;
-              border-radius: 5px;
-              padding: 0 8px;
-            }
-          }   
-        }
-
-        .impression-box {
-          margin-left: 100px;
-          padding: 0 10px;
-          &__title {
-          }
-          .book_impression {
-            height: 110px;
-            width: 89%;
-            border: inset #dbedf0 2px;
-            padding: 0 8px;
-          }
-        }
+      .right-select_form {
+        background-color: #ffffff;
+        height: 50px;
+        width: 250px;
+        font-size: 18px;
+        border: inset #dbedf0 2px;
+        border-radius: 2px;
+        margin: 0 35px 0 0;
+        padding: 0 30px;
+        text-align: center;
+      }
+      .area_form {
+        height: 90px;
+        width: 535px;
+        font-size: 14px;
+        border: inset #dbedf0 2px;
+        border-radius: 2px;
+        margin-bottom: 20px;
+        padding: 5px 15px;
+        display: block;
+      }
+      .title-line_1 {
+        font-size: 14px;
+        margin: 65px 0 5px 5px;
+        display: flex;
+      }  
+      .title-line {
+        font-size: 14px;
+        margin:0 0 5px 5px;
+        display: flex;
+      }
+      .required {
+        background-color: #ff0000;
+        color: #ffffff;
+        margin-left: 20px;
+        padding: 0 6px;
+        border-radius: 3px;
+      }
+      .optional {
+        background-color: #7c7c7c;
+        color: #ffffff;
+        margin-left: 20px;
+        padding: 0 6px;
+        border-radius: 3px;
       }
       .btn-box {
         height: 100px;
+        width: 535px;
         margin-top: 5px;
         padding-top: 25px;
         font-size: 20px;
@@ -180,13 +117,12 @@
         letter-spacing: 3px;
         line-height: 50px;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         .register-btn {
           background-color: #04a711;
           height: 50px;
           width: 180px;
           color: #eeeeee;
-          margin-right: 60px;
           border: outset 2px;
           border-radius: 20px;
           cursor: pointer;
@@ -214,5 +150,3 @@
 a {
   text-decoration: none;
 }
-
-
