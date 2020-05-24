@@ -17,10 +17,8 @@
             .name
               = @book.user.name
           .user-image_box
-            -# = image_tag @book.user.image.to_s, class: "user-image_set"
-            -# aaaaaa
-            -# = image_tag @book.user.image.to_s
-            -# = @book.user.image
+            = link_to users_path do
+              = image_tag @user.user_image
         .Left-image_form
           .image-box
             = image_tag @book.image
@@ -55,59 +53,14 @@
           .buy_date-form
             .title-line
               .title
-                登録ユーザー評価 :
+                登録者評価 :
             .right-select_box
               = @book.evaluation
         .impression-form
           .title-line
             .title
               チャットスペース  
-          .area_box
-
-
-  -# .book_detail
-  -#   .title-box
-  -#     .icon
-  -#       .fa.fa-book
-  -#     .content-title
-  -#       本の詳細
-  -#   .upper_box
-  -#     .upper_left_box
-  -#       .title
-  -#         FACT FULNESS
-  -#       .like_box  
-  -#       .image   
-  -#       .author
-  -#         明智光秀
-  -#     .upper_right_box
-  -#       .top
-  -#         .heading
-  -#           読書ステータス
-  -#           .status
-  -#             読書済み
-  -#         .heading
-  -#           ジャンル
-  -#           .genre
-  -#             ビジネス
-  -#       .middle
-  -#         .heading
-  -#           読書媒体
-  -#           .item
-  -#             電子書籍
-  -#         .heading
-  -#           購入日
-  -#           .buydate
-  -#             2020年4月20日
-  -#       .heading
-  -#         感想／メモ
-  -#       .impression  
-  -#         最高に面白い
-
-  -#   .btn-box
-  -#     = link_to edit_book_path do 
-  -#       .register-btn
-  -#         編集画面へ
-  -#     = link_to "戻る", :back, class: 'btn'  
+          .area_box 
 
   = render partial: 'shared/footer_1' 
                 

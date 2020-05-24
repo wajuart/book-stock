@@ -4,7 +4,7 @@
 
 .MypageView {
   background-color: #f1f1f1;
-  height: 1200px; 
+  height: 1300px; 
   .MypageContainer {
     margin: 0 auto;
     width: 1350px;
@@ -63,11 +63,11 @@
         }
       }  
     }
-    .Main-content {
+    .Main-content_my {
       width: 100%;
       margin-top: 40px;
       .user-top {
-        background-color: #e6edfc;;
+        background-color: #e6edfc;
         height: 200px;
         margin-bottom: 20px;
         padding: 20px;
@@ -91,7 +91,7 @@
                 height: 100%;
                 width: 100%;
                 margin: 0 auto;
-                object-fit: contain;
+                object-fit: cover;
               }
             }
           }  
@@ -150,13 +150,14 @@
       }
       .books-area {
         background-color: #ffffff;
-        height: 880px;
-        padding: 0 18px;
+        height: 920px;
+        padding: 20px 18px;
         display: flex;
         flex-wrap: wrap;
         .book-list { 
-          background-image: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+          background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
           background-color: rgb(223, 251, 252);
+          height: 250px;
           width: 180px;
           margin: 22px 43px;
           box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
@@ -166,11 +167,12 @@
           }
           .book-image {
             height: 190px;
-            padding: 3px;
+            padding: 4px 14px;
             position: relative;
             img {
               height: 100%;
               width: 100%;
+              object-fit: contain;
             }
             .book-genre-tag {
               position: absolute;

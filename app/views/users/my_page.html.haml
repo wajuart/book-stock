@@ -113,7 +113,7 @@
               .icon-arrow-right
                 .fa.fa-caret-right.fa-2x  
 
-      .Main-content
+      .Main-content_my
         .user-top
           .user-icon-box
             = link_to profile_edit_user_path(current_user) do
@@ -139,7 +139,7 @@
             .book-list
               = link_to my_books_show_user_path(book) do
                 .book-image
-                  = image_tag book.image.to_s  
+                  = image_tag book.image.to_s
                   .book-genre-tag
                     = book.genre
                   .book-status

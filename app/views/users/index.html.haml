@@ -1,0 +1,43 @@
+.MainDisplay
+  = render partial: 'shared/header_1'
+
+  .title-box
+    .icon
+      .fa.fa-edit
+    .content-title
+      プロフィール編集
+  .form
+    = form_for(@user, local: true) do |f|
+      .profile-container
+        .profile-top 
+          .image-form
+            = f.label :user_image, class: "user-image" do
+              = image_tag current_user.user_image.url
+              = f.file_field :user_image, class: 'hidden'
+          .name-box
+            .current-name
+              = current_user.name
+            = f.text_field :name, class: 'name-form', placeholder: '-- new nickname --'
+        .profile-middle
+          .favorite-left
+            .form_1
+              = f.label :誕生日
+              = f.date_field :birth_day, class: 'birth_day'
+            .form_2
+              = f.label :好きな著者
+              = f.text_field :favorite_author, class: 'f_author-form', placeholder: '-- favorite author --'
+          .favorite-right    
+            .form_3
+              = f.label :好きなジャンル
+              = f.select :favorite_genre, [["-- 選択して下さい --","-- 選択して下さい --"], ["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'f_genre-form'
+            .form_4
+              = f.label :愛読書
+              = f.text_field :favorite_book, class: 'f_book-form', placeholder: '-- favorite book --'
+        .profile-bottom
+          .text-form
+            = f.label :自己紹介
+            = f.text_area :introduction, class: "introduction", rows: "7", maxlength: "500", placeholder: "自己紹介（500文字以内）\n\n例）\nジャンル問わず、毎月10冊程度の本を読んでいます。おすすめの本があれば共有したいです。よろしくお願いします。"
+        .btn-form
+          = f.submit "変更する", class:"edit-btn", data: { confirm: "この内容で登録しますか？"}
+
+  = render partial: 'shared/footer_1'

@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
-  
+  before_action :set_user, only: [:index, :my_page, :edit, :profile_edit, :show]
+
+  def index
+  end
 
   def new
     @user = User.new
@@ -18,14 +21,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:id])
-    @user = User.find(params[:id])
+    # @user = User.find_by(params[:id])
+    # @book = Book.find_by(params[:id])
     # @user = User.where(user_id: current_user.id)
   end
 
   def my_page
-    @books = Book.page(params[:page]).order(created_at: :asc)
-    @user = User.find(params[:id])
+    # @books = Book.page(params[:page]).order(created_at: :asc)
+    # @books = Book.user.book.order(created_at: :asc)
+    @books = current_user.books.page(params[:page]).per(12).order(created_at: :desc)
+    # @user = User.find(params[:id])
     # @user = User.where(user_id: current_user.id)
   end
 
@@ -35,11 +40,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
   end  
   
   def profile_edit
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
   end  
 
   def update
@@ -56,6 +61,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :user_image, :birth_day, :favorite_author, :favorite_genre, :favorite_book, :introduction)
+  end
+
+  def set_user
+    @user = User.find_by(params[:id]) 
   end
 
 #   def index

@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+ 
+.MainDisplay {
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100vw;
+  .form {
+    height: calc(100vh - 270px);
+    font-family: ヒラギノ明朝 ProN;
+    font-size: 13px;
+    padding: 0 150px;
+    .registers-box {
+      display: flex;
+      .Left-side { 
+        height: 650px;
+        width: 1200px;
+        padding: 20px 100px 0 270px;
+        .Left-upper_form {
+          display: flex;
+          .image-form_e {
+            height: 270px;
+            width: 190px;
+            border: outset 3px rgb(190, 199, 223);
+            margin: 0 auto;
+            font-size: 5px;
+            line-height: 160px; 
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 2px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }  
+      .Right-side { 
+        height: 650px;
+        width: 100%;
+        padding: 25px 70px 15px 50px;
+        .upper-box_n {
+          margin-bottom: 35px;
+          display: flex;
+        }
+        .middle-box_n {
+          margin-bottom: 35px;
+          display: flex;
+        }
+        .lower-box_n {
+          margin-bottom: 10px;
+          display: flex;
+        }
+      }
+      .left-input_form {
+        height: 50px;
+        width: 100%;
+        font-size: 22px;
+        border-bottom: thin solid #cccccc;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        margin-bottom: 30px;
+        padding: 0 20px;
+      }
+      .right-select_form {
+        background-color: #ffffff;
+        height: 50px;
+        width: 250px;
+        font-size: 18px;
+        border: inset #dbedf0 2px;
+        border-radius: 2px;
+        margin: 0 35px 0 0;
+        padding: 0 30px;
+      }
+      // .evaluation-form {
+      //   margin-right: 35px;
+      //   text-align: center;
+      // }
+      // .evaluation_form {
+      //   background-color: #ffffff;
+      //   height: 60px;
+      //   width: 150px;
+      //   font-size: 18px;
+      //   border: inset #dbedf0 2px;
+      // }
+      .area_form {
+        height: 90px;
+        width: 535px;
+        font-size: 14px;
+        border: inset #dbedf0 2px;
+        border-radius: 2px;
+        margin-bottom: 20px;
+        padding: 5px 15px;
+        display: block;
+      }
+      .area_form_2 {
+        height: 90px;
+        width: 250px;
+        font-size: 14px;
+        border: inset #dbedf0 2px;
+        border-radius: 2px;
+        padding: 5px 15px;
+        background-color: #ffffff;
+      }
+      .title-line {
+        font-size: 14px;
+        margin:0 0 5px 5px;
+        display: flex;
+      }
+      .required {
+        background-color: #ff0000;
+        color: #ffffff;
+        margin-left: 20px;
+        padding: 0 6px;
+        border-radius: 3px;
+      }
+      .optional {
+        background-color: #7c7c7c;
+        color: #ffffff;
+        margin-left: 20px;
+        padding: 0 6px;
+        border-radius: 3px;
+      }
+      .btn-box {
+        height: 100px;
+        width: 535px;
+        margin-top: 5px;
+        padding-top: 25px;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 3px;
+        line-height: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        .book-edit_btn {
+          background-color: #04a711;
+          height: 50px;
+          width: 180px;
+          color: #eeeeee;
+          border: outset 2px;
+          border-radius: 20px;
+          cursor: pointer;
+          &:hover {
+            background-color: #05800f;
+          }  
+        }
+        a { 
+          color: #eeeeee;
+          background-color: black;
+          height: 50px;
+          width: 130px;
+          border: outset 2px;
+          border-radius: 20px;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(88, 83, 83);
+          }
+        }  
+      }
+    }
+  }  
+}
+
+a {
+  text-decoration: none;
+}

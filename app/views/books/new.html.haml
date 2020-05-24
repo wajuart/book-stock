@@ -13,13 +13,6 @@
           .Left-upper_form
             .image-form
               = f.file_field :image, class: 'input_image', placeholder: '-- upload a image --'
-            .evaluation-form
-              .title-line_1
-                .title
-                  5段回評価
-                .optional
-                  任意
-              = f.select :evaluation, [["-- 未評価 ---","--- 未評価 --"], ["5","5"], ["4","4"], ["3","3"], ["2","2"], ["1","1"]], {}, class: 'evaluation_form'
           .title-form
             .title-line
               .title
@@ -43,7 +36,7 @@
             = f.text_field :author, class: 'left-input_form', placeholder: '-- type a author --'
 
         .Right-side
-          .upper-box
+          .upper-box_n
             .status-form
               .title-line
                 .title
@@ -57,15 +50,15 @@
                   ジャンル
                 .required
                   必須 
-              = f.select :genre, [["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'right-select_form', required:''
-          .lower-box
+              = f.select :genre, [["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"],["芸能","芸能"],["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'right-select_form', required:''
+          .middle-box_n
             .item-form
               .title-line
                 .title
                   読書媒体
                 .optional
                   任意  
-              = f.select :item, [["-- 未設定 --","-- 未設定 --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'right-select_form'
+              = f.select :item, [["-- 未登録 --","-- 未登録 --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'right-select_form'
             .buy_date-form
               .title-line
                 .title
@@ -73,13 +66,21 @@
                 .optional
                   任意  
               = f.date_field :buy_date, class: 'right-select_form', placeholder: '-- type purchase date --'
-          .memo-form
-            .title-line
-              .title
-                memo
-              .optional
-                任意  
-            = f.text_area :memo, class: 'area_form', placeholder: '-- type memos --'
+          .lower-box_n
+            .evaluation-form
+              .title-line
+                .title
+                  5段回評価
+                .optional
+                  任意
+              = f.select :evaluation, [["-- 未登録 --","-- 未登録 --"], ["是非お勧めしたい","是非お勧めしたい"], ["お勧めしたい","お勧めしたい"], ["普通","普通"], ["あまりお勧めしない","あまりお勧めしない"], ["お勧めしない","お勧めしない"]], {}, class: 'right-select_form'
+            .memo-form
+              .title-line
+                .title
+                  memo
+                .optional
+                  任意  
+              = f.text_area :memo, class: 'area_form_2', placeholder: '-- type memos --'
           .impression-form
             .title-line
               .title
@@ -92,5 +93,3 @@
             = link_to "戻る", :back, class: 'btn' 
             
   = render partial: 'shared/footer_1'  
-                
-            

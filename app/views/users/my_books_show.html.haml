@@ -12,7 +12,8 @@
         .Left-side
           .Left-upper_form
             .image_box
-              = image_tag @book.image
+              = link_to edit_book_path do
+                = image_tag @book.image
           .title-form
             .title-line
               .title
@@ -63,7 +64,7 @@
               .title-line
                 .title
                   5段階評価 :
-              .right-select_result
+              .eva-select_result
                 = @book.evaluation
             .memo-form
               .title-line
@@ -77,123 +78,17 @@
                 感想 :
             .area_result
               = @book.impression    
-          .btn-box
-            = f.submit '登録する', class: 'register-btn', data: { confirm: "この内容で登録しますか？"}
-            = link_to "戻る", :back, class: 'btn' 
-            
+          .btn-box_show
+            -# .register-btn 編集
+            -# = link_to "戻る", :back, class: 'btn' 
+            = link_to "/books/#{@book.id}/edit", method: :get, class:"to_edit-btn" do
+              %p.text
+                編集画面へ
+            = link_to "/books/#{@book.id}", method: :delete, class:"delet-btn" do
+              %p.text
+                削除
+
+
+
+
   = render partial: 'shared/footer_1'  
-                
-            
-
-
--# .MainDisplay
--#   = render partial: 'shared/header_1' 
-
--#   .title-box
--#     .icon
--#       .fa.fa-book
--#     .content-title
--#       本の詳細
--#   .form
-
--#     .registers-box
--#       .Left-side
--#         .registered-user
--#           .user-left
--#             .registant
--#               登録者
--#             .name
--#               = @book.user.name
--#           .user-image_box
--#             -# = image_tag @book.user.image.to_s, class: "user-image_set"
--#             -# aaaaaa
--#             -# = image_tag @book.user.image.to_s
--#             -# = @book.user.image
--#         .Left-image_form
--#           .image-box
--#             = image_tag @book.image
-              
--#         .title-form
--#           .title_box
--#             = @book.title
--#       .Right-side
--#         .upper-box
--#           .publisher-form
--#             .title-line
--#               .title
--#                 出版社 :
--#             .right-select_box
--#               = @book.publisher
--#           .author-form
--#             .title-line
--#               .title
--#                 著者 :
--#             .right-select_box
--#               = @book.author
--#         .lower-box
--#           .item-form
--#             .title-line
--#               .title
--#                 ジャンル :
--#             .right-select_box
--#               = @book.genre
--#           .buy_date-form
--#             .title-line
--#               .title
--#                 登録ユーザー評価 :
--#             .right-select_box
--#               = @book.evaluation
--#         .impression-form
--#           .title-line
--#             .title
--#               チャットスペース  
--#           .area_box
-
-
--#   -# .book_detail
--#   -#   .title-box
--#   -#     .icon
--#   -#       .fa.fa-book
--#   -#     .content-title
--#   -#       本の詳細
--#   -#   .upper_box
--#   -#     .upper_left_box
--#   -#       .title
--#   -#         FACT FULNESS
--#   -#       .like_box  
--#   -#       .image   
--#   -#       .author
--#   -#         明智光秀
--#   -#     .upper_right_box
--#   -#       .top
--#   -#         .heading
--#   -#           読書ステータス
--#   -#           .status
--#   -#             読書済み
--#   -#         .heading
--#   -#           ジャンル
--#   -#           .genre
--#   -#             ビジネス
--#   -#       .middle
--#   -#         .heading
--#   -#           読書媒体
--#   -#           .item
--#   -#             電子書籍
--#   -#         .heading
--#   -#           購入日
--#   -#           .buydate
--#   -#             2020年4月20日
--#   -#       .heading
--#   -#         感想／メモ
--#   -#       .impression  
--#   -#         最高に面白い
-
--#   -#   .btn-box
--#   -#     = link_to edit_book_path do 
--#   -#       .register-btn
--#   -#         編集画面へ
--#   -#     = link_to "戻る", :back, class: 'btn'  
-
--#   = render partial: 'shared/footer_1' 
-                
-            
