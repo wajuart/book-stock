@@ -1,0 +1,94 @@
+.MainDisplay
+  = render partial: 'shared/header_1' 
+  
+  .title-box
+    .icon
+      .fa.fa-book
+    .content-title
+      本の登録情報
+  .form
+    = form_for @book do |f|
+      .registers-box
+        .Left-side
+          .Left-upper_form
+            .image_box
+              = link_to edit_book_path do
+                = image_tag @book.image
+          .title-form
+            .title-line
+              .title
+                タイトル :
+            .left-input_result
+              = @book.title
+          .publisher-form
+            .title-line
+              .title
+                出版社 :
+            .left-input_result
+              = @book.publisher
+          .author-form
+            .title-line
+              .title
+                著者 :
+            .left-input_result
+              = @book.author
+        .Right-side
+          .upper-box
+            .status-form
+              .title-line
+                .title
+                  読書ステータス :
+              .right-select_result
+                = @book.status
+            .genre-form
+              .title-line
+                .title
+                  ジャンル :
+              .right-select_result
+                = @book.genre
+          .middle-box_m
+            .item-form
+              .title-line
+                .title
+                  読書媒体 :
+              .right-select_result
+                = @book.item
+            .buy_date-form
+              .title-line
+                .title
+                  購入日 :
+              .right-select_result
+                = @book.buy_date
+          .lower-box_m
+            .evaluation-form
+              .title-line
+                .title
+                  5段階評価 :
+              .eva-select_result
+                = @book.evaluation
+            .memo-form
+              .title-line
+                .title
+                  memo :
+              .area_result_2
+                = @book.memo
+          .impression-form
+            .title-line
+              .title
+                感想 :
+            .area_result
+              = @book.impression    
+          .btn-box_show
+            -# .register-btn 編集
+            -# = link_to "戻る", :back, class: 'btn' 
+            = link_to "/books/#{@book.id}/edit", method: :get, class:"to_edit-btn" do
+              %p.text
+                編集画面へ
+            = link_to "/books/#{@book.id}", method: :delete, class:"delet-btn" do
+              %p.text
+                削除
+
+
+
+
+  = render partial: 'shared/footer_1'  

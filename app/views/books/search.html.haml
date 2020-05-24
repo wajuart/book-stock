@@ -1,35 +1,31 @@
-.MainDisplay
-  - if user_signed_in?
-    = render partial: 'shared/header_1'
-  - else
-    = render partial: 'shared/header_2'
+- if user_signed_in?
+  = render partial: 'shared/header_1'
+- else
+  = render partial: 'shared/header_2'
 
-  .main-registers
-    .registers-box
-      .title-box
-        .icon
-          .fa.fa-search
-        .title
-          検索結果  
-      .books-box
-        - @books.each do |book|
-          = link_to book_path(book) do
-            .book-list
-              .book-image
-                = image_tag book.image.to_s  
-                .book-genre-tag
-                  = book.genre
-                .book-status
-                  .book-status__title
-                    = book.status
-              .book-title
-                = book.title
-        
-      .bottom-space
-        .pages
-          page1
-        = link_to "戻る", :back, class: 'btn'            
-  
-  = render partial: 'shared/footer_1'  
+
+.Search-box
+  .title-box_s
+    .icon
+      .fa.fa-search
+    .title
+      = "' #{params[:keyword]} ' の検索結果"
+  .books-area_s
+    - @books.each do |book|
+      .book-list_s
+        = link_to book_path(book) do
+          .book-image
+            = image_tag book.image.to_s  
+            .book-genre-tag
+              = book.genre
+          .book-title
+            = book.title
+    
+  .bottom-space
+    .pages
+      page1
+    = link_to "戻る", :back, class: 'btn'            
+
+= render partial: 'shared/footer_1'  
                 
             

@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20200520013714) do
     t.string   "encrypted_password",                   default: "", null: false
     t.string   "user_image"
     t.date     "birth_day"
-    t.string   "favorite_auther"
+    t.string   "favorite_author"
     t.string   "favorite_genre"
     t.string   "favorite_book"
     t.text     "introduction",           limit: 65535

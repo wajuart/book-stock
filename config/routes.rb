@@ -18,10 +18,11 @@ Rails.application.routes.draw do
     end  
   end  
 
-  resources :users, only: [:show, :edit, :update] do
+  resources :users, only: [:index, :show, :edit, :update] do
     member do
       get 'my_page'
       get 'profile_edit'
+      get 'my_books_show'
       get 'all_books'
       get 'read_books'
       get 'reading_books'
@@ -37,6 +38,7 @@ Rails.application.routes.draw do
       get 'hobby'
       get 'health'
       get 'sports'
+      get 'entertainment'
       get 'parenting'
       get 'novel'
       get 'comic'

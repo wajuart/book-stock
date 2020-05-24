@@ -27,21 +27,7 @@
       = form_tag(search_books_path, method: 'get') do      
         = text_field_tag :search , '', placeholder: "本を検索する", class: "search-box__input" 
         = submit_tag '検索', class: "search-btn" , name: nil
-        -# .search-icon
-        -#   .fa.fa-search
-      -# .search-btn
-        -# .fa.fa-search
-        -# = link_to search_books_path do
-            
-          
-    
-    -# = form_tag(url: search_books_path, local: true, method: :get, class: "search-form") do |form|
-    -#   = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
-    -#   = form.submit "検索", class: "search-btn"
-      -# = form.label :title, 'タイトル'
-      -# = form.text_field :title
-      -# = form.submit '検索する'
-      本を検索 
+
     .MainSecondHeader__social-btn
       = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
         = icon('fab', 'facebook-square',  class: "content__btn__icon")
@@ -73,105 +59,17 @@
             ジャンル
           .select-box
             = select_tag 'book[genre]', options_for_select(["-- 選択してください --","ビジネス", "自己啓発", "マネー", "政治／経済", "勉強／スキル", "料理", "趣味", "健康", "スポーツ", "子育て", "小説", "漫画", "生活", "その他"])
-      .books-box-top
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-            -# - @books.each do |book|
-            -#   = book.title
-            -# = @book.title
+      .books-box
+        - @books.each do |book|
+          .book-list
+            = link_to book_path(book) do
+              .book-image
+                = image_tag book.image.to_s  
+                .book-genre-tag
+                  = book.genre
+              .book-title
+                = book.title
 
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-
-      .books-box-middle
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title 
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title 
-
-      .books-box-bottom
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
-        .book-list
-          .book-image
-            .book-genre-tag
-            .book-status
-              .book-status__title
-          .book-title
       .bottom-space
         .pages
           page1

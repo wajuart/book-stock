@@ -7,7 +7,9 @@ class BooksController < ApplicationController
   # before_action :authenticate_user!, only: [:show]
 
   def index
-    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    @books = Book.page(params[:page]).per(15).order(created_at: :desc)
+    # @books = Book.includes(:images).order('created_at DESC').limit(3)
+    # @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     # @books = Book.all
     # @books = @books.includes(:user)
     # @books = @user.books.includes(:user)
@@ -18,62 +20,61 @@ class BooksController < ApplicationController
   end  
 
   def create
-    # @book = Book.new(
-    #   content: params[:content],
-    #   user_id: @current_user.id
-    # )
-    
-    # binding.pry
-    # params[:book][:buydate] = @buy_date.to_s
     @book = Book.new(book_params)
-    # if params[:commit]
-    #   @book.user = current_user
-    # @book = Book.new(book_params)
-    
-    # respond_to do |format|
     # binding.pry
-    if @book.save!
+    if @book.save
       flash.now[:notice] = '本が登録されました。'
-      # notice = Notice.new
-      # redirect_to user.books_path(@user), notice: '本が登録されました。'
-      # redirect_to user_path(@book.user_id)
-      render :index
+      redirect_to books_path
     else
-      # @books = @books.includes(:user)
-      # @books = @user.books.includes(:user)
       flash.now[:alert] = '本の情報を入力してください。'
-      # render :index
-      # format.html { render :new }
-      # render 'new'
       render :new
     end
-
   end
 
   def show
     @book = Book.find_by(id: params[:id])
-    # @user = User.find_by(id: @book.user_id)
+    @user = User.find_by(id: @book.user_id)
   end
 
 
   def edit
-    @book = Book.find(id: params[:id])
+    @book = Book.find_by(id: params[:id])
+    @user = User.find_by(id: @book.user_id)
   end
 
 
   def update
     book = Book.find(params[:id])
     book.update(book_params)
+    @book = Book.find_by(id: params[:id])
+    if @book.update(book_params)
+      flash.now[:notice] = '本が編集されました。'
+      redirect_to books_path
+    else
+      flash.now[:alert] = '削除に失敗しました。'
+      redirect_to edit_book_path(params[:id])
+    end
   end
   
   def destroy
     book = Book.find(params[:id])
     book.destroy
+    flash.now[:notice] = '本が削除されました。'
+    redirect_to books_path
+    # @book = Book.find_by(id: params[:id])
+    # if @book.destroy
+    #   flash.now[:notice] = '本が削除されました。'
+    #   redirect_to books_path
+    # else
+    #   redirect_to edit_book_path(@book.id)
+    # end
   end
 
 
   def search
-    @books = Book.search(params[:search])
+    @books = Book.search(params[:keyword])
+    @books = Book.page(params[:page]).per(18).order(created_at: :desc)
+    # @books = Book.page(params[:page]).order(created_at: :desc)
   end
 
 
@@ -93,14 +94,17 @@ class BooksController < ApplicationController
     p "**********"
     p params
     params.require(:book).permit(
-      :image,
       :title,
+      :image,
       :author,
+      :publisher,
       :status,
       :genre,
       :item,
-      :buydate,
-      :impression
+      :memo,
+      :impression,
+      :evaluation,
+      :buy_date,
     ).merge(user_id: current_user.id)
     # params.require(:book).permit(:content, :image).merge(user_id: current_user.id)
   end
