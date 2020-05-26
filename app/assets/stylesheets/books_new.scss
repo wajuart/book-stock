@@ -2,10 +2,20 @@
   box-sizing: border-box;
 }
  
-.MainDisplay {
-  background-color: #ffffff;
-  height: 100vh;
+.BookNew {
+  height: 100%;
   width: 100vw;
+  .title-box_bn { 
+    font-family: ヒラギノ明朝 ProN;
+    letter-spacing: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 40px 0 0 200px;
+    display: flex;
+    .icon {
+      margin-right: 8px;
+    }
+  }
   .form {
     height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
@@ -74,18 +84,8 @@
         border-radius: 2px;
         margin: 0 35px 0 0;
         padding: 0 30px;
-      }
-      // .evaluation-form {
-      //   margin-right: 35px;
-      //   text-align: center;
-      // }
-      // .evaluation_form {
-      //   background-color: #ffffff;
-      //   height: 60px;
-      //   width: 150px;
-      //   font-size: 18px;
-      //   border: inset #dbedf0 2px;
-      }
+      }  
+    }
       .area_form {
         height: 90px;
         width: 535px;
@@ -136,7 +136,7 @@
         display: flex;
         justify-content: space-evenly;
         .register-btn {
-          background-color: #04a711;
+          background-color: rgb(50, 177, 134);
           height: 50px;
           width: 180px;
           color: #eeeeee;
@@ -144,7 +144,7 @@
           border-radius: 20px;
           cursor: pointer;
           &:hover {
-            background-color: #05800f;
+            background-color: rgba(50, 177, 135, 0.788);
           }  
         }
         a { 

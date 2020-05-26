@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 .title-box { 
   font-family: ヒラギノ明朝 ProN;
   letter-spacing: 5px;
@@ -13,165 +14,173 @@
     margin-right: 8px;
   }
 }
-.form {
+.MainDisplay_pd {
   background-color: #ffffff;
-  padding-top: 10px;
-  .profile-container {
-    background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
-    height: 620px;
-    width: 780px;
-    font-size: 24px;
-    font-weight: bold;
-    border: outset;
-    border-radius: 10px;
-    margin: 0 auto;
-    padding: 0 110px;
-    .profile-top {
-      height: 140px;
-      padding: 10px 0;
-      display: flex;
-      justify-content: center;
-      .image-form {
-        background-color: rgb(255, 246, 246);
-        height: 110px;
-        width: 110px;
-        border: solid thin;
-        margin: 10px 50px 0 40px;
-        padding: 3px;
-        &:hover {
-          opacity: 0.8;
-        }
-        img {
-          height: 100%;
-          width: 100%;
-          display: block;
-          margin: 0 auto;
-          object-fit: cover;
-         } 
-        .user-image { 
-          height: 100%;
-          width: 100%;
-          .hidden { 
+  height: 760px;
+  width: 100vw;
+  .form {
+    background-color: #ffffff;
+    padding-top: 10px;
+    .profile-container {
+      background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
+      height: 620px;
+      width: 780px;
+      font-size: 24px;
+      font-weight: bold;
+      border: outset;
+      border-radius: 10px;
+      margin: 0 auto;
+      padding: 0 110px;
+      .profile-top {
+        height: 140px;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        .image-form {
+          background-color: rgb(255, 246, 246);
+          height: 110px;
+          width: 110px;
+          border: solid thin;
+          margin: 10px 50px 0 40px;
+          padding: 3px;
+          &:hover {
+            opacity: 0.8;
+          }
+          img {
             height: 100%;
             width: 100%;
-            display: none;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+          } 
+          .user-image { 
+            height: 100%;
+            width: 100%;
+            .hidden { 
+              height: 100%;
+              width: 100%;
+              display: none;
+            }
+          }
+          }  
+        }  
+        .name-box {
+          margin-left: 50px;
+          .current-name {
+            height: 48px;
+            width: 220px;
+            font-size: 20px;
+            font-weight: lighter;
+            text-align: center;
+            margin: 15px auto 0;
+          }
+          .name-form {
+            background-color: #ffffff;
+            height: 48px;
+            width: 220px;
+            font-size: 16px;
+            font-weight: lighter;
+            border: inset 3px;
+            border-radius: 10px;
+            padding: 0 16px;
           }
         }
+      .profile-middle {
+        font-size: 14px;
+        font-weight: lighter;
+        margin: 15px 0 0;
+        display: flex;
+        justify-content: center;
+        .favorite-left {
+          margin: 0 120px 0 10px;
+          .form_1 {
+            width: 200px;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+            .birth_day {  
+              height: 35px;
+              width: 220px;
+              border-radius: 7px;
+              margin-bottom: 15px;
+              padding: 0 15px;
+            }  
+          }
+          .form_2 {
+            width: 200px;
+            flex-wrap: wrap;
+            .f_author-form {  
+              height: 35px;
+              width: 220px;
+              border-radius: 7px;
+              margin-bottom: 15px;
+              padding: 0 15px;
+            }  
+          }
         }  
+        .favorite-right {
+          margin-right: 10px;
+          .form_3 {
+            width: 200px;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+            .f_genre-form {  
+              height: 35px;
+              width: 220px;
+              background-color: #fff;
+              border: inset 2px;
+              border-radius: 7px;
+              margin-bottom: 15px;
+              padding: 0 15px;
+            }  
+          }
+          .form_4 {
+            width: 200px;
+            flex-wrap: wrap;
+            .f_book-form {  
+              height: 35px;
+              width: 220px;
+              border-radius: 7px;
+              margin-bottom: 15px;
+              padding: 0 15px;
+            }  
+          }
+        }
+      }
+      .profile-bottom {
+        height: 240px;
+        width: 100%;
+        font-weight: lighter;
+        padding: 15px 16px;
+        .text-form {
+          font-size: 16px;
+          .introduction {
+            height: 170px;
+            width: 540px;
+            font-size: 16px;
+            border: inset 2px #dddddd;
+            border-radius: 7px;
+            margin: 0 auto 20px;
+            padding: 15px;
+          }
+        }
       }  
-      .name-box {
-        margin-left: 50px;
-        .current-name {
-          height: 48px;
-          width: 220px;
-          font-size: 20px;
-          font-weight: lighter;
+      .btn-form {
+        .edit-btn { 
+          background-color: rgb(50, 177, 134);
+          height: 50px;
+          width: 200px;
+          font-size: 16px;
+          color: #ffffff;
+          line-height: 50px;
           text-align: center;
-          margin: 15px auto 0;
+          border: outset 2px;
+          border-radius: 30px;
+          margin: 0 auto;
+          display: block;
+          &:hover {
+            background-color: rgba(50, 177, 135, 0.788);
+          }
         }
-        .name-form {
-          background-color: #ffffff;
-          height: 48px;
-          width: 220px;
-          font-size: 16px;
-          font-weight: lighter;
-          border: inset 3px;
-          border-radius: 10px;
-          padding: 0 16px;
-        }
-      }
-    .profile-middle {
-      font-size: 14px;
-      font-weight: lighter;
-      margin: 15px 0 0;
-      display: flex;
-      justify-content: center;
-      .favorite-left {
-        margin: 0 120px 0 10px;
-        .form_1 {
-          width: 200px;
-          flex-wrap: wrap;
-          margin-bottom: 5px;
-          .birth_day {  
-            height: 35px;
-            width: 220px;
-            border-radius: 7px;
-            margin-bottom: 15px;
-            padding: 0 15px;
-          }  
-        }
-        .form_2 {
-          width: 200px;
-          flex-wrap: wrap;
-          .f_author-form {  
-            height: 35px;
-            width: 220px;
-            border-radius: 7px;
-            margin-bottom: 15px;
-            padding: 0 15px;
-          }  
-        }
-      }  
-      .favorite-right {
-        margin-right: 10px;
-        .form_3 {
-          width: 200px;
-          flex-wrap: wrap;
-          margin-bottom: 5px;
-          .f_genre-form {  
-            height: 35px;
-            width: 220px;
-            background-color: #fff;
-            border: inset 2px;
-            border-radius: 7px;
-            margin-bottom: 15px;
-            padding: 0 15px;
-          }  
-        }
-        .form_4 {
-          width: 200px;
-          flex-wrap: wrap;
-          .f_book-form {  
-            height: 35px;
-            width: 220px;
-            border-radius: 7px;
-            margin-bottom: 15px;
-            padding: 0 15px;
-          }  
-        }
-      }
-    }
-    .profile-bottom {
-      height: 240px;
-      width: 100%;
-      font-weight: lighter;
-      padding: 15px 16px;
-      .text-form {
-        font-size: 16px;
-        .introduction {
-          height: 170px;
-          width: 540px;
-          font-size: 16px;
-          border: inset 2px #dddddd;
-          border-radius: 7px;
-          margin: 0 auto 20px;
-          padding: 15px;
-        }
-      }
-    }  
-    .btn-form {
-      .edit-btn { 
-        background-color: rgb(50, 177, 134);;
-        height: 50px;
-        width: 200px;
-        font-size: 16px;
-        color: #ffffff;
-        line-height: 50px;
-        text-align: center;
-        border: outset 2px;
-        border-radius: 30px;
-        margin: 0 auto;
-        display: block;
       }
     }
   }

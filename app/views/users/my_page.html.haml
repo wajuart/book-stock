@@ -1,182 +1,163 @@
-.MainDisplay
-  = render partial: 'shared/header_1'
+= render partial: 'shared/header_1'
 
-  .MypageView  
-    .MypageContainer
-      .Side-var
-        .Mypage-nav
-          %ul.Mypage-nav__list
-            %li.Mypage-nav__list__item-top マイページ
+.MypageView  
+  .MypageContainer
+    .Side-var
+      .Mypage-nav
+        %ul.Mypage-nav__list
+          %li.Mypage-nav__list__item-top マイページ
+        = link_to profile_edit_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name プロフィール
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to new_book_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 本を登録
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to all_books_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name マイブック
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+
+        %h3.Mypage-nav__head ジャンル
+        %ul.Mypage-nave__list
+        = link_to business_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name ビジネス
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x 
+        = link_to self_enlightenment_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 自己啓発
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to money_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name マネー
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x      
+        = link_to politics_economy_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 政治／経済
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to study_skill_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 勉強／スキル
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x 
+        = link_to cooking_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 料理
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to hobby_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 趣味
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to health_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 健康
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to entertainment_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 芸能
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to parenting_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 子育て
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to novel_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 小説
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to comic_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 漫画
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to life_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 生活
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to genre_etc_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name その他
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x 
+        %h3.Mypage-nav__head 読書媒体
+        %ul.Mypage-nave__list
+        = link_to real_book_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name リアル本
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to e_book_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name 電子書籍
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to paper_white_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name Paperwhite
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to audio_book_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name オーディオブック
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+        = link_to item_etc_user_path(current_user) do
+          %li.Mypage-nav__list__item
+            .item-name その他
+            .icon-arrow-right
+              .fa.fa-caret-right.fa-2x
+
+    .Main-content_my
+      .user-top
+        .user-icon-box
           = link_to profile_edit_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name プロフィール
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to new_book_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 本を登録
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to all_books_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name マイブック
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-
-          %h3.Mypage-nav__head ジャンル
-          %ul.Mypage-nave__list
-          = link_to business_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name ビジネス
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x 
-          = link_to self_enlightenment_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 自己啓発
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to money_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name マネー
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x      
-          = link_to politics_economy_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 政治／経済
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to study_skill_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 勉強／スキル
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x 
-          = link_to cooking_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 料理
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to hobby_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 趣味
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to health_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 健康
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x 
-          = link_to parenting_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 子育て
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to novel_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 小説
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to comic_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 漫画
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to life_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 生活
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to etc_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name その他
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x 
-          -# = link_to destroy_user_session_path, method: :delete do   
-          -#   %li.Mypage-nav__list__item
-          -#     .item-name ログアウト
-          -#     .icon-arrow-right
-          -#       .fa.fa-caret-right.fa-2x
-          %h3.Mypage-nav__head 読書媒体
-          %ul.Mypage-nave__list
-          = link_to real_book_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name リアル本
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to e_book_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name 電子書籍
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x
-          = link_to paper_white_user_path(current_user) do
-            %li.Mypage-nav__list__item
-              .item-name Paperwhite
-              .icon-arrow-right
-                .fa.fa-caret-right.fa-2x  
-
-      .Main-content_my
-        .user-top
-          .user-icon-box
+            .user-icon
+              = image_tag current_user.user_image.url, class: "user-image_set"
+        .trade-info
+          .trade-info__nickname
             = link_to profile_edit_user_path(current_user) do
-              .user-icon
-                = image_tag current_user.user_image.url, class: "user-image_set"
-          .trade-info
-            .trade-info__nickname
               = current_user.name
-            .trade-info__count  
-              .trade-info__count__sell-title 登録数
-              .trade-info__count__sell-count 25      
-              .trade-info__count__buy-title 購入数
-              .trade-info__count__buy-count 17
-        %ul.trade-tab
-          %li.active すべて
-          %li 読書済み
-          %li 読書中
-          %li 未読
-          %li 興味有り
+          .trade-info__count  
+            .trade-info__count__sell-title 登録数
+            .trade-info__count__sell-count 25      
+            .trade-info__count__buy-title 購入数
+            .trade-info__count__buy-count 17
+      %ul.trade-tab
+        %li.active すべて
+        %li 読書済み
+        %li 読書中
+        %li 未読
+        %li 興味有り
 
-        .books-area 
-          - @books.each do |book|
-            .book-list
-              = link_to my_books_show_user_path(book) do
-                .book-image
-                  = image_tag book.image.to_s
-                  .book-genre-tag
-                    = book.genre
-                  .book-status
-                    .book-status__title
-                      = book.status
-                .book-title
-                  = book.title
-          
-          
-       
+      .books-area 
+        - @books.each do |book|
+          .book-list
+            = link_to my_books_show_user_path(book) do
+              .book-image
+                = image_tag book.image.to_s
+                .book-genre-tag
+                  = book.genre
+                .book-status
+                  .book-status__title
+                    = book.status
+              .book-title
+                = book.title   
 
-           
-                    
-
-
-  -# .UserDetails
-  -#   .DetailsContainer
-  -#     .title-box
-  -#       .icon
-  -#         .fa.fa-user
-  -#       .title
-  -#         ユーザー情報
-  -#     .Details-upper
-  -#       .Details-upper__left
-  -#         .user-icon
-
-  -#         .user-nickname
-  -#           ニックネーム
-  -#       .Details-upper__right
-  -#         %ul.regdister-info
-  -#           %li.list 登録数 :
-  -#           %li.list 登録ジャンル :
-  -#           %li.list アプリ使用開始日 :
-  -#     .Details-lower
-  -#       .user-introduction
-  -#     .Bottom-space       
-
-  = render partial: 'shared/footer_1'
+= render partial: 'shared/footer_1'
 
 

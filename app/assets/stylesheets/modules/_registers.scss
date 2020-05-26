@@ -36,7 +36,7 @@
             margin: 40px 0 100px;
             border: outset #ffffff 4px;
             border-radius: 3px;
-            cursor: pointer;     
+            cursor: pointer;
           }
         }
         a { 
@@ -208,6 +208,8 @@
       .MainRegisters {
         height: 1100px;
         background-image: url(https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_1280.jpg);
+        background-size: cover;
+        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box {
           height: 100%;
           width: 100%;         
@@ -329,7 +331,7 @@
                     img {
                       width: 96px;
                       height: 65px;
-                    }                       
+                    }
                   }
                   .book-status {
                     position: absolute;

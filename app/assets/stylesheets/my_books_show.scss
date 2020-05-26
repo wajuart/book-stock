@@ -2,10 +2,20 @@
   box-sizing: border-box;
 }
  
-.MainDisplay {
-  background-color: #ffffff;
-  height: 100vh;
+.MyBooksShow {
+  height: 100%;
   width: 100vw;
+  .title-box_mbs { 
+    font-family: ヒラギノ明朝 ProN;
+    letter-spacing: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 40px 0 0 200px;
+    display: flex;
+    .icon {
+      margin-right: 8px;
+    }
+  }
   .form {
     height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
@@ -33,6 +43,9 @@
               width: 100%;
               height: 100%;
               object-fit: cover;
+              &:hover {
+                opacity: 0.8;
+              }
             }
           }
         }
@@ -57,7 +70,7 @@
       .left-input_result {
         height: 50px;
         width: 100%;
-        font-size: 22px;
+        font-size: 20px;
         text-align: center;
         line-height: 50px;
         border-bottom: thin solid #cccccc;
@@ -84,8 +97,11 @@
         line-height: 50px;
         border-bottom: thin solid #cccccc;
       }
+      .impression-form_mbs {
+        margin-top: 16px;
+      }
       .area_result {
-        height: 90px;
+        height: 120px;
         width: 550px;
         font-size: 14px;
         border: inset #dbedf0 2px;
@@ -106,6 +122,10 @@
       .title_memo {
         margin-left: 57px;
       }
+      .memo-form_mbs {
+        margin-left: 35px;
+      } 
+
       .title-line_1 {
         font-size: 14px;
         margin: 65px 0 5px 5px;
@@ -142,7 +162,7 @@
         display: flex;
         justify-content: space-evenly;
         .to_edit-btn {
-          background-color: #04a711;
+          background-color: #1486a8;
           height: 50px;
           width: 180px;
           color: #eeeeee;
@@ -150,7 +170,7 @@
           border-radius: 20px;
           cursor: pointer;
           &:hover {
-            background-color: #05800f;
+            background-color: #1486a8d2;
           }  
         }
         .delete-btn {
@@ -185,5 +205,3 @@
 a {
   text-decoration: none;
 }
-
-

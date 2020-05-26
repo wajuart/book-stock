@@ -1,35 +1,43 @@
-.MainDisplay
-  = render partial: 'shared/header_1' 
+= render partial: 'shared/header_1' 
 
-  .title-box
+.MainDisplay_bs
+  .title-box_bs
     .icon
       .fa.fa-book
     .content-title
       本の詳細
-  .form
-
-    .registers-box
+  .form_bs
+    .registers-box_bs
       .Left-side
         .registered-user
           .user-left
             .registant
               登録者
             .name
-              = @book.user.name
+              = link_to @book.user.name, "/users/#{@book.user_id}"
+              -# = link_to book.user.name, "/users/#{user.book_id}"
+              -# = link_to user_path do
+              -#   = @book.user.name
           .user-image_box
-            = link_to users_path do
-              = image_tag @user.user_image
+            = image_tag @user.user_image
+            -# = link_to @book.user.user_image, "/users/#{@book.user_id}"
+            -# = image_tag @user.user_image
+            -# = link_to @book.user.user_image, "/users/#{@book.user_id}"
+            -#   = image_tag @user.user_image
+            -# = link_to user_path do
+            -#   = image_tag @user.user_image
+            -# = link_to @book.users_path(book.user)
+            -# = link_to @book.user.name, users_path(@book.user.id)
         .Left-image_form
-          .image-box
+          .image-box_bs
             = image_tag @book.image
-              
         .title-form
           .title-line
             .title
               タイトル :
-          .left-input_result
+          .left-input_result_bs
             = @book.title
-      .Right-side
+      .Right-side_bs
         .upper-box
           .publisher-form
             .title-line
@@ -56,12 +64,38 @@
                 登録者評価 :
             .right-select_box
               = @book.evaluation
-        .impression-form
+        .update-form
           .title-line
             .title
-              チャットスペース  
-          .area_box 
+              最終更新日 :
+          .right-select_box_bs
+            = @book.updated_at.strftime("%Y-%m-%d")  
+        .impression-form_bs
+          .title-line
+            .title
+              登録者レビュー :
+        .area_box_bs
+          = @book.impression
+  - if current_user
+    = form_for [@book, @comment] do |f|
+      .comment-table
+        .comment-table__title
+          本についてのコメント
+        .comment-area
+          = f.text_area :text, class: 'comment_form', placeholder: '-- コメントする --'
+          = f.submit 'SEND', class: 'comment-btn'
+          .index-title
+            コメント一覧
+          - if @comments
+            - @comments.each do |comment|
+              .comment-index
+                .comment-set
+                  .comment-upper
+                    .comment-user-name
+                      = link_to comment.user.name, "/users/#{comment.user_id}"
+                    .comment-time
+                      = comment.created_at.strftime("%Y-%m-%d %H:%M")
+                  .comment-lower
+                    = comment.text 
 
-  = render partial: 'shared/footer_1' 
-                
-            
+= render partial: 'shared/footer_1' 

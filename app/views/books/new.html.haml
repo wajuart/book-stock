@@ -1,7 +1,7 @@
-.MainDisplay
-  = render partial: 'shared/header_1' 
-  
-  .title-box
+= render partial: 'shared/header_1' 
+
+.BookNew 
+  .title-box_bn
     .icon
       .fa.fa-book
     .content-title
@@ -58,7 +58,7 @@
                   読書媒体
                 .optional
                   任意  
-              = f.select :item, [["-- 未登録 --","-- 未登録 --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'right-select_form'
+              = f.select :item, [["-- 未登録 --","-- 未登録 --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["オーディオブック","オーディオブック"], ["その他","その他"]], {}, class: 'right-select_form'
             .buy_date-form
               .title-line
                 .title
@@ -92,4 +92,4 @@
             = f.submit '登録する', class: 'register-btn', data: { confirm: "この内容で登録しますか？"}
             = link_to "戻る", :back, class: 'btn' 
             
-  = render partial: 'shared/footer_1'  
+= render partial: 'shared/footer_1'  

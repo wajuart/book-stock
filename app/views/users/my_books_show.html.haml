@@ -1,7 +1,7 @@
-.MainDisplay
-  = render partial: 'shared/header_1' 
+= render partial: 'shared/header_1' 
   
-  .title-box
+.MyBooksShow
+  .title-box_mbs
     .icon
       .fa.fa-book
     .content-title
@@ -33,7 +33,7 @@
             .left-input_result
               = @book.author
         .Right-side
-          .upper-box
+          .upper-box_m
             .status-form
               .title-line
                 .title
@@ -66,13 +66,13 @@
                   5段階評価 :
               .eva-select_result
                 = @book.evaluation
-            .memo-form
+            .memo-form_mbs
               .title-line
                 .title
                   memo :
               .area_result_2
                 = @book.memo
-          .impression-form
+          .impression-form_mbs
             .title-line
               .title
                 感想 :
@@ -88,7 +88,4 @@
               %p.text
                 削除
 
-
-
-
-  = render partial: 'shared/footer_1'  
+= render partial: 'shared/footer_1'  

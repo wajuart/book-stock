@@ -3,103 +3,75 @@
 }
  
 
-  .Search-box {
-    height: 1180px;
-    background-color: #ffffff;     
-    .title-box_s {
-      height: 30px;
-      display: flex;
-      margin: 20px 0 40px 60px;
-      padding-left: 30px;
-      .icon {
-        font-size: 25px;
-        line-height: 30px;
-        margin-right: 8px;
-      }
-      .title {
-        font-family: ヒラギノ明朝 ProN;
-        letter-spacing: 5px;
-        font-size: 25px;
-        line-height: 30px;
-        padding: 0 12px ;
-      }          
-    }
-    .books-area_s {
-      background-color: #ffffff;
-      height: 960px;
-      padding: 20px 116px;
-      display: flex;
-      flex-wrap: wrap;
-      .book-list_s {
-        background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
-        height: 250px;
-        width: 180px;
-        margin: 30px 40px 15px;
-        box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
-        cursor: pointer;
-        &:hover {
-          opacity: 0.8;
-        }     
-        .book-image {
-          height: 190px;
-          padding: 4px 14px;
-          position: relative;
-          img {
-            height: 100%;
-            width: 100%;
-            object-fit: contain;
-          }
-          .book-genre-tag {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 20px;
-            width: 70px;
-            background-color: slateblue;
-            font-size: 11px;     
-            text-align: center;
-            color: #fff;
-            img {
-              width: 96px;
-              height: 65px;
-            }                   
-          }
-          .book-status {
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 2;
-            border-top: 30px solid #4ca53ad7;
-            border-right: 30px solid #4ca53ad7;
-            border-bottom: 30px solid transparent;
-            border-left: 30px solid transparent;
-            &__title {
-              color: white;
-              font-weight: bold;
-              position: absolute;
-              top: -18px;
-              left: -10px;
-              width: 40px;
-              font-size: 11px;
-              transform: rotate(45deg);
-              text-align: center;
-            }
-          }
-        }
-        .book-title {
-          height: 60px;
-          background-color: #ffffff;
-          color: #000000;
-          line-height: 60px;
-          font-size: 16px;
-          font-family: クレー;
-          padding: 0 13px;
-          text-align: center;
-          overflow: hidden;
-        }
-      }                        
-    }
+.Search-box {
+  height: auto;
+  display: block;
+  .title-box_sea {
+    font-family: ヒラギノ明朝 ProN;
+    letter-spacing: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 40px 0 0 200px;
+    display: flex;
+    .icon {
+      margin-right: 8px;
+    }          
   }
+  .books-area_s {
+    background-color: #ffffff;
+    height: auto;
+    padding: 20px 116px;
+    display: flex;
+    flex-wrap: wrap;
+    .book-list_s {
+      background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+      height: 250px;
+      width: 180px;
+      margin: 30px 40px 15px;
+      box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }     
+      .book-image {
+        height: 190px;
+        padding: 4px 14px;
+        position: relative;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+        .book-genre-tag {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 70px;
+          background-color: slateblue;
+          font-size: 11px;     
+          text-align: center;
+          color: #fff;
+          img {
+            width: 96px;
+            height: 65px;
+          }                   
+        }
+      }
+      .book-title {
+        height: 60px;
+        background-color: #ffffff;
+        color: #000000;
+        line-height: 60px;
+        font-size: 16px;
+        font-family: クレー;
+        padding: 0 13px;
+        text-align: center;
+        overflow: hidden;
+      }
+    }                        
+  }
+}
 .bottom-space {
   height: 100px;
   display: flex;

@@ -43,11 +43,13 @@ Rails.application.routes.draw do
       get 'novel'
       get 'comic'
       get 'life'
-      get 'etc'
+      get 'genre_etc'
       get 'item'
       get 'real_book'
       get 'e_book'
       get 'paper_white'
+      get 'audio_book'
+      get 'item_etc'
     end  
   end
 
@@ -69,7 +71,8 @@ Rails.application.routes.draw do
       get 'comic'
       get 'life'
       get 'ect'
-    end  
+    end
+    resources :comments, only: :create
     collection do
       get 'search'
     end

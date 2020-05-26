@@ -3,9 +3,8 @@
 - else
   = render partial: 'shared/header_2'
 
-
 .Search-box
-  .title-box_s
+  .title-box_sea
     .icon
       .fa.fa-search
     .title
@@ -20,12 +19,9 @@
               = book.genre
           .book-title
             = book.title
-    
   .bottom-space
     .pages
       page1
     = link_to "戻る", :back, class: 'btn'            
 
 = render partial: 'shared/footer_1'  
-                
-            
