@@ -4,15 +4,15 @@
 
 .MypageView {
   background-color: #f1f1f1;
-  height: 1300px; 
+  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
   .MypageContainer {
     margin: 0 auto;
     width: 1350px;
     display: flex;
     .Side-var {
       width: 300px;
-      margin: 40px 40px 0 0;
-      .Mypage-nav { 
+      margin: 40px 40px 50px 0;
+      .Mypage-nav {
         &__list {
           &__item-top {
             background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
@@ -38,6 +38,7 @@
             display: flex;
             border-bottom: solid thin #ebebeb;
             position: relative;
+            box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
             &:hover {
               background-color: #f8f8f8;
               color:rgb(42, 84, 167);
@@ -67,12 +68,13 @@
       width: 100%;
       margin-top: 40px;
       .user-top {
-        background-color: #e6edfc;
+        background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
         height: 200px;
         margin-bottom: 20px;
         padding: 20px;
         display: flex;
         justify-content: center;
+        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .user-icon-box {
           height: 120px;
           width: 120px;
@@ -104,6 +106,12 @@
             font-size: 24px;
             margin: 24px 0 30px;
             text-align: center;
+            a {
+              color: #000000;
+              &:hover {
+                text-decoration: underline #555555;
+              }
+            }
           }
           &__count {
             padding: 10px;
@@ -130,6 +138,7 @@
       }  
       .trade-tab li {
         background-color: rgb(146, 158, 212);
+        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         height: 60px;
         width: 220px;
         color: #ffffff;
@@ -150,10 +159,10 @@
       }
       .books-area {
         background-color: #ffffff;
-        height: 920px;
-        padding: 20px 18px;
+        padding: 20px 18px 30px;
         display: flex;
         flex-wrap: wrap;
+        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .book-list { 
           background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
           background-color: rgb(223, 251, 252);
@@ -220,7 +229,7 @@
             text-align: center;
             overflow: hidden;
           }
-        }                      
+        }
       }
       .tab-area ul {
         display: none;
@@ -228,6 +237,7 @@
       .tab-area ul.list-show {
         display: block;
       }
+    }
   }
 }
 
@@ -241,125 +251,3 @@
   text-decoration: none;
   line-height: 45px;
 }
-
-.user-icon-box a {
-  // color: #000;
-}
-
-}
-// .MainDisplay {
-//   background-color: #ffffff;
-//   height: 100vh;
-//   width: 100vw;
-  
-//   .MainSecondHeader {
-//     .search-box {
-//       height: 100%;
-//       width: 600px;
-//       display: flex;
-//       position: relative;
-//       &__input {
-//         background-color: #ffffff;
-//         height: 35px;
-//         width: 350px;
-//         color: #555555;
-//         font-size: 14px;
-//         margin-top: 8px;
-//         padding: 0 90px 0 20px;
-//         border: inset #eeeeee 2px;
-//         border-radius: 20px;
-//         line-height: 35px;
-//       }  
-//       .search-btn {
-//         position: absolute;
-//         left: 280px;
-//         input {
-//           background-color: #7699b6;
-//           font-size: 13px;
-//           color: #000000;
-//           padding: 0 10px;
-//           border: outset thin;
-//           border-radius: 5px;
-//           &:hover {
-//             opacity: 0.7;
-//           }
-//         }
-//       }  
-//     }
-    
-//   }
-// }  
-// .UserDetails {
-//   height: calc(100vh - 270px);
-//   .DetailsContainer {
-//     height: 100%;
-//     width: 100%;         
-//     padding: 20px 80px; 
-//       .title-box {  
-//         height: 30px;
-//         display: flex;
-//         margin: 20px 0 40px 60px;
-//         padding-left: 30px;
-//         .icon {
-//           font-size: 25px;
-//           line-height: 30px;
-//           margin-right: 8px;
-//         }
-//         .title {
-//           font-family: ヒラギノ明朝 ProN;
-//           letter-spacing: 5px;
-//           font-size: 25px;
-//           line-height: 30px;
-//           padding: 0 12px ;
-//         }        
-//       }
-//       .Details-upper {
-//         // background-color: #fafdea;
-//         height: 280px;
-//         padding: 0 180px;
-//         display: flex;
-//         justify-content: space-evenly;
-//         &__left {
-//           // background-color: #fcdcdc;
-//           width: 100%;
-//           .user-icon {
-//             background-color: #ffffff;
-//             background-image: url(https://pics.prcm.jp/dona1118/82181124/png/82181124.png);
-//             background-size: 100%;
-//             height: 180px;
-//             width: 180px;
-//             border: groove;
-//             border-radius: 50%;
-//             margin: 15px 0 15px 300px;
-//           }
-//           .user-nickname {
-//             font-size: 20px;
-//             margin-top: 30px;
-//             margin: 30px 0 0 330px;
-//           }
-//         }  
-//         &__right {
-//           // background-color: #e3eaff;
-//           width: 100%;
-//           padding: 20px 20px;
-//           ul {
-//            li {
-//              font-size: 17px;
-//              margin: 30px 0;
-//            } 
-//           } 
-//         }                        
-//       }
-//       .Details-lower {
-//         // background-color: #eeffdd;
-//         height: 250px;
-//         padding: 15px 180px;
-//         .user-introduction {
-//           height: 100%;
-//           width: 600px;
-//           border: inset;
-//           margin: 0 auto;
-//         }
-//       }  
-//   }
-// }  

@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.User-info {
+  width: 100%;
+}
+
 .title-box { 
   font-family: ヒラギノ明朝 ProN;
   letter-spacing: 5px;
@@ -16,9 +20,9 @@
 .form {
   background-color: #ffffff;
   padding-top: 10px;
-  .profile-container {
+  .profile-container_i {
     background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
-    height: 620px;
+    height: 550px;
     width: 780px;
     font-size: 24px;
     font-weight: bold;
@@ -38,9 +42,6 @@
         border: solid thin;
         margin: 10px 50px 0 40px;
         padding: 3px;
-        &:hover {
-          opacity: 0.8;
-        }
         img {
           height: 100%;
           width: 100%;
@@ -59,27 +60,16 @@
         }
         }  
       }  
-      .name-box {
-        margin-left: 50px;
-        .current-name {
-          height: 48px;
-          width: 220px;
-          font-size: 20px;
-          font-weight: lighter;
-          text-align: center;
-          margin: 15px auto 0;
-        }
-        .name-form {
-          background-color: #ffffff;
-          height: 48px;
-          width: 220px;
-          font-size: 16px;
-          font-weight: lighter;
-          border: inset 3px;
-          border-radius: 10px;
-          padding: 0 16px;
-        }
-      }
+    .user-name_i {
+      height: 100px;
+      width: 220px;
+      font-size: 20px;
+      font-weight: lighter;
+      line-height: 100px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
     .profile-middle {
       font-size: 14px;
       font-weight: lighter;
@@ -92,10 +82,13 @@
           width: 200px;
           flex-wrap: wrap;
           margin-bottom: 5px;
-          .birth_day {  
+          .birth_day_i {  
             height: 35px;
             width: 220px;
-            border-radius: 7px;
+            border: solid thin;
+            border-top: none;
+            border-left: none;
+            border-right: none;
             margin-bottom: 15px;
             padding: 0 15px;
           }  
@@ -103,13 +96,6 @@
         .form_2 {
           width: 200px;
           flex-wrap: wrap;
-          .f_author-form {  
-            height: 35px;
-            width: 220px;
-            border-radius: 7px;
-            margin-bottom: 15px;
-            padding: 0 15px;
-          }  
         }
       }  
       .favorite-right {
@@ -131,13 +117,6 @@
         .form_4 {
           width: 200px;
           flex-wrap: wrap;
-          .f_book-form {  
-            height: 35px;
-            width: 220px;
-            border-radius: 7px;
-            margin-bottom: 15px;
-            padding: 0 15px;
-          }  
         }
       }
     }
@@ -148,31 +127,92 @@
       padding: 15px 16px;
       .text-form {
         font-size: 16px;
-        .introduction {
+        .introduction_i {
+          background-color: #ffffff;
           height: 170px;
           width: 540px;
           font-size: 16px;
-          border: inset 2px #dddddd;
+          border: groove 2px #dddddd;
           border-radius: 7px;
           margin: 0 auto 20px;
           padding: 15px;
         }
       }
     }  
-    .btn-form {
-      .edit-btn { 
-        background-color: rgb(50, 177, 134);;
-        height: 50px;
-        width: 200px;
-        font-size: 16px;
-        color: #ffffff;
-        line-height: 50px;
+  }
+}
+.result_under_bar {
+  height: 35px;
+  width: 220px;
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+  border: solid thin #b8b8b8;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+.table-title {
+  font-size: 20px;
+  text-align: center;
+  margin: 60px 0 0px;
+}
+
+.books-area_i {
+  background-color: #ffffff;
+  margin-bottom: 50px;
+  padding: 20px 116px;
+  display: flex;
+  flex-wrap: wrap;
+  .book-list_i {
+    background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+    height: 250px;
+    width: 180px;
+    margin: 30px 40px 15px;
+    box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }     
+    .book-image {
+      height: 190px;
+      padding: 4px 14px;
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      .book-genre-tag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 70px;
+        background-color: slateblue;
+        font-size: 11px;     
         text-align: center;
-        border: outset 2px;
-        border-radius: 30px;
-        margin: 0 auto;
-        display: block;
+        color: #fff;
+        img {
+          width: 96px;
+          height: 65px;
+        }                   
       }
     }
-  }
+    .book-title {
+      height: 60px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 60px;
+      font-size: 16px;
+      font-family: クレー;
+      padding: 0 13px;
+      text-align: center;
+      overflow: hidden;
+    }
+  }                        
 }

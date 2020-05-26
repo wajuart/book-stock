@@ -1,7 +1,7 @@
-.MainDisplay
-  = render partial: 'shared/header_1' 
-  
-  .title-box
+= render partial: 'shared/header_1' 
+
+.BookEdit 
+  .title-box_be
     .icon
       .fa.fa-edit
     .content-title
@@ -11,7 +11,7 @@
       .registers-box
         .Left-side
           .Left-upper_form
-            .image-form_e
+            .image-form
               = image_tag @book.image
               = f.file_field :image, class: 'input_image', placeholder: '-- upload a image --'
           .title-form
@@ -51,7 +51,7 @@
                   ジャンル
                 .required
                   必須 
-              = f.select :genre, [["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'right-select_form', required:''
+              = f.select :genre, [["ビジネス","ビジネス"], ["自己啓発","自己啓発"], ["マネー","マネー"], ["政治／経済","政治／経済"], ["勉強／スキル","勉強／スキル"], ["料理","料理"], ["趣味","趣味"], ["健康","健康"], ["スポーツ","スポーツ"], ["芸能","芸能"], ["子育て","子育て"], ["小説","小説"], ["漫画","漫画"], ["生活","生活"], ["その他","その他"]], {}, class: 'right-select_form', required:''
           .middle-box_n
             .item-form
               .title-line
@@ -59,7 +59,7 @@
                   読書媒体
                 .optional
                   任意  
-              = f.select :item, [["-- 未登録 --","-- 未登録 --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["その他","その他"]], {}, class: 'right-select_form'
+              = f.select :item, [["-- 未登録 --","-- 未登録 --"], ["リアル本","リアル本"], ["電子書籍","電子書籍"], ["Paperwhite","Paperwhite"], ["オーディオブック","オーディオブック"], ["その他","その他"]], {}, class: 'right-select_form'
             .buy_date-form
               .title-line
                 .title
@@ -90,8 +90,8 @@
                 任意  
             = f.text_area :impression, class: 'area_form', placeholder: '-- type impressions --'
           .btn-box
-            = f.submit '編集する', class: 'book-edit_btn', data: { confirm: "この内容で編集しますか？"}
+            = f.submit '更新', class: 'book-edit_btn', data: { confirm: "この内容で編集しますか？"}
 
             = link_to "戻る", :back, class: 'btn'
             
-  = render partial: 'shared/footer_1'
+= render partial: 'shared/footer_1'

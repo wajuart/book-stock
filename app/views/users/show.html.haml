@@ -1,0 +1,59 @@
+= render partial: 'shared/header_1'
+
+.User-info
+  .title-box
+    .icon
+      .fa.fa-user
+    .content-title
+      ユーザー情報
+  .form
+    = form_for(@user, local: true) do |f|
+      .profile-container_i
+        .profile-top 
+          .image-form
+            = f.label :user_image, class: "user-image" do
+              = image_tag @user.user_image.url
+              .hidden
+          .user-name_i
+            = @user.name
+        .profile-middle
+          .favorite-left
+            .form_1
+              誕生日 :
+              .result_under_bar
+                = @user.birth_day
+            .form_2
+              好きな著者 :
+              .result_under_bar
+                = @user.favorite_author
+          .favorite-right    
+            .form_3
+              好きなジャンル :
+              .result_under_bar
+                = @user.favorite_genre
+            .form_4
+              愛読書 :
+              .result_under_bar
+                = @user.favorite_book
+        .profile-bottom
+          .text-form
+            自己紹介 :
+            .introduction_i
+              = @user.introduction
+  .table-title
+    ユーザー登録本一覧
+
+.books-area_i
+  - @books.each do |book|
+    .book-list_i
+      = link_to book_path(book) do
+        .book-image
+          = image_tag book.image.to_s  
+          .book-genre-tag
+            = book.genre
+        .book-title
+          = book.title
+
+
+
+= render partial: 'shared/footer_1'

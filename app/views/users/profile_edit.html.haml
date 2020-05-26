@@ -1,6 +1,6 @@
-.MainDisplay
-  = render partial: 'shared/header_1'
+= render partial: 'shared/header_1'
 
+.MainDisplay_pd
   .title-box
     .icon
       .fa.fa-edit
@@ -38,6 +38,6 @@
             = f.label :自己紹介
             = f.text_area :introduction, class: "introduction", rows: "7", maxlength: "500", placeholder: "自己紹介（500文字以内）\n\n例）\nジャンル問わず、毎月10冊程度の本を読んでいます。おすすめの本があれば共有したいです。よろしくお願いします。"
         .btn-form
-          = f.submit "変更する", class:"edit-btn", data: { confirm: "この内容で登録しますか？"}
+          = f.submit "更新する", class:"edit-btn", data: { confirm: "この内容で登録しますか？"}
 
-  = render partial: 'shared/footer_1'
+= render partial: 'shared/footer_1'

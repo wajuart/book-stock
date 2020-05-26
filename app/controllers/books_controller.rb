@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :set_current_user
   # before_action :set_tweet, only: [:edit, :show]
   # before_action :move_to_index, except: [:index, :show, :search]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:create]
   # before_action :set_user
   # before_action :authenticate_user!, only: [:show]
 
@@ -23,10 +23,9 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
     # binding.pry
     if @book.save
-      flash.now[:notice] = '本が登録されました。'
-      redirect_to books_path
+      redirect_to books_path(@book), notice: '本が登録されました'
     else
-      flash.now[:alert] = '本の情報を入力してください。'
+      flash.now[:alert] = '本の情報を正しく入力してください。'
       render :new
     end
   end
@@ -34,6 +33,9 @@ class BooksController < ApplicationController
   def show
     @book = Book.find_by(id: params[:id])
     @user = User.find_by(id: @book.user_id)
+    # @comments = @book.comments
+    @comment = Comment.new
+    @comments = @book.comments.includes(:user)
   end
 
 
@@ -48,32 +50,31 @@ class BooksController < ApplicationController
     book.update(book_params)
     @book = Book.find_by(id: params[:id])
     if @book.update(book_params)
-      flash.now[:notice] = '本が編集されました。'
-      redirect_to books_path
+      redirect_to books_path(@book), notice: '本が更新されました'
     else
-      flash.now[:alert] = '削除に失敗しました。'
-      redirect_to edit_book_path(params[:id])
+      flash.now[:alert] = '編集に失敗しました'
+      render :edit
     end
   end
   
   def destroy
     book = Book.find(params[:id])
     book.destroy
-    flash.now[:notice] = '本が削除されました。'
-    redirect_to books_path
+    # book.destroy(book_params)
     # @book = Book.find_by(id: params[:id])
+    redirect_to books_path(@book), notice: '本が削除されました'
     # if @book.destroy
-    #   flash.now[:notice] = '本が削除されました。'
-    #   redirect_to books_path
+    #   redirect_to books_path(@book), notice: '本が削除されました'
     # else
-    #   redirect_to edit_book_path(@book.id)
+    #   flash.now[:alert] = '削除に失敗しました。'
+    #   render :edit
     # end
   end
 
 
   def search
-    @books = Book.search(params[:keyword])
-    @books = Book.page(params[:page]).per(18).order(created_at: :desc)
+    @books = Book.search(params[:keyword]).order(created_at: :desc)
+    # @books = Book.page(params[:page]).per(18).order(created_at: :desc)
     # @books = Book.page(params[:page]).order(created_at: :desc)
   end
 

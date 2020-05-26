@@ -2,10 +2,20 @@
   box-sizing: border-box;
 }
  
-.MainDisplay {
-  background-color: #ffffff;
-  height: 100vh;
+.BookEdit {
+  height: 100%;
   width: 100vw;
+  .title-box_be { 
+    font-family: ヒラギノ明朝 ProN;
+    letter-spacing: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 40px 0 0 200px;
+    display: flex;
+    .icon {
+      margin-right: 8px;
+    }
+  }
   .form {
     height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
@@ -16,10 +26,10 @@
       .Left-side { 
         height: 650px;
         width: 1200px;
-        padding: 20px 100px 0 270px;
+        padding: 30px 100px 0 270px;
         .Left-upper_form {
           display: flex;
-          .image-form_e {
+          .image-form {
             height: 270px;
             width: 190px;
             border: outset 3px rgb(190, 199, 223);
@@ -57,7 +67,7 @@
       .left-input_form {
         height: 50px;
         width: 100%;
-        font-size: 22px;
+        font-size: 20px;
         border-bottom: thin solid #cccccc;
         border-top: none;
         border-right: none;
@@ -75,19 +85,8 @@
         margin: 0 35px 0 0;
         padding: 0 30px;
       }
-      // .evaluation-form {
-      //   margin-right: 35px;
-      //   text-align: center;
-      // }
-      // .evaluation_form {
-      //   background-color: #ffffff;
-      //   height: 60px;
-      //   width: 150px;
-      //   font-size: 18px;
-      //   border: inset #dbedf0 2px;
-      // }
       .area_form {
-        height: 90px;
+        height: 120px;
         width: 535px;
         font-size: 14px;
         border: inset #dbedf0 2px;
@@ -136,7 +135,7 @@
         display: flex;
         justify-content: space-evenly;
         .book-edit_btn {
-          background-color: #04a711;
+          background-color: rgb(50, 177, 134);
           height: 50px;
           width: 180px;
           color: #eeeeee;
@@ -144,19 +143,19 @@
           border-radius: 20px;
           cursor: pointer;
           &:hover {
-            background-color: #05800f;
-          }  
+            background-color: rgba(50, 177, 135, 0.788);
+          }
         }
         a { 
           color: #eeeeee;
-          background-color: black;
+          background-color: #131c53;
           height: 50px;
           width: 130px;
           border: outset 2px;
           border-radius: 20px;
           cursor: pointer;
           &:hover {
-            background-color: rgb(88, 83, 83);
+            background-color: #131b53b6;
           }
         }  
       }

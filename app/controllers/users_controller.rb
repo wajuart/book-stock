@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:index, :my_page, :edit, :profile_edit, :show]
+  # before_action :set_user, only: [:index, :my_page, :edit, :profile_edit, :show]
 
   def index
+    @users = User.all
   end
 
   def new
@@ -12,17 +13,19 @@ class UsersController < ApplicationController
     @user = User.new(user_params) 
     @user.image = "default.png"
     if @user.save
-      flash[:success] = '新しいユーザーを登録しました。'
+      flash[:success] = '新しいユーザーを登録しました'
       redirect_to @user
     else
-      flash.now[:danger] = 'ユーザーの登録に失敗しました。'
+      flash.now[:danger] = 'ユーザーの登録に失敗しました'
       render :new
     end
   end
 
   def show
-    # @user = User.find_by(params[:id])
-    # @book = Book.find_by(params[:id])
+    # user = User.find(params[:id])
+    @user = User.find(params[:id])
+    # @books = Book.find(params[:id])
+    @books = @user.books
     # @user = User.where(user_id: current_user.id)
   end
 
@@ -40,20 +43,20 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end  
   
   def profile_edit
-    # @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end  
 
   def update
     @user = User.find(params[:id])
     # @user.image = "default_icon.png"
     if current_user.update(user_params)
-      redirect_to my_page_user_path(current_user)
+      redirect_to my_page_user_path(current_user), notice: 'プロフィールが更新されました'
     else
-      render :edit
+      render :edit, alert: 'プロフィールの更新に失敗しました'
     end
   end
 

@@ -1,12 +1,13 @@
 class Book < ApplicationRecord
+  has_many :comments, dependent: :destroy
   belongs_to :user, foreign_key: :user_id
+
+  mount_uploader :image, ImageUploader
   
   def self.search(search)
     return Book.all unless search
     Book.where('title LIKE(?)', "%#{search}%")
   end
-
-  validates :title, :status, :genre, presence: true, unless: :image?
 
   enum status: {
     読書済み: 1,
@@ -30,7 +31,7 @@ class Book < ApplicationRecord
     小説: 12,
     漫画: 13,
     生活: 14,
-    etc: 15
+    その他: 15
   }, _prefix: true
 
   enum item: {
@@ -38,8 +39,14 @@ class Book < ApplicationRecord
     リアル本: 1,
     電子書籍: 2,
     Paperwhite: 3,
-    その他: 4
+    オーディオブック: 4
+    # その他: 5
   }, _prefix: true  
 
-  mount_uploader :image, ImageUploader
+  validates :title, :status, :genre, presence: true, unless: :image?
+  validates :title, length: { maximum: 18 }, presence: true
+  validates :publisher, length: { maximum: 15 }
+  validates :impression, length: { maximum: 180 }
+  validates :memo, length: { maximum: 60 }
+  
 end
