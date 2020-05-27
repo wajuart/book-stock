@@ -128,15 +128,15 @@
           = link_to profile_edit_user_path(current_user) do
             .user-icon
               = image_tag current_user.user_image.url, class: "user-image_set"
-        .registrations-info
-          .register-name
+        .trade-info
+          .trade-info__nickname
             = link_to profile_edit_user_path(current_user) do
               = current_user.name
-          .count-box  
-            .count-title
-              登録本数
-            .count-books
-              = @book.count      
+          .trade-info__count  
+            .trade-info__count__sell-title 登録数
+            .trade-info__count__sell-count 25      
+            .trade-info__count__buy-title 購入数
+            .trade-info__count__buy-count 17
       %ul.trade-tab
         %li.active すべて
         %li 読書済み

@@ -136,6 +136,7 @@
           border-radius: 7px;
           margin: 0 auto 20px;
           padding: 15px;
+          word-wrap: break-word;
         }
       }
     }  
@@ -159,8 +160,23 @@
 .table-title {
   font-size: 20px;
   text-align: center;
+  letter-spacing: 3px;
   margin: 60px 0 0px;
 }
+.count-box { 
+  margin: 10px auto;
+
+  .count-title_ush {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .count-books_ush {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
 
 .books-area_i {
   background-color: #ffffff;

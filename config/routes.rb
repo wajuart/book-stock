@@ -70,7 +70,7 @@ Rails.application.routes.draw do
       get 'novel'
       get 'comic'
       get 'life'
-      get 'ect'
+      get 'genre_ect'
     end
     resources :comments, only: :create
     collection do

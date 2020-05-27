@@ -6,7 +6,13 @@ class Book < ApplicationRecord
   
   def self.search(search)
     return Book.all unless search
-    Book.where('title LIKE(?)', "%#{search}%")
+      Book.where('title LIKE(?)', "%#{search}%")
+      .or(
+        Book.where('author LIKE(?)', "%#{search}%")
+      )
+      .or(
+        Book.where('publisher LIKE(?)', "%#{search}%")
+      )
   end
 
   enum status: {
@@ -45,8 +51,8 @@ class Book < ApplicationRecord
 
   validates :title, :status, :genre, presence: true, unless: :image?
   validates :title, length: { maximum: 18 }, presence: true
-  validates :publisher, length: { maximum: 15 }
-  validates :impression, length: { maximum: 180 }
-  validates :memo, length: { maximum: 60 }
+  validates :publisher, length: { maximum: 15, message: "は 15文字以下で入力してください" }, allow_blank: true
+  validates :memo, length: { maximum: 60, message: "は 60文字以下で入力してください" }, allow_blank: true
+  validates :impression, length: { maximum: 180, message: "は 180文字以下で入力してください" }, allow_blank: true
   
 end

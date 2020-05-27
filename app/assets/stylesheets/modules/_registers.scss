@@ -68,8 +68,6 @@
     }
     }
     .MainDisplay {
-      background-color: #ffffff;
-      height: 100vh;
       width: calc(100% - 260px);
       .MainHeader {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
@@ -114,7 +112,7 @@
           }  
         }   
       }          
-      .MainSecondHeader {
+      .MainSecondHeader_ma {
         background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
         height: 50px;
         width: 100%;
@@ -122,38 +120,37 @@
         display: flex;
         justify-content: space-between;
         border-bottom: solid 1px #eeeeee; 
-        line-height: 50px;
-        .name-box {
+        .name-box_ma {
           height: 50px;
-          width: 200px;
-          margin: 7px 240px 7px 50px;
-          .user-name {
+          width: 530px;
+          margin: 7px 0 0 0;
+          .user-name_ma {
             height: 35px;
             font-size: 15px;
             line-height: 35px;
             text-align: center;
             border: outset 2px;
+            padding: 0 15px;
           }
         }  
-        .search-box {
-          height: 100%;
-          width: 600px;
+        .search-box_ma {
+          width: 100%;
+          margin: -2px -20px 10px 280px;
           display: flex;
-          
-          &__input {
+          position: relative;
+          &__input_ma {
             background-color: #ffffff;
             height: 35px;
             width: 350px;
             color: #555555;
             font-size: 14px;
-            margin-top: 8px;
+            margin: 8px 0 5px;
             padding: 0 90px 0 20px;
             border: inset #eeeeee 2px;
             border-radius: 20px;
             line-height: 35px;
-            position: relative;
           }  
-          .search-btn {
+          .search-btn_ma {
             background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
             font-size: 13px;
             color: #ffffff;
@@ -161,14 +158,16 @@
             padding: 0 10px;
             border: outset thin;
             border-radius: 5px;
+            position: absolute;
+            left: 285px;
             &:hover {
             opacity: 0.7;
             }
           }  
         }
-        &__social-btn {          
-          width: 600px;
-          padding-left: 120px;
+        .social-box_ma {          
+          width: 1200px;
+          padding: 11px 0 0 150px;
           .social-btn__facebook {
             color: #ffffff;
             font-size: 15px;

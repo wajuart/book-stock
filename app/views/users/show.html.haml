@@ -42,7 +42,11 @@
               = @user.introduction
   .table-title
     ユーザー登録本一覧
-
+  .count-box
+    .count-title_ush
+      登録本数
+    .count-books_ush
+      = @book.count
 .books-area_i
   - @books.each do |book|
     .book-list_i
@@ -53,7 +57,4 @@
             = book.genre
         .book-title
           = book.title
-
-
-
 = render partial: 'shared/footer_1'

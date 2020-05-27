@@ -39,10 +39,23 @@
             text-align: center;
             margin-bottom: 30px;
             padding: 2px;
+            &:hover {
+              opacity: 0.8;
+            }
             img {
               width: 100%;
               height: 100%;
+              cursor: pointer;
               object-fit: cover;
+            }
+            .book-image {
+              height: 100%;
+              width: 100%;
+              .hidden { 
+                height: 100%;
+                width: 100%;
+                display: none;
+              }
             }
           }
         }
@@ -106,7 +119,12 @@
       }
       .title-line {
         font-size: 14px;
-        margin:0 0 5px 5px;
+        margin: 0 0 5px 5px;
+        display: flex;
+      }
+      .title-line_img {
+        font-size: 14px;
+        margin: -26px 0 5px 100px;
         display: flex;
       }
       .required {

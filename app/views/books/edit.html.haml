@@ -10,17 +10,23 @@
     = form_for @book do |f|
       .registers-box
         .Left-side
+          .title-line_img
+            .title
+              イメージ
+            .optional
+              任意
           .Left-upper_form
             .image-form
-              = image_tag @book.image
-              = f.file_field :image, class: 'input_image', placeholder: '-- upload a image --'
+              = f.label :image, class: "book-image" do
+                = image_tag @book.image
+                = f.file_field :image, class: 'hidden', placeholder: '-- upload a image --'
           .title-form
             .title-line
               .title
                 タイトル
               .required
                 必須
-            = f.text_field :title, class: 'left-input_form', placeholder: '-- type a title --', required:''
+            = f.text_field :title, class: 'left-input_form', placeholder: '-- type a title --', autofocus: true, required:''
           .publisher-form
             .title-line
               .title

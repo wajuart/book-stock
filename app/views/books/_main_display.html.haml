@@ -19,16 +19,16 @@
         = link_to user_session_path do
           アプリについて           
 
-  .MainSecondHeader
-    .name-box
-      .user-name
+  .MainSecondHeader_ma
+    .name-box_ma
+      .user-name_ma
         = current_user.name
-    .search-box
-      = form_tag(search_books_path, method: 'get') do      
-        = text_field_tag :search , '', placeholder: "本を検索する", class: "search-box__input" 
-        = submit_tag '検索', class: "search-btn" , name: nil
+    .search-box_ma
+      = form_tag(search_books_path, method: 'get') do
+        = text_field_tag :keyword, '', placeholder: "本を検索する", class: "search-box_ma__input_ma" 
+        = submit_tag '検索', class: "search-btn_ma" , name: nil
 
-    .MainSecondHeader__social-btn
+    .social-box_ma
       = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
         = icon('fab', 'facebook-square',  class: "content__btn__icon")
         facebook

@@ -17,7 +17,7 @@
           .name-box
             .current-name
               = current_user.name
-            = f.text_field :name, class: 'name-form', placeholder: '-- new nickname --'
+            = f.text_field :name, class: 'name-form', placeholder: '-- new nickname --', required:''
         .profile-middle
           .favorite-left
             .form_1
@@ -36,7 +36,7 @@
         .profile-bottom
           .text-form
             = f.label :自己紹介
-            = f.text_area :introduction, class: "introduction", rows: "7", maxlength: "500", placeholder: "自己紹介（500文字以内）\n\n例）\nジャンル問わず、毎月10冊程度の本を読んでいます。おすすめの本があれば共有したいです。よろしくお願いします。"
+            = f.text_area :introduction, class: "introduction", rows: "7", maxlength: "280", placeholder: "自己紹介（280文字以内）\n\n例）\nジャンル問わず、毎月10冊程度の本を読んでいます。おすすめの本があれば共有したいです。よろしくお願いします。"
         .btn-form
           = f.submit "更新する", class:"edit-btn", data: { confirm: "この内容で登録しますか？"}
 

@@ -1,3 +1,98 @@
+//トップページ
+.MainSecondHeader {
+  background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
+  height: 50px;
+  width: 100vw;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #eeeeee; 
+  line-height: 50px;
+  .name-box {
+    height: 50px;
+    width: 200px;
+    margin: 7px 240px 7px 50px;
+    .user-name {
+      height: 35px;
+      font-size: 15px;
+      line-height: 35px;
+      text-align: center;
+      border: outset 2px;
+    }
+  }  
+  .search-box {
+    height: 100%;
+    width: 600px;
+    margin-left: 214px;
+    display: flex;
+    &__input {
+      background-color: #ffffff;
+      height: 35px;
+      width: 350px;
+      color: #555555;
+      font-size: 14px;
+      margin-top: 8px;
+      padding: 0 90px 0 20px;
+      border: inset #eeeeee 2px;
+      border-radius: 20px;
+      line-height: 35px;
+      position: relative;
+    }  
+    .search-btn {
+      background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
+      font-size: 13px;
+      color: #ffffff;
+      margin-top: 15px;
+      padding: 0 10px;
+      border: outset thin;
+      border-radius: 5px;
+      &:hover {
+      opacity: 0.7;
+      }
+    }  
+  }
+  .social-btn {          
+    width: 600px;
+    padding-left: 200px;
+    .social-btn__facebook {
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      background-color: #4169e1;
+      border-radius: 3px;
+      padding: 4px 8px;
+      &:hover {
+        opacity: 0.7;
+      }  
+    }
+    .social-btn__twitter {
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      background-color: #00bfff;
+      margin: 0 15px;
+      border-radius: 3px;
+      padding: 4px 8px;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .social-btn__instagram {
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      background-color: #fc76bf;
+      border-radius: 3px;
+      padding: 4px 8px;
+      &:hover {
+        opacity: 0.7;
+      }      
+    }
+  } 
+}
+
+
+//トップページ以外
 .MainHeader {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
   height: 110px;
@@ -65,8 +160,9 @@
   .search-box {
     height: 100%;
     width: 600px;
+    margin-top: -2px;
+    position: relative;
     display: flex;
-    
     &__input {
       background-color: #ffffff;
       height: 35px;
@@ -78,7 +174,6 @@
       border: inset #eeeeee 2px;
       border-radius: 20px;
       line-height: 35px;
-      position: relative;
     }  
     .search-btn {
       background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
@@ -88,13 +183,15 @@
       padding: 0 10px;
       border: outset thin;
       border-radius: 5px;
+      position: absolute;
+      left: 285px;
       &:hover {
       opacity: 0.7;
       }
     }  
   }
   &__social-btn {          
-    width: 600px;
+    width: 456px;
     padding-left: 120px;
     .social-btn__facebook {
       color: #ffffff;
@@ -186,5 +283,4 @@
     margin-top: 13px;
     font-size: 6px;
   }
-  
 }

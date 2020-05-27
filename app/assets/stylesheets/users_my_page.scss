@@ -98,10 +98,10 @@
             }
           }  
         }  
-        .trade-info {
+        .registrations-info {
           width: 300px;
           margin-left: 40px;
-          &__nickname {
+          .register-name {
             width: 100%;
             font-size: 24px;
             margin: 24px 0 30px;
@@ -113,22 +113,18 @@
               }
             }
           }
-          &__count {
-            padding: 10px;
+          .count-box  {
+            margin-left: 35px;
+            padding: 10px 10px 10px 0px;
             display: flex;
-            justify-content: space-between;
-            &__sell-title {
-              font-size: 18px;
-            }  
-            &__sell-count {
+            justify-content: center;
+            .count-title {
               font-size: 20px;
               margin-right: 30px;
-            }
-            &__buy-title {
-              font-size: 18px;
             }  
-            &__buy-count {
+            .count-books  {
               font-size: 20px;
+              margin-right: 30px;
             }
           }  
         }

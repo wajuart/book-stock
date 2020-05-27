@@ -1,27 +1,28 @@
-- if user_signed_in?
-  = render partial: 'shared/header_1'
-- else
-  = render partial: 'shared/header_2'
+.SearchDisplay
+  - if user_signed_in?
+    = render partial: 'shared/header_1'
+  - else
+    = render partial: 'shared/header_2'
 
-.Search-box
-  .title-box_sea
-    .icon
-      .fa.fa-search
-    .title
-      = "' #{params[:keyword]} ' の検索結果"
-  .books-area_s
-    - @books.each do |book|
-      .book-list_s
-        = link_to book_path(book) do
-          .book-image
-            = image_tag book.image.to_s  
-            .book-genre-tag
-              = book.genre
-          .book-title
-            = book.title
-  .bottom-space
-    .pages
-      page1
-    = link_to "戻る", :back, class: 'btn'            
+  .Search-box
+    .title-box_sea
+      .icon
+        .fa.fa-search
+      .title
+        = "' #{params[:keyword]} ' の検索結果"
+    .books-area_s
+      - @books.each do |book|
+        .book-list_s
+          = link_to book_path(book) do
+            .book-image
+              = image_tag book.image.to_s  
+              .book-genre-tag
+                = book.genre
+            .book-title
+              = book.title
+    .bottom-space
+      .pages
+        page1
+      = link_to "戻る", :back, class: 'btn'            
 
-= render partial: 'shared/footer_1'  
+  = render partial: 'shared/footer_1'  
