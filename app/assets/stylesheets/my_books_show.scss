@@ -161,7 +161,7 @@
         line-height: 50px;
         display: flex;
         justify-content: space-evenly;
-        .to_edit-btn {
+        .to-edit_btn {
           background-color: #1486a8;
           height: 50px;
           width: 180px;
@@ -171,21 +171,11 @@
           cursor: pointer;
           &:hover {
             background-color: #1486a8d2;
+            text-decoration: none;
           }  
         }
-        .delete-btn {
-          background-color: #04a711;
-          height: 50px;
-          width: 180px;
-          color: #eeeeee;
-          border: outset 2px;
-          border-radius: 20px;
-          cursor: pointer;
-          &:hover {
-            background-color: #05800f;
-          }  
-        }
-        a { 
+
+        a.delete_btn { 
           color: #eeeeee;
           background-color: black;
           height: 50px;
@@ -195,6 +185,7 @@
           cursor: pointer;
           &:hover {
             background-color: rgb(88, 83, 83);
+            text-decoration: none;
           }
         }  
       }

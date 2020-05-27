@@ -6,7 +6,7 @@
       = link_to books_path(current_user) do
         トップページ 
     %li.conent-list__item
-      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
     %li.conent-list__item
       = link_to edit_user_path(current_user) do
         アカウント編集    

@@ -1,4 +1,4 @@
-//トップページ
+//トップページ用
 .MainSecondHeader {
   background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
   height: 50px;
@@ -46,8 +46,10 @@
       padding: 0 10px;
       border: outset thin;
       border-radius: 5px;
+      height: 24px;
+      line-height: 1px;
       &:hover {
-      opacity: 0.7;
+      opacity: 0.9;
       }
     }  
   }
@@ -92,7 +94,7 @@
 }
 
 
-//トップページ以外
+//トップページ以外用
 .MainHeader {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
   height: 110px;
@@ -127,7 +129,10 @@
           font-weight: bold;
           text-decoration: underline;
         }
-      }  
+      }
+      a .log-out_btn {
+        padding-bottom: -1px;
+      }
       &:hover {
         color: black;
         font-weight: bold;

@@ -13,6 +13,9 @@
       width: 300px;
       margin: 40px 40px 50px 0;
       .Mypage-nav {
+        a {
+          text-decoration: none;
+        }
         &__list {
           &__item-top {
             background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
@@ -43,6 +46,7 @@
               background-color: #f8f8f8;
               color:rgb(42, 84, 167);
               font-weight: bold;
+              font-size: 16px;
             }  
             .icon-arrow-right {
               position: absolute;
@@ -170,6 +174,9 @@
           &:hover {
             opacity: 0.8;
           }
+          a {
+            text-decoration: none;
+          }
           .book-image {
             height: 190px;
             padding: 4px 14px;
@@ -187,7 +194,8 @@
               width: 70px;
               background-color: slateblue;
               color: #000;
-              font-size: 11px;     
+              font-size: 11px;
+              line-height: 20px;
               text-align: center;
               color: #fff;                   
             }

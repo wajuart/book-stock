@@ -10,6 +10,8 @@
         .fa.fa-search
       .title
         = "' #{params[:keyword]} ' の検索結果"
+      .pagination_sea
+        = paginate(@books)
     .books-area_s
       - @books.each do |book|
         .book-list_s
@@ -19,10 +21,6 @@
               .book-genre-tag
                 = book.genre
             .book-title
-              = book.title
-    .bottom-space
-      .pages
-        page1
-      = link_to "戻る", :back, class: 'btn'            
+              = book.title        
 
   = render partial: 'shared/footer_1'  

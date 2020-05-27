@@ -7,7 +7,8 @@ class BooksController < ApplicationController
   # before_action :authenticate_user!, only: [:show]
 
   def index
-    @books = Book.page(params[:page]).per(15).order(created_at: :desc)
+    # @books = Book.page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
     # @books = Book.includes(:images).order('created_at DESC').limit(3)
     # @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     # @books = Book.all
@@ -73,7 +74,7 @@ class BooksController < ApplicationController
 
 
   def search
-    @books = Book.search(params[:keyword]).order(created_at: :desc)
+    @books = Book.search(params[:keyword]).order(created_at: :desc).page(params[:page]).per(18)
     # @books = Book.page(params[:page]).per(18).order(created_at: :desc)
     # @books = Book.page(params[:page]).order(created_at: :desc)
   end

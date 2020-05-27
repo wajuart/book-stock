@@ -25,9 +25,10 @@ class UsersController < ApplicationController
     # user = User.find(params[:id])
     @user = User.find(params[:id])
     # @books = Book.find(params[:id])
-    @books = @user.books
+    @books = @user.books.order("created_at DESC").page(params[:page]).per(18)
     books = @book = Book.where(user_id: params[:id]).all
     # @user = User.where(user_id: current_user.id)
+    # @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
   end
 
   def my_page

@@ -21,16 +21,15 @@
   .form {
     background-color: #ffffff;
     padding-top: 10px;
-    .profile-container {
+    .profile-container_pe {
       background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
-      height: 620px;
       width: 780px;
       font-size: 24px;
       font-weight: bold;
       border: outset;
       border-radius: 10px;
       margin: 0 auto;
-      padding: 0 110px;
+      padding: 0 110px 20px;
       .profile-top {
         height: 140px;
         padding: 10px 0;
@@ -166,7 +165,7 @@
         }
       }  
       .btn-form {
-        .edit-btn { 
+        .pro-edit_btn { 
           background-color: rgb(50, 177, 134);
           height: 50px;
           width: 200px;

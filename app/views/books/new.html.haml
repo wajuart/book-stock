@@ -10,9 +10,16 @@
     = form_for @book do |f|
       .registers-box
         .Left-side
+          .title-line_img
+            .title
+              イメージ
+            .optional
+              任意
           .Left-upper_form
             .image-form
-              = f.file_field :image, class: 'input_image'
+              = f.label :image, class: "book-image" do
+                = image_tag @book.image
+                = f.file_field :image, class: 'hidden'
           .title-form
             .title-line
               .title
@@ -90,6 +97,6 @@
             = f.text_area :impression, class: 'area_form', placeholder: '-- type impressions --'
           .btn-box
             = f.submit '登録する', class: 'register-btn', data: { confirm: "この内容で登録しますか？"}
-            = link_to "戻る", :back, class: 'btn' 
+            = link_to "戻る", :back, class: 'back_btn'
             
 = render partial: 'shared/footer_1'  

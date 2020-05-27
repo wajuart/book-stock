@@ -19,7 +19,7 @@
             .image-form
               = f.label :image, class: "book-image" do
                 = image_tag @book.image
-                = f.file_field :image, class: 'hidden', placeholder: '-- upload a image --'
+                = f.file_field :image, class: 'hidden'
           .title-form
             .title-line
               .title
@@ -98,6 +98,6 @@
           .btn-box
             = f.submit '更新', class: 'book-edit_btn', data: { confirm: "この内容で編集しますか？"}
 
-            = link_to "戻る", :back, class: 'btn'
+            = link_to "戻る", :back, class: 'back_btn'
             
 = render partial: 'shared/footer_1'

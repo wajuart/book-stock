@@ -8,7 +8,7 @@
       プロフィール編集
   .form
     = form_for(@user, local: true) do |f|
-      .profile-container
+      .profile-container_pe
         .profile-top 
           .image-form
             = f.label :user_image, class: "user-image" do
@@ -38,6 +38,6 @@
             = f.label :自己紹介
             = f.text_area :introduction, class: "introduction", rows: "7", maxlength: "280", placeholder: "自己紹介（280文字以内）\n\n例）\nジャンル問わず、毎月10冊程度の本を読んでいます。おすすめの本があれば共有したいです。よろしくお願いします。"
         .btn-form
-          = f.submit "更新する", class:"edit-btn", data: { confirm: "この内容で登録しますか？"}
+          = f.submit "更新する", class:"pro-edit_btn", data: { confirm: "この内容で登録しますか？"}
 
 = render partial: 'shared/footer_1'

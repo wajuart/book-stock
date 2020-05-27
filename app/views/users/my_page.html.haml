@@ -156,6 +156,9 @@
                   .book-status__title
                     = book.status
               .book-title
-                = book.title   
+                = book.title
+      .bottom-space
+        .pagenation
+          = paginate(@books)
 
 = render partial: 'shared/footer_1'

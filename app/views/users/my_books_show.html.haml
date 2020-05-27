@@ -79,12 +79,10 @@
             .area_result
               = @book.impression    
           .btn-box_show
-            -# .register-btn 編集
-            -# = link_to "戻る", :back, class: 'btn' 
-            = link_to "/books/#{@book.id}/edit", method: :get, class:"to_edit-btn" do
+            = link_to "/books/#{@book.id}/edit", method: :get, class:"to-edit_btn" do
               %p.text
                 編集画面へ
-            = link_to "/books/#{@book.id}", method: :delete, class:"delet-btn" do
+            = link_to "/books/#{@book.id}", method: :delete, class:"delete_btn" do
               %p.text
                 削除
 

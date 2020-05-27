@@ -12,17 +12,22 @@
       letter-spacing: 5px;
       font-size: 25px;
       line-height: 30px;
-      padding: 40px 0 0 200px;
+      padding: 40px 150px 0 200px;
       display: flex;
       .icon {
         margin-right: 8px;
-      }          
+      }
+      .pagination_sea {
+        font-size: 20px;
+        margin-left: 750px;
+        letter-spacing: 0vmax;
+      }
     }
     .books-area_s {
       background-color: #ffffff;
       height: auto;
-      margin-bottom: 200px;
-      padding: 20px 116px;
+      margin-bottom: 251px;
+      padding: 50px 116px 20px;
       display: flex;
       flex-wrap: wrap;
       .book-list_s {
@@ -34,7 +39,10 @@
         cursor: pointer;
         &:hover {
           opacity: 0.8;
-        }     
+        }
+        a {
+          text-decoration: none;
+        }
         .book-image {
           height: 190px;
           padding: 4px 14px;
@@ -51,7 +59,8 @@
             height: 20px;
             width: 70px;
             background-color: slateblue;
-            font-size: 11px;     
+            font-size: 11px; 
+            line-height: 20px;    
             text-align: center;
             color: #fff;
             img {
@@ -87,21 +96,26 @@
       border: inset;
       background-color: mintcream;
     }
-    a { 
-      color: #eeeeee;
-      background-color: black;
-      height: 35px;
-      width: 130px;
-      text-align: center;
-      line-height: 35px;
-      margin-top: 30px;
-      border: outset 2px;
-      border-radius: 20px;
-      cursor: pointer;
-      &:hover {
-        background-color: rgb(88, 83, 83);
-      }
-    }
+    // a { 
+    //   color: #eeeeee;
+    //   background-color: black;
+    //   height: 35px;
+    //   width: 130px;
+    //   text-align: center;
+    //   line-height: 35px;
+    //   margin-top: 30px;
+    //   border: outset 2px;
+    //   border-radius: 20px;
+    //   cursor: pointer;
+    //   &:hover {
+    //     background-color: rgb(88, 83, 83);
+    //   }
+    // }
+
+    // .bottom-space_sea2 {
+    //   background-color: #ca6565;
+    //   margin: 0 auto;
+    // }
   }
 }
 
