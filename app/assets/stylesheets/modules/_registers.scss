@@ -27,7 +27,8 @@
       .contents {
         font-weight: bold;
         margin-bottom: 40px;
-        a { 
+        a {
+          text-decoration: none; 
           .my-page-btn {
             background-color: white;
             color: rgb(11, 54, 29);
@@ -85,6 +86,10 @@
           padding-top: 10px;
           margin: 0 auto;
           cursor: pointer;
+          a {
+            color: #FFF;
+            text-decoration: none; 
+          }
         }  
         .conent-list {
           margin-top: 28px;
@@ -237,7 +242,6 @@
                 font-size: 13px;
                 margin: 5px 0 0 30px;
                 display: flex;
-                
                 &__left {
                   width: 65px;
                   text-align: center;
@@ -311,7 +315,10 @@
                 cursor: pointer;
                 &:hover {
                   opacity: 0.8;
-                }     
+                }
+                a {
+                  text-decoration: none; 
+                }
                 .book-image {
                   height: 190px;
                   padding: 4px 14px;

@@ -21,6 +21,10 @@
       padding-top: 10px;
       margin: 0 auto;
       cursor: pointer;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
     }  
     .conent-list {
       margin-top: 28px;
@@ -88,7 +92,7 @@
           height: 45px;
           width: 130px;
           text-align: center;
-          line-height: 45px;
+          line-height: 28px;
           margin: 0 auto;
           border: outset 2px;
           border-radius: 20px;

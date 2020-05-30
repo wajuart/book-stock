@@ -133,31 +133,8 @@
           }  
         }
       }
-      .trade-tab { 
-        display: flex;
-      }  
-      .trade-tab li {
-        background-color: rgb(146, 158, 212);
-        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-        height: 60px;
-        width: 220px;
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 60px;
-        text-align: center;
-        cursor: pointer;
-        transition: .3s;
-        &:hover {
-          opacity: 0.7;
-        }
-      }
-      .trade-tab li.active {
-        background-color: #ffffff;
-        color: #3CCACE;
-        cursor: auto;
-      }
       .books-area {
+        width: 1100px;
         background-color: #ffffff;
         padding: 20px 18px 30px;
         display: flex;
@@ -239,6 +216,11 @@
       }
     }
   }
+}
+
+.contents-book-none {
+  font-size: 20px;
+  margin: 200px auto;
 }
 
 .mypage-nav a {

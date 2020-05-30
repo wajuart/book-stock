@@ -35,6 +35,7 @@ class UsersController < ApplicationController
     # @books = Book.page(params[:page]).order(created_at: :asc)
     # @books = Book.user.book.order(created_at: :asc)
     @books = current_user.books.page(params[:page]).per(12).order(created_at: :desc)
+    # @books = @books = current_user.books.where(status: '2').page(params[:page]).per(12).order(created_at: :desc)
     # @user = User.find(params[:id])
     # @user = User.where(user_id: current_user.id)
     books = @book = Book.where(user_id: params[:id]).all
@@ -71,106 +72,135 @@ class UsersController < ApplicationController
   # end
 
   def all_books
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.page(params[:page]).per(12).order(created_at: :desc)
   end
 
   # ステータス別
   def read_books
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(status: '読書済み').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def reading_books
-    @books = current_user.books.where(status '読書中').page(params[:page]).per(12).order(created_at: :desc)
+    books = @book = Book.where(user_id: params[:id]).all
+    @books = current_user.books.where(status: '読書中').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def will_read_books
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(status: '未読').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def interested
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(status: '興味あり').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   # ジャンル別
   def business
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: 'ビジネス').page(params[:page]).per(12).order(created_at: :desc)
+    # @books = current_user.books.where(genre: 'ビジネス', status: '1').page(params[:page]).per(12).order(created_at: :desc)
+    # @books = current_user.books.where(genre: 'ビジネス', status: '2').page(params[:page]).per(12).order(created_at: :desc)
+    # @books = current_user.books.where(genre: 'ビジネス', status: '3').page(params[:page]).per(12).order(created_at: :desc)
+    # @books = current_user.books.where(genre: 'ビジネス', status: '4').page(params[:page]).per(12).order(created_at: :desc)
     # @books = Book.where(genre: 'ビジネス').page(params[:page]).per(12).order(created_at: :desc)
+    # ⬆️トップ画面での切り替えで使える
   end
 
   def self_enlightenment
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '自己啓発').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def money
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: 'マネー').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def politics_economy
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '政治／経済').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def study_skill
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '勉強／スキル').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def cooking
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '料理').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def hobby
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '趣味').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def health
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '健康').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def sports
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: 'スポーツ').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def entertainment
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '芸能').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def parenting
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '子育て').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def novel
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '小説').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def comic
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '漫画').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def life
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: '生活').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def genre_etc
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(genre: 'その他').page(params[:page]).per(12).order(created_at: :desc)
   end
 
-
   def real_book
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(item: 'リアル本').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def e_book
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(item: '電子書籍').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def paper_white
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(item: 'Paperwhite').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def audio_book
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(item: 'オーディオブック').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   def item_etc
+    books = @book = Book.where(user_id: params[:id]).all
     @books = current_user.books.where(item: 'その他').page(params[:page]).per(12).order(created_at: :desc)
   end
 

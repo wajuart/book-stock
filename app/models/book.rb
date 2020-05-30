@@ -1,7 +1,9 @@
 class Book < ApplicationRecord
-  has_many :comments, dependent: :destroy
   belongs_to :user, foreign_key: :user_id
-
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :liked_users, through: :likes, source: :user
+  
   mount_uploader :image, ImageUploader
   
   def self.search(search)
@@ -13,6 +15,16 @@ class Book < ApplicationRecord
       .or(
         Book.where('publisher LIKE(?)', "%#{search}%")
       )
+  end
+
+  def like_user(user_id)
+    likes.find_by(user_id: user_id)
+   end
+
+  # ⑤
+  def like_by?(user)
+    likes.where(user_id: user.id).exists?
+
   end
 
   enum status: {
@@ -42,12 +54,12 @@ class Book < ApplicationRecord
 
   enum item: {
     "-- 未登録 --": 0,
-    リアル本: 1,
+    リアル書籍: 1,
     電子書籍: 2,
     Paperwhite: 3,
-    オーディオブック: 4
-    # その他: 5
-  }, _prefix: true  
+    オーディオブック: 4,
+    その他: 5
+  }, _prefix: true
 
   validates :title, :status, :genre, presence: true, unless: :image?
   validates :title, length: { maximum: 18 }, presence: true

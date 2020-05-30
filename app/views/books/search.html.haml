@@ -10,17 +10,25 @@
         .fa.fa-search
       .title
         = "' #{params[:keyword]} ' の検索結果"
-      .pagination_sea
-        = paginate(@books)
+      .bottom-space_sea2
+        .pagenation
+          = paginate(@books)
     .books-area_s
-      - @books.each do |book|
-        .book-list_s
-          = link_to book_path(book) do
-            .book-image
-              = image_tag book.image.to_s  
-              .book-genre-tag
-                = book.genre
-            .book-title
-              = book.title        
+      - if @books.count == 0
+        .search-book-none
+          該当する本はありません
+      - else
+        - @books.each do |book|
+          .book-list_s
+            = link_to book_path(book) do
+              .book-image
+                = image_tag book.image.to_s  
+                .book-genre-tag
+                  = book.genre
+              .book-title
+                = book.title
+    .bottom-space_sea
+      .pagenation
+        = paginate(@books)
 
   = render partial: 'shared/footer_1'  

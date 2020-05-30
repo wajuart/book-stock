@@ -57,4 +57,8 @@
             = book.genre
         .book-title
           = book.title
+.bottom-space
+  .pagenation
+    = paginate(@books)
+
 = render partial: 'shared/footer_1'

@@ -12,7 +12,7 @@
         .registered-user
           .user-left
             .registant
-              登録者
+              登録ユーザー
             .name
               = link_to @book.user.name, "/users/#{@book.user_id}"
               -# = link_to book.user.name, "/users/#{user.book_id}"
@@ -61,7 +61,7 @@
           .buy_date-form
             .title-line
               .title
-                登録者評価 :
+                ユーザー5段階評価 :
             .right-select_box
               = @book.evaluation
         .update-form
@@ -76,13 +76,77 @@
               登録者レビュー :
         .area_box_bs
           = @book.impression
+
+  
+
+  //①
+  -# = render partial: 'shared/like' 
+
+  //②
+  -# %h3 いいね件数: #{@book.likes.count}
+  -# - if current_user.already_liked?(@book)
+  -#   = button_to 'いいねを取り消す', book_like_path(@book), method: :delete
+  -# - else
+  -#   = button_to 'いいね', book_likes_path(@book)
+  -# %h2 いいねしたユーザー:
+  -# - @book.liked_users.each do |user|
+  -#   %li= user.nickname
+  -# = link_to "トップへ戻る", books_path
+ 
+  //③
+  -# %div{:class => "buttons_#{@book.id}"}= render partial: 'likes/like'
+  -# - @like_count = Like.where(book_id: params[:book_id]).count
+
+  //④
+  -# .item-button-container
+  -#   .item-button-container__left
+  -#     = render partial: 'likes/like', locals: { book: @book, books: @books, likes: @likes, like: @like}
+
+  //⑤
+  -# - if user_signed_in?
+  -#   - if @book.like_by?(current_user)
+  -#     %span いいね解除:
+  -#     = link_to @book.likes.count, book_like_path(@book), method: :delete
+  -#   - else
+  -#     %span いいね登録:
+  -#     = link_to @book.likes.count, book_likes_path(@book), method: :post
+  -#   %span いいね数:
+  -#   = @book.likes.count
+
+  //⑥
+  -# - if Like.find_by(user_id: current_user.id, book_id: @book.id)
+  -# - else
+  -#   = link_to("/likes/#{@book.id}/create", {method: "post"})
+  -# - if Like.find_by(user_id: current_user.id, book_id: @book.id)
+  -#   = link_to("/likes/#{@book.id}/destroy", {method: "post"})
+  -# - else
+  -#   = link_to("/likes/#{@book.id}/create", {method: "post"})
+
+  -# ⑦
+  -# = render partial: 'users/book' 
+  -# = render partial: 'users/like' 
+
+  -# ⑧
+  -# %span{:id => "book-#{@book.id}-like"}
+  -# = render 'shared/likes', book: @book, like: @like
+
+  - if !@book.liked_users.include?(current_user)
+    = link_to likes_path(book_id: @book.id), method: :post do
+      %i.far.fa-heart.like-btn
+  - else
+    = link_to likes_path(book_id: @book.id), method: :delete do
+      %i.fas.fa-heart.unlike-btn
+
+  = @book.liked_users.count
+
+
   - if current_user
     = form_for [@book, @comment] do |f|
       .comment-table
         .comment-table__title
           本についてのコメント
         .comment-area
-          = f.text_area :text, class: 'comment_form', placeholder: '-- コメントする --'
+          = f.text_area :text, class: 'comment_form', placeholder: '-- コメントする --', autofocus: true
           = f.submit 'SEND', class: 'comment-btn'
           .index-title
             コメント一覧

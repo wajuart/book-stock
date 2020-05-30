@@ -13,10 +13,10 @@
 }
 
 .bottom-space_sea { 
-  // margin-left: -10px;
+  // margin-left: -500px;
   // margin: 0 auto 30px;
   .pagination {
-    background-color: #dfdfdf;
+    background-color: #ffffff;
     width: fit-content;
     font-size: 20px;
     margin: 30px auto 30px;
@@ -27,17 +27,37 @@
   }
 }
 
+.bottom-space_sea2 { 
+  // margin-left: -500px;
+  // margin: 0 auto 30px;
+  .pagination {
+    background-color: #ffffff;
+    width: fit-content;
+    font-size: 20px;
+    margin: 0 0 0 100px;
+    padding: 0 25px;
+    text-align: center;
+    letter-spacing: normal;
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  }
+}
+
+
 .pagination>li>a {          
-  border: none;     /*枠線をなくす*/
-  color: #004fc5;   /*文字の色を変える*/
+  border: none;
+  color: #004fc5;
   padding: 10px 13px;
 }
 
 /* 表示しているページ番号のデザイン */
 .pagination>.active>a {     
   background: #2e2e2e;     /*背景の色を変える*/
-  color: #ffffff;
+  color: #fff;
   border-radius: 5px;
+  &:hover {
+    color: #fff;
+  }
 }
 
 /*ホバー時のデザイン*/

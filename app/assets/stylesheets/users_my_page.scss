@@ -16,6 +16,9 @@
         a {
           text-decoration: none;
         }
+        ul {
+          margin: unset;
+        }
         &__list {
           &__item-top {
             background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
@@ -39,6 +42,7 @@
             color: #000;
             padding: 16px;
             display: flex;
+            line-height: 16px;
             border-bottom: solid thin #ebebeb;
             position: relative;
             box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
@@ -83,6 +87,7 @@
           height: 120px;
           width: 120px;
           a {
+            color: #fff;;
             .user-icon {
               background-color: rgb(255, 246, 246);
               height: 120px;
@@ -102,7 +107,7 @@
             }
           }  
         }  
-        .registrations-info {
+        .user-right-info {
           width: 300px;
           margin-left: 40px;
           .register-name {
@@ -133,12 +138,24 @@
           }  
         }
       }
-      .trade-tab { 
+      ul.status-tab { 
         display: flex;
-      }  
-      .trade-tab li {
+        a {
+          text-decoration: none;
+        }
+      }
+      
+      .status-tab li.active {
+        background-color: #ffffff;
+        color: rgba(1, 158, 106, 0.644);
+        font-size: 20px;
+        cursor: auto;
+        box-shadow: none;
+      }
+
+      li.tab-list {
         background-color: rgb(146, 158, 212);
-        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+        box-shadow: 0 0 10px 2px rgba(85, 85, 85, 0.295);  
         height: 60px;
         width: 220px;
         color: #ffffff;
@@ -150,13 +167,10 @@
         transition: .3s;
         &:hover {
           opacity: 0.7;
+          box-shadow: none;
         }
       }
-      .trade-tab li.active {
-        background-color: #ffffff;
-        color: #3CCACE;
-        cursor: auto;
-      }
+
       .books-area {
         background-color: #ffffff;
         padding: 20px 18px 30px;
@@ -235,10 +249,10 @@
           }
         }
       }
-      .tab-area ul {
+      .books-area ul {
         display: none;
       }
-      .tab-area ul.list-show {
+      .books-area ul.book-list {
         display: block;
       }
     }

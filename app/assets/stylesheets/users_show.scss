@@ -193,7 +193,10 @@
     cursor: pointer;
     &:hover {
       opacity: 0.8;
-    }     
+    }
+    a {
+      text-decoration: none;
+    }
     .book-image {
       height: 190px;
       padding: 4px 14px;

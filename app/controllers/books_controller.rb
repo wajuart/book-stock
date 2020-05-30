@@ -9,6 +9,7 @@ class BooksController < ApplicationController
   def index
     # @books = Book.page(params[:page]).per(15).order(created_at: :desc)
     @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
+    @book = Book.new
     # @books = Book.includes(:images).order('created_at DESC').limit(3)
     # @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     # @books = Book.all
@@ -32,11 +33,14 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find_by(id: params[:id])
+    # @book = Book.find_by(id: params[:id])
+    @book = Book.find(params[:id])
     @user = User.find_by(id: @book.user_id)
     # @comments = @book.comments
     @comment = Comment.new
     @comments = @book.comments.includes(:user)
+    # @like = Like.find_by(user_id: current_user.id, book_id: params[:id]) if user_signed_in?
+    # @like = Like.new
   end
 
 
@@ -74,7 +78,7 @@ class BooksController < ApplicationController
 
 
   def search
-    @books = Book.search(params[:keyword]).order(created_at: :desc).page(params[:page]).per(18)
+    @books = Book.search(params[:keyword]).order(created_at: :desc).page(params[:page]).per(24)
     # @books = Book.page(params[:page]).per(18).order(created_at: :desc)
     # @books = Book.page(params[:page]).order(created_at: :desc)
   end

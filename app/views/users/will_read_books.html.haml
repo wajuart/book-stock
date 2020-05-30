@@ -21,7 +21,6 @@
             .item-name マイブック
             .icon-arrow-right
               .fa.fa-caret-right.fa-2x
-
         %h3.Mypage-nav__head ジャンル
         %ul.Mypage-nave__list
         = link_to business_user_path(current_user) do
@@ -121,41 +120,54 @@
             .item-name その他
             .icon-arrow-right
               .fa.fa-caret-right.fa-2x
-
     .Main-content_my
       .user-top
         .user-icon-box
           = link_to profile_edit_user_path(current_user) do
             .user-icon
-              = image_tag current_user.user_image.url, class: "user-image_set"
-        .trade-info
-          .trade-info__nickname
+              - if current_user.user_image.present?
+                = image_tag current_user.user_image.url, class: "user-image_set"
+              - else 
+                = image_tag 'default_user.png', class: "user-icon"
+        .user-right-info
+          .register-name
             = link_to profile_edit_user_path(current_user) do
               = current_user.name
-          .trade-info__count  
-            .trade-info__count__sell-title 登録数
-            .trade-info__count__sell-count 25      
-            .trade-info__count__buy-title 購入数
-            .trade-info__count__buy-count 17
-      %ul.trade-tab
-        %li.active すべて
-        %li 読書済み
-        %li 読書中
-        %li 未読
-        %li 興味有り
-
-      .books-area 
-        - @books.each do |book|
-          .book-list
-            = link_to my_books_show_user_path(book) do
-              .book-image
-                = image_tag book.image.to_s
-                .book-genre-tag
-                  = book.genre
-                .book-status
-                  .book-status__title
-                    = book.status
-              .book-title
-                = book.title   
+          .count-box  
+            .count-title
+              登録本数
+            .count-books
+              = @book.count      
+      %ul.status-tab
+        = link_to all_books_user_path(current_user) do
+          %li.tab-list すべて
+        = link_to read_books_user_path(current_user) do
+          %li.tab-list 読書済み
+        = link_to reading_books_user_path(current_user) do
+          %li.tab-list  読書中
+        = link_to will_read_books_user_path(current_user) do
+          %li.tab-list.active  未読
+        = link_to interested_user_path(current_user) do
+          %li.tab-list  興味有り
+      .books-area
+        - if @books.count == 0
+          .contents-book-none
+            該当する本はありません
+        - else
+          - @books.each do |book|
+            %ul.book-list
+              = link_to my_books_show_user_path(book) do
+                .book-image
+                  = image_tag book.image.to_s
+                  .book-genre-tag
+                    = book.genre
+                  .book-status
+                    .book-status__title
+                      = book.status
+                .book-title
+                  = book.title
+      .bottom-space
+        .pagenation
+          = paginate(@books)
 
 = render partial: 'shared/footer_1'

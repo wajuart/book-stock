@@ -30,6 +30,7 @@ Rails.application.routes.draw do
       get 'interested'
       get 'genre'
       get 'business'
+      get 'business_read'
       get 'self_enlightenment'
       get 'money'
       get 'politics_economy'
@@ -73,6 +74,7 @@ Rails.application.routes.draw do
       get 'genre_ect'
     end
     resources :comments, only: :create
+    resources :likes, only: [:create, :destroy]
     collection do
       get 'search'
     end
@@ -80,7 +82,24 @@ Rails.application.routes.draw do
 
     # resources :books, only: [:index, :new, :create, :show, :edit, :update, :destroy]
     # resources :registers, only: [:index, :new, :create, :show, :edit, :update, :destroy,]
-    
+
+    # ③
+    # post "likes/:book_id/create", to: "likes#create", constraints: {book_id: /\d+/}, as: :likes_create
+    # post "likes/:book_id/delete", to: "likes#delete", constraints: {book_id: /\d+/}, as: :likes_delete
+
+    # ⑥
+    # post "likes/:book_id/create" => "likes#create"
+    # post "likes/:book_id/destroy" => "likes#destroy"
+
+    # ⑦
+    # post '/books/:book_id/likes' => "likes#create"
+    # delete '/books/:book_id/likes' => "likes#destroy"
+
+    # ⑨
+    get  'likes/index'
+    post '/likes', to: 'likes#create'
+    delete '/likes', to: 'likes#destroy'
+
     post "books/creat" => "books#creat"
     get "books/:id" => "books#show"
   # root "books#new"  
