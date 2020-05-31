@@ -1,235 +1,246 @@
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
-.MypageView {
-  background-color: #f1f1f1;
-  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-  .MypageContainer {
-    margin: 0 auto;
-    width: 1350px;
-    display: flex;
-    .Side-var {
-      width: 300px;
-      margin: 40px 40px 50px 0;
-      .Mypage-nav {
-        &__list {
-          &__item-top {
-            background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
-            height: 48px;
-            width: 100%;
-            padding: 16px;
-            list-style: none;
-            &:hover {
-              background-color: rgba(60, 201, 206, 0.514);
-              font-weight: bold;
-            }
-          }  
-          &__item {
-            background-color: #ffffff;
-            font-size: 14px;
-            height: 48px;
-            width: 100%;
-            color: #000;
-            padding: 16px;
-            display: flex;
-            border-bottom: solid thin #ebebeb;
-            position: relative;
-            box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-            &:hover {
-              background-color: #f8f8f8;
-              color:rgb(42, 84, 167);
-              font-weight: bold;
-            }  
-            .icon-arrow-right {
-              position: absolute;
-              top: 50%;
-              right: 16px;
-              color: #ccc;
-              transform: translate(0, -50%);
-              }
-          }
-        }
-        &__head {
-          color: rgb(42, 84, 167);
-          font-weight: bold;
-          font-size: 18px;
-          height: 48px;
-          width: 100%;
-          margin-top: 18px;
-          padding: 16px;
-        }
-      }  
-    }
-    .Main-content_my {
-      width: 100%;
-      margin-top: 40px;
-      .user-top {
-        background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
-        height: 200px;
-        margin-bottom: 20px;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-        .user-icon-box {
-          height: 120px;
-          width: 120px;
-          a {
-            .user-icon {
-              background-color: rgb(255, 246, 246);
-              height: 120px;
-              width: 120px;
-              margin: 20px 0;
-              padding: 3px;
-              border: solid thin;
-              &:hover {
-                opacity: 0.8;
-              }     
-              img {
-                height: 100%;
-                width: 100%;
-                margin: 0 auto;
-                object-fit: cover;
-              }
-            }
-          }  
-        }  
-        .trade-info {
-          width: 300px;
-          margin-left: 40px;
-          &__nickname {
-            width: 100%;
-            font-size: 24px;
-            margin: 24px 0 30px;
-            text-align: center;
-            a {
-              color: #000000;
-              &:hover {
-                text-decoration: underline #555555;
-              }
-            }
-          }
-          &__count {
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            &__sell-title {
-              font-size: 18px;
-            }  
-            &__sell-count {
-              font-size: 20px;
-              margin-right: 30px;
-            }
-            &__buy-title {
-              font-size: 18px;
-            }  
-            &__buy-count {
-              font-size: 20px;
-            }
-          }  
-        }
-      }
-      .books-area {
-        width: 1100px;
-        background-color: #ffffff;
-        padding: 20px 18px 30px;
-        display: flex;
-        flex-wrap: wrap;
-        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-        .book-list { 
-          background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
-          background-color: rgb(223, 251, 252);
-          height: 250px;
-          width: 180px;
-          margin: 22px 43px;
-          box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
-          cursor: pointer;
-          &:hover {
-            opacity: 0.8;
-          }
-          .book-image {
-            height: 190px;
-            padding: 4px 14px;
-            position: relative;
-            img {
-              height: 100%;
-              width: 100%;
-              object-fit: contain;
-            }
-            .book-genre-tag {
-              position: absolute;
-              top: 0;
-              left: 0;
-              height: 20px;
-              width: 70px;
-              background-color: slateblue;
-              color: #000;
-              font-size: 11px;     
-              text-align: center;
-              color: #fff;                   
-            }
-            .book-status {
-              position: absolute;
-              top: 0;
-              right: 0;
-              z-index: 2;
-              color: #000;
-              border-top: 30px solid #4ca53ad7;
-              border-right: 30px solid #4ca53ad7;
-              border-bottom: 30px solid transparent;
-              border-left: 30px solid transparent;
-              &__title {
-                color: white;
-                font-weight: bold;
-                position: absolute;
-                top: -18px;
-                left: -10px;
-                width: 40px;
-                font-size: 10px;
-                transform: rotate(45deg);
-                text-align: center;
-              }
-            }
-          }
-          .book-title {
-            height: 60px;
-            background-color: #ffffff;
-            color: #000000;
-            line-height: 60px;
-            font-size: 16px;
-            font-family: クレー;
-            padding: 0 13px;
-            text-align: center;
-            overflow: hidden;
-          }
-        }
-      }
-      .tab-area ul {
-        display: none;
-      }
-      .tab-area ul.list-show {
-        display: block;
-      }
-    }
-  }
-}
+// .MypageView {
+//   background-color: #f1f1f1;
+//   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+//   .MypageContainer {
+//     margin: 0 auto;
+//     width: 1350px;
+//     display: flex;
+//     .Side-var {
+//       width: 300px;
+//       margin: 40px 40px 50px 0;
+//       .Mypage-nav {
+//         &__list {
+//           &__item-top {
+//             background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
+//             color: #ffffff;
+//             font-size: 16px;
+//             font-weight: bold;
+//             height: 48px;
+//             width: 100%;
+//             padding: 16px;
+//             list-style: none;
+//             &:hover {
+//               background-color: rgba(60, 201, 206, 0.514);
+//               font-weight: bold;
+//             }
+//           }  
+//           &__item {
+//             background-color: #ffffff;
+//             font-size: 14px;
+//             height: 48px;
+//             width: 100%;
+//             color: #000;
+//             padding: 16px;
+//             display: flex;
+//             border-bottom: solid thin #ebebeb;
+//             position: relative;
+//             box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+//             &:hover {
+//               background-color: #f8f8f8;
+//               color:rgb(42, 84, 167);
+//               font-weight: bold;
+//             }  
+//             .icon-arrow-right {
+//               position: absolute;
+//               top: 50%;
+//               right: 16px;
+//               color: #ccc;
+//               transform: translate(0, -50%);
+//               }
+//           }
+//         }
+//         &__head {
+//           color: rgb(42, 84, 167);
+//           font-weight: bold;
+//           font-size: 18px;
+//           height: 48px;
+//           width: 100%;
+//           margin-top: 18px;
+//           padding: 16px;
+//         }
+//       }  
+//     }
+//     .Main-content_my {
+//       // width: 100%;
+//       // margin-top: 40px;
+//       // .user-top {
+//       //   background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
+//       //   height: 200px;
+//       //   margin-bottom: 20px;
+//       //   padding: 20px;
+//       //   display: flex;
+//       //   justify-content: center;
+//       //   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+//       //   .user-icon-box {
+//       //     height: 120px;
+//       //     width: 120px;
+//       //     a {
+//       //       .user-icon {
+//       //         background-color: rgb(255, 246, 246);
+//       //         height: 120px;
+//       //         width: 120px;
+//       //         margin: 20px 0;
+//       //         padding: 3px;
+//       //         border: solid thin;
+//       //         &:hover {
+//       //           opacity: 0.8;
+//       //         }     
+//       //         img {
+//       //           height: 100%;
+//       //           width: 100%;
+//       //           margin: 0 auto;
+//       //           object-fit: cover;
+//       //         }
+//       //       }
+//       //     }  
+//       //   }  
+//       //   .trade-info {
+//       //     width: 300px;
+//       //     margin-left: 40px;
+//       //     &__nickname {
+//       //       width: 100%;
+//       //       font-size: 24px;
+//       //       margin: 24px 0 30px;
+//       //       text-align: center;
+//       //       a {
+//       //         color: #000000;
+//       //         &:hover {
+//       //           text-decoration: underline #555555;
+//       //         }
+//       //       }
+//       //     }
+//       //     &__count {
+//       //       padding: 10px;
+//       //       display: flex;
+//       //       justify-content: space-between;
+//       //       &__sell-title {
+//       //         font-size: 18px;
+//       //       }  
+//       //       &__sell-count {
+//       //         font-size: 20px;
+//       //         margin-right: 30px;
+//       //       }
+//       //       &__buy-title {
+//       //         font-size: 18px;
+//       //       }  
+//       //       &__buy-count {
+//       //         font-size: 20px;
+//       //       }
+//       //     }  
+//       //   }
+//       // }
+//       .books-area {
+//         width: 1100px;
+//         background-color: #ffffff;
+//         padding: 20px 18px 30px;
+//         display: flex;
+//         flex-wrap: wrap;
+//         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+//         .book-list { 
+//           background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+//           background-color: rgb(223, 251, 252);
+//           height: 250px;
+//           width: 180px;
+//           margin: 22px 43px;
+//           box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
+//           cursor: pointer;
+//           &:hover {
+//             opacity: 0.8;
+//           }
+//           .book-image {
+//             height: 190px;
+//             padding: 4px 14px;
+//             position: relative;
+//             img {
+//               height: 100%;
+//               width: 100%;
+//               object-fit: contain;
+//             }
+//             .book-genre-tag {
+//               position: absolute;
+//               top: 0;
+//               left: 0;
+//               height: 20px;
+//               width: 70px;
+//               background-color: slateblue;
+//               color: #000;
+//               font-size: 11px;     
+//               text-align: center;
+//               color: #fff;                   
+//             }
+//             .book-status {
+//               position: absolute;
+//               top: 0;
+//               right: 0;
+//               z-index: 2;
+//               color: #000;
+//               border-top: 30px solid #4ca53ad7;
+//               border-right: 30px solid #4ca53ad7;
+//               border-bottom: 30px solid transparent;
+//               border-left: 30px solid transparent;
+//               &__title {
+//                 color: white;
+//                 font-weight: bold;
+//                 position: absolute;
+//                 top: -18px;
+//                 left: -10px;
+//                 width: 40px;
+//                 font-size: 10px;
+//                 transform: rotate(45deg);
+//                 text-align: center;
+//               }
+//             }
+//           }
+//           .book-title {
+//             height: 60px;
+//             background-color: #ffffff;
+//             color: #000000;
+//             line-height: 60px;
+//             font-size: 16px;
+//             font-family: クレー;
+//             padding: 0 13px;
+//             text-align: center;
+//             overflow: hidden;
+//           }
+//         }
+//       }
+//       .tab-area ul {
+//         display: none;
+//       }
+//       .tab-area ul.list-show {
+//         display: block;
+//       }
+//     }
+//   }
+// }
 
-.contents-book-none {
-  font-size: 20px;
-  margin: 200px auto;
-}
+// .contents-book-none {
+//   font-size: 20px;
+//   margin: 200px auto;
+// }
 
-.mypage-nav a {
-  color: #222222;
-  text-decoration: none;
-}
+// .mypage-nav a {
+//   color: #222222;
+//   text-decoration: none;
+// }
 
-.list-show a {
-  color: #222222;
-  text-decoration: none;
-  line-height: 45px;
+// .list-show a {
+//   color: #222222;
+//   text-decoration: none;
+//   line-height: 45px;
+// }
+
+
+.content_keyword {
+  background-color: #06ccab71;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 20px;
+  padding: 2px 0;
+  border: outset thin;
 }

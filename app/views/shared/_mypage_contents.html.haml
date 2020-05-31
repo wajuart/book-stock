@@ -95,7 +95,7 @@
         %ul.Mypage-nave__list
         = link_to real_book_user_path(current_user) do
           %li.Mypage-nav__list__item
-            .item-name リアル本
+            .item-name リアル書籍
             .icon-arrow-right
               .fa.fa-caret-right.fa-2x
         = link_to e_book_user_path(current_user) do
@@ -137,7 +137,9 @@
               登録本数
             .count-books
               = @book.count
-      .books-area 
+      .books-area
+        .content_keyword
+          = @keyword
         - if @books.count == 0
           .contents-book-none
             該当する本はありません
@@ -154,3 +156,39 @@
                       = book.status
                 .book-title
                   = book.title
+      .bottom-space_myp
+        .pagenation
+          = paginate(@books)
+
+        -# - if @books.count == 0
+        -#   .contents-book-none
+        -#     該当する本はありません
+        -# - else
+        -#   - @books.each do |book|
+        -#     .book-list
+        -#       = link_to my_books_show_user_path(book) do
+        -#         .book-image
+        -#           = image_tag book.image.to_s
+        -#           .book-genre-tag
+        -#             = book.genre
+        -#           .book-status
+        -#             .book-status__title
+        -#               = book.status
+        -#         .book-title
+        -#           = book.title
+        -# - if @books.count == 0
+        -#   .contents-book-none
+        -#     該当する本はありません
+        -# - else
+        -#   - @books.each do |book|
+        -#     .book-list
+        -#       = link_to my_books_show_user_path(book) do
+        -#         .book-image
+        -#           = image_tag book.image.to_s
+        -#           .book-genre-tag
+        -#             = book.genre
+        -#           .book-status
+        -#             .book-status__title
+        -#               = book.status
+        -#         .book-title
+        -#           = book.title

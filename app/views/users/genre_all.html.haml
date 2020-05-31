@@ -1,0 +1,59 @@
+= render partial: 'shared/header_1'
+
+.Genre_all 
+  .title-box_gen
+    .icon
+      .fa.fa-book
+    .content-title
+      マイブック／ジャンル別検索
+  .genre-area
+    %ul.box-upper_gen
+      = link_to business_user_path(current_user) do
+        %li.genre_gen.business
+          ビジネス
+      = link_to self_enlightenment_user_path(current_user) do
+        %li.genre_gen.self_enlightenment
+          自己啓発
+      = link_to money_user_path(current_user) do
+        %li.genre_gen.money
+          マネー
+      = link_to politics_economy_user_path(current_user) do
+        %li.genre_gen.politics_economy
+          政治／経済
+      = link_to study_skill_user_path(current_user) do
+        %li.genre_gen.study_skill
+          勉強／スキル
+    %ul.box-middle_gen
+      = link_to cooking_user_path(current_user) do
+        %li.genre_gen.cooking
+          料理
+      = link_to hobby_user_path(current_user) do
+        %li.genre_gen.hobby
+          趣味
+      = link_to health_user_path(current_user) do
+        %li.genre_gen.health
+          健康
+      = link_to sports_user_path(current_user) do
+        %li.genre_gen.sports
+          スポーツ
+      = link_to entertainment_user_path(current_user) do
+        %li.genre_gen.entertainment
+          芸能
+    %ul.box-lower_gen
+      = link_to parenting_user_path(current_user) do
+        %li.genre_gen.parenting
+          子育て
+      = link_to novel_user_path(current_user) do
+        %li.genre_gen.novel
+          小説
+      = link_to comic_user_path(current_user) do
+        %li.genre_gen.comic
+          漫画
+      = link_to life_user_path(current_user) do
+        %li.genre_gen.life
+          生活
+      = link_to genre_etc_user_path(current_user) do
+        %li.genre_gen.genre_etc
+          その他
+
+= render partial: 'shared/footer_1'

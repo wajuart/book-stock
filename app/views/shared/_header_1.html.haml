@@ -4,12 +4,12 @@
   %ul.conent-list
     %li.conent-list__item
       = link_to books_path(current_user) do
-        トップページ 
-    %li.conent-list__item
-      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
+        トップページ
     %li.conent-list__item
       = link_to edit_user_path(current_user) do
         アカウント編集    
+    %li.conent-list__item
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
     %li.conent-list__item
       = link_to home_index_path(current_user) do
         アプリについて  
@@ -50,9 +50,9 @@
     = link_to all_books_user_path(current_user) do
       %li.content-list__item
         マイブック
-    = link_to books_path(current_user) do    
+    = link_to genre_all_user_path(current_user) do    
       %li.content-list__item
         ジャンル
-    = link_to books_path(current_user) do
+    = link_to item_all_user_path(current_user) do
       %li.content-list__item
         読書媒体 

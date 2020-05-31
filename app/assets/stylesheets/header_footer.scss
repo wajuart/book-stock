@@ -111,6 +111,10 @@
     padding-top: 10px;
     margin: 0 auto;
     cursor: pointer;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
   }  
   .conent-list {
     margin-top: 28px;
@@ -165,7 +169,7 @@
   .search-box {
     height: 100%;
     width: 600px;
-    margin-top: -2px;
+    margin: -2px -195px 0 0;
     position: relative;
     display: flex;
     &__input {
@@ -192,10 +196,11 @@
       left: 285px;
       &:hover {
       opacity: 0.7;
+      transition: .3s;
       }
     }  
   }
-  &__social-btn {          
+  .social-btn {          
     width: 456px;
     padding-left: 120px;
     .social-btn__facebook {
@@ -207,6 +212,7 @@
       padding: 4px 8px;
       &:hover {
         opacity: 0.7;
+        transition: .3s;
       }  
     }
     .social-btn__twitter {
@@ -219,6 +225,7 @@
       padding: 4px 8px;
       &:hover {
         opacity: 0.7;
+        transition: .3s;
       }
     }
     .social-btn__instagram {
@@ -230,6 +237,7 @@
       padding: 4px 8px;
       &:hover {
         opacity: 0.7;
+        transition: .3s;
       }      
     }
   } 

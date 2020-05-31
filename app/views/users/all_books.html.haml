@@ -1,3 +1,30 @@
 = render partial: 'shared/header_1'
-= render partial: 'shared/mypage'
+
+.All_my-books
+  .title-box_amb
+    .icon
+      .fa.fa-book
+    .title
+      マイブック
+    .bottom-space_sea2
+      .pagenation
+        = paginate(@books)
+  .books-area_amb
+    - if @books.count == 0
+      .book-none
+        該当する本はありません
+    - else
+      - @books.each do |book|
+        .book-list_amb
+          = link_to book_path(book) do
+            .book-image
+              = image_tag book.image.to_s  
+              .book-genre-tag
+                = book.genre
+            .book-title
+              = book.title
+  .bottom-space_sea
+    .pagenation
+      = paginate(@books)
+
 = render partial: 'shared/footer_1'

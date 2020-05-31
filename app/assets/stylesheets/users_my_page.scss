@@ -48,7 +48,7 @@
             box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
             &:hover {
               background-color: #f8f8f8;
-              color:rgb(42, 84, 167);
+              color: rgb(0, 190, 63);
               font-weight: bold;
               font-size: 16px;
             }  
@@ -147,7 +147,7 @@
       
       .status-tab li.active {
         background-color: #ffffff;
-        color: rgba(1, 158, 106, 0.644);
+        color: rgb(0, 190, 63);
         font-size: 20px;
         cursor: auto;
         box-shadow: none;
@@ -172,6 +172,7 @@
       }
 
       .books-area {
+        width: 1100px;
         background-color: #ffffff;
         padding: 20px 18px 30px;
         display: flex;
@@ -257,6 +258,11 @@
       }
     }
   }
+}
+
+.contents-book-none {
+  font-size: 20px;
+  margin: 200px auto;
 }
 
 .mypage-nav a {

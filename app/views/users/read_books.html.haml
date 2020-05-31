@@ -139,7 +139,7 @@
             .count-books
               = @book.count      
       %ul.status-tab
-        = link_to all_books_user_path(current_user) do
+        = link_to my_page_user_path(current_user) do
           %li.tab-list すべて
         = link_to read_books_user_path(current_user) do
           %li.tab-list.active 読書済み

@@ -95,7 +95,7 @@
         %ul.Mypage-nave__list
         = link_to real_book_user_path(current_user) do
           %li.Mypage-nav__list__item
-            .item-name リアル本
+            .item-name リアル書籍
             .icon-arrow-right
               .fa.fa-caret-right.fa-2x
         = link_to e_book_user_path(current_user) do
@@ -137,7 +137,7 @@
             .count-books
               = @book.count      
       %ul.status-tab
-        = link_to all_books_user_path(current_user) do
+        = link_to my_page_user_path(current_user) do
           %li.tab-list.active すべて
         = link_to read_books_user_path(current_user) do
           %li.tab-list 読書済み
@@ -164,6 +164,6 @@
                       = book.status
                 .book-title
                   = book.title
-      .bottom-space
+      .bottom-space_myp
         .pagenation
           = paginate(@books)

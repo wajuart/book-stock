@@ -83,6 +83,98 @@ class BooksController < ApplicationController
     # @books = Book.page(params[:page]).order(created_at: :desc)
   end
 
+  # ジャンル別
+  def genre_all
+    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
+  end
+
+  def business
+    @books = Book.where(genre: 'ビジネス').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def self_enlightenment
+    @books = Book.where(genre: '自己啓発').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def money
+    @books = Book.where(genre: 'マネー').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def politics_economy
+    @books = Book.where(genre: '政治／経済').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def study_skill
+    @books = Book.where(genre: '勉強／スキル').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def cooking
+    @books = Book.where(genre: '料理').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def hobby
+    @books = Book.where(genre: '趣味').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def health
+    @books = Book.where(genre: '健康').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def sports
+    @books = Book.where(genre: 'スポーツ').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def entertainment
+    @books = Book.where(genre: '芸能').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def parenting
+    @books = Book.where(genre: '子育て').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def novel
+    @books = Book.where(genre: '小説').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def comic
+    @books = Book.where(genre: '漫画').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def life
+    @books = Book.where(genre: '生活').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def genre_etc
+    @books = Book.where(genre: 'その他').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+
+  # ★評価別
+  def evaluation_all
+    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
+  end
+
+  def evaluation_five
+    # books = @book = Book.where(user_id: params[:id]).all
+    @books = Book.where(evaluation: '⭐️⭐️⭐️⭐️⭐️').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def evaluation_four
+    @books = Book.where(evaluation: '⭐️⭐️⭐️⭐️☆').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def evaluation_three
+    @books = Book.where(evaluation: '⭐️⭐️⭐️☆☆').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def evaluation_two
+    @books = Book.where(evaluation: '⭐️⭐️☆☆☆').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
+  def evaluation_one
+    @books = Book.where(evaluation: '⭐️☆☆☆☆').page(params[:page]).per(15).order(created_at: :desc)
+  end
+
 
   def ensure_correct_user
     @book = Book.find_by(id:params[:id])
