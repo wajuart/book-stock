@@ -23,7 +23,6 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    # binding.pry
     if @book.save
       redirect_to books_path(@book), notice: '本が登録されました'
     else

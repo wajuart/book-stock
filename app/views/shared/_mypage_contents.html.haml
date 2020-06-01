@@ -137,25 +137,26 @@
               登録本数
             .count-books
               = @book.count
-      .books-area
-        .content_keyword
-          = @keyword
-        - if @books.count == 0
-          .contents-book-none
-            該当する本はありません
-        - else
-          - @books.each do |book|
-            .book-list
-              = link_to my_books_show_user_path(book) do
-                .book-image
-                  = image_tag book.image.to_s
-                  .book-genre-tag
-                    = book.genre
-                  .book-status
-                    .book-status__title
-                      = book.status
-                .book-title
-                  = book.title
+      = render partial: 'shared/books-area_contents'
+      -# .books-area
+      -#   .content_keyword
+      -#     = @keyword
+      -#   - if @books.count == 0
+      -#     .contents-book-none
+      -#       該当する本はありません
+      -#   - else
+      -#     - @books.each do |book|
+      -#       .book-list
+      -#         = link_to my_books_show_user_path(book) do
+      -#           .book-image
+      -#             = image_tag book.image.to_s
+      -#             .book-genre-tag
+      -#               = book.genre
+      -#             .book-status
+      -#               .book-status__title
+      -#                 = book.status
+      -#           .book-title
+      -#             = book.title
       .bottom-space_myp
         .pagenation
           = paginate(@books)

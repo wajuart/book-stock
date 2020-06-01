@@ -1,19 +1,3 @@
-// @import "reset";
-// @import "config/colors";
-// @import "modules/home/index";
-// @import "modules/users/show";
-// @import "modules/registers";
-// @import "modules/books/index";
-// @import "modules/books/search";
-// @import "modules/books";
-// // @import "modules/books";
-// @import "modules/books/new";
-// @import "modules/books/show";
-// @import "font-awesome-sprockets";
-// @import "font-awesome";
-// @import "modules/user";
-// @import "modules/flash";
-
 @import "reset";
 @import "config/colors";
 @import "home_index";
@@ -29,8 +13,8 @@
 @import "books_new";
 @import "books_show";
 @import "books_edit";
-@import "genre_all";
-@import "item_all";
+@import "users_genre_all";
+@import "users_item_all";
 @import "header_footer";
 @import "font-awesome-sprockets";
 @import "font-awesome";

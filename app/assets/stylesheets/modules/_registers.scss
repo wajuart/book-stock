@@ -14,7 +14,8 @@
     // background-image: url(https://www.pakutaso.com/shared/img/thumb/PPP_mokumecyou_TP_V.jpg);
     // background-size: 1100%;
     // background:linear-gradient(#F89174, #FFC778);
-    background-size: 400%; 
+    
+    background-size: 400%;
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
     border: outset 2px; 
     height: 1320px;
@@ -29,14 +30,16 @@
         margin-bottom: 40px;
         a {
           text-decoration: none; 
-          .my-page-btn {
+          .content-btn_my {
+            height: 55px;
+            width: 180px;
             background-color: white;
             color: rgb(11, 54, 29);
             font-family: Papyrus;
             font-size: 30px;
-            margin: 40px 0 100px;
+            margin: 40px auto 100px;
             border: outset #ffffff 4px;
-            border-radius: 3px;
+            border-radius: 15px;
             cursor: pointer;
           }
         }
@@ -346,7 +349,7 @@
                     left: 0;
                     height: 20px;
                     width: 70px;
-                    background-color: slateblue;
+                    // background-color: slateblue;
                     font-size: 11px;
                     line-height: 20px;
                     text-align: center;
@@ -423,7 +426,7 @@
   background-color: #ffffff;
   height: fit-content;
   width: fit-content;
-  margin: 0 0 0 120px;
+  margin: 0 0 0 200px;
   padding: 10px;
   border: outset thin rgb(180, 180, 180);
   border-radius: 5px;
@@ -434,6 +437,7 @@
   }
   .box-lower {
     display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -457,9 +461,11 @@
 
 .star-list {
   background-color: #474343;
+  width: 150px;
   color: #FFF;
   font-size: 14px;
-  margin: 0 25px;
+  text-align: center;
+  margin: 0 15px;
   padding: 3px 6px;
   border: outset thin;
   border-radius: 3px;
@@ -472,9 +478,9 @@
 
 .eva-title {
   background-color: #ffffff;
-  color: rgb(41, 69, 160);
+  color: rgb(49, 80, 179);
   font-weight: bold;
-  margin-right: 28px;
+  margin-right: px;
   border: none;
   box-shadow: none;
   &:hover {
