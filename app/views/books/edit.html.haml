@@ -102,7 +102,9 @@
             = f.text_area :impression, class: 'area_form', placeholder: '-- type impressions --'
           .btn-box
             = f.submit '更新', class: 'book-edit_btn', data: { confirm: "この内容で登録しますか？"}
-
+            = link_to "/books/#{@book.id}", method: :delete, class:"delete_btn" do
+              %p.text
+                削除
             = link_to "戻る", :back, class: 'back_btn'
             
 = render partial: 'shared/footer_1'

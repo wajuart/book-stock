@@ -14,9 +14,8 @@ Rails.application.routes.draw do
   resources :home, only: [:index] do
     collection do
       get 'app_description'
-      get 'app_question'
     end  
-  end  
+  end
 
   resources :users, only: [:index, :show, :edit, :update] do
     member do

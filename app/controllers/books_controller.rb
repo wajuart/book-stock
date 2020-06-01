@@ -78,6 +78,7 @@ class BooksController < ApplicationController
 
   def search
     @books = Book.search(params[:keyword]).order(created_at: :desc).page(params[:page]).per(24)
+    @book = Book.find_by(id: params[:id])
     # @books = Book.page(params[:page]).per(18).order(created_at: :desc)
     # @books = Book.page(params[:page]).order(created_at: :desc)
   end

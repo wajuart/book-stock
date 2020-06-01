@@ -1,0 +1,11 @@
+.MainHeader
+  .logo-box
+    = link_to home_index_path(current_user) do
+      Book Stock     
+  %ul.conent-list
+    %li.conent-list__item
+      = link_to new_user_session_path do
+        新規登録 
+    %li.conent-list__item
+      = link_to user_session_path do
+        ログイン  

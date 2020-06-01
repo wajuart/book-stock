@@ -164,8 +164,24 @@
           cursor: pointer;
           &:hover {
             background-color: rgba(50, 177, 135, 0.788);
+            transition: .3s;
           }
         }
+        a.delete_btn { 
+          color: #eeeeee;
+          background-color: black;
+          height: 50px;
+          width: 130px;
+          border: outset 2px;
+          border-radius: 20px;
+          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(88, 83, 83);
+            text-decoration: none;
+            transition: .3s;
+          }
+        }  
         a.back_btn { 
           color: #eeeeee;
           background-color: #131c53;
@@ -178,6 +194,7 @@
           &:hover {
             background-color: #131b53b6;
             text-decoration: none;
+            transition: .3s;
           }
         }  
       }
@@ -185,31 +202,7 @@
   }  
 }
 
-// .prev-image {
-//   object-fit: cover;
-// }
 
-// .prev-content {
-//   height: 270px;
-//   width: 190px;
-//   border: outset 3px rgb(190, 199, 223);
-//   margin: 0 auto;
-//   font-size: 5px;
-//   line-height: 160px; 
-//   text-align: center;
-//   margin-bottom: 30px;
-//   padding: 2px;
-//   box-shadow: 0 0 15px 0 rgba(85, 85, 85, 0.295); 
-//   &:hover {
-//     opacity: 0.8;
-//   }
-//   .prev-image {
-//     width: 100%;
-//     height: 100%;
-//     cursor: pointer;
-//     object-fit: cover;
-//   }
-// }  
 
 a {
   text-decoration: none;

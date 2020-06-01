@@ -166,6 +166,7 @@
           cursor: pointer;
           &:hover {
             background-color: rgba(50, 177, 135, 0.788);
+            transition: .3s;
           }  
         }
         a.back_btn { 
@@ -180,6 +181,7 @@
           &:hover {
             background-color: #131b53b6;
             text-decoration: none;
+            transition: .3s;
           }
         } 
       }

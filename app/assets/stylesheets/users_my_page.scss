@@ -86,6 +86,7 @@
         .user-icon-box {
           height: 120px;
           width: 120px;
+          margin-left: 40px;
           a {
             color: #fff;;
             .user-icon {
@@ -107,9 +108,9 @@
             }
           }  
         }  
-        .user-right-info {
-          width: 300px;
-          margin-left: 40px;
+        .user-left-myinfo {
+          width: 250px;
+          margin-right: 50px;
           .register-name {
             width: 100%;
             font-size: 24px;
@@ -137,7 +138,45 @@
             }
           }  
         }
+        .user-right-myinfo{
+          color: #fff;
+          font-size: 14px;
+          text-align: center;
+          display: flex;
+          .genre-left {
+
+            .genre-block {
+              display: flex;
+            }
+          }
+          .genre-center {
+            margin: 0 28px;
+            .genre-block {
+              display: flex;
+            }
+          }
+          .genre-right {
+            .genre-block {
+              display: flex;
+            }
+          }
+        }
+        .my-genre {
+          width: 100px;
+          margin-right: 10px;
+          padding: 5px 0;
+          border: outset thin;
+        }
+
+        .count-genre {
+          color: #000;
+          padding: 5px 0;
+          text-align: center;
+        }
+
+  
       }
+
       ul.status-tab { 
         display: flex;
         a {

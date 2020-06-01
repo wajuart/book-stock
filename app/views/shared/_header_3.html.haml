@@ -4,5 +4,9 @@
       Book Stock     
   %ul.conent-list   
     %li.conent-list__item
-      = link_to home_index_path(current_user) do
-        アプリについて 
+      - if user_signed_in?
+        = link_to books_path(current_user) do
+          トップ
+      - else 
+        = link_to app_description_home_index_path(current_user) do
+          アプリについて 

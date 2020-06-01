@@ -120,23 +120,7 @@
               .fa.fa-caret-right.fa-2x
 
     .Main-content_my
-      .user-top
-        .user-icon-box
-          = link_to profile_edit_user_path(current_user) do
-            .user-icon
-              - if current_user.user_image.present?
-                = image_tag current_user.user_image.url, class: "user-image_set"
-              - else 
-                = image_tag 'default_user.png', class: "user-icon"
-        .user-right-info
-          .register-name
-            = link_to profile_edit_user_path(current_user) do
-              = current_user.name
-          .count-box  
-            .count-title
-              登録本数
-            .count-books
-              = @book.count
+      = render partial: 'shared/user_top'
       = render partial: 'shared/books-area_contents'
       -# .books-area
       -#   .content_keyword

@@ -1,15 +1,5 @@
 .MainDisplay
-  .MainHeader
-    .logo-box
-      = link_to home_index_path(current_user) do
-        Book Stock     
-    %ul.conent-list
-      %li.conent-list__item
-        = link_to new_user_session_path do
-          新規登録 
-      %li.conent-list__item
-        = link_to user_session_path do
-          ログイン   
+  = render partial: 'shared/header_4'  
 
   .middle-display
     .introduction_box
@@ -26,7 +16,8 @@
         = link_to books_path(current_user) do   
           .app-btn
             Appを使う
-        = link_to books_path(current_user) do    
+        = link_to app_description_home_index_path(current_user) do    
           .app-btn 
-            Appの解説         
+            Appの解説   
+                  
   = render partial: 'shared/footer_1'           

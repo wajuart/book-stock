@@ -41,6 +41,11 @@
             border: outset #ffffff 4px;
             border-radius: 15px;
             cursor: pointer;
+            &:hover {
+              background-color: rgb(70, 70, 70);
+              color: #fff;
+              transition: .3s;
+            }
           }
         }
         a { 
@@ -251,7 +256,7 @@
                 &__left {
                   background-color: #000;
                   color: #FFF;
-                  height: fit-content;
+                  height: 26px;
                   width: 85px;
                   text-align: center;
                   border: outset 1px rgb(151, 151, 151);
@@ -264,7 +269,7 @@
                   }
                 }
                 &__center {
-                  height: fit-content;
+                  height: 26px;
                   width: 85px;
                   text-align: center;
                   margin: 0 10px;
@@ -281,13 +286,13 @@
                   }
                 }
                 &__right {
-                  height: fit-content;
+                  height: 26px;
                   width: 85px;
                   text-align: center;
                   border: outset 1px;
                   color: #FFF;
                   background-color: rgb(1, 88, 122);
-                  padding: 3px 6px 0 5px;
+                  padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
                     background-color: #FFF;

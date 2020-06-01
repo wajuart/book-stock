@@ -1,0 +1,11 @@
+%ul.status-tab
+  = link_to my_page_user_path(current_user) do
+    %li.tab-list.active すべて
+  = link_to read_books_user_path(current_user) do
+    %li.tab-list 読書済み
+  = link_to reading_books_user_path(current_user) do
+    %li.tab-list  読書中
+  = link_to will_read_books_user_path(current_user) do
+    %li.tab-list  未読
+  = link_to interested_user_path(current_user) do
+    %li.tab-list  興味有り

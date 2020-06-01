@@ -12,7 +12,7 @@
     .conent-list__item
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'    
     %li.conent-list__item
-      = link_to home_index_path(current_user) do
+      = link_to app_description_home_index_path(current_user) do
         アプリについて 
 
 .MainSecondHeader

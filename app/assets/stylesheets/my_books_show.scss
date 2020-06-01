@@ -175,26 +175,55 @@
           &:hover {
             background-color: #1486a8d2;
             text-decoration: none;
+            transition: .3s;
           }  
         }
-
-        a.delete_btn { 
+        a.back_btn { 
           color: #eeeeee;
-          background-color: black;
+          background-color: #131c53;
           height: 50px;
           width: 130px;
           border: outset 2px;
           border-radius: 20px;
-          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
+          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
           cursor: pointer;
           &:hover {
-            background-color: rgb(88, 83, 83);
+            background-color: #131b53b6;
             text-decoration: none;
+            transition: .3s;
           }
-        }  
+        } 
       }
     }
   }  
+}
+
+.to-comment_view {
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  a {
+    padding: 8px 30px;
+  }
+  .to-comment_btn {
+    background-color: #d86100;
+    height: 50px;
+    width: 250px;
+    color: #eeeeee;
+    letter-spacing: 3px;
+    border: outset 2px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
+    cursor: pointer;
+    &:hover {
+      background-color: #df6400b2;
+      text-decoration: none;
+      transition: .3s;
+    }
+  }
 }
 
 a {
