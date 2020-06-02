@@ -1,46 +1,4 @@
-.MainHeader {
-  background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-  height: 110px;
-  width: 100vw;
-  padding: 0 40px;
-  border-bottom: solid 1px #eeeeee;                         
-  .logo-box { 
-    height: 50px;  
-    width: 200px;
-    color: white;
-    font-size: 35px;
-    font-family: fantasy;
-    letter-spacing: 1px;
-    padding-top: 10px;
-    margin: 0 auto;
-    cursor: pointer;
-  }  
-  .conent-list {
-    margin-top: 28px;
-    font-size: 15px;
-    letter-spacing: 2px;
-    display: flex;
-    justify-content: center;
-    &__item {
-      color: silver;
-      margin: 0 70px;
-      cursor: pointer;
-      a {
-        color: silver;
-        &:hover {
-          color: black;
-          font-weight: bold;
-          text-decoration: underline;
-        }
-      }  
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }  
-  }   
-}          
+//トップページ用
 .MainSecondHeader {
   background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
   height: 50px;
@@ -65,8 +23,8 @@
   .search-box {
     height: 100%;
     width: 600px;
+    margin-left: 214px;
     display: flex;
-    
     &__input {
       background-color: #ffffff;
       height: 35px;
@@ -88,14 +46,16 @@
       padding: 0 10px;
       border: outset thin;
       border-radius: 5px;
+      height: 24px;
+      line-height: 1px;
       &:hover {
-      opacity: 0.7;
+      opacity: 0.9;
       }
     }  
   }
-  &__social-btn {          
+  .social-btn {          
     width: 600px;
-    padding-left: 120px;
+    padding-left: 200px;
     .social-btn__facebook {
       color: #ffffff;
       font-size: 15px;
@@ -128,6 +88,156 @@
       padding: 4px 8px;
       &:hover {
         opacity: 0.7;
+      }      
+    }
+  } 
+}
+
+
+//トップページ以外用
+.MainHeader {
+  background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
+  height: 110px;
+  width: 100vw;
+  padding: 0 40px;
+  border-bottom: solid 1px #eeeeee;                         
+  .logo-box { 
+    height: 50px;  
+    width: 200px;
+    color: white;
+    font-size: 35px;
+    font-family: fantasy;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    margin: 0 auto;
+    cursor: pointer;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }  
+  .conent-list {
+    margin-top: 28px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    &__item {
+      color: silver;
+      margin: 0 70px;
+      cursor: pointer;
+      a {
+        color: silver;
+        &:hover {
+          color: black;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+      a .log-out_btn {
+        padding-bottom: -1px;
+      }
+      &:hover {
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }  
+  }   
+}          
+.MainSecondHeader {
+  background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
+  height: 50px;
+  width: 100vw;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #eeeeee; 
+  line-height: 50px;
+  .name-box {
+    height: 50px;
+    width: 200px;
+    margin: 7px 240px 7px 50px;
+    .user-name {
+      height: 35px;
+      font-size: 15px;
+      line-height: 35px;
+      text-align: center;
+      border: outset 2px;
+    }
+  }  
+  .search-box {
+    height: 100%;
+    width: 600px;
+    margin: -2px -195px 0 0;
+    position: relative;
+    display: flex;
+    &__input {
+      background-color: #ffffff;
+      height: 35px;
+      width: 350px;
+      color: #555555;
+      font-size: 14px;
+      margin-top: 8px;
+      padding: 0 90px 0 20px;
+      border: inset #eeeeee 2px;
+      border-radius: 20px;
+      line-height: 35px;
+    }  
+    .search-btn {
+      background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
+      font-size: 13px;
+      color: #ffffff;
+      margin-top: 15px;
+      padding: 0 10px;
+      border: outset thin;
+      border-radius: 5px;
+      position: absolute;
+      left: 285px;
+      &:hover {
+      opacity: 0.7;
+      transition: .3s;
+      }
+    }  
+  }
+  .social-btn {          
+    width: 456px;
+    padding-left: 120px;
+    .social-btn__facebook {
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      background-color: #4169e1;
+      border-radius: 3px;
+      padding: 4px 8px;
+      &:hover {
+        opacity: 0.7;
+        transition: .3s;
+      }  
+    }
+    .social-btn__twitter {
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      background-color: #00bfff;
+      margin: 0 15px;
+      border-radius: 3px;
+      padding: 4px 8px;
+      &:hover {
+        opacity: 0.7;
+        transition: .3s;
+      }
+    }
+    .social-btn__instagram {
+      color: #ffffff;
+      font-size: 15px;
+      text-decoration: none;
+      background-color: #fc76bf;
+      border-radius: 3px;
+      padding: 4px 8px;
+      &:hover {
+        opacity: 0.7;
+        transition: .3s;
       }      
     }
   } 
@@ -186,5 +296,4 @@
     margin-top: 13px;
     font-size: 6px;
   }
-  
 }

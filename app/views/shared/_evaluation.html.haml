@@ -1,0 +1,146 @@
+.MainDisplay
+  .MainHeader
+    .logo-box
+      = link_to home_index_path(current_user) do
+        Book Stock     
+    %ul.conent-list
+      .conent-list__item
+        = link_to new_user_session_path do
+          新規登録
+      .conent-list__item
+        = link_to user_session_path do
+          ログイン  
+      .conent-list__item
+        = link_to edit_user_path(current_user) do
+          アカウント編集
+      .conent-list__item
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
+      .conent-list__item
+        = link_to user_session_path do
+          アプリについて           
+
+  .MainSecondHeader_ma
+    .name-box_ma
+      .user-name_ma
+        = current_user.name
+    .search-box_ma
+      = form_tag(search_books_path, method: 'get') do
+        = text_field_tag :keyword, '', placeholder: "本を検索する", class: "search-box_ma__input_ma" 
+        = submit_tag '検索', class: "search-btn_ma" , name: nil
+
+    .social-box_ma
+      = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
+        = icon('fab', 'facebook-square',  class: "content__btn__icon")
+        facebook
+      = link_to "https://twitter.com/", class: "social-btn social-btn__twitter" do
+        = icon('fab', 'twitter', class: "content__btn__icon")
+        twitter
+      = link_to "https://www.instagram.com/", class: "social-btn social-btn__instagram" do
+        = icon('fab', 'instagram', class: "social-btn__icon")
+        instagram
+
+  .MainRegisters
+    .Registers-box
+      .contents-top
+        .Registers-top
+          .title
+            .title__icon
+              .fa.fa-book
+            .title__name
+              ユーザー評価別
+          %ul.tag-box
+            = link_to books_path(current_user) do
+              %li.tag-box__left
+                最新登録順
+            = link_to evaluation_all_book_path(current_user) do
+              %li.tag-box__center
+                ⭐️ 評価別
+            = link_to genre_all_book_path(current_user) do
+              %li.tag-box__right
+                ジャンル別
+        .evaluation-box
+          %ul.box-upper
+            %li.star-list.eva-title
+              登録ユーザー評価
+            = link_to evaluation_five_book_path(current_user) do
+              %li.star-list
+                星５：⭐️⭐️⭐️⭐️⭐️
+            = link_to evaluation_four_book_path(current_user) do
+              %li.star-list
+                星４：⭐️⭐️⭐️⭐️☆
+          %ul.box-lower
+            = link_to evaluation_three_book_path(current_user) do
+              %li.star-list
+                星３：⭐️⭐️⭐️☆☆
+            = link_to evaluation_two_book_path(current_user) do
+              %li.star-list
+                星２：⭐️⭐️☆☆☆
+            = link_to evaluation_one_book_path(current_user) do
+              %li.star-list
+                星１：⭐️☆☆☆☆
+      .books-box
+        - if @books.count == 0
+          .book-none
+            該当する本はありません
+        - else
+          - @books.each do |book|
+            %ul.book-list
+              = link_to book_path(book) do
+                .book-image
+                  = image_tag book.image.to_s
+                  - if book.genre == "ビジネス"
+                    .book-genre-tag.business
+                      ビジネス
+                  - elsif book.genre == "自己啓発"
+                    .book-genre-tag.self_enlightenment
+                      自己啓発
+                  - elsif book.genre == "マネー"
+                    .book-genre-tag.money
+                      マネー
+                  - elsif book.genre == "政治／経済"
+                    .book-genre-tag.politics_economy
+                      政治／経済
+                  - elsif book.genre == "勉強／スキル"
+                    .book-genre-tag.study_skill
+                      勉強／スキル
+                  - elsif book.genre == "料理"
+                    .book-genre-tag.cooking
+                      料理
+                  - elsif book.genre == "趣味"
+                    .book-genre-tag.hobby
+                      趣味
+                  - elsif book.genre == "健康"
+                    .book-genre-tag.health
+                      健康
+                  - elsif book.genre == "スポーツ"
+                    .book-genre-tag.sports
+                      スポーツ
+                  - elsif book.genre == "芸能"
+                    .book-genre-tag.entertainment
+                      芸能
+                  - elsif book.genre == "子育て"
+                    .book-genre-tag.parenting
+                      子育て
+                  - elsif book.genre == "小説"
+                    .book-genre-tag.novel
+                      小説
+                  - elsif book.genre == "漫画"
+                    .book-genre-tag.comic
+                      漫画
+                  - elsif book.genre == "生活"
+                    .book-genre-tag.life
+                      生活
+                  - else book.genre == "その他"
+                    .book-genre-tag.genre_etc
+                      その他
+                .book-title
+                  = book.title
+      .bottom-space_sea
+        .pagenation
+          = paginate(@books)
+          
+  .footer
+    .logo
+      Book Stock
+    .sub
+      Copyright &copy; Kazuki Kouno All rights reserved

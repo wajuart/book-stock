@@ -12,7 +12,10 @@
         .profile-top 
           .image-form
             = f.label :user_image, class: "user-image" do
-              = image_tag @user.user_image.url
+              - if current_user.user_image.present?
+                = image_tag current_user.user_image.url, class: "prev-content"
+              - else
+                = image_tag 'default_user.png', class: "user-icon"
               .hidden
           .user-name_i
             = @user.name
@@ -42,7 +45,11 @@
               = @user.introduction
   .table-title
     ユーザー登録本一覧
-
+  .count-box
+    .count-title_ush
+      登録本数
+    .count-books_ush
+      = @book.count
 .books-area_i
   - @books.each do |book|
     .book-list_i
@@ -53,7 +60,8 @@
             = book.genre
         .book-title
           = book.title
-
-
+.bottom-space_sea
+  .pagenation
+    = paginate(@books)
 
 = render partial: 'shared/footer_1'

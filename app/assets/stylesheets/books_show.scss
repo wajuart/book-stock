@@ -64,25 +64,15 @@
             img {
               width: 100%;
               height: 100%;
-              // object-fit: cover;
-              &:hover {
-                opacity: 0.8;
-              }
+              object-fit: cover;
             } 
           }
         }
         .Left-image_form {
           display: flex;
           .image-box_bs {
-          //   height: 280px;
-          //   width: 200px;
-          //   border: outset 3px rgb(190, 199, 223);
-          //   margin: 0 auto;
-          //   padding: 2px;
-          //   font-size: 5px;
-          //   line-height: 160px; 
-          //   text-align: center;
             margin-bottom: 30px;
+            box-shadow: 0 0 15px 0 rgba(85, 85, 85, 0.295); 
             img {
               width: 100%;
               height: 100%;
@@ -172,6 +162,34 @@
     }
   }  
 }
+
+.to-edit_btn-box {
+  height: 50px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  a {
+    padding: 10px 65px;
+  }
+  .to-edit_btn_2 {
+    background-color: #d86100;
+    height: 50px;
+    width: 250px;
+    color: #eeeeee;
+    letter-spacing: 3px;
+    border: outset 2px;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
+    cursor: pointer;
+    &:hover {
+      background-color: #df6400b2;
+      text-decoration: none;
+      transition: .3s;
+    }
+  }
+}
+
   .comment-table {
     height: auto;
     width: 1100px;
@@ -209,11 +227,14 @@
         letter-spacing: 5px;
         font-weight: bold;
         margin: 0 auto 40px;
+        border-color: whitesmoke;
         border-radius: 30px;
         cursor: pointer;
         display: block;
+        box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
         &:hover {
           background-color: rgba(50, 177, 135, 0.644);
+          transition: .3s;
         }
       }
       .index-title {
@@ -258,6 +279,10 @@
       }
     }
   }
+
+.book-icon {
+  margin-top: 35px;
+}
 
 a {
   text-decoration: none;

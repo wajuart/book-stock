@@ -1,0 +1,10 @@
+= render partial: 'shared/header_1'
+
+.user-index
+  %h1  登録ユーザー一覧
+  - @users.each do |user|
+    %a{:href => "/users/#{user.id}"}= user.name
+    %hr/
+  = link_to "トップへ戻る", books_path
+
+= render partial: 'shared/footer_1'

@@ -11,7 +11,7 @@ class CreateBooks < ActiveRecord::Migration[5.0]
       t.integer :item
       t.text :memo
       t.text :impression
-      t.integer :evaluation
+      t.string :evaluation
       t.date :buy_date
 
       t.timestamps

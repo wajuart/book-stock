@@ -8,16 +8,19 @@
       プロフィール編集
   .form
     = form_for(@user, local: true) do |f|
-      .profile-container
+      .profile-container_pe
         .profile-top 
           .image-form
             = f.label :user_image, class: "user-image" do
-              = image_tag current_user.user_image.url
+              - if current_user.user_image.present?
+                = image_tag current_user.user_image.url, class: "prev-content"
+              - else
+                = image_tag 'default_user.png', class: "user-icon"
               = f.file_field :user_image, class: 'hidden'
           .name-box
             .current-name
               = current_user.name
-            = f.text_field :name, class: 'name-form', placeholder: '-- new nickname --'
+            = f.text_field :name, class: 'name-form', placeholder: '-- new nickname --', autofocus: true, required:''
         .profile-middle
           .favorite-left
             .form_1
@@ -36,8 +39,8 @@
         .profile-bottom
           .text-form
             = f.label :自己紹介
-            = f.text_area :introduction, class: "introduction", rows: "7", maxlength: "500", placeholder: "自己紹介（500文字以内）\n\n例）\nジャンル問わず、毎月10冊程度の本を読んでいます。おすすめの本があれば共有したいです。よろしくお願いします。"
+            = f.text_area :introduction, class: "introduction", rows: "7", maxlength: "280", placeholder: "自己紹介（280文字以内）\n\n例）\nジャンル問わず、毎月10冊程度の本を読んでいます。おすすめの本があれば共有したいです。よろしくお願いします。"
         .btn-form
-          = f.submit "更新する", class:"edit-btn", data: { confirm: "この内容で登録しますか？"}
+          = f.submit "更新する", class:"pro-edit_btn"
 
 = render partial: 'shared/footer_1'

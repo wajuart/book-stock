@@ -1,53 +1,86 @@
 # README
 
 # Book Stock
-トップ画面挿入
+![ER図](app/assets/images/home.png)
 
 # 概要
-説明
+本を登録して一元管理するアプリです。
+本が持つ様々な要素の視点から視覚的かつ直感的に管理することができます。
 
-URL https://
+## URL
+https://
 
-テストアカウント 説明
+## 認証機能
+### ID
+### Pass
+
+## テストアカウント
+（説明を書く）
 
 # 機能一覧
+## ユーザー管理
 ・ユーザー登録、編集機能
 ・ログイン、ログアウト機能
+・プロフィール編集機能
+## 本の登録
 ・本の登録、編集、削除機能
-・コメントの投稿、イイネ機能
-・感想の登録、編集、削除機能
-・読みたいリスト登録、削除機能
-・本、著者、出版書の検索機能
+## 検索機能
+・タイトル、出版社、著者のキーワード検索機能
+・ジャンル別、5段階評価別検索機能
+・読書ステータス、読書媒体検索機能
+## ユーザー間交流
+・自己紹介登録機能（プロフィール）
+・本へのコメント投稿機能
+・5段階評価／レビューの共有
 
 # 使用技術一覧
-フロントサイド ・HTML (haml) ・CSS (sass) ・JavaScript (jQuery)
+## フロントエンド
+・HTML (haml)
+・CSS (sass)
+・JavaScript (jQuery)
 
-サーバーサイド ・Ruby (2.5.1) ・Rails (5.2.3)
+## サーバーサイド
+・Ruby (2.5.1)
+・Rails (5.0.7.2)
 
-ユーザー関連 ・device
+## ユーザー関連
+・device
 
-画像関連 ・carrierwave
+## 画像関連
+・carrierwave
 
-グラフ関連 ・chart.js
+## DB
+・MySQL(5.6.47)
 
-サーバー ・Nginx (1.16.1)
-
-DB ・MySQL(5.6)
-
-インフラ・開発環境等 ・CircleCI (CI/CD) ・Rubocop ・RSpec ・Capistrano ・AWS(Route53, ALB, ACM, VPC, EC2, S3)
+## デプロイ
+・heroku
 
 # 制作背景
-リアルな本だけでなく、電子書籍、Paperwhiteなど様々の媒体で読書をする時代となった今、手持ちの本を誰もが1つのアプリで見える化し一元管理出来ると便利であると思い制作しました。
-
-# 工夫した点
+実際の書籍だけでなく、電子書籍、Paperwhiteなど様々の媒体で読書をする時代となった今、手持ちの本を誰もが1つのアプリで見える化し一元管理が出来ると便利であると思い制作しました。
 
 # 特徴
+## 本が持つ要素による視覚的管理
+読者によって様々な要素を持つ本を直感的に管理できます。読書済み、読書中、未読、興味ありの4つの項目で読書ステータスを登録が可能です。
+ジャンル毎の登録本数が一目で分かり、自分の読書傾向値も測れます。
+![ER図](app/assets/images/mypage.png)
 
-# Book Stock DB設計
+## 検索機能の充実
+検索フォームでのキーワード検索に加え、ジャンルや読書媒体、読書ステータスなどから本を検索する機能により、所有している本、アプリ内の全ての本を様々な視点から探す事ができます。
+![ER図](app/assets/images/search_genre.png)
+![ER図](app/assets/images/search_item.png)
+
+## ユーザー間の交流
+ユーザーによる本の評価やレビューの共有の他、コメント投稿によるユーザー間の交流で新たな本との出会いも期待できます。
+![ER図](app/assets/images/comment.png)
+
+# ER図
+![ER図](app/assets/images/ER図.png)
+
+# DB設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 |user_image|string|
@@ -85,3 +118,4 @@ DB ・MySQL(5.6)
 ### Association
 - belongs_to :user
 - belongs_to :book
+

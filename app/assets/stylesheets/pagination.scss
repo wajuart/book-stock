@@ -1,0 +1,77 @@
+.bottom-space { 
+  margin-left: -10px;
+  .pagination {
+    background-color: #ffffff;
+    width: fit-content;
+    font-size: 20px;
+    margin: 30px auto 30px;
+    padding: 0 25px;
+    text-align: center;
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  }
+}
+
+.bottom-space_sea { 
+  .pagination {
+    background-color: #ffffff;
+    width: fit-content;
+    font-size: 20px;
+    margin: 30px auto 30px;
+    padding: 0 25px;
+    text-align: center;
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  }
+}
+
+.bottom-space_sea2 { 
+  .pagination {
+    background-color: #ffffff;
+    width: fit-content;
+    font-size: 20px;
+    margin: 0 0 0 100px;
+    padding: 0 25px;
+    text-align: center;
+    letter-spacing: normal;
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  }
+}
+
+.bottom-space_myp { 
+  .pagination {
+    background-color: #ffffff;
+    width: fit-content;
+    font-size: 20px;
+    margin: 20px auto 0;
+    padding: 0 25px;
+    text-align: center;
+    letter-spacing: normal;
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  }
+}
+
+
+.pagination>li>a {          
+  border: none;
+  color: #004fc5;
+  padding: 10px 13px;
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  background: #2e2e2e;
+  color: #fff;
+  border-radius: 5px;
+  &:hover {
+    color: #fff;
+  }
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {       
+  font-size: 24px;
+  font-weight: bold;
+}

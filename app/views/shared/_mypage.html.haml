@@ -1,0 +1,10 @@
+.MypageView  
+  .MypageContainer
+    = render partial: 'shared/my_side_var'
+    .Main-content_my
+      = render partial: 'shared/user_top'
+      = render partial: 'shared/status_tab'
+      = render partial: 'shared/books-area'
+      .bottom-space_myp
+        .pagenation
+          = paginate(@books)

@@ -1,0 +1,56 @@
+-if user_signed_in?
+  = render partial: 'shared/header_3'
+-else
+  = render partial: 'shared/header_4'  
+
+.description-view
+  .app-title
+    Book Stock
+  .content-area_des
+    .des-intro
+      %p「Book Stock」は、本を視覚的に一元管理するアプリです。
+      %br読む人によって内容以外にも様々な" 要素 "を持つ本を、視覚的かつ直感的に管理ができます。
+      %br本を通じたユーザーとの交流で、新たな本との出会いもあることでしょう。
+    .des-title_1
+      機能紹介
+    .des-title_2
+      本の登録
+    .des-text
+      %p本の登録ができます。タイトルや本の表紙のイメージ、著者などの基本情報の他、「ジャンル」「読書媒体」「ユーザー評価」「レビュー」などの登録が可能です。
+    .des-image
+
+    .des-title_2
+      読書ステータス管理
+    .des-text
+      %p本の「読書の状態」を管理できます。「読書済み」「読書中」「未読」を選択して読むべき本の区別ができる他、「興味あり」の選択で気になる本として登録することも可能です。
+    .des-image
+
+    .des-title_2
+      検索機能
+    .des-text
+      %p① ヘッダーの検索フォームでアプリに登録されている全ての本の検索が可能です。「タイトル」「出版社」「著者」のキーワードから検索できます。
+    .des-image
+
+    .des-text
+      %p② ヘッダーの検索フォームでアプリに登録されている全ての本の検索が可能です。「タイトル」「出版社」「著者」のキーワードから検索できます。
+    .des-image
+
+    .des-title_2
+      登録状況の確認
+    .des-text
+      %p他ユーザーが登録した本の詳細ページにコメントを残すことができます。登録ユーザーによる星5段階評価やレビューを参考に、自由にコメントを残してみましょう。
+    .des-image
+
+    .des-title_2
+      ユーザー交流
+    .des-text
+      %p他ユーザーが登録した本の詳細ページにコメントを残すことができます。登録ユーザーによる星5段階評価やレビューを参考に、自由にコメントを残してみましょう。
+    .des-image
+
+    .last-text
+      %p Book Stockで本を楽しく管理してみましょう！
+
+
+
+
+= render partial: 'shared/footer_1'

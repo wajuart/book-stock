@@ -1,0 +1,96 @@
+.user-top
+  .user-icon-box
+    = link_to profile_edit_user_path(current_user) do
+      .user-icon
+        - if current_user.user_image.present?
+          = image_tag current_user.user_image.url, class: "user-image_set"
+        - else 
+          = image_tag 'default_user.png', class: "user-icon"
+  .user-left-myinfo
+    .register-name
+      = link_to profile_edit_user_path(current_user) do
+        = current_user.name
+    .count-box  
+      .count-title
+        登録本数
+      .count-books
+        = @book.count
+  .user-right-myinfo
+    %ul.genre-left
+      %li.genre-block
+        .my-genre.business
+          ビジネス
+        .count-genre
+          = @book_1.count
+      %li.genre-block
+        .my-genre.politics_economy
+          政治／経済
+        .count-genre
+          = @book_4.count
+      %li.genre-block
+        .my-genre.hobby
+          趣味
+        .count-genre
+          = @book_7.count
+      %li.genre-block
+        .my-genre.entertainment
+          芸能
+        .count-genre
+          = @book_10.count
+      %li.genre-block
+        .my-genre.comic
+          漫画
+        .count-genre
+          = @book_13.count
+    %ul.genre-center
+      %li.genre-block
+        .my-genre.self_enlightenment
+          自己啓発
+        .count-genre
+          = @book_2.count
+      %li.genre-block
+        .my-genre.study_skill
+          勉強／スキル
+        .count-genre
+          = @book_5.count
+      %li.genre-block
+        .my-genre.health
+          健康
+        .count-genre
+          = @book_8.count
+      %li.genre-block
+        .my-genre.parenting
+          子育て
+        .count-genre
+          = @book_11.count
+      %li.genre-block
+        .my-genre.life
+          生活
+        .count-genre
+          = @book_14.count
+    %ul.genre-right
+      %li.genre-block
+        .my-genre.money
+          マネー
+        .count-genre
+          = @book_3.count
+      %li.genre-block
+        .my-genre.cooking
+          料理
+        .count-genre
+          = @book_6.count
+      %li.genre-block
+        .my-genre.sports
+          スポーツ
+        .count-genre
+          = @book_9.count
+      %li.genre-block
+        .my-genre.novel
+          小説
+        .count-genre
+          = @book_12.count
+      %li.genre-block
+        .my-genre.genre_etc
+          その他
+        .count-genre
+          = @book_15.count

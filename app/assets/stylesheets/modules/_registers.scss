@@ -14,7 +14,8 @@
     // background-image: url(https://www.pakutaso.com/shared/img/thumb/PPP_mokumecyou_TP_V.jpg);
     // background-size: 1100%;
     // background:linear-gradient(#F89174, #FFC778);
-    background-size: 400%; 
+    
+    background-size: 400%;
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
     border: outset 2px; 
     height: 1320px;
@@ -27,16 +28,24 @@
       .contents {
         font-weight: bold;
         margin-bottom: 40px;
-        a { 
-          .my-page-btn {
+        a {
+          text-decoration: none; 
+          .content-btn_my {
+            height: 55px;
+            width: 180px;
             background-color: white;
             color: rgb(11, 54, 29);
             font-family: Papyrus;
             font-size: 30px;
-            margin: 40px 0 100px;
+            margin: 40px auto 100px;
             border: outset #ffffff 4px;
-            border-radius: 3px;
+            border-radius: 15px;
             cursor: pointer;
+            &:hover {
+              background-color: rgb(70, 70, 70);
+              color: #fff;
+              transition: .3s;
+            }
           }
         }
         a { 
@@ -51,11 +60,10 @@
             margin: 0 auto;
             margin-bottom: 100px;
             cursor: pointer;
+            background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
             &:hover {
               background-color: #FFF;
-            }
-            background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
-            .content-name {          
+              transition: .3s;
             }
             .content-sub-name {
               color: #434A54;
@@ -68,8 +76,6 @@
     }
     }
     .MainDisplay {
-      background-color: #ffffff;
-      height: 100vh;
       width: calc(100% - 260px);
       .MainHeader {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
@@ -87,6 +93,10 @@
           padding-top: 10px;
           margin: 0 auto;
           cursor: pointer;
+          a {
+            color: #FFF;
+            text-decoration: none; 
+          }
         }  
         .conent-list {
           margin-top: 28px;
@@ -105,16 +115,14 @@
                 font-weight: bold;
                 text-decoration: underline;
               }
-            }  
-            &:hover {
-              color: black;
-              font-weight: bold;
-              text-decoration: underline;
+            a .log-out_btn {
+              padding-bottom: -1px;
             }
+            }  
           }  
         }   
       }          
-      .MainSecondHeader {
+      .MainSecondHeader_ma {
         background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
         height: 50px;
         width: 100%;
@@ -122,38 +130,37 @@
         display: flex;
         justify-content: space-between;
         border-bottom: solid 1px #eeeeee; 
-        line-height: 50px;
-        .name-box {
+        .name-box_ma {
           height: 50px;
-          width: 200px;
-          margin: 7px 240px 7px 50px;
-          .user-name {
+          width: 530px;
+          margin: 7px 0 0 0;
+          .user-name_ma {
             height: 35px;
             font-size: 15px;
             line-height: 35px;
             text-align: center;
             border: outset 2px;
+            padding: 0 15px;
           }
         }  
-        .search-box {
-          height: 100%;
-          width: 600px;
+        .search-box_ma {
+          width: 100%;
+          margin: -2px -20px 10px 280px;
           display: flex;
-          
-          &__input {
+          position: relative;
+          &__input_ma {
             background-color: #ffffff;
             height: 35px;
             width: 350px;
             color: #555555;
             font-size: 14px;
-            margin-top: 8px;
+            margin: 8px 0 5px;
             padding: 0 90px 0 20px;
             border: inset #eeeeee 2px;
             border-radius: 20px;
             line-height: 35px;
-            position: relative;
           }  
-          .search-btn {
+          .search-btn_ma {
             background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
             font-size: 13px;
             color: #ffffff;
@@ -161,14 +168,18 @@
             padding: 0 10px;
             border: outset thin;
             border-radius: 5px;
+            position: absolute;
+            left: 285px;
+            height: 24px;
             &:hover {
             opacity: 0.7;
+            transition: .3s;
             }
           }  
         }
-        &__social-btn {          
-          width: 600px;
-          padding-left: 120px;
+        .social-box_ma {          
+          width: 1200px;
+          padding: 11px 0 0 150px;
           .social-btn__facebook {
             color: #ffffff;
             font-size: 15px;
@@ -178,6 +189,7 @@
             padding: 4px 8px;
             &:hover {
               opacity: 0.7;
+              transition: .3s;
             }  
           }
           .social-btn__twitter {
@@ -190,6 +202,7 @@
             padding: 4px 8px;
             &:hover {
               opacity: 0.7;
+              transition: .3s;
             }
           }
           .social-btn__instagram {
@@ -201,6 +214,7 @@
             padding: 4px 8px;
             &:hover {
               opacity: 0.7;
+              transition: .3s;
             }      
           }
         } 
@@ -213,11 +227,16 @@
         .Registers-box {
           height: 100%;
           width: 100%;         
-          padding: 20px 80px; 
-            .Registers-top {  
-              height: 30px;
+          padding: 20px 55px 0 100px; 
+            .Registers-top {
+              background-color: #ffffff;
+              width: fit-content;
+              height: 40px;
+              border: outset #FFF 1px;
+              border-radius: 5px;
               display: flex;
-              margin: 25px 0 50px 0;
+              margin: 25px -41px 50px 0;
+              padding: 5px 10px 5px 5px;
               .title {
                 font-family: ヒラギノ明朝 ProN;
                 letter-spacing: 5px;
@@ -226,43 +245,50 @@
                 padding: 0 12px 0 12px;
                 display: flex;
                 &__icon {
-                  margin-right: 5px;
+                  margin-right: 20px;
                 }
               }       
               .tag-box {
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 13px;
-                margin: 5px 0 0 30px;
+                margin: 1px 0 3px 30px;
                 display: flex;
-                
                 &__left {
-                  width: 65px;
+                  background-color: #000;
+                  color: #FFF;
+                  height: 26px;
+                  width: 85px;
                   text-align: center;
-                  border: outset 1px;
-                  background-color: rgb(238, 238, 238);
+                  border: outset 1px rgb(151, 151, 151);
                   padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
-                    background-color: black;
-                    color: #FFF;
+                    background-color: #FFF;
+                    color: #000;
+                    transition: .3s;
                   }
                 }
                 &__center {
-                  width: 65px;
+                  height: 26px;
+                  width: 85px;
                   text-align: center;
+                  line-height: 20px;
                   margin: 0 10px;
                   border: outset 1px;
                   color: #FFF;
-                  background-color: rgb(255, 115, 0);
+                  background-color: rgb(221, 88, 0);
                   padding: 3px 5px 0 5px;
                   cursor: pointer;
                   &:hover {
                     background-color: #FFF;
                     color:rgb(255, 115, 0);
+                    font-weight: bold;
+                    transition: .3s;
                   }
                 }
                 &__right {
-                  width: 80px;
+                  height: 26px;
+                  width: 85px;
                   text-align: center;
                   border: outset 1px;
                   color: #FFF;
@@ -272,6 +298,8 @@
                   &:hover {
                     background-color: #FFF;
                     color: rgb(1, 88, 122);
+                    font-weight: bold;
+                    transition: .3s;
                   }
                 }
               }
@@ -308,7 +336,10 @@
                 cursor: pointer;
                 &:hover {
                   opacity: 0.8;
-                }     
+                }
+                a {
+                  text-decoration: none; 
+                }
                 .book-image {
                   height: 190px;
                   padding: 4px 14px;
@@ -324,8 +355,9 @@
                     left: 0;
                     height: 20px;
                     width: 70px;
-                    background-color: slateblue;
-                    font-size: 11px;     
+                    // background-color: slateblue;
+                    font-size: 11px;
+                    line-height: 20px;
                     text-align: center;
                     color: #fff;
                     img {
@@ -368,15 +400,6 @@
                 }
               }           
             }
-            .pages { 
-              width: 100px;
-              font-size: 15px;
-              margin: 0 auto 15px;
-              text-align: center;
-              border: inset;
-              background-color: mintcream;
-            }
-            
         }
       }
    }
@@ -399,9 +422,147 @@
     margin-top: 13px;
     font-size: 6px;
   }
-  
-}  
+}
 
+.contents-top {
+  display: flex;
+}
+
+.evaluation-box {
+  background-color: #ffffff;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 0 0 200px;
+  padding: 10px;
+  border: outset thin rgb(180, 180, 180);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  .box-upper {
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .box-lower {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.genre-box {
+  background-color: #ffffff;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 0 0 120px;
+  padding: 10px;
+  border: outset thin rgb(180, 180, 180);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  .box-upper {
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .box-lower {
+    display: flex;
+  }
+}
+
+.star-list {
+  background-color: #474343;
+  width: 150px;
+  color: #FFF;
+  font-size: 14px;
+  text-align: center;
+  margin: 0 15px;
+  padding: 3px 6px;
+  border: outset thin;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  &:hover {
+    background-color: rgb(128, 129, 129);
+    transition: .3s;
+  }
+}
+
+.eva-title {
+  background-color: #ffffff;
+  color: rgb(49, 80, 179);
+  font-weight: bold;
+  margin-right: px;
+  border: none;
+  box-shadow: none;
+  &:hover {
+    background-color: #ffffff;
+  } 
+}
+
+li.genre {
+  width: 88px;
+  color: #FFF;
+  font-size: 11px;
+  text-align: center;
+  margin: 0 3px;
+  padding: 3px 3px;
+  border: outset thin;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  &:hover {
+    opacity: 0.7;
+    transition: .3s;
+  }
+}
+
+.book-none {
+  background-color: #FFF;
+  font-size: 20px;
+  border: outset #eeeeee 3px;
+  margin: 200px auto 0;
+  padding: 50px 300px;
+}
+
+.business {
+  background-color: #6a2b8f;
+}
+.self_enlightenment {
+  background-color: #305ab4;
+}
+.money {
+  background-color: #cfc203;
+}
+.politics_economy {
+  background-color: #7e3d00;
+}
+.study_skill {
+  background-color: #006d88;
+}
+.cooking {
+  background-color: #f04400;
+}
+.hobby {
+  background-color: #d30023;
+}
+.health {
+  background-color: #006408;
+}
+.sports {
+  background-color: #00aaa2;
+}
+.entertainment {
+  background-color: #351dc0;
+}
+.parenting {
+  background-color: #ce43a0;
+}
+.novel {
+  background-color: #c27400;
+}
+.comic {
+  background-color: #30a761;
+}
+.life {
+  background-color: #992929;
+}
+.genre_etc {
+  background-color: #575757;
+}
 .wrapper a {
   text-decoration: none;
 }

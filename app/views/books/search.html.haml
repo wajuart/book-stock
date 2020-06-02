@@ -1,27 +1,77 @@
-- if user_signed_in?
-  = render partial: 'shared/header_1'
-- else
-  = render partial: 'shared/header_2'
+.SearchDisplay
+  - if user_signed_in?
+    = render partial: 'shared/header_1'
+  - else
+    = render partial: 'shared/header_2'
 
-.Search-box
-  .title-box_sea
-    .icon
-      .fa.fa-search
-    .title
-      = "' #{params[:keyword]} ' の検索結果"
-  .books-area_s
-    - @books.each do |book|
-      .book-list_s
-        = link_to book_path(book) do
-          .book-image
-            = image_tag book.image.to_s  
-            .book-genre-tag
-              = book.genre
-          .book-title
-            = book.title
-  .bottom-space
-    .pages
-      page1
-    = link_to "戻る", :back, class: 'btn'            
+  .Search-box
+    .title-box_sea
+      .icon
+        .fa.fa-search
+      .title
+        = "' #{params[:keyword]} ' の検索結果"
+      .bottom-space_sea2
+        .pagenation
+          = paginate(@books)
+    .books-area_s
+      - if @books.count == 0
+        .search-book-none
+          該当する本はありません
+      - else
+        - @books.each do |book|
+          .book-list_s
+            = link_to book_path(book) do
+              .book-image
+                = image_tag book.image.to_s  
+                - if book.genre == "ビジネス"
+                  .book-genre-tag.business
+                    ビジネス
+                - elsif book.genre == "自己啓発"
+                  .book-genre-tag.self_enlightenment
+                    自己啓発
+                - elsif book.genre == "マネー"
+                  .book-genre-tag.money
+                    マネー
+                - elsif book.genre == "政治／経済"
+                  .book-genre-tag.politics_economy
+                    政治／経済
+                - elsif book.genre == "勉強／スキル"
+                  .book-genre-tag.study_skill
+                    勉強／スキル
+                - elsif book.genre == "料理"
+                  .book-genre-tag.cooking
+                    料理
+                - elsif book.genre == "趣味"
+                  .book-genre-tag.hobby
+                    趣味
+                - elsif book.genre == "健康"
+                  .book-genre-tag.health
+                    健康
+                - elsif book.genre == "スポーツ"
+                  .book-genre-tag.sports
+                    スポーツ
+                - elsif book.genre == "芸能"
+                  .book-genre-tag.entertainment
+                    芸能
+                - elsif book.genre == "子育て"
+                  .book-genre-tag.parenting
+                    子育て
+                - elsif book.genre == "小説"
+                  .book-genre-tag.novel
+                    小説
+                - elsif book.genre == "漫画"
+                  .book-genre-tag.comic
+                    漫画
+                - elsif book.genre == "生活"
+                  .book-genre-tag.life
+                    生活
+                - else book.genre == "その他"
+                  .book-genre-tag.genre_etc
+                    その他
+              .book-title
+                = book.title
+    .bottom-space_sea
+      .pagenation
+        = paginate(@books)
 
-= render partial: 'shared/footer_1'  
+  = render partial: 'shared/footer_1'  

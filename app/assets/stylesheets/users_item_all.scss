@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+.Item_all {
+  height: auto;
+  width: 100vw;
+  .title-box_item { 
+    font-family: ヒラギノ明朝 ProN;
+    letter-spacing: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 40px 0 0 200px;
+    display: flex;
+    .icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+.item-area {
+  height: 100%;
+  text-align: center;
+  line-height: 80px;
+  margin: 100px 340px 20px;
+  a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border: outset #fff 3px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
+  }
+}
+
+.item-title {
+  height: 40px;
+  margin-bottom: 170px;
+}
+
+ul.box_item {
+  background-color: rgb(253, 253, 253);
+  display: flex;
+}
+
+li.read-item {
+  height: 230px;
+  width: 250px;
+  margin: 10px;
+  padding-bottom: 5px;
+  &:hover {
+    // background-color: rgb(128, 129, 129);
+    font-size: 21px;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: .3s;
+  }
+}
+
+.real_book {
+  img {
+    height: inherit;
+  }
+}
+
+.e_book {
+  img {
+    height: inherit;
+  }
+}
+
+.paper_white {
+  img {
+    height: inherit;
+  }
+}
+
+.audio_book {
+  img {
+    height: inherit;
+  }
+}
+
+ul.item-box {
+  margin: 0 0 0 340px;
+  text-align: center;
+  display: flex;
+}
+
+li.item.li {
+  background-color: rgba(113, 247, 173, 0.438);
+  width: 276px;
+  border: inset thin;
+  padding: 3px 0;
+}

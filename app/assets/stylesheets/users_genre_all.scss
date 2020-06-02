@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+.Genre_all {
+  height: auto;
+  width: 100vw;
+  .title-box_gen { 
+    font-family: ヒラギノ明朝 ProN;
+    letter-spacing: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 40px 0 0 200px;
+    display: flex;
+    .icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+.genre-area {
+  height: 100%;
+  text-align: center;
+  line-height: 100px;
+  margin: 120px 270px 148px;
+  a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    border: outset #fff 3px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
+  }
+}
+
+
+ul.box-upper_gen {
+  display: flex;
+}
+
+ul.box-middle_gen {
+  margin: 0 auto;
+  display: flex;
+}
+
+ul.box-lower_gen {
+  margin: 0 auto;
+  display: flex;
+}
+
+li.genre_gen {
+  height: 100px;
+  width: 250px;
+  &:hover {
+    font-size: 21px;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: .3s;
+  }
+}

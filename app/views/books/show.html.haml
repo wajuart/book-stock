@@ -12,7 +12,7 @@
         .registered-user
           .user-left
             .registant
-              登録者
+              登録ユーザー
             .name
               = link_to @book.user.name, "/users/#{@book.user_id}"
               -# = link_to book.user.name, "/users/#{user.book_id}"
@@ -61,7 +61,7 @@
           .buy_date-form
             .title-line
               .title
-                登録者評価 :
+                ユーザー5段階評価 :
             .right-select_box
               = @book.evaluation
         .update-form
@@ -76,13 +76,17 @@
               登録者レビュー :
         .area_box_bs
           = @book.impression
+  - if current_user == @book.user
+    .to-edit_btn-box
+      = link_to "/books/#{@book.id}/edit", method: :get, class:"to-edit_btn_2" do
+        編集画面へ
   - if current_user
     = form_for [@book, @comment] do |f|
       .comment-table
         .comment-table__title
           本についてのコメント
         .comment-area
-          = f.text_area :text, class: 'comment_form', placeholder: '-- コメントする --'
+          = f.text_area :text, class: 'comment_form', placeholder: '-- コメントする --', autofocus: true
           = f.submit 'SEND', class: 'comment-btn'
           .index-title
             コメント一覧
