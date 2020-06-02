@@ -64,7 +64,7 @@ class Book < ApplicationRecord
   validates :title, :status, :genre, presence: true, unless: :image?
   validates :title, length: { maximum: 18 }, presence: true
   validates :publisher, length: { maximum: 10, message: "は 10文字以下で入力してください" }, allow_blank: true
-  validates :author, length: { maximum: 10, message: "は 10文字以下で入力してください" }, allow_blank: true
+  validates :author, length: { maximum: 12, message: "は 12文字以下で入力してください" }, allow_blank: true
   validates :memo, length: { maximum: 60, message: "は 60文字以下で入力してください" }, allow_blank: true
   validates :impression, length: { maximum: 180, message: "は 180文字以下で入力してください" }, allow_blank: true
   

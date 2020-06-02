@@ -66,13 +66,13 @@ class BooksController < ApplicationController
     book.destroy
     # book.destroy(book_params)
     # @book = Book.find_by(id: params[:id])
-    redirect_to books_path(@book), notice: '本が削除されました'
-    # if @book.destroy
-    #   redirect_to books_path(@book), notice: '本が削除されました'
-    # else
-    #   flash.now[:alert] = '削除に失敗しました。'
-    #   render :edit
-    # end
+    # redirect_to books_path(@book), notice: '本が削除されました'
+    if book.destroy
+      redirect_to books_path(@book), notice: '本が削除されました'
+    else
+      flash.now[:alert] = '削除に失敗しました。'
+      render :edit
+    end
   end
 
 
