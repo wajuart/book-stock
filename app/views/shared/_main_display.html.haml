@@ -2,27 +2,58 @@
   .MainHeader
     .logo-box
       = link_to home_index_path(current_user) do
-        Book Stock     
+        Book Stock
     %ul.conent-list
-      .conent-list__item
-        = link_to new_user_session_path do
-          新規登録
-      .conent-list__item
-        = link_to user_session_path do
-          ログイン
-      .conent-list__item
-        = link_to edit_user_path(current_user) do
-          アカウント編集
-      .conent-list__item
-        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
-      .conent-list__item
-        = link_to app_description_home_index_path do
-          アプリについて           
+      - if user_signed_in?
+        .conent-list__item
+          = link_to edit_user_path(current_user) do
+            アカウント編集
+        .conent-list__item
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
+        .conent-list__item
+          = link_to app_description_home_index_path do
+            アプリについて
+      - else
+        .conent-list__item
+          = link_to new_user_session_path do
+            新規登録
+        .conent-list__item
+          = link_to user_session_path do
+            ログイン
+        .conent-list__item
+          = link_to app_description_home_index_path do
+            アプリについて        
+
+
+    -# .logo-box
+    -#   = link_to home_index_path(current_user) do
+    -#     Book Stock     
+    -# %ul.conent-list
+    -#   .conent-list__item
+    -#     = link_to new_user_session_path do
+    -#       新規登録
+    -#   .conent-list__item
+    -#     = link_to user_session_path do
+    -#       ログイン
+    -#   .conent-list__item
+    -#     = link_to edit_user_path(current_user) do
+    -#       アカウント編集
+    -#   .conent-list__item
+    -#     = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
+    -#   .conent-list__item
+    -#     = link_to app_description_home_index_path do
+    -#       アプリについて     
+
+
+
 
   .MainSecondHeader_ma
     .name-box_ma
       .user-name_ma
-        = current_user.name
+        - if user_signed_in? 
+          = current_user.name
+        - else
+          未ログイン
     .search-box_ma
       = form_tag(search_books_path, method: 'get') do
         = text_field_tag :keyword, '', placeholder: "本を検索する", class: "search-box_ma__input_ma" 
@@ -48,15 +79,16 @@
           .title__name
             登録本一覧
         %ul.tag-box
-          = link_to books_path(current_user) do
-            %li.tag-box__left
-              最新登録順
-          = link_to evaluation_all_book_path(current_user) do
-            %li.tag-box__center
-              ⭐️ 評価別
-          = link_to genre_all_book_path(current_user) do
-            %li.tag-box__right
-              ジャンル別
+          - if user_signed_in? 
+            = link_to books_path(current_user) do
+              %li.tag-box__left
+                最新登録順
+            = link_to evaluation_all_book_path(current_user) do
+              %li.tag-box__center
+                ⭐️ 評価別
+            = link_to genre_all_book_path(current_user) do
+              %li.tag-box__right
+                ジャンル別
       .books-box
         - @books.each do |book|
           %ul.book-list

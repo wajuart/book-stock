@@ -28,6 +28,8 @@
         width: 1200px;
         padding: 30px 100px 0 270px;
         .Left-upper_form {
+          height: 270px;
+          margin-bottom: 30px;
           display: flex;
           .image-form {
             height: 270px;
@@ -44,11 +46,13 @@
               opacity: 0.8;
             }
             img {
+              height: -webkit-fill-available;
               width: 100%;
-              height: 100%;
               cursor: pointer;
-              // padding-bottom: 10px;
               object-fit: cover;
+            }
+            .book-icon {
+              object-fit: contain;
             }
             .book-image {
               height: 100%;
@@ -166,6 +170,7 @@
           cursor: pointer;
           &:hover {
             background-color: rgba(50, 177, 135, 0.788);
+            width: 200px;
             transition: .3s;
           }  
         }
@@ -181,6 +186,7 @@
           &:hover {
             background-color: #131b53b6;
             text-decoration: none;
+            width: 150px;
             transition: .3s;
           }
         } 

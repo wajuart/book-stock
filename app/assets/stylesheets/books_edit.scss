@@ -44,10 +44,13 @@
               opacity: 0.8;
             }
             img {
+              height: -webkit-fill-available;
               width: 100%;
-              height: 100%;
               cursor: pointer;
               object-fit: cover;
+            }
+            .book-icon {
+              object-fit: contain;
             }
             .book-image {
               height: 100%;
@@ -164,6 +167,7 @@
           cursor: pointer;
           &:hover {
             background-color: rgba(50, 177, 135, 0.788);
+            width: 200px;
             transition: .3s;
           }
         }
@@ -179,6 +183,7 @@
           &:hover {
             background-color: rgb(88, 83, 83);
             text-decoration: none;
+            width: 150px;
             transition: .3s;
           }
         }  
@@ -194,6 +199,7 @@
           &:hover {
             background-color: #131b53b6;
             text-decoration: none;
+            width: 150px;
             transition: .3s;
           }
         }  

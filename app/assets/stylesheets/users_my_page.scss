@@ -113,12 +113,13 @@
           margin-right: 50px;
           .register-name {
             width: 100%;
-            font-size: 24px;
+            font-size: 20px;
             margin: 24px 0 30px;
             text-align: center;
             a {
               color: #000000;
               &:hover {
+                font-weight: bold;
                 text-decoration: underline #555555;
               }
             }
@@ -129,11 +130,12 @@
             display: flex;
             justify-content: center;
             .count-title {
-              font-size: 20px;
+              font-size: 18px;
               margin-right: 30px;
             }  
             .count-books  {
-              font-size: 20px;
+              font-size: 18px;
+              font-weight: bold;
               margin-right: 30px;
             }
           }  

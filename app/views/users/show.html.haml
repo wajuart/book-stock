@@ -11,11 +11,11 @@
       .profile-container_i
         .profile-top 
           .image-form
-            = f.label :user_image, class: "user-image" do
-              - if current_user.user_image.present?
-                = image_tag current_user.user_image.url, class: "prev-content"
-              - else
-                = image_tag 'default_user.png', class: "user-icon"
+            - if @user.user_image.present?
+              = f.label :user_image, class: "user-image" do
+                = image_tag @user.user_image.url
+            - else
+              = image_tag 'default_user.png', class: "user-icon"
               .hidden
           .user-name_i
             = @user.name
@@ -51,15 +51,71 @@
     .count-books_ush
       = @book.count
 .books-area_i
-  - @books.each do |book|
-    .book-list_i
-      = link_to book_path(book) do
-        .book-image
-          = image_tag book.image.to_s  
-          .book-genre-tag
-            = book.genre
-        .book-title
-          = book.title
+  - if @books.count == 0
+    .search-book-none
+      該当する本はありません
+  - else
+    - @books.each do |book|
+      .book-list_i
+        = link_to book_path(book) do
+          .book-image
+            = image_tag book.image.to_s  
+            - if book.genre == "ビジネス"
+              .book-genre-tag.business
+                ビジネス
+            - elsif book.genre == "自己啓発"
+              .book-genre-tag.self_enlightenment
+                自己啓発
+            - elsif book.genre == "マネー"
+              .book-genre-tag.money
+                マネー
+            - elsif book.genre == "政治／経済"
+              .book-genre-tag.politics_economy
+                政治／経済
+            - elsif book.genre == "勉強／スキル"
+              .book-genre-tag.study_skill
+                勉強／スキル
+            - elsif book.genre == "料理"
+              .book-genre-tag.cooking
+                料理
+            - elsif book.genre == "趣味"
+              .book-genre-tag.hobby
+                趣味
+            - elsif book.genre == "健康"
+              .book-genre-tag.health
+                健康
+            - elsif book.genre == "スポーツ"
+              .book-genre-tag.sports
+                スポーツ
+            - elsif book.genre == "芸能"
+              .book-genre-tag.entertainment
+                芸能
+            - elsif book.genre == "子育て"
+              .book-genre-tag.parenting
+                子育て
+            - elsif book.genre == "小説"
+              .book-genre-tag.novel
+                小説
+            - elsif book.genre == "漫画"
+              .book-genre-tag.comic
+                漫画
+            - elsif book.genre == "生活"
+              .book-genre-tag.life
+                生活
+            - else book.genre == "その他"
+              .book-genre-tag.genre_etc
+                その他
+          .book-title
+            = book.title
+  -# - @books.each do |book|
+  -#   .book-list_i
+  -#     = link_to book_path(book) do
+  -#       .book-image
+  -#         = image_tag book.image.to_s  
+  -#         .book-genre-tag
+  -#           = book.genre
+  -#       .book-title
+  -#         = book.title
 .bottom-space_sea
   .pagenation
     = paginate(@books)

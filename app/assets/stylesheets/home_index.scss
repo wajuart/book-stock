@@ -78,7 +78,6 @@
       .text {
         color: #ffffff;
         font-size: 18px;
-        // font-weight: bold;
       }
       .btn_box {
         margin-top: 30px;
@@ -98,7 +97,9 @@
           border-radius: 20px;
           cursor: pointer;
           &:hover {
-            background-color: rgb(88, 83, 83);
+            background-color: rgb(65, 65, 65);
+            width: 150px;
+            transition: .3s;
           }
         }
       }

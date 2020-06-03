@@ -1,9 +1,9 @@
 .app-title {
-  font-size: 35px;
+  font-size: 55px;
   font-family: fantasy;
   letter-spacing: 1px;
   text-align: center;
-  margin: 40px 0 30px;
+  margin: 60px 0 30px;
 }
 
 .content-area_des {
@@ -16,13 +16,20 @@
 }
 
 .des-title_1 {
-  font-size: 24px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: serif;
+  letter-spacing: 10px;
   text-align: center;
-  margin: 60px 0 30px;
+  margin: 100px 0 30px;
 }
 
 .des-title_2 {
-  font-size: 20px;
+  color: rgb(8, 91, 146);
+  font-weight: bold;
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-family: ヒラギノ明朝 ProN;
   text-align: center;
   margin: 70px 0 30px;
 }
@@ -32,12 +39,108 @@
   margin: 20px 0;
 }
 
-.des-image {
-  text-align: center;
+.register_book_img {
+  height: 350px;
+  width: 700px;
+  display: block;
+  margin: 0 auto;
+}
+
+.mypage_img {
+  height: 350px;
+  width: 700px;
+  display: block;
+  margin: 0 auto;
+}
+
+.search_img {
+  height: 350px;
+  width: 1100px;
+  display: block;
+  margin: 0 auto 60px;
+}
+
+.genre_img {
+  height: 240px;
+  width: 740px;
+  display: block;
+  margin: 0 auto;
+}
+
+.item_img {
+  height: 240px;
+  width: 740px;
+  display: block;
+  margin: 0 auto;
+}
+
+.des_img_flex {
+  margin: 20px 0 0 370px;
+  display: flex;
+  .book_detail_img {
+    height: 350px;
+    width: 560px;
+
+  }
+  .comment_img {
+    height: 350px;
+    width: 480px;
+  }
 }
 
 .last-text {
   font-size: 24px;
+  letter-spacing: 3px;
   text-align: center;
-  margin: 100px 0;
+  margin: 130px 0;
+}
+
+.btn-box_des {
+  height: 100px;
+  margin-top: 5px;
+  padding-top: 25px;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 50px;
+  a.back_btn { 
+    color: #eeeeee;
+    background-color: #131c53;
+    width: 150px;
+    border: outset 2px;
+    border-radius: 20px;
+    line-height: 50px;
+    margin: 0 auto;
+    display: inline-block;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
+    cursor: pointer;
+    &:hover {
+      background-color: #131b53b6;
+      text-decoration: none;
+      width: 180px;
+      transition: .3s;
+    }
+  }  
+}
+
+.start_btn {
+  background-color: #00b193;
+  width: 200px;
+  border: outset 2px;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: inline-block;
+  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
+  cursor: pointer;
+  &:hover {
+    background-color: #00b193c4;
+    width: 250px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s;
+  }
+  a {
+    color: #fff;
+  }
 }

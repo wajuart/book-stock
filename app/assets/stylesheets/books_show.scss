@@ -185,6 +185,7 @@
     &:hover {
       background-color: #df6400b2;
       text-decoration: none;
+      width: 300px;
       transition: .3s;
     }
   }
@@ -227,13 +228,15 @@
         letter-spacing: 5px;
         font-weight: bold;
         margin: 0 auto 40px;
+        padding: 5px;
         border-color: whitesmoke;
         border-radius: 30px;
         cursor: pointer;
         display: block;
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
         &:hover {
-          background-color: rgba(50, 177, 135, 0.644);
+          background-color: rgba(1, 155, 104, 0.836);
+          width: 190px;
           transition: .3s;
         }
       }
@@ -280,9 +283,7 @@
     }
   }
 
-.book-icon {
-  margin-top: 35px;
-}
+
 
 a {
   text-decoration: none;
