@@ -67,7 +67,7 @@ class UsersController < ApplicationController
       redirect_to my_page_user_path(current_user), notice: 'プロフィールが更新されました。'
     else
       flash.now[:alert] = '編集に失敗しました。'
-      render :edit
+      render :profile_edit
     end
   end
 

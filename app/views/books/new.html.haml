@@ -8,6 +8,7 @@
       本を登録する
   .form
     = form_for @book do |f|
+      = render "devise/shared/error_messages", resource: @book
       .registers-box
         .Left-side
           .title-line_img

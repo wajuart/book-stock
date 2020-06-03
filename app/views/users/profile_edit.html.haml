@@ -8,6 +8,7 @@
       プロフィール編集
   .form
     = form_for(@user, local: true) do |f|
+      = render "devise/shared/error_messages", resource: @user
       .profile-container_pe
         .profile-top 
           .image-form

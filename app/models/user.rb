@@ -6,8 +6,6 @@ class User < ApplicationRecord
   
   has_many :books, dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_many :likes, dependent: :destroy
-  has_many :liked_books, through: :likes, source: :book
          
   validates :name, length: { maximum: 10, message: "は 10文字以下で入力してください" }, presence: true
   validates :email, presence: true, uniqueness: true 
