@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'statuses/create'
   get 'genres/create'
 
+  resources :home
   root to: "home#index"
 
   devise_for :users, controllers: {

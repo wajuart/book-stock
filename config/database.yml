@@ -52,3 +52,6 @@ production:
   database: book-stock_production
   username: book-stock
   password: <%= ENV['BOOK-STOCK_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
