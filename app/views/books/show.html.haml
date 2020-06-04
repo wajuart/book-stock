@@ -68,6 +68,10 @@
               登録者レビュー :
         .area_box_bs
           = @book.impression
+  - if user_signed_in?
+  - else
+    .margin-bottom_bs
+
   - if current_user == @book.user
     .to-edit_btn-box
       = link_to "/books/#{@book.id}/edit", method: :get, class:"to-edit_btn_2" do
