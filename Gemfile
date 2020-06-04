@@ -65,3 +65,5 @@ gem 'mini_magick'
 gem 'kaminari'
 gem 'pry-rails'
 gem 'ransack'
+
+ruby "2.5.1"
