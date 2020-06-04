@@ -131,7 +131,6 @@
         &:hover {
           color: #000;
           font-weight: bold;
-          text-decoration: underline;
         }
       }
       a .log-out_btn {
@@ -266,9 +265,8 @@
       margin: 0 35px ;
       cursor: pointer;
       &:hover {
-        color: black;
+        color: #002491;
         font-weight: bold;
-        text-decoration: underline;
       }     
     }    
   }

@@ -19,7 +19,13 @@ class Users::SessionsController < Devise::SessionsController
 
   def after_sign_out_path_for(resource)
     home_index_path
-  end 
+  end
+
+  def new_guest
+    user = User.guest
+    sign_in user
+    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
 
   # DELETE /resource/sign_out
   # def destroy

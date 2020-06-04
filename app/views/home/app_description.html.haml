@@ -1,7 +1,4 @@
--if user_signed_in?
-  = render partial: 'shared/header_3'
--else
-  = render partial: 'shared/header_4'  
+= render partial: 'shared/header_3'
 
 .description-view
   .app-title
@@ -47,7 +44,7 @@
         .des-image_com
           = image_tag 'comment.png', class: "comment_img"
     .last-text
-      %p Book Stockで本を楽しく管理して、素敵な読書ライフを！
+      %p 「Book Stock」で本を楽しく管理して、素敵な読書ライフを！
     .btn-box_des
       - if user_signed_in?
         = link_to "戻る", :back, class: 'back_btn'

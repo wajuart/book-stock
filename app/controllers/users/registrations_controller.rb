@@ -3,6 +3,8 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
+  before_action :check_guest, only: %i[update destroy]
+
 
   # GET /resource/sign_up
   # def new
@@ -57,6 +59,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def after_update_path_for(resource)
     my_page_user_path(current_user)
   end  
+  
+  def check_guest
+    if resource.email == 'guest_bs6@example.com'
+      redirect_to root_path, alert: 'ゲストユーザーの変更・削除はできません。'
+    end
+  end
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)

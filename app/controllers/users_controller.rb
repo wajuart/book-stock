@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  # before_action :set_user, only: [:index, :my_page, :edit, :profile_edit, :show]
   before_action :authenticate_user!
 
   def index
