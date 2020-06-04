@@ -6,14 +6,15 @@ class User < ApplicationRecord
   
   has_many :books, dependent: :destroy
   has_many :comments, dependent: :destroy
-  has_many :likes, dependent: :destroy
-  has_many :liked_books, through: :likes, source: :book
-  def already_liked?(book)
-    self.likes.exists?(book_id: book.id)
+
+  def self.guest
+    find_or_create_by!(name: 'Test', email: 'guest_bs6@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
   end
          
   validates :name, length: { maximum: 10, message: "は 10文字以下で入力してください" }, presence: true
-  validates :email, presence: true, uniqueness: true 
+  validates :email, presence: true
   validates :favorite_author, length: { maximum: 15, message: "は 15文字以下で入力してください" }, allow_blank: true
   validates :favorite_author, length: { maximum: 15, message: "は 15文字以下で入力してください" }, allow_blank: true
   validates :favorite_genre, length: { maximum: 15, message: "は 15文字以下で入力してください" }, allow_blank: true

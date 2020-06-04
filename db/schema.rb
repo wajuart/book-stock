@@ -10,24 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200528103657) do
+ActiveRecord::Schema.define(version: 20200520013714) do
 
   create_table "books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",                     null: false
+    t.string   "title",                    null: false
     t.string   "image"
     t.string   "author"
     t.string   "publisher"
-    t.integer  "status",                    null: false
-    t.integer  "genre",                     null: false
+    t.integer  "status",                   null: false
+    t.integer  "genre",                    null: false
     t.integer  "item"
-    t.text     "memo",        limit: 65535
-    t.text     "impression",  limit: 65535
+    t.text     "memo",       limit: 65535
+    t.text     "impression", limit: 65535
     t.string   "evaluation"
     t.date     "buy_date"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "user_id"
-    t.integer  "likes_count"
     t.index ["user_id"], name: "index_books_on_user_id", using: :btree
   end
 
@@ -39,15 +38,6 @@ ActiveRecord::Schema.define(version: 20200528103657) do
     t.integer  "book_id"
     t.index ["book_id"], name: "index_comments_on_book_id", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
-  end
-
-  create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "book_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_likes_on_book_id", using: :btree
-    t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -73,6 +63,4 @@ ActiveRecord::Schema.define(version: 20200528103657) do
   add_foreign_key "books", "users"
   add_foreign_key "comments", "books"
   add_foreign_key "comments", "users"
-  add_foreign_key "likes", "books"
-  add_foreign_key "likes", "users"
 end

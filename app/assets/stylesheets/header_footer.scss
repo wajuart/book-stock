@@ -129,18 +129,12 @@
       a {
         color: silver;
         &:hover {
-          color: black;
+          color: #000;
           font-weight: bold;
-          text-decoration: underline;
         }
       }
       a .log-out_btn {
         padding-bottom: -1px;
-      }
-      &:hover {
-        color: black;
-        font-weight: bold;
-        text-decoration: underline;
       }
     }  
   }   
@@ -271,9 +265,8 @@
       margin: 0 35px ;
       cursor: pointer;
       &:hover {
-        color: black;
+        color: #002491;
         font-weight: bold;
-        text-decoration: underline;
       }     
     }    
   }

@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 .title-box { 
   font-family: ヒラギノ明朝 ProN;
   letter-spacing: 5px;
@@ -44,7 +43,8 @@
           margin: 10px 50px 0 40px;
           padding: 3px;
           &:hover {
-            opacity: 0.8;
+            opacity: 0.7;
+            transition: .1s;
           }
           img {
             height: 100%;
@@ -184,7 +184,9 @@
           margin: 0 auto;
           display: block;
           &:hover {
-            background-color: rgba(50, 177, 135, 0.788);
+            background-color: rgba(50, 177, 135, 0.705);
+            font-size: 17px;
+            transition: .1s;
           }
         }
       }

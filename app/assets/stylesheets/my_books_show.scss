@@ -43,10 +43,10 @@
             img {
               width: 100%;
               height: 100%;
-              object-fit: contain;
-              padding-bottom: 10px;
+              object-fit: cover;
               &:hover {
-                opacity: 0.8;
+                opacity: 0.6;
+                transition: .1s;
               }
             }
           }
@@ -175,6 +175,7 @@
           &:hover {
             background-color: #1486a8d2;
             text-decoration: none;
+            width: 200px;
             transition: .3s;
           }  
         }
@@ -190,6 +191,7 @@
           &:hover {
             background-color: #131b53b6;
             text-decoration: none;
+            width: 150px;
             transition: .3s;
           }
         } 

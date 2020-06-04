@@ -8,6 +8,7 @@
       本を編集する
   .form
     = form_for @book do |f|
+      = render "devise/shared/error_messages", resource: @book
       .registers-box
         .Left-side
           .title-line_img
@@ -82,7 +83,7 @@
             .evaluation-form
               .title-line
                 .title
-                  5段回評価
+                  5段階評価
                 .optional
                   任意
               = f.select :evaluation, [["-- 未登録 --"],  ["⭐️⭐️⭐️⭐️⭐️"], ["⭐️⭐️⭐️⭐️☆"], ["⭐️⭐️⭐️☆☆"], ["⭐️⭐️☆☆☆"], ["⭐️☆☆☆☆"]], {}, class: 'right-select_form'
@@ -96,12 +97,12 @@
           .impression-form
             .title-line
               .title
-                感想
+                レビュー
               .optional
                 任意  
             = f.text_area :impression, class: 'area_form', placeholder: '-- type impressions --'
           .btn-box
-            = f.submit '更新', class: 'book-edit_btn', data: { confirm: "この内容で登録しますか？"}
+            = f.submit '更新', class: 'book-edit_btn'
             = link_to "/books/#{@book.id}", method: :delete, class:"delete_btn" do
               %p.text
                 削除

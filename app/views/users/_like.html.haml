@@ -1,7 +1,0 @@
-- if Like.find_by(user_id: current_user.id, book_id: book.id)
-  = link_to "/books/#{book.id}/likes", method: :delete, remote: true do
-  %i.material-icons star
-- else
-  = link_to "/books/#{book.id}/likes", method: :post, remote: true do
-  %i.material-icons star_border
-= book.likes.length

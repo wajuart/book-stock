@@ -1,23 +1,41 @@
 .MainHeader
   .logo-box
-    Book Stock     
+    = link_to home_index_path(current_user) do
+      Book Stock     
   %ul.conent-list
-    %li.conent-list__item
-      = link_to books_path(current_user) do
-        トップページ
-    %li.conent-list__item
-      = link_to edit_user_path(current_user) do
-        アカウント編集    
-    %li.conent-list__item
-      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
-    %li.conent-list__item
-      = link_to app_description_home_index_path(current_user) do
-        アプリについて  
+    - if user_signed_in? 
+      %li.conent-list__item
+        = link_to books_path(current_user) do
+          トップページ
+      %li.conent-list__item
+        = link_to edit_user_path(current_user) do
+          アカウント編集    
+      %li.conent-list__item
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
+      %li.conent-list__item
+        = link_to app_description_home_index_path(current_user) do
+          アプリについて
+    - else
+      %li.conent-list__item
+        = link_to books_path(current_user) do
+          トップページ
+      %li.conent-list__item
+        = link_to new_user_session_path do
+          新規登録
+      %li.conent-list__item
+        = link_to user_session_path do
+          ログイン
+      %li.conent-list__item
+        = link_to app_description_home_index_path(current_user) do
+          アプリについて
 
 .MainSecondHeader
   .name-box
     .user-name
-      = current_user.name
+      - if user_signed_in? 
+        = current_user.name
+      - else
+        未ログインユーザー
   .search-box
     = form_tag(search_books_path, method: 'get') do
       = text_field_tag :keyword, '', placeholder: "本を検索する", class: "search-box__input" 
@@ -34,25 +52,26 @@
       = icon('fab', 'instagram', class: "social-btn__icon")
       instagram
 
-.MypageHeader 
-  %ul.content-title
-    %li.title-icon
-      .fa.fa-home
-    %li.title-name  
-      My Page
-  %ul.content-list    
-    = link_to my_page_user_path(current_user) do    
-      %li.content-list__item
-        ＴＯＰ
-    = link_to new_book_path(current_user) do
-      %li.content-list__item
-        本を登録
-    = link_to all_books_user_path(current_user) do
-      %li.content-list__item
-        マイブック
-    = link_to genre_all_user_path(current_user) do    
-      %li.content-list__item
-        ジャンル
-    = link_to item_all_user_path(current_user) do
-      %li.content-list__item
-        読書媒体 
+- if user_signed_in? 
+  .MypageHeader 
+    %ul.content-title
+      %li.title-icon
+        .fa.fa-home
+      %li.title-name  
+        My Page
+    %ul.content-list    
+      = link_to my_page_user_path(current_user) do    
+        %li.content-list__item
+          ＴＯＰ
+      = link_to new_book_path(current_user) do
+        %li.content-list__item
+          本を登録
+      = link_to all_books_user_path(current_user) do
+        %li.content-list__item
+          マイブック
+      = link_to genre_all_user_path(current_user) do    
+        %li.content-list__item
+          ジャンル
+      = link_to item_all_user_path(current_user) do
+        %li.content-list__item
+          読書媒体 

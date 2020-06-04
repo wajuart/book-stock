@@ -1,8 +1,6 @@
 class Book < ApplicationRecord
   belongs_to :user, foreign_key: :user_id
   has_many :comments, dependent: :destroy
-  has_many :likes, dependent: :destroy
-  has_many :liked_users, through: :likes, source: :user
   
   mount_uploader :image, ImageUploader
   
@@ -15,16 +13,6 @@ class Book < ApplicationRecord
       .or(
         Book.where('publisher LIKE(?)', "%#{search}%")
       )
-  end
-
-  def like_user(user_id)
-    likes.find_by(user_id: user_id)
-   end
-
-  # ⑤
-  def like_by?(user)
-    likes.where(user_id: user.id).exists?
-
   end
 
   enum status: {

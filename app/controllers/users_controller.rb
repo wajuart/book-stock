@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :set_user, only: [:index, :my_page, :edit, :profile_edit, :show]
+  before_action :authenticate_user!
 
   def index
     @users = User.all
@@ -22,21 +22,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    # user = User.find(params[:id])
     @user = User.find(params[:id])
-    # @books = Book.find(params[:id])
     @books = @user.books.order("created_at DESC").page(params[:page]).per(18)
     books = @book = Book.where(user_id: params[:id]).all
-    # @user = User.where(user_id: current_user.id)
-    # @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
   end
 
   def my_page
-    # @books = Book.page(params[:page]).order(created_at: :asc)
-    # @books = Book.user.book.order(created_at: :asc)
-    # @books = @books = current_user.books.where(status: '2').page(params[:page]).per(12).order(created_at: :desc)
-    # @user = User.find(params[:id])
-    # @user = User.where(user_id: current_user.id)
     @books = current_user.books.page(params[:page]).per(12).order(created_at: :desc)
     books = @book = Book.where(user_id: params[:id]).all
     books = @book_1 = current_user.books.where(genre: 'ビジネス')
@@ -71,19 +62,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    # @user.image = "default_icon.png"
     if current_user.update(user_params)
-      redirect_to my_page_user_path(current_user), notice: 'プロフィールが更新されました'
+      redirect_to my_page_user_path(current_user), notice: 'プロフィールが更新されました。'
     else
-      flash.now[:alert] = '編集に失敗しました'
-      render :edit
+      flash.now[:alert] = '編集に失敗しました。'
+      render :profile_edit
     end
   end
-
-  # def counts(user)  
-  #   # books = @book = Book.where(user_id: params[:id]).all  
-  #   # @book_cnt = books.count
-  # end
 
   def all_books
     books = @book = Book.where(user_id: params[:id]).all
@@ -194,12 +179,6 @@ class UsersController < ApplicationController
     @book_13 = current_user.books.where(genre: '漫画')
     @book_14 = current_user.books.where(genre: '生活')
     @book_15 = current_user.books.where(genre: 'その他')
-    # @books = current_user.books.where(genre: 'ビジネス', status: '1').page(params[:page]).per(12).order(created_at: :desc)
-    # @books = current_user.books.where(genre: 'ビジネス', status: '2').page(params[:page]).per(12).order(created_at: :desc)
-    # @books = current_user.books.where(genre: 'ビジネス', status: '3').page(params[:page]).per(12).order(created_at: :desc)
-    # @books = current_user.books.where(genre: 'ビジネス', status: '4').page(params[:page]).per(12).order(created_at: :desc)
-    # @books = Book.where(genre: 'ビジネス').page(params[:page]).per(12).order(created_at: :desc)
-    # ⬆️トップ画面での切り替えで使える
   end
 
   def self_enlightenment
@@ -619,14 +598,5 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find_by(params[:id]) 
   end
-
-#   def index
-#     return nil if params[:keyword] == ""
-#     @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
-#     respond_to do |format|
-#       format.html
-#   end
-# end 
-
 
 end

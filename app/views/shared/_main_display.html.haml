@@ -2,32 +2,38 @@
   .MainHeader
     .logo-box
       = link_to home_index_path(current_user) do
-        Book Stock     
+        Book Stock
     %ul.conent-list
-      .conent-list__item
-        = link_to new_user_session_path do
-          新規登録
-      .conent-list__item
-        = link_to user_session_path do
-          ログイン
-      .conent-list__item
-        = link_to edit_user_path(current_user) do
-          アカウント編集
-      .conent-list__item
-        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
-      .conent-list__item
-        = link_to app_description_home_index_path do
-          アプリについて           
-
+      - if user_signed_in?
+        .conent-list__item
+          = link_to edit_user_path(current_user) do
+            アカウント編集
+        .conent-list__item
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
+        .conent-list__item
+          = link_to app_description_home_index_path do
+            アプリについて
+      - else
+        .conent-list__item
+          = link_to new_user_session_path do
+            新規登録
+        .conent-list__item
+          = link_to user_session_path do
+            ログイン
+        .conent-list__item
+          = link_to app_description_home_index_path do
+            アプリについて        
   .MainSecondHeader_ma
     .name-box_ma
       .user-name_ma
-        = current_user.name
+        - if user_signed_in? 
+          = current_user.name
+        - else
+          未ログインユーザー
     .search-box_ma
       = form_tag(search_books_path, method: 'get') do
         = text_field_tag :keyword, '', placeholder: "本を検索する", class: "search-box_ma__input_ma" 
         = submit_tag '検索', class: "search-btn_ma" , name: nil
-
     .social-box_ma
       = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
         = icon('fab', 'facebook-square',  class: "content__btn__icon")
@@ -38,7 +44,6 @@
       = link_to "https://www.instagram.com/", class: "social-btn social-btn__instagram" do
         = icon('fab', 'instagram', class: "social-btn__icon")
         instagram
-
   .MainRegisters
     .Registers-box
       .Registers-top
@@ -48,15 +53,16 @@
           .title__name
             登録本一覧
         %ul.tag-box
-          = link_to books_path(current_user) do
-            %li.tag-box__left
-              最新登録順
-          = link_to evaluation_all_book_path(current_user) do
-            %li.tag-box__center
-              ⭐️ 評価別
-          = link_to genre_all_book_path(current_user) do
-            %li.tag-box__right
-              ジャンル別
+          - if user_signed_in? 
+            = link_to books_path(current_user) do
+              %li.tag-box__left
+                最新登録順
+            = link_to evaluation_all_book_path(current_user) do
+              %li.tag-box__center
+                ⭐️ 評価別
+            = link_to genre_all_book_path(current_user) do
+              %li.tag-box__right
+                ジャンル別
       .books-box
         - @books.each do |book|
           %ul.book-list
@@ -110,13 +116,11 @@
                     その他
               .book-title
                 = book.title
-
       .bottom-space_sea
         .pagenation
           = paginate(@books)
-          
   .footer
     .logo
       Book Stock
     .sub
-      Copyright &copy; Kazuki Kouno All rights reserved
+      Copyright &copy; Book Stock Inc. All rights reserved
