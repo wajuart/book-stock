@@ -1414,7 +1414,7 @@ h1.a {
 .All_my-books .books-area_amb {
   background-color: #ffffff;
   height: auto;
-  margin-bottom: 251px;
+  margin-bottom: 304px;
   padding: 50px 116px 20px;
   display: flex;
   flex-wrap: wrap;
@@ -1953,27 +1953,28 @@ a {
 }
 /* line 19, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form {
+  height: calc(100vh - 270px);
   font-family: ヒラギノ明朝 ProN;
   font-size: 13px;
   padding: 0 150px;
 }
-/* line 23, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 24, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box {
   display: flex;
 }
-/* line 25, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 26, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side {
   height: 650px;
   width: 1200px;
   padding: 30px 100px 0 270px;
 }
-/* line 29, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 30, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form {
   height: 270px;
   margin-bottom: 30px;
   display: flex;
 }
-/* line 33, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 34, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form .image-form {
   height: 270px;
   width: 190px;
@@ -1986,63 +1987,63 @@ a {
   padding: 2px;
   box-shadow: 0 0 15px 0 rgba(85, 85, 85, 0.295);
 }
-/* line 44, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 45, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form .image-form:hover {
   opacity: 0.6;
   transition: .1s;
 }
-/* line 48, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 49, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form .image-form img {
   height: -webkit-fill-available;
   width: 100%;
   cursor: pointer;
   object-fit: cover;
 }
-/* line 54, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 55, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form .image-form .book-icon {
   object-fit: contain;
 }
-/* line 57, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 58, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form .image-form .book-image {
   height: 260px;
   width: 190px;
 }
-/* line 60, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 61, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form .image-form .book-image .prev-contents {
   height: 260px;
 }
-/* line 62, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 63, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form .image-form .book-image .prev-contents .prev-content {
   height: 260px;
 }
-/* line 66, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 67, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Left-side .Left-upper_form .image-form .book-image .hidden {
   height: 100%;
   width: 100%;
   display: none;
 }
-/* line 75, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 76, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Right-side {
   height: 650px;
   width: 100%;
   padding: 25px 70px 15px 50px;
 }
-/* line 79, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 80, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Right-side .upper-box_n {
   margin-bottom: 35px;
   display: flex;
 }
-/* line 83, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 84, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Right-side .middle-box_n {
   margin-bottom: 35px;
   display: flex;
 }
-/* line 87, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 88, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .Right-side .lower-box_n {
   margin-bottom: 10px;
   display: flex;
 }
-/* line 92, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 93, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .left-input_form {
   height: 50px;
   width: 100%;
@@ -2054,7 +2055,7 @@ a {
   margin-bottom: 30px;
   padding: 0 20px;
 }
-/* line 103, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 104, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .registers-box .right-select_form {
   background-color: #ffffff;
   height: 50px;
@@ -2065,7 +2066,7 @@ a {
   margin: 0 35px 0 0;
   padding: 0 30px;
 }
-/* line 114, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 115, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .area_form {
   height: 120px;
   width: 535px;
@@ -2076,7 +2077,7 @@ a {
   padding: 5px 15px;
   display: block;
 }
-/* line 124, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 125, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .area_form_2 {
   height: 90px;
   width: 250px;
@@ -2086,19 +2087,19 @@ a {
   padding: 5px 15px;
   background-color: #ffffff;
 }
-/* line 133, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 134, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .title-line {
   font-size: 14px;
   margin: 0 0 5px 5px;
   display: flex;
 }
-/* line 138, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 139, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .title-line_img {
   font-size: 14px;
   margin: -26px 0 5px 100px;
   display: flex;
 }
-/* line 143, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 144, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .required {
   background-color: #ff0000;
   color: #ffffff;
@@ -2106,7 +2107,7 @@ a {
   padding: 0 6px;
   border-radius: 3px;
 }
-/* line 150, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 151, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .optional {
   background-color: #7c7c7c;
   color: #ffffff;
@@ -2114,7 +2115,7 @@ a {
   padding: 0 6px;
   border-radius: 3px;
 }
-/* line 157, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 158, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .btn-box {
   height: 100px;
   width: 535px;
@@ -2127,7 +2128,7 @@ a {
   display: flex;
   justify-content: space-evenly;
 }
-/* line 168, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 169, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .btn-box .register-btn {
   background-color: #32b186;
   height: 50px;
@@ -2138,13 +2139,13 @@ a {
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
   cursor: pointer;
 }
-/* line 177, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 178, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .btn-box .register-btn:hover {
   background-color: rgba(50, 177, 135, 0.788);
   width: 200px;
   transition: .3s;
 }
-/* line 183, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 184, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .btn-box a.back_btn {
   color: #eeeeee;
   background-color: #131c53;
@@ -2155,7 +2156,7 @@ a {
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
   cursor: pointer;
 }
-/* line 192, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 193, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 .BookNew .form .btn-box a.back_btn:hover {
   background-color: #131b53b6;
   text-decoration: none;
@@ -2163,7 +2164,7 @@ a {
   transition: .3s;
 }
 
-/* line 204, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
+/* line 205, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_new.scss */
 a {
   text-decoration: none;
 }
@@ -2497,7 +2498,12 @@ a {
   word-wrap: break-word;
 }
 
-/* line 289, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_show.scss */
+/* line 287, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_show.scss */
+.margin-bottom_bs {
+  margin-bottom: 70px;
+}
+
+/* line 293, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_show.scss */
 a {
   text-decoration: none;
 }
@@ -2527,25 +2533,26 @@ a {
 }
 /* line 19, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form {
+  height: calc(100vh - 270px);
   font-family: ヒラギノ明朝 ProN;
   font-size: 13px;
   padding: 0 150px;
 }
-/* line 23, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 24, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box {
   display: flex;
 }
-/* line 25, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 26, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side {
   height: 650px;
   width: 1200px;
   padding: 30px 100px 0 270px;
 }
-/* line 29, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 30, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form {
   display: flex;
 }
-/* line 31, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 32, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form .image-form {
   height: 270px;
   width: 190px;
@@ -2558,63 +2565,63 @@ a {
   padding: 2px;
   box-shadow: 0 0 15px 0 rgba(85, 85, 85, 0.295);
 }
-/* line 42, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 43, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form .image-form:hover {
   opacity: 0.6;
   transition: .1s;
 }
-/* line 46, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 47, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form .image-form img {
   height: -webkit-fill-available;
   width: 100%;
   cursor: pointer;
   object-fit: cover;
 }
-/* line 52, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 53, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form .image-form .book-icon {
   object-fit: contain;
 }
-/* line 55, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 56, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form .image-form .book-image {
   height: 260px;
   width: 190px;
 }
-/* line 58, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 59, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form .image-form .book-image .prev-contents {
   height: 260px;
 }
-/* line 60, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 61, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form .image-form .book-image .prev-contents .prev-content {
   height: 260px;
 }
-/* line 64, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 65, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Left-side .Left-upper_form .image-form .book-image .hidden {
   height: 100%;
   width: 100%;
   display: none;
 }
-/* line 73, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 74, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Right-side {
   height: 650px;
   width: 100%;
   padding: 25px 70px 15px 50px;
 }
-/* line 77, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 78, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Right-side .upper-box_n {
   margin-bottom: 35px;
   display: flex;
 }
-/* line 81, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 82, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Right-side .middle-box_n {
   margin-bottom: 35px;
   display: flex;
 }
-/* line 85, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 86, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .Right-side .lower-box_n {
   margin-bottom: 10px;
   display: flex;
 }
-/* line 90, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 91, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .left-input_form {
   height: 50px;
   width: 100%;
@@ -2626,7 +2633,7 @@ a {
   margin-bottom: 30px;
   padding: 0 20px;
 }
-/* line 101, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 102, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .right-select_form {
   background-color: #ffffff;
   height: 50px;
@@ -2637,7 +2644,7 @@ a {
   margin: 0 35px 0 0;
   padding: 0 30px;
 }
-/* line 111, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 112, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .area_form {
   height: 120px;
   width: 535px;
@@ -2648,7 +2655,7 @@ a {
   padding: 5px 15px;
   display: block;
 }
-/* line 121, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 122, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .area_form_2 {
   height: 90px;
   width: 250px;
@@ -2658,19 +2665,19 @@ a {
   padding: 5px 15px;
   background-color: #ffffff;
 }
-/* line 130, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 131, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .title-line {
   font-size: 14px;
   margin: 0 0 5px 5px;
   display: flex;
 }
-/* line 135, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 136, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .title-line_img {
   font-size: 14px;
   margin: -26px 0 5px 100px;
   display: flex;
 }
-/* line 140, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 141, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .required {
   background-color: #ff0000;
   color: #ffffff;
@@ -2678,7 +2685,7 @@ a {
   padding: 0 6px;
   border-radius: 3px;
 }
-/* line 147, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 148, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .optional {
   background-color: #7c7c7c;
   color: #ffffff;
@@ -2686,7 +2693,7 @@ a {
   padding: 0 6px;
   border-radius: 3px;
 }
-/* line 154, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 155, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .btn-box {
   height: 100px;
   width: 535px;
@@ -2699,7 +2706,7 @@ a {
   display: flex;
   justify-content: space-evenly;
 }
-/* line 165, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 166, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .btn-box .book-edit_btn {
   background-color: #32b186;
   height: 50px;
@@ -2710,13 +2717,13 @@ a {
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
   cursor: pointer;
 }
-/* line 174, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 175, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .btn-box .book-edit_btn:hover {
   background-color: rgba(50, 177, 135, 0.788);
   width: 200px;
   transition: .3s;
 }
-/* line 180, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 181, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .btn-box a.delete_btn {
   color: #eeeeee;
   background-color: black;
@@ -2727,14 +2734,14 @@ a {
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
   cursor: pointer;
 }
-/* line 189, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 190, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .btn-box a.delete_btn:hover {
   background-color: #585353;
   text-decoration: none;
   width: 150px;
   transition: .3s;
 }
-/* line 196, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 197, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .btn-box a.back_btn {
   color: #eeeeee;
   background-color: #131c53;
@@ -2745,7 +2752,7 @@ a {
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
   cursor: pointer;
 }
-/* line 205, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 206, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 .BookEdit .form .registers-box .btn-box a.back_btn:hover {
   background-color: #131b53b6;
   text-decoration: none;
@@ -2753,7 +2760,7 @@ a {
   transition: .3s;
 }
 
-/* line 219, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
+/* line 220, /Users/kazuki/projects/book-stock/app/assets/stylesheets/books_edit.scss */
 a {
   text-decoration: none;
 }
@@ -2784,7 +2791,7 @@ a {
 
 /* line 21, /Users/kazuki/projects/book-stock/app/assets/stylesheets/users_genre_all.scss */
 .genre-area {
-  height: 100%;
+  height: 401px;
   text-align: center;
   line-height: 100px;
   margin: 120px 270px 148px;
@@ -2872,7 +2879,7 @@ li.genre_gen:hover {
 
 /* line 36, /Users/kazuki/projects/book-stock/app/assets/stylesheets/users_item_all.scss */
 .item-title {
-  height: 40px;
+  height: 123px;
   margin-bottom: 170px;
 }
 
@@ -2919,12 +2926,12 @@ li.read-item:hover {
 
 /* line 84, /Users/kazuki/projects/book-stock/app/assets/stylesheets/users_item_all.scss */
 ul.item-box {
-  margin: 0 0 0 340px;
+  margin: 0 0 182px 340px;
   text-align: center;
   display: flex;
 }
 
-/* line 90, /Users/kazuki/projects/book-stock/app/assets/stylesheets/users_item_all.scss */
+/* line 91, /Users/kazuki/projects/book-stock/app/assets/stylesheets/users_item_all.scss */
 li.item.li {
   background-color: rgba(113, 247, 173, 0.438);
   width: 276px;
@@ -11575,8 +11582,8 @@ li.genre:hover {
 }
 
 /* line 168, /Users/kazuki/projects/book-stock/app/assets/stylesheets/modules/user.scss */
-.margin-bottom_2 {
-  height: 103px;
+.margin-bottom_3 {
+  height: 187px;
 }
 
 /* line 173, /Users/kazuki/projects/book-stock/app/assets/stylesheets/modules/user.scss */
