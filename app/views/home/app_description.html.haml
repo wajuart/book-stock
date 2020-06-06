@@ -49,8 +49,8 @@
       - if user_signed_in?
         = link_to "戻る", :back, class: 'back_btn'
       - else
-        .start_btn
-          = link_to books_path(current_user) do
+        = link_to books_path(current_user) do
+          .start_btn
             はじめる
       
 = render partial: 'shared/footer_1'
