@@ -77,8 +77,8 @@
 }
 
 .des_img_flex {
-  margin: 20px 0 0 370px;
-  display: flex;
+  margin: 40px auto 20px;
+  display: inline-flex;
   .book_detail_img {
     height: 350px;
     width: 560px;
@@ -106,6 +106,9 @@
   text-align: center;
   letter-spacing: 3px;
   line-height: 50px;
+  a {
+    color: #fff;
+  }
   a.back_btn { 
     color: #eeeeee;
     background-color: #131c53;
@@ -142,8 +145,5 @@
     font-weight: bold;
     text-decoration: none;
     transition: .3s;
-  }
-  a {
-    color: #fff;
   }
 }
