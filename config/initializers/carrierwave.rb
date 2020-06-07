@@ -1,18 +1,17 @@
-# require 'carrierwave/storage/abstract'
-# require 'carrierwave/storage/file'
-# require 'carrierwave/storage/fog'
+require 'carrierwave/storage/abstract'
+require 'carrierwave/storage/file'
+require 'carrierwave/storage/fog'
 
-# CarrierWave.configure do |config|
-#   config.storage = :fog
-#   config.fog_provider = 'fog/aws'
-#   config.fog_public = false
-#   config.fog_credentials = {
-#     provider: 'AWS',
-#     aws_access_key_id: Rails.application.secrets.aws_access_key_id,
-#     aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-#     region: 'ap-northeast-1'
-#   }
+CarrierWave.configure do |config|
+  config.storage = :fog
+  config.fog_provider = 'fog/aws'
+  config.fog_credentials = {
+    provider: 'AWS',
+    aws_access_key_id: ENV['S3_ACCESS_KEY'],
+    aws_secret_access_key: ENV['S3_SECRET_KEY']
+    region: ENV['S3_REGION'],
+  }
   
-#   config.fog_directory  = 'bk-stock.0408'
-#   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bk-stock.0408'
-# end
+  config.fog_directory  = ENV['S3_BUCKET']
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bk-stock.0408'
+end
