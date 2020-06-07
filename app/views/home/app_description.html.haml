@@ -1,56 +1,57 @@
-= render partial: 'shared/header_3'
+.MainDisplay
+  = render partial: 'shared/header_3'
 
-.description-view
-  .app-title
-    Book Stock
-  .content-area_des
-    .des-intro
-      %p「Book Stock」は、本を視覚的に一元管理するアプリです。
-      %br読む人によって内容以外にも様々な" 要素 "を持つ本を、視覚的かつ直感的に管理ができます。
-      %br本を通じたユーザーとの交流で、新たな本との出会いもあることでしょう。
-    .des-title_1
-      《 機能紹介 》
-    .des-title_2
-      本の登録
-    .des-text
-      %p本の登録ができます。タイトルや本の表紙のイメージなどの基本情報の他、「ジャンル」「読書媒体」「5段階評価」「レビュー」などの登録が可能です。
-    .des-image
-      = image_tag 'register_book.png', class: "register_book_img"
-    .des-title_2
-      本の視覚的管理
-    .des-text
-      %p本の「読書の状態」を管理できます。「読書済み」「読書中」「未読」を選択して読むべき本の区別ができる他、「興味あり」の
-      %p選択で気になる本として登録することも可能です。また、ジャンル毎の登録本数が一目で分かり、自分の読書傾向値も測れます。
-    .des-image
-      = image_tag 'mypage.png', class: "mypage_img"
-    .des-title_2
-      検索機能
-    .des-text
-      %p① ヘッダーの検索フォームでアプリに登録されている全ての本の検索が可能です。「タイトル」「出版社」「著者」のキーワードから検索できます。
-    .des-image
-      = image_tag 'search.png', class: "search_img"
-    .des-text
-      %p② 「ジャンル」「読書媒体」「読書ステータス」「5段階評価」の観点から本の検索が可能です。
-    .des-image
-      = image_tag 'search_genre.png', class: "genre_img"
-      = image_tag 'search_item.png', class: "item_img"
-    .des-title_2
-      ユーザー間の交流
-    .des-text
-      %p他ユーザーが登録した本の詳細ページにコメントを残すことができます。登録ユーザーによる5段階評価やレビューを参考にコメントを残してみましょう。
-      .des_img_flex
-        .des-image_com
-          = image_tag 'book_detail.png', class: "book_detail_img"
-        .des-image_com
-          = image_tag 'comment.png', class: "comment_img"
-    .last-text
-      %p 「Book Stock」で本を楽しく管理して、素敵な読書ライフを！
-    .btn-box_des
-      - if user_signed_in?
-        = link_to "戻る", :back, class: 'back_btn'
-      - else
-        = link_to books_path(current_user) do
-          .start_btn
-            はじめる
-      
-= render partial: 'shared/footer_1'
+  .description-view
+    .app-title
+      Book Stock
+    .content-area_des
+      .des-intro
+        %p「Book Stock」は、本を視覚的に一元管理するアプリです。
+        %br読む人によって内容以外にも様々な" 要素 "を持つ本を、視覚的かつ直感的に管理ができます。
+        %br本を通じたユーザーとの交流で、新たな本との出会いもあることでしょう。
+      .des-title_1
+        《 機能紹介 》
+      .des-title_2
+        本の登録
+      .des-text
+        %p本の登録ができます。タイトルや本の表紙のイメージなどの基本情報の他、「ジャンル」「読書媒体」「5段階評価」「レビュー」などの登録が可能です。
+      .des-image
+        = image_tag 'register_book.png', class: "register_book_img"
+      .des-title_2
+        本の視覚的管理
+      .des-text
+        %p本の「読書の状態」を管理できます。「読書済み」「読書中」「未読」を選択して読むべき本の区別ができる他、「興味あり」の
+        %p選択で気になる本として登録することも可能です。また、ジャンル毎の登録本数が一目で分かり、自分の読書傾向値も測れます。
+      .des-image
+        = image_tag 'mypage.png', class: "mypage_img"
+      .des-title_2
+        検索機能
+      .des-text
+        %p① ヘッダーの検索フォームでアプリに登録されている全ての本の検索が可能です。「タイトル」「出版社」「著者」のキーワードから検索できます。
+      .des-image
+        = image_tag 'search.png', class: "search_img"
+      .des-text
+        %p② 「ジャンル」「読書媒体」「読書ステータス」「5段階評価」の観点から本の検索が可能です。
+      .des-image
+        = image_tag 'search_genre.png', class: "genre_img"
+        = image_tag 'search_item.png', class: "item_img"
+      .des-title_2
+        ユーザー間の交流
+      .des-text
+        %p他ユーザーが登録した本の詳細ページにコメントを残すことができます。登録ユーザーによる5段階評価やレビューを参考にコメントを残してみましょう。
+        .des_img_flex
+          .des-image_com
+            = image_tag 'book_detail.png', class: "book_detail_img"
+          .des-image_com
+            = image_tag 'comment.png', class: "comment_img"
+      .last-text
+        %p 「Book Stock」で本を楽しく管理して、素敵な読書ライフを！
+      .btn-box_des
+        - if user_signed_in?
+          = link_to "戻る", :back, class: 'back_btn'
+        - else
+          = link_to books_path(current_user) do
+            .start_btn
+              はじめる
+        
+  = render partial: 'shared/footer_1'

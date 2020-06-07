@@ -5,7 +5,7 @@
 .wrapper {
   display: flex;
   height: 100vh;
-  width: 100vh;
+  width: 100%;
   .mypage-side {
     background-image: url(https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg);
     background-size: 400%;
@@ -71,11 +71,11 @@
     }
     }
     .MainDisplay {
-      width: calc(100vh -260px);
+      width: 1530px;
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
-        width: calc(100vh -260px);
+        width: 1530px;
         padding: 0 40px;
         border-bottom: solid 1px #eeeeee;                         
         .logo-box { 
@@ -119,7 +119,7 @@
       .MainSecondHeader_ma {
         background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
         height: 50px;
-        width: calc(100vh -260px);
+        width: 1530px;
         padding: 0 40px;
         display: flex;
         justify-content: space-between;
@@ -215,13 +215,13 @@
       }
       .MainRegisters {
         height: 1100px;
-        width: calc(100vh -260px);
+        width: 1530px;
         background-image: url(https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_1280.jpg);
         background-size: cover;
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box_top {
           height: 100%;
-          width: calc(100vh -260px);     
+          width: 1530px;         
           padding: 20px 55px 0 100px; 
             .Registers-top {
               background-color: #ffffff;
@@ -459,7 +459,7 @@
 .footer_top {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
   height: 60px;
-  width: calc(100vh -260px);
+  width: 1530px;
   text-align: center;
   color: #363333;
   padding: 15px 0;
