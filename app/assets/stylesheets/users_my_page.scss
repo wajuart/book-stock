@@ -111,7 +111,7 @@
         }  
         .user-left-myinfo {
           width: 250px;
-          margin-right: 50px;
+          margin-right: 10px;
           .register-name {
             width: 100%;
             font-size: 20px;
@@ -147,13 +147,12 @@
           text-align: center;
           display: flex;
           .genre-left {
-
             .genre-block {
               display: flex;
             }
           }
           .genre-center {
-            margin: 0 28px;
+            margin: 0 35px;
             .genre-block {
               display: flex;
             }
@@ -166,7 +165,7 @@
         }
         .my-genre {
           width: 100px;
-          margin-right: 10px;
+          margin-right: 15px;
           padding: 5px 0;
           border: outset thin;
         }
