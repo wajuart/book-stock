@@ -1,5 +1,5 @@
 .MainDisplay
-  .MainHeader
+  .MainHeader_top
     .logo-box
       = link_to home_index_path(current_user) do
         Book Stock
@@ -120,7 +120,7 @@
         .pagenation
           = paginate(@books)
   .footer_top
-    .logo
+    .logo_top
       Book Stock
-    .sub
+    .sub_top
       Copyright &copy; Book Stock Inc. All rights reserved

@@ -26,26 +26,27 @@
           .content-btn_my {
             height: 55px;
             width: 180px;
-            background-color: #00c552;
             font-family: serif;
-            font-size: 26px;
-            line-height: 47px;
+            background-color: white;
+            color: rgb(11, 54, 29);
+            font-size: 24px;
+            line-height: 40px;
             margin: 40px auto 100px;
-            border: outset #fff 3px;
+            border: outset #ffffff 4px;
             border-radius: 15px;
             cursor: pointer;
             &:hover {
               background-color: rgb(70, 70, 70);
               color: #fff;
-              width: 200px;
+              width: 190px;
               transition: .3s;
             }
           }
         }
         a { 
           color: black;
-          .content-btn { 
-            height: fit-content;
+          .content-btn {
+            height: auto;
             width: 180px;
             font-size: 20px;
             font-family: 游明朝体;
@@ -54,9 +55,10 @@
             margin: 0 auto;
             margin-bottom: 100px;
             cursor: pointer;
-            background: linear-gradient(rgb(1, 124, 255), rgba(28, 233, 216, 0.815));
+            background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
             &:hover {
-              background-color: rgb(255, 255, 255);
+              background-color: #FFF;
+              width: 190px;
               transition: .3s;
             }
             .content-sub-name {
@@ -65,13 +67,12 @@
             } 
           }
         }       
-        
       }
     }
     }
     .MainDisplay {
-      width: calc(100% - 260px);
-      .MainHeader {
+      width: 1530px;
+      .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
         width: 1530px;
@@ -214,12 +215,13 @@
       }
       .MainRegisters {
         height: 1100px;
+        width: 1530px;
         background-image: url(https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_1280.jpg);
         background-size: cover;
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box {
           height: 100%;
-          width: 1530px;
+          width: 100%;         
           padding: 20px 55px 0 100px; 
             .Registers-top {
               background-color: #ffffff;
@@ -452,6 +454,8 @@
 }
 
 
+
+
 .footer_top {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
   height: 60px;
@@ -460,12 +464,12 @@
   color: #363333;
   padding: 15px 0;
   border-top: solid 1px #dad8d8;
-  .logo {
+  .logo_top {
     height: 10px;
     font-size: 20px;
     font-family: fantasy;
   }
-  .sub {
+  .sub_top {
     height: 10px;
     margin-top: 13px;
     font-size: 6px;
