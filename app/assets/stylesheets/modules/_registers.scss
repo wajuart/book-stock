@@ -26,12 +26,12 @@
           .content-btn_my {
             height: 55px;
             width: 180px;
-            background-color: white;
-            color: rgb(11, 54, 29);
-            font-family: Papyrus;
-            font-size: 30px;
+            background-color: #00c552;
+            font-family: serif;
+            font-size: 26px;
+            line-height: 47px;
             margin: 40px auto 100px;
-            border: outset #ffffff 4px;
+            border: outset #fff 3px;
             border-radius: 15px;
             cursor: pointer;
             &:hover {
@@ -45,7 +45,7 @@
         a { 
           color: black;
           .content-btn { 
-            height: 55px;
+            height: fit-content;
             width: 180px;
             font-size: 20px;
             font-family: 游明朝体;
@@ -54,10 +54,9 @@
             margin: 0 auto;
             margin-bottom: 100px;
             cursor: pointer;
-            background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
+            background: linear-gradient(rgb(1, 124, 255), rgba(28, 233, 216, 0.815));
             &:hover {
-              background-color: #FFF;
-              width: 200px;
+              background-color: rgb(255, 255, 255);
               transition: .3s;
             }
             .content-sub-name {
@@ -119,7 +118,7 @@
       .MainSecondHeader_ma {
         background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
         height: 50px;
-        width: 100%;
+        width: 1530px;
         padding: 0 40px;
         display: flex;
         justify-content: space-between;
@@ -220,7 +219,7 @@
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box {
           height: 100%;
-          width: 100%;         
+          width: 1530px;
           padding: 20px 55px 0 100px; 
             .Registers-top {
               background-color: #ffffff;
@@ -348,7 +347,7 @@
                     top: 0;
                     left: 0;
                     height: 20px;
-                    width: 70px;
+                    width: 75px;
                     font-size: 11px;
                     line-height: 20px;
                     text-align: center;
@@ -453,10 +452,10 @@
 }
 
 
-.footer {
+.footer_top {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
   height: 60px;
-  width: 100%;
+  width: 1530px;
   text-align: center;
   color: #363333;
   padding: 15px 0;

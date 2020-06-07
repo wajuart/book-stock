@@ -54,9 +54,9 @@
             登録本一覧
         %ul.tag-box
           - if user_signed_in? 
-            = link_to books_path(current_user) do
-              %li.tag-box__left
-                最新登録順
+            -# = link_to books_path(current_user) do
+            -#   %li.tag-box__left
+            -#     最新登録順
             = link_to evaluation_all_book_path(current_user) do
               %li.tag-box__center
                 ⭐️ 評価別
@@ -119,7 +119,7 @@
       .bottom-space_sea
         .pagenation
           = paginate(@books)
-  .footer
+  .footer_top
     .logo
       Book Stock
     .sub
