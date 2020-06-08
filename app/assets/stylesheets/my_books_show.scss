@@ -13,7 +13,7 @@
     padding: 40px 0 0 200px;
     display: flex;
     .icon {
-      margin-right: 8px;
+      margin-right: 20px;
     }
   }
   .form {
@@ -170,13 +170,12 @@
           color: #eeeeee;
           border: outset 2px;
           border-radius: 20px;
-          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
           cursor: pointer;
           &:hover {
             background-color: #1486a8d2;
             text-decoration: none;
-            width: 200px;
-            transition: .3s;
+            font-size: 21px;
+            transition: .1s;
           }  
         }
         a.back_btn { 
@@ -186,13 +185,12 @@
           width: 130px;
           border: outset 2px;
           border-radius: 20px;
-          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
           cursor: pointer;
           &:hover {
             background-color: #131b53b6;
             text-decoration: none;
-            width: 150px;
-            transition: .3s;
+            font-size: 21px;
+            transition: .1s;
           }
         } 
       }

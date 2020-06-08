@@ -13,7 +13,7 @@
     padding: 40px 0 0 200px;
     display: flex;
     .icon {
-      margin-right: 8px;
+      margin-right: 20px;
     }
   }
   .form {
@@ -170,12 +170,11 @@
           color: #eeeeee;
           border: outset 2px;
           border-radius: 20px;
-          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
           cursor: pointer;
           &:hover {
             background-color: rgba(50, 177, 135, 0.788);
-            width: 200px;
-            transition: .3s;
+            font-size: 22px;
+            transition: .1s;
           }
         }
         a.delete_btn { 
@@ -184,14 +183,13 @@
           height: 50px;
           width: 130px;
           border: outset 2px;
-          border-radius: 20px;
-          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
+          border-radius: 20px; 
           cursor: pointer;
           &:hover {
             background-color: rgb(88, 83, 83);
             text-decoration: none;
-            width: 150px;
-            transition: .3s;
+            font-size: 22px;
+            transition: .1s;
           }
         }  
         a.back_btn { 
@@ -199,15 +197,15 @@
           background-color: #131c53;
           height: 50px;
           width: 130px;
+          line-height: 46px;
           border: outset 2px;
           border-radius: 20px;
-          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
           cursor: pointer;
           &:hover {
             background-color: #131b53b6;
             text-decoration: none;
-            width: 150px;
-            transition: .3s;
+            font-size: 22px;
+            transition: .1s;
           }
         }  
       }

@@ -6,22 +6,30 @@
       .fa.fa-search
     .content-title
       ユーザー評価別 検索
+  .select_area
+    %ul.select-btn_area
+      = link_to evaluation_all_book_path(current_user) do
+        %li.serect-list
+          すべて
+      = link_to evaluation_mine_user_path(current_user) do
+        %li.serect-list.active
+          自分のみ
   .evaluation-area
     %ul.star-box
       = link_to evaluation_five_book_path(current_user) do
         %li.star-list
-          星５ ⭐️⭐️⭐️⭐️⭐️
+          星５：⭐️⭐️⭐️⭐️⭐️
       = link_to evaluation_four_book_path(current_user) do
         %li.star-list
-          星４ ⭐️⭐️⭐️⭐️☆
+          星４：⭐️⭐️⭐️⭐️☆
       = link_to evaluation_three_book_path(current_user) do
         %li.star-list
-          星３ ⭐️⭐️⭐️☆☆
+          星３：⭐️⭐️⭐️☆☆
       = link_to evaluation_two_book_path(current_user) do
         %li.star-list
-          星２ ⭐️⭐️☆☆☆
+          星２：⭐️⭐️☆☆☆
       = link_to evaluation_one_book_path(current_user) do
         %li.star-list
-          星１ ⭐️☆☆☆☆
-
+          星１：⭐️☆☆☆☆
+          
 = render partial: 'shared/footer_1'

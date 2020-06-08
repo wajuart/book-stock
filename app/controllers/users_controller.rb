@@ -157,7 +157,7 @@ class UsersController < ApplicationController
   end
 
   # ジャンル別
-  def genre_all
+  def genre_mine
   end
 
   def business
@@ -473,6 +473,15 @@ class UsersController < ApplicationController
     @book_13 = current_user.books.where(genre: '漫画')
     @book_14 = current_user.books.where(genre: '生活')
     @book_15 = current_user.books.where(genre: 'その他')
+  end
+
+  def evaluation_mine
+    books = @book = Book.where(user_id: params[:id]).all
+    @book_1 = current_user.books.where(evaluation: '⭐️⭐️⭐️⭐️⭐️').page(params[:page]).per(12).order(created_at: :desc)
+    @book_1 = current_user.books.where(evaluation: '⭐️⭐️⭐️⭐️☆').page(params[:page]).per(12).order(created_at: :desc)
+    @book_1 = current_user.books.where(evaluation: '⭐️⭐️⭐️☆☆').page(params[:page]).per(12).order(created_at: :desc)
+    @book_1 = current_user.books.where(evaluation: '⭐️⭐️☆☆☆').page(params[:page]).per(12).order(created_at: :desc)
+    @book_1 = current_user.books.where(evaluation: '⭐️☆☆☆☆').page(params[:page]).per(12).order(created_at: :desc)
   end
 
   # 読書媒体別

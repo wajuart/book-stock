@@ -34,7 +34,7 @@ Rails.application.routes.draw do
       get 'reading_books'
       get 'will_read_books'
       get 'interested'
-      get 'genre_all'
+      get 'genre_mine'
       get 'business'
       get 'business_read'
       get 'self_enlightenment'
@@ -57,6 +57,7 @@ Rails.application.routes.draw do
       get 'paper_white'
       get 'audio_book'
       get 'item_etc'
+      get 'evaluation_mine'
     end  
   end
 

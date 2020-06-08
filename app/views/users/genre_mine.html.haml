@@ -3,9 +3,17 @@
 .Genre_all 
   .title-box_gen
     .icon
-      .fa.fa-book
+      .fa.fa-search
     .content-title
-      マイブック／ジャンル別検索
+      ジャンル別 検索
+  .select_area
+    %ul.select-btn_area
+      = link_to genre_all_book_path(current_user) do
+        %li.serect-list
+          すべて
+      = link_to genre_mine_user_path(current_user) do
+        %li.serect-list.active
+          自分のみ
   .genre-area
     %ul.box-upper_gen
       = link_to business_user_path(current_user) do

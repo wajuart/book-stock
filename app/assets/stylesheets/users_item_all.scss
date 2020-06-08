@@ -13,7 +13,7 @@
     padding: 40px 0 0 200px;
     display: flex;
     .icon {
-      margin-right: 8px;
+      margin-right: 20px;
     }
   }
 }
@@ -22,11 +22,13 @@
   height: 100%;
   text-align: center;
   line-height: 80px;
-  margin: 100px 340px 20px;
+  margin: 190px auto 20px;
+  display: table;
   a {
     color: #fff;
     font-size: 20px;
     text-decoration: none;
+    margin: 0 8px;
     border: outset #fff 3px;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
@@ -34,7 +36,10 @@
 }
 
 .item-title_i {
+  margin: 0 auto;
+  display: table;
   height: 123px;
+  letter-spacing: 2px;
   margin-bottom: 170px;
 }
 
@@ -81,14 +86,14 @@ li.read-item {
 }
 
 ul.item-box_i {
-  margin: 0 0 0 340px;
   text-align: center;
   display: flex;
 }
 
 li.item.li {
-  background-color: rgba(113, 247, 173, 0.438);
+  background-color: rgba(113, 243, 247, 0.438);
   width: 276px;
-  border: inset thin;
+  border: inset 2px rgb(235, 235, 235);
+  margin: 0 8px;
   padding: 3px 0;
 }

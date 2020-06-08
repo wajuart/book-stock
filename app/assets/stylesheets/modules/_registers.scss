@@ -27,19 +27,18 @@
             height: 55px;
             width: 180px;
             font-family: serif;
-            background-color: white;
-            color: rgb(11, 54, 29);
-            font-size: 24px;
-            line-height: 40px;
-            margin: 40px auto 100px;
-            border: outset #ffffff 4px;
+            background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
+            font-size: 22px;
+            line-height: 48px;
+            margin: 40px auto 92px;
+            border: outset #ffffff ;
             border-radius: 15px;
             cursor: pointer;
             &:hover {
-              background-color: rgb(70, 70, 70);
+              background-color: #FFF;
               color: #fff;
               width: 190px;
-              transition: .3s;
+              transition: .1s;
             }
           }
         }
@@ -53,13 +52,14 @@
             border: outset white;
             border-radius: 15px;
             margin: 0 auto;
-            margin-bottom: 100px;
+            margin-bottom: 92px;
             cursor: pointer;
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
             &:hover {
               background-color: #FFF;
+              color: #fff;
               width: 190px;
-              transition: .3s;
+              transition: .1s;
             }
             .content-sub-name {
               color: #434A54;
@@ -120,7 +120,7 @@
         background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
         height: 50px;
         width: 1530px;
-        padding: 0 40px;
+        padding: 0 60px;
         display: flex;
         justify-content: space-between;
         border-bottom: solid 1px #eeeeee; 
@@ -128,18 +128,25 @@
           height: 50px;
           width: 530px;
           margin: 7px 0 0 0;
+          display: flex;
+          .name-label {
+            line-height: 36px;
+            margin-right: 10px;
+          }
           .user-name_ma {
             height: 35px;
+            width: 180px;
             font-size: 15px;
             line-height: 35px;
             text-align: center;
-            border: outset 2px;
+            border: inset 2px;
+            border-radius: 5px;
             padding: 0 15px;
           }
         }  
         .search-box_ma {
           width: 100%;
-          margin: -2px -20px 10px 280px;
+          margin: -2px -20px 10px 254px;
           display: flex;
           position: relative;
           &__input_ma {
@@ -172,8 +179,8 @@
           }  
         }
         .social-box_ma {          
-          width: 1200px;
-          padding: 11px 0 0 150px;
+          width: inherit;
+          padding: 11px 0 0 194px;
           .social-btn__facebook {
             color: #ffffff;
             font-size: 15px;
@@ -222,82 +229,34 @@
         .Registers-box_top {
           height: 100%;
           width: 1530px;         
-          padding: 20px 55px 0 100px; 
+          padding: 20px 100px;
             .Registers-top {
               background-color: #ffffff;
-              width: fit-content;
               height: 40px;
               border: outset #FFF 1px;
               border-radius: 5px;
               display: flex;
-              margin: 25px -41px 50px 0;
+              margin: 25px auto 50px;
               padding: 5px 10px 5px 5px;
               .title {
                 font-family: ヒラギノ明朝 ProN;
                 letter-spacing: 5px;
                 font-size: 22px;
                 line-height: 30px;
+                margin: 0 auto;
                 padding: 0 12px 0 12px;
                 display: flex;
-                &__icon {
-                  margin-right: 20px;
+                &__name {
+                  margin: 0 30px 0 20px;
+                }
+                &__sub {
+                  color: #015091;
+                  font-size: 20px;
+                  font-weight: bold;
+                  line-height: 27px;
+                  letter-spacing: 7px;
                 }
               }       
-              .tag-box {
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 13px;
-                margin: 1px 0 3px 30px;
-                display: flex;
-                &__left {
-                  background-color: #000;
-                  color: #FFF;
-                  height: 26px;
-                  width: 85px;
-                  text-align: center;
-                  border: outset 1px rgb(151, 151, 151);
-                  padding: 3px 5px 0 5px;
-                  cursor: pointer;
-                  &:hover {
-                    background-color: #FFF;
-                    color: #000;
-                    transition: .3s;
-                  }
-                }
-                &__center {
-                  height: 26px;
-                  width: 85px;
-                  text-align: center;
-                  line-height: 20px;
-                  margin: 0 10px;
-                  border: outset 1px;
-                  color: #FFF;
-                  background-color: rgb(221, 88, 0);
-                  padding: 3px 5px 0 5px;
-                  cursor: pointer;
-                  &:hover {
-                    background-color: #FFF;
-                    color:rgb(255, 115, 0);
-                    font-weight: bold;
-                    transition: .3s;
-                  }
-                }
-                &__right {
-                  height: 26px;
-                  width: 85px;
-                  text-align: center;
-                  border: outset 1px;
-                  color: #FFF;
-                  background-color: rgb(1, 88, 122);
-                  padding: 3px 5px 0 5px;
-                  cursor: pointer;
-                  &:hover {
-                    background-color: #FFF;
-                    color: rgb(1, 88, 122);
-                    font-weight: bold;
-                    transition: .3s;
-                  }
-                }
-              }
               .genre-box {
                 background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
                 width: 240px;
@@ -514,23 +473,6 @@
   }
   .box-lower {
     display: flex;
-  }
-}
-
-.star-list {
-  background-color: #474343;
-  width: 150px;
-  color: #FFF;
-  font-size: 14px;
-  text-align: center;
-  margin: 0 15px;
-  padding: 3px 6px;
-  border: outset thin;
-  border-radius: 3px;
-  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-  &:hover {
-    background-color: rgb(128, 129, 129);
-    transition: .3s;
   }
 }
 

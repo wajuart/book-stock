@@ -17,12 +17,18 @@
               マイブック
             .content-sub-name
               Registered Books
-        = link_to genre_all_user_path(current_user) do      
+        = link_to genre_all_book_path(current_user) do      
           %li.content-btn
             .content-name
               ジャンル
             .content-sub-name
               Genre of Books
+        = link_to evaluation_all_book_path(current_user) do
+          %li.content-btn
+            .content-name
+              ユーザー評価
+            .content-sub-name
+              User Rating
         = link_to item_all_user_path(current_user) do                  
           %li.content-btn
             .content-name

@@ -1,19 +1,19 @@
-.MainHeader
+.MainHeader_top
   .logo-box
     = link_to home_index_path(current_user) do
-      Book Stock     
+      Book Stock
   %ul.conent-list
-    - if user_signed_in? 
+    - if user_signed_in?
       %li.conent-list__item
         = link_to books_path(current_user) do
           トップページ
       %li.conent-list__item
         = link_to edit_user_path(current_user) do
-          アカウント編集    
+          アカウント編集
       %li.conent-list__item
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
       %li.conent-list__item
-        = link_to app_description_home_index_path(current_user) do
+        = link_to app_description_home_index_path do
           アプリについて
     - else
       %li.conent-list__item
@@ -26,22 +26,22 @@
         = link_to user_session_path do
           ログイン
       %li.conent-list__item
-        = link_to app_description_home_index_path(current_user) do
-          アプリについて
-
-.MainSecondHeader
-  .name-box
-    .user-name
+        = link_to app_description_home_index_path do
+          アプリについて        
+.MainSecondHeader_ma
+  .name-box_ma
+    .name-label
+      nickname
+    .user-name_ma
       - if user_signed_in? 
         = current_user.name
       - else
         未ログインユーザー
-  .search-box
+  .search-box_ma
     = form_tag(search_books_path, method: 'get') do
-      = text_field_tag :keyword, '', placeholder: "本を検索する", class: "search-box__input" 
-      = submit_tag '検索', class: "search-btn" , name: nil
-    
-  .social-btn
+      = text_field_tag :keyword, '', placeholder: "本を検索する", class: "search-box_ma__input_ma" 
+      = submit_tag '検索', class: "search-btn_ma" , name: nil
+  .social-box_ma
     = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
       = icon('fab', 'facebook-square',  class: "content__btn__icon")
       facebook
@@ -51,25 +51,3 @@
     = link_to "https://www.instagram.com/", class: "social-btn social-btn__instagram" do
       = icon('fab', 'instagram', class: "social-btn__icon")
       instagram
-
-- if user_signed_in? 
-  .MypageHeader 
-    %ul.content-list    
-      = link_to my_page_user_path(current_user) do    
-        %li.content-list__item
-          マイページ
-      = link_to new_book_path(current_user) do
-        %li.content-list__item
-          本を登録
-      = link_to all_books_user_path(current_user) do
-        %li.content-list__item
-          マイブック
-      = link_to genre_all_book_path(current_user) do    
-        %li.content-list__item
-          ジャンル
-      = link_to evaluation_all_book_path(current_user) do
-        %li.content-list__item
-          ユーザー評価
-      = link_to item_all_user_path(current_user) do
-        %li.content-list__item
-          読書媒体 

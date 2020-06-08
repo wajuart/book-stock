@@ -118,10 +118,9 @@
     line-height: 50px;
     margin: 0 auto;
     display: inline-block;
-    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
     cursor: pointer;
     &:hover {
-      background-color: #131b53b6;
+      background-color: #131a53c4;
       text-decoration: none;
       width: 180px;
       transition: .3s;
@@ -136,7 +135,6 @@
   border-radius: 20px;
   margin: 0 auto;
   display: inline-block;
-  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
   cursor: pointer;
   &:hover {
     background-color: #00b193c4;

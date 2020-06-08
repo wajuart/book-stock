@@ -5,6 +5,26 @@
 .MypageView {
   background-color: #f1f1f1;
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  .Mypage_top {
+    font-family: ヒラギノ明朝 ProN;
+    letter-spacing: 2px;
+    font-size: 26px;
+    padding: 30px 0 5px ;
+    .title-box_my {
+      width: 1350px;
+      background-image: linear-gradient(rgba(209, 255, 247, 0.521), rgba(121, 205, 253, 0.671));
+      margin: 0 auto -10px;
+      padding: 5px 0;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
+      .title-icon_my {
+        margin-right: 15px;
+      }
+      .title-name_my {
+      }
+    }
+  }
   .MypageContainer {
     margin: 0 auto;
     width: 1350px;

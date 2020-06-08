@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+.Evaluation_all {
+  height: auto;
+  width: 100vw;
+  .title-box { 
+    font-family: ヒラギノ明朝 ProN;
+    letter-spacing: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 40px 0 0 200px;
+    display: flex;
+    .icon {
+      margin-right: 20px;
+    }
+  }
+}
+
+.evaluation-area {
+  height: 401px;
+  text-align: center;
+  line-height: 100px;
+  margin: 120px auto 148px;
+  display: table;
+  a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    border: outset #fff 3px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
+  }
+}
+
+.star-box { 
+  margin-top: 75px;
+  display: flex;
+  a {
+    border: none;
+  }
+  li.star-list {
+    background-color: #474343;
+    width: 230px;
+    color: #FFF;
+    font-size: 30px;
+    text-align: center;
+    margin: 5px 5px;
+    padding: 10px 6px;
+    border: outset thin;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+    &:hover {
+      background-color: rgb(128, 129, 129);
+      transition: .3s;
+    }
+  }
+}
+
+
+li.genre_gen {
+  height: 100px;
+  width: 250px;
+  &:hover {
+    font-size: 21px;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: .3s;
+  }
+}
+
+.books-box {
+  display: flex;
+  flex-wrap: wrap;
+  .book-list {
+    background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+    height: 250px;
+    width: 180px;
+    margin: 22px 43px;
+    box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+    a {
+      text-decoration: none; 
+    }
+    .book-image {
+      height: 190px;
+      padding: 4px 14px;
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+      .book-genre-tag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 75px;
+        font-size: 11px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+        img {
+          width: 96px;
+          height: 65px;
+        }
+      }
+      .book-status {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        border-top: 30px solid #4ca53ad7;
+        border-right: 30px solid #4ca53ad7;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid transparent;
+        &__title {
+          color: white;
+          font-weight: bold;
+          position: absolute;
+          top: -18px;
+          left: -10px;
+          width: 40px;
+          font-size: 10px;
+          transform: rotate(45deg);
+          text-align: center;
+        }
+      }
+    }
+    .book-title {
+      height: 60px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 60px;
+      font-size: 16px;
+      font-family: クレー;
+      padding: 0 13px;
+      text-align: center;
+      overflow: hidden;
+    }
+  }           
+}

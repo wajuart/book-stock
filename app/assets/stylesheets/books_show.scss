@@ -13,7 +13,7 @@
     padding: 40px 0 0 200px;
     display: flex;
     .icon {
-      margin-right: 8px;
+      margin-right: 20px;
     }
   }
   .form_bs {
@@ -23,10 +23,11 @@
     font-size: 13px;
     margin: 25px 0 30px;
     padding: 0 150px;
+    display: contents;
     .registers-box_bs {
       background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
       width: 1100px;
-      margin: 0 auto;
+      margin: 30px auto;
       border: outset;
       border-radius: 10px;
       padding-bottom: 30px;
@@ -191,7 +192,6 @@
     }
   }
 }
-
   .comment-table {
     height: auto;
     width: 1100px;
@@ -220,7 +220,7 @@
         display: block;
       }
       .comment-btn {
-        background-color: rgba(50, 177, 135, 0.788);
+        background-color: rgba(4, 197, 133, 0.932);
         color: #ffffff;
         height: auto;
         width: 170px;
@@ -236,7 +236,7 @@
         display: block;
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
         &:hover {
-          background-color: rgba(1, 155, 104, 0.836);
+          background-color: rgb(1, 155, 104);
           width: 190px;
           transition: .3s;
         }
