@@ -98,7 +98,7 @@
 .MainHeader {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
   height: 110px;
-  width: 100vw;
+  width: 100%;
   padding: 0 40px;
   border-bottom: solid 1px #eeeeee;                         
   .logo-box { 
@@ -142,7 +142,7 @@
 .MainSecondHeader {
   background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
   height: 50px;
-  width: 100vw;
+  width: 100%;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -247,7 +247,7 @@
 .MypageHeader {
   background-color: #eaf6fd;;   
   height: 50px;
-  width: 100vw;
+  width: 100%;
   padding: 0 40px;
   display: flex;
   justify-content: center;
@@ -282,7 +282,7 @@
 .footer {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
   height: 60px;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   color: #363333;
   padding: 15px 0;
