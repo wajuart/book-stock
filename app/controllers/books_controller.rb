@@ -1,10 +1,10 @@
 class BooksController < ApplicationController
   before_action :set_current_user
-  # before_action :redirect_root, except: :index
   before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
     @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
+    @books_all = Book.where(params[:id]).all
     @book = Book.new
   end
 
@@ -71,77 +71,77 @@ class BooksController < ApplicationController
   end
 
   def business
-    @keyword = "< ビジネス > "
+    @keyword = "【 ビジネス 】"
     @books = Book.where(genre: 'ビジネス').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def self_enlightenment
-    @keyword = "< 自己啓発 > "
+    @keyword = "【 自己啓発 】"
     @books = Book.where(genre: '自己啓発').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def money
-    @keyword = "< マネー > "
+    @keyword = "【 マネー 】"
     @books = Book.where(genre: 'マネー').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def politics_economy
-    @keyword = "< 政治／経済 > "
+    @keyword = "【 政治／経済 】"
     @books = Book.where(genre: '政治／経済').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def study_skill
-    @keyword = "< 勉強／スキル > "
+    @keyword = "【 勉強／スキル 】"
     @books = Book.where(genre: '勉強／スキル').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def cooking
-    @keyword = "< 料理 > "
+    @keyword = "【 料理 】"
     @books = Book.where(genre: '料理').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def hobby
-    @keyword = "< 趣味 > "
+    @keyword = "【 趣味 】"
     @books = Book.where(genre: '趣味').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def health
-    @keyword = "< 健康 > "
+    @keyword = "【 健康 】"
     @books = Book.where(genre: '健康').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def sports
-    @keyword = "< スポーツ > "
+    @keyword = "【 スポーツ 】"
     @books = Book.where(genre: 'スポーツ').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def entertainment
-    @keyword = "< 芸能 > "
+    @keyword = "【 芸能 】"
     @books = Book.where(genre: '芸能').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def parenting
-    @keyword = "< 子育て > "
+    @keyword = "【 子育て 】"
     @books = Book.where(genre: '子育て').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def novel
-    @keyword = "< 小説 > "
+    @keyword = "【 小説 】"
     @books = Book.where(genre: '小説').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def comic
-    @keyword = "< 漫画 > "
+    @keyword = "【 漫画 】"
     @books = Book.where(genre: '漫画').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def life
-    @keyword = "< 生活 > "
+    @keyword = "【 生活 】"
     @books = Book.where(genre: '生活').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def genre_etc
-    @keyword = "< その他 > "
+    @keyword = "【 その他 】"
     @books = Book.where(genre: 'その他').page(params[:page]).per(15).order(created_at: :desc)
   end
 
@@ -152,39 +152,29 @@ class BooksController < ApplicationController
   end
 
   def evaluation_five
-    @keyword = "< 星5つ：⭐️⭐️⭐️⭐️⭐️ > "
+    @keyword = "【 星5つ：⭐️⭐️⭐️⭐️⭐️ 】"
     @books = Book.where(evaluation: '⭐️⭐️⭐️⭐️⭐️').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def evaluation_four
-    @keyword = "< 星4つ：⭐️⭐️⭐️⭐️☆ > "
+    @keyword = "【 星4つ：⭐️⭐️⭐️⭐️☆ 】"
     @books = Book.where(evaluation: '⭐️⭐️⭐️⭐️☆').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def evaluation_three
-    @keyword = "< 星3つ：⭐️⭐️⭐️☆☆ > "
+    @keyword = "【 星3つ：⭐️⭐️⭐️☆☆ 】"
     @books = Book.where(evaluation: '⭐️⭐️⭐️☆☆').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def evaluation_two
-    @keyword = "< 星2つ：⭐️⭐️☆☆☆ > "
+    @keyword = "【 星2つ：⭐️⭐️☆☆☆ 】"
     @books = Book.where(evaluation: '⭐️⭐️☆☆☆').page(params[:page]).per(15).order(created_at: :desc)
   end
 
   def evaluation_one
-    @keyword = "< 星1つ：⭐️☆☆☆☆ > "
+    @keyword = "【 星1つ：⭐️☆☆☆☆ 】"
     @books = Book.where(evaluation: '⭐️☆☆☆☆').page(params[:page]).per(15).order(created_at: :desc)
   end
-
-
-  def ensure_correct_user
-    @book = Book.find_by(id:params[:id])
-    if @book.user_id != @current_user.id
-      flash[:notice] = "権限がありません"
-      redirect_to("/books/index")
-    end  
-  end
-
 
   private
 

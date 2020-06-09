@@ -7,9 +7,13 @@
           .title__icon
             .fa.fa-book
           .title__name
-            登録本一覧
-          .title__sub
-            < all books >
+            登録書籍一覧
+          .title__result
+            全書籍登録数：
+          .title__count
+            = @books_all.count
+          .title__num
+            件
       .books-box
         - @books.each do |book|
           %ul.book-list
@@ -66,8 +70,4 @@
       .bottom-space_sea
         .pagenation
           = paginate(@books)
-  .footer_top
-    .logo_top
-      Book Stock
-    .sub_top
-      Copyright &copy; Book Stock Inc. All rights reserved
+  = render partial: 'shared/footer_top'

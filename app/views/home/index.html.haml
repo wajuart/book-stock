@@ -19,7 +19,10 @@
         = link_to app_description_home_index_path(current_user) do
           .app-btn 
             Appの解説
-      .notifi_account
-        %p※テストアカウントがございます。ログイン画面へお進みください。
+      .notifi_account_home
+        - if user_signed_in?
+          %p「Appを使う」へお進みください。
+        - else
+          %p※テストアカウントがございます。ログイン画面へお進みください。
                   
   = render partial: 'shared/footer_1'           

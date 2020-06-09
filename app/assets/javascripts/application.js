@@ -19,5 +19,5 @@
 
 
 $(document).on('turbolinks:load', function(){
-  setTimeout("$('.notification').fadeOut('slow')", 1700) 
+  setTimeout("$('.notification').fadeOut('slow')", 3200) 
 })

@@ -6,7 +6,10 @@
       .icon
         .fa.fa-search
       .title
-        = "' #{params[:keyword]} ' の検索結果"
+        = "' #{params[:keyword]} ' の検索結果 :"
+      .search__count
+        = @books.total_count
+      .search__num 件
       .bottom-space_sea2
         .pagenation
           = paginate(@books)

@@ -7,9 +7,15 @@
           .title__icon
             .fa.fa-book
           .title__name
-            ユーザー評価別 検索結果
+            ユーザー評価別
           .title__sub
             = @keyword
+          .title__result
+            検索結果：
+          .title__count
+            = @books.count
+          .title__num
+            件
       .books-box
         - if @books.count == 0
           .book-none

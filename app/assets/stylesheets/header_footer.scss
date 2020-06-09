@@ -148,12 +148,18 @@
   justify-content: space-between;
   border-bottom: solid 1px #eeeeee; 
   line-height: 50px;
+  position: relative;
   .name-box {
     height: 50px;
-    width: 200px;
-    margin: 7px 240px 7px 50px;
+    width: max-content;
+    display: flex;
+    .name-label {
+      line-height: 36px;
+      margin-right: 10px;
+    }
     .user-name {
       height: 35px;
+      width: 180px;
       font-size: 15px;
       line-height: 35px;
       text-align: center;
@@ -163,9 +169,10 @@
   }  
   .search-box {
     height: 100%;
-    width: 600px;
-    margin: -2px -195px 0 0;
-    position: relative;
+    width: max-content;
+    margin: -3px;
+    position: absolute;
+    left: 715px;
     display: flex;
     &__input {
       background-color: #ffffff;
