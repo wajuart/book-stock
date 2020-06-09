@@ -228,7 +228,7 @@
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box_top {
           height: 100%;
-          width: 1530px;         
+          width: calc(100vw - 260px);         
           padding: 20px 100px;
             .Registers-top {
               background-color: #ffffff;
