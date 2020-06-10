@@ -16,7 +16,7 @@
             .content-name
               マイブック
             .content-sub-name
-              Registered Books
+              My Books
         = link_to genre_all_book_path(current_user) do      
           %li.content-btn
             .content-name
@@ -40,8 +40,30 @@
     .contents-var_2
       .contents_2
         .content-btn_my_2
-          %input{:onclick => "window.alert('ログインしてください。')", :type => "button", :value => "My Page", class: "item_my"}/
-          %input{:onclick => "window.alert('ログインしてください。')", :type => "button", :value => "本を登録", class: "content-btn"}/
-          %input{:onclick => "window.alert('ログインしてください。')", :type => "button", :value => "マイブック", class: "content-btn"}/
-          %input{:onclick => "window.alert('ログインしてください。')", :type => "button", :value => "ジャンル", class: "content-btn"}/
-          %input{:onclick => "window.alert('ログインしてください。')", :type => "button", :value => "読書媒体", class: "content-btn"}/
+          .item_my{:onclick => "window.alert('ログインしてください。')"}
+            MyPage
+        .content-btn_2{:onclick => "window.alert('ログインしてください。')"}
+          .content-name
+            本を登録
+          .content-sub-name
+            Register Books
+        .content-btn_2{:onclick => "window.alert('ログインしてください。')"}
+          .content-name
+            マイブック
+          .content-sub-name
+            My Books
+        .content-btn_2{:onclick => "window.alert('ログインしてください。')"}
+          .content-name
+            ジャンル
+          .content-sub-name
+            Genre of Books
+        .content-btn_2{:onclick => "window.alert('ログインしてください。')"}
+          .content-name
+            ユーザー評価
+          .content-sub-name
+            User Rating
+        .content-btn_2{:onclick => "window.alert('ログインしてください。')"}
+          .content-name
+            読書媒体
+          .content-sub-name
+            Reading Item

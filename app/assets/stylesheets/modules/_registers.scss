@@ -390,45 +390,96 @@
       font-weight: bold;
       margin-bottom: 40px;
       .content-btn_my_2 {
+        position: relative;
         .item_my {
           height: 55px;
           width: 180px;
-          background-color: white;
-          color: rgb(11, 54, 29);
-          font-family: Papyrus;
-          font-size: 30px;
-          margin: 40px auto 100px;
-          border: outset #ffffff 4px;
-          border-radius: 15px;
-          cursor: pointer;
-          &:hover {
-            background-color: rgb(70, 70, 70);
-            color: #fff;
-            transition: .3s;
-          }
-        }
-        .content-btn { 
-          height: 55px;
-          width: 180px;
-          font-size: 20px;
-          font-family: 游明朝体;
-          border: outset white;
-          border-radius: 15px;
-          margin: 0 auto;
-          margin-bottom: 100px;
-          cursor: pointer;
+          font-family: serif;
           background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
+          font-size: 22px;
+          line-height: 48px;
+          margin: 40px auto 92px;
+          border: outset #ffffff ;
+          border-radius: 15px;
+          cursor: pointer;
           &:hover {
             background-color: #FFF;
-            transition: .3s;
+            color: #fff;
+            width: 190px;
+            transition: .1s;
           }
+        }
+      }
+      .content-btn_2 { 
+        height: 55px;
+        width: 180px;
+        font-size: 20px;
+        font-family: 游明朝体;
+        border: outset white;
+        border-radius: 15px;
+        margin: 0 auto;
+        margin-bottom: 92px;
+        cursor: pointer;
+        background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
+        &:hover {
+          background-color: #FFF;
+          color: #fff;
+          width: 190px;
+          transition: .1s;
+        }
+        .content-name {
+          background-color: rgba(255, 255, 255, 0);
+          border: none;
+        }
+        .content-sub-name {
+          color: #434A54;
+          
+          font-size: 13px;
         }
       }
     }
   }
 }
 
+.content-sub-name_1 {
+  color: #434A54;
+  font-size: 13px;
+  // position: absolute;
+  // top: 218px;
+  // left: 52px;
+}
 
+.content-sub-name_2 {
+  color: #434A54;
+  font-size: 13px;
+  // position: absolute;
+  // // top: 218px;
+  // left: 52px;
+}
+
+.content-sub-name_3 {
+  color: #434A54;
+  font-size: 13px;
+  // position: absolute;
+  // // top: 218px;
+  // left: 52px;
+}
+
+.content-sub-name_4 {
+  color: #434A54;
+  font-size: 13px;
+  // position: absolute;
+  // // top: 218px;
+  // left: 52px;
+}
+
+.content-sub-name_5 {
+  color: #434A54;
+  font-size: 13px;
+  // position: absolute;
+  // // top: 218px;
+  // left: 52px;
+}
 
 
 .footer_top {
