@@ -22,7 +22,7 @@
   height: 100%;
   text-align: center;
   line-height: 80px;
-  margin: 190px auto 20px;
+  margin: 190px auto 0;
   display: table;
   a {
     color: #fff;
@@ -48,8 +48,8 @@ ul.box_item {
 }
 
 li.read-item {
-  height: 230px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   margin: 10px;
   padding-bottom: 5px;
   &:hover {
@@ -91,7 +91,7 @@ ul.item-box_i {
 
 li.item.li {
   background-color: rgba(113, 243, 247, 0.438);
-  width: 276px;
+  width: 226px;
   border: inset 2px rgb(235, 235, 235);
   margin: 0 8px;
   padding: 3px 0;
