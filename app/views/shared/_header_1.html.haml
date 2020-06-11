@@ -46,13 +46,10 @@
   .social-btn
     = link_to "https://www.facebook.com/", class: "social-btn social-btn__facebook" do
       = icon('fab', 'facebook-square',  class: "content__btn__icon")
-      facebook
     = link_to "https://twitter.com/", class: "social-btn social-btn__twitter" do
       = icon('fab', 'twitter', class: "content__btn__icon")
-      twitter
     = link_to "https://www.instagram.com/", class: "social-btn social-btn__instagram" do
       = icon('fab', 'instagram', class: "social-btn__icon")
-      instagram
 
 - if user_signed_in? 
   .MypageHeader 
