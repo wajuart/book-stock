@@ -2,14 +2,12 @@
   box-sizing: border-box;
 }
 
-.MainDisplay {
-  height: 100vh;
-  width: 100vw;
+.GenreDisplay {
+  display: block;
 }
 
 .Genre_all {
   height: calc(100vh - 270px);
-  width: 100%;
   .title-box_gen { 
     font-family: ヒラギノ明朝 ProN;
     letter-spacing: 5px;

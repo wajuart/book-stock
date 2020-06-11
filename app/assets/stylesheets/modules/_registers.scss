@@ -5,7 +5,6 @@
 .wrapper {
   display: flex;
   height: 100vh;
-  width: 100vw;
   .mypage-side {
     background-image: url(https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg);
     background-size: 400%;
@@ -75,7 +74,6 @@
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
-        width: 100%;
         padding: 0 40px;
         border-bottom: solid 1px #eeeeee;                         
         .logo-box { 
@@ -119,7 +117,6 @@
       .MainSecondHeader_ma {
         background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
         height: 50px;
-        width: 100%;
         padding: 0 60px;
         display: flex;
         justify-content: space-between;
@@ -234,154 +231,152 @@
       }
       .MainRegisters {
         height: 1100px;
-        width: 100%;
         background-image: url(https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_1280.jpg);
         background-size: cover;
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box_top {
-          height: 100%;
-          width: 100%;        
+          height: 100%;     
           padding: 20px 100px;
-            .Registers-top {
-              background-color: #ffffff;
-              height: 40px;
-              border: outset #FFF 1px;
-              border-radius: 5px;
+          .Registers-top {
+            background-color: #ffffff;
+            height: 40px;
+            border: outset #FFF 1px;
+            border-radius: 5px;
+            display: flex;
+            margin: 25px auto 50px;
+            padding: 5px 10px 5px 5px;
+            .title {
+              font-family: ヒラギノ明朝 ProN;
+              letter-spacing: 5px;
+              font-size: 22px;
+              line-height: 27px;
+              margin: 0 auto;
+              padding: 0 12px 0 12px;
               display: flex;
-              margin: 25px auto 50px;
-              padding: 5px 10px 5px 5px;
-              .title {
-                font-family: ヒラギノ明朝 ProN;
-                letter-spacing: 5px;
-                font-size: 22px;
+              &__name {
+                margin: 0 30px 0 20px;
+              }
+              &__sub {
+                color: #01355f;
+                font-size: 20px;
+                line-height: 30px;
                 line-height: 27px;
-                margin: 0 auto;
-                padding: 0 12px 0 12px;
-                display: flex;
-                &__name {
-                  margin: 0 30px 0 20px;
-                }
-                &__sub {
-                  color: #01355f;
-                  font-size: 20px;
-                  line-height: 30px;
-                  line-height: 27px;
-                  letter-spacing: 7px;
-                }
-                &__result {
-                  font-size: 20px;
-                  line-height: 27px;
-                  letter-spacing: 3px;
-                  margin-left: 20px;
-                }
-                &__count {
-                  font-size: 20px;
-                  line-height: 27px;
-                  letter-spacing: 7px;
-                  margin-left: 5px;
-                }
-                &__num {
-                  font-size: 20px;
-                  line-height: 27px;
-                  letter-spacing: 7px;
-                }
-              }      
-              .genre-box {
-                background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-                width: 240px;
-                height: 30px;
+                letter-spacing: 7px;
+              }
+              &__result {
+                font-size: 20px;
+                line-height: 27px;
+                letter-spacing: 3px;
+                margin-left: 20px;
+              }
+              &__count {
+                font-size: 20px;
+                line-height: 27px;
+                letter-spacing: 7px;
+                margin-left: 5px;
+              }
+              &__num {
+                font-size: 20px;
+                line-height: 27px;
+                letter-spacing: 7px;
+              }
+            }      
+            .genre-box {
+              background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
+              width: 240px;
+              height: 30px;
+              font-size: 13px;
+              border-radius: 3px;
+              display: flex;
+              justify-content: center;
+              margin-left: 30px;
+              .name {
+                color:  #ffffff;            
+                line-height: 33px;
+                margin-right: 10px;
+              }
+              .select-box {
+                margin-top: 5px;
                 font-size: 13px;
-                border-radius: 3px;
-                display: flex;
-                justify-content: center;
-                margin-left: 30px;
-                .name {
-                  color:  #ffffff;            
-                  line-height: 33px;
-                  margin-right: 10px;
-                }
-                .select-box {
-                  margin-top: 5px;
-                  font-size: 13px;
-                  line-height: 25px;
-                }
+                line-height: 25px;
               }
             }
-            .books-box {
-              display: flex;
-              flex-wrap: wrap;
-              .book-list {
-                background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
-                height: 250px;
-                width: 180px;
-                margin: 22px 43px;
-                box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
-                cursor: pointer;
-                &:hover {
-                  opacity: 0.8;
+          }
+          .books-box {
+            display: flex;
+            flex-wrap: wrap;
+            .book-list {
+              background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
+              height: 250px;
+              width: 180px;
+              margin: 22px 43px;
+              box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
+              cursor: pointer;
+              &:hover {
+                opacity: 0.8;
+              }
+              a {
+                text-decoration: none; 
+              }
+              .book-image {
+                height: 190px;
+                padding: 4px 14px;
+                position: relative;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: contain;
                 }
-                a {
-                  text-decoration: none; 
-                }
-                .book-image {
-                  height: 190px;
-                  padding: 4px 14px;
-                  position: relative;
-                  img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: contain;
-                  }
-                  .book-genre-tag {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 20px;
-                    width: 75px;
-                    font-size: 11px;
-                    line-height: 20px;
-                    text-align: center;
-                    color: #fff;
-                    img {
-                      width: 96px;
-                      height: 65px;
-                    }
-                  }
-                  .book-status {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    z-index: 2;
-                    border-top: 30px solid #4ca53ad7;
-                    border-right: 30px solid #4ca53ad7;
-                    border-bottom: 30px solid transparent;
-                    border-left: 30px solid transparent;
-                    &__title {
-                      color: white;
-                      font-weight: bold;
-                      position: absolute;
-                      top: -18px;
-                      left: -10px;
-                      width: 40px;
-                      font-size: 10px;
-                      transform: rotate(45deg);
-                      text-align: center;
-                    }
-                  }
-                }
-                .book-title {
-                  height: 60px;
-                  background-color: #ffffff;
-                  color: #000000;
-                  line-height: 60px;
-                  font-size: 16px;
-                  font-family: クレー;
-                  padding: 0 13px;
+                .book-genre-tag {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 20px;
+                  width: 75px;
+                  font-size: 11px;
+                  line-height: 20px;
                   text-align: center;
-                  overflow: hidden;
+                  color: #fff;
+                  img {
+                    width: 96px;
+                    height: 65px;
+                  }
                 }
-              }           
-            }
+                .book-status {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  z-index: 2;
+                  border-top: 30px solid #4ca53ad7;
+                  border-right: 30px solid #4ca53ad7;
+                  border-bottom: 30px solid transparent;
+                  border-left: 30px solid transparent;
+                  &__title {
+                    color: white;
+                    font-weight: bold;
+                    position: absolute;
+                    top: -18px;
+                    left: -10px;
+                    width: 40px;
+                    font-size: 10px;
+                    transform: rotate(45deg);
+                    text-align: center;
+                  }
+                }
+              }
+              .book-title {
+                height: 60px;
+                background-color: #ffffff;
+                color: #000000;
+                line-height: 60px;
+                font-size: 16px;
+                font-family: クレー;
+                padding: 0 13px;
+                text-align: center;
+                overflow: hidden;
+              }
+            }           
+          }
         }
       }
    }
@@ -453,47 +448,6 @@
     }
   }
 }
-
-.content-sub-name_1 {
-  color: #434A54;
-  font-size: 13px;
-  // position: absolute;
-  // top: 218px;
-  // left: 52px;
-}
-
-.content-sub-name_2 {
-  color: #434A54;
-  font-size: 13px;
-  // position: absolute;
-  // // top: 218px;
-  // left: 52px;
-}
-
-.content-sub-name_3 {
-  color: #434A54;
-  font-size: 13px;
-  // position: absolute;
-  // // top: 218px;
-  // left: 52px;
-}
-
-.content-sub-name_4 {
-  color: #434A54;
-  font-size: 13px;
-  // position: absolute;
-  // // top: 218px;
-  // left: 52px;
-}
-
-.content-sub-name_5 {
-  color: #434A54;
-  font-size: 13px;
-  // position: absolute;
-  // // top: 218px;
-  // left: 52px;
-}
-
 
 .footer_top {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
