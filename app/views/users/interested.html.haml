@@ -1,25 +1,26 @@
-= render partial: 'shared/header_1'
+.MainDisplay
+  = render partial: 'shared/header_1'
 
-.MypageView
-  = render partial: 'shared/mypage_top'
-  .MypageContainer
-    = render partial: 'shared/my_side_var'
-    .Main-content_my
-      = render partial: 'shared/user_top'
-      %ul.status-tab
-        = link_to my_page_user_path(current_user) do
-          %li.tab-list すべて
-        = link_to read_books_user_path(current_user) do
-          %li.tab-list 読書済み
-        = link_to reading_books_user_path(current_user) do
-          %li.tab-list  読書中
-        = link_to will_read_books_user_path(current_user) do
-          %li.tab-list  未読
-        = link_to interested_user_path(current_user) do
-          %li.tab-list.active  興味有り
-      = render partial: 'shared/books-area'
-      .bottom-space_myp
-        .pagenation
-          = paginate(@books)
+  .MypageView
+    = render partial: 'shared/mypage_top'
+    .MypageContainer
+      = render partial: 'shared/my_side_var'
+      .Main-content_my
+        = render partial: 'shared/user_top'
+        %ul.status-tab
+          = link_to my_page_user_path(current_user) do
+            %li.tab-list すべて
+          = link_to read_books_user_path(current_user) do
+            %li.tab-list 読書済み
+          = link_to reading_books_user_path(current_user) do
+            %li.tab-list  読書中
+          = link_to will_read_books_user_path(current_user) do
+            %li.tab-list  未読
+          = link_to interested_user_path(current_user) do
+            %li.tab-list.active  興味有り
+        = render partial: 'shared/books-area'
+        .bottom-space_myp
+          .pagenation
+            = paginate(@books)
 
-= render partial: 'shared/footer_1'
+  = render partial: 'shared/footer_1'

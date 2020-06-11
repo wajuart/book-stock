@@ -2,9 +2,14 @@
   box-sizing: border-box;
 }
 
-.Genre_all {
-  height: auto;
+.MainDisplay {
+  height: 100vh;
   width: 100vw;
+}
+
+.Genre_all {
+  height: calc(100vh - 270px);
+  width: 100%;
   .title-box_gen { 
     font-family: ヒラギノ明朝 ProN;
     letter-spacing: 5px;
@@ -50,7 +55,6 @@
 }
 
 .genre-area {
-  height: 401px;
   text-align: center;
   line-height: 100px;
   margin: 120px auto 148px;

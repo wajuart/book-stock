@@ -71,7 +71,7 @@
     }
     }
     .MainDisplay {
-      width: calc(100% - 260px);
+      width: calc(100vw - 260px);
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;

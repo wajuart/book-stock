@@ -14,7 +14,7 @@ class User < ApplicationRecord
   end
          
   validates :name, length: { maximum: 10, message: "は 10文字以下で入力してください" }, presence: true
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
   validates :favorite_author, length: { maximum: 15, message: "は 15文字以下で入力してください" }, allow_blank: true
   validates :favorite_author, length: { maximum: 15, message: "は 15文字以下で入力してください" }, allow_blank: true
   validates :favorite_genre, length: { maximum: 15, message: "は 15文字以下で入力してください" }, allow_blank: true
