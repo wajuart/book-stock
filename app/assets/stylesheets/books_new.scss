@@ -3,8 +3,6 @@
 }
  
 .BookNew {
-  height: 100%;
-  width: 100vw;
   .title-box_bn { 
     font-family: ヒラギノ明朝 ProN;
     letter-spacing: 5px;
@@ -23,10 +21,9 @@
     padding: 0 150px;
     .registers-box {
       display: flex;
+      justify-content: center;
       .Left-side { 
-        height: 650px;
-        width: 1200px;
-        padding: 30px 100px 0 270px;
+        padding: 30px 80px 0 0;
         .Left-upper_form {
           height: 270px;
           margin-bottom: 30px;
@@ -74,9 +71,6 @@
         }
       }  
       .Right-side { 
-        height: 650px;
-        width: 100%;
-        padding: 25px 70px 15px 50px;
         .upper-box_n {
           margin-bottom: 35px;
           display: flex;

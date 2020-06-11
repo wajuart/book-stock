@@ -119,7 +119,7 @@
         height: 50px;
         padding: 0 60px;
         display: flex;
-        // justify-content: space-between;
+        justify-content: center;
         border-bottom: solid 1px #eeeeee; 
         .name-box_ma {
           height: 50px;
@@ -142,8 +142,8 @@
           }
         }  
         .search-box_ma {
-          margin: -2px 0;
           display: flex;
+          margin: -2px 410px 0 250px;
           position: relative;
           &__input_ma {
             background-color: #ffffff;
