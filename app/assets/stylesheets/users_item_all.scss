@@ -3,7 +3,7 @@
 }
 
 .Item_all {
-  height: auto;
+  height: calc(100vh -270px);
   width: 100vw;
   .title-box_item { 
     font-family: ヒラギノ明朝 ProN;
@@ -36,16 +36,15 @@
 }
 
 .item-title_i {
-  margin: 0 auto;
+  margin: 0 auto 130px;
   display: table;
-  height: 123px;
   letter-spacing: 2px;
-  margin-bottom: 170px;
 }
 
 ul.box_item {
   background-color: rgb(253, 253, 253);
-  display: flex;
+  margin: 0 auto;
+  display: inline-flex;
 }
 
 li.read-item {

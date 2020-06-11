@@ -57,7 +57,7 @@
 .genre-area {
   text-align: center;
   line-height: 100px;
-  margin: 120px auto 148px;
+  margin: 120px auto;
   display: table;
   a {
     color: #fff;
@@ -70,22 +70,53 @@
 }
 
 ul.box-upper_gen {
+  margin: 0 auto;
   display: flex;
+  li.genre_gen {
+    height: 100px;
+    width: 210px;
+    &:hover {
+      font-size: 21px;
+      font-weight: bold;
+      opacity: 0.5;
+      transition: .3s;
+    }
+  }
 }
 
 ul.box-middle_gen {
   margin: 0 auto;
   display: flex;
+  li.genre_gen {
+    height: 100px;
+    width: 210px;
+    &:hover {
+      font-size: 21px;
+      font-weight: bold;
+      opacity: 0.5;
+      transition: .3s;
+    }
+  }
 }
 
 ul.box-lower_gen {
   margin: 0 auto;
   display: flex;
+  li.genre_gen {
+    height: 100px;
+    width: 210px;
+    &:hover {
+      font-size: 21px;
+      font-weight: bold;
+      opacity: 0.5;
+      transition: .3s;
+    }
+  }
 }
 
 li.genre_gen {
   height: 100px;
-  width: 250px;
+  width: 210px;
   &:hover {
     font-size: 21px;
     font-weight: bold;
