@@ -71,8 +71,7 @@
     }
     }
     .MainDisplay {
-      // width: calc(100vw - 260px);
-      width: 100%;
+      width: calc(100vw - 260px);
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
@@ -127,7 +126,7 @@
         border-bottom: solid 1px #eeeeee; 
         .name-box_ma {
           height: 50px;
-          width: 530px;
+          width: fit-content;
           margin: 7px 0 0 0;
           display: flex;
           .name-label {
@@ -146,7 +145,7 @@
           }
         }  
         .search-box_ma {
-          margin: -2px -20px 10px 252px;
+          margin: -2px -20px 10px 54px;
           display: flex;
           position: relative;
           &__input_ma {
@@ -179,15 +178,20 @@
           }  
         }
         .social-box_ma {          
-          width: inherit;
+          width: fit-content;
           padding: 11px 0 0 194px;
+          display: contents;
           .social-btn__facebook {
             color: #ffffff;
             font-size: 15px;
             text-decoration: none;
             background-color: #4169e1;
             border-radius: 3px;
-            padding: 4px 8px;
+            padding: 2px 8px;
+            width: 112px;
+            height: fit-content;
+            margin: auto 0;
+            text-align: center;
             &:hover {
               opacity: 0.7;
               transition: .3s;
@@ -200,7 +204,11 @@
             background-color: #00bfff;
             margin: 0 15px;
             border-radius: 3px;
-            padding: 4px 8px;
+            padding: 2px 8px;
+            width: 112px;
+            height: fit-content;
+            margin: auto -190px;
+            text-align: center;
             &:hover {
               opacity: 0.7;
               transition: .3s;
@@ -212,7 +220,11 @@
             text-decoration: none;
             background-color: #fc76bf;
             border-radius: 3px;
-            padding: 4px 8px;
+            padding: 2px 8px;
+            width: 120px;
+            height: fit-content;
+            margin: auto 0;
+            text-align: center;
             &:hover {
               opacity: 0.7;
               transition: .3s;
