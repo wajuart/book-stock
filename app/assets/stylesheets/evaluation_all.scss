@@ -3,8 +3,6 @@
 }
 
 .Evaluation_all {
-  height: auto;
-  width: 100vw;
   .title-box { 
     font-family: ヒラギノ明朝 ProN;
     letter-spacing: 5px;
@@ -19,7 +17,6 @@
 }
 
 .evaluation-area {
-  height: 401px;
   text-align: center;
   line-height: 100px;
   margin: 120px auto 148px;
@@ -36,19 +33,19 @@
 }
 
 .star-box { 
-  margin-top: 75px;
+  margin: 50px 0 70px;
   display: flex;
   a {
     border: none;
   }
   li.star-list {
     background-color: #474343;
-    width: 185px;
+    width: 180px;
     color: #FFF;
     font-size: 30px;
     text-align: center;
-    margin: 5px 5px;
-    padding: 10px 6px;
+    margin: 5px 2px;
+    padding: 10px 0;
     border: outset thin;
     border-radius: 3px;
     box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  

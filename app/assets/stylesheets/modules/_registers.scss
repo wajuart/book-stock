@@ -119,7 +119,7 @@
         height: 50px;
         padding: 0 60px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         border-bottom: solid 1px #eeeeee; 
         .name-box_ma {
           height: 50px;
@@ -143,7 +143,7 @@
         }  
         .search-box_ma {
           display: flex;
-          margin: -2px 410px 0 250px;
+          margin: -2px 0;
           position: relative;
           &__input_ma {
             background-color: #ffffff;
@@ -229,7 +229,7 @@
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box_top {
           height: 100%;     
-          padding: 20px 100px;
+          padding: 20px 50px;
           .Registers-top {
             background-color: #ffffff;
             height: 40px;
@@ -274,26 +274,6 @@
                 letter-spacing: 7px;
               }
             }      
-            .genre-box {
-              background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-              width: 240px;
-              height: 30px;
-              font-size: 13px;
-              border-radius: 3px;
-              display: flex;
-              justify-content: center;
-              margin-left: 30px;
-              .name {
-                color:  #ffffff;            
-                line-height: 33px;
-                margin-right: 10px;
-              }
-              .select-box {
-                margin-top: 5px;
-                font-size: 13px;
-                line-height: 25px;
-              }
-            }
           }
           .books-box {
             display: flex;
@@ -302,7 +282,7 @@
               background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
               height: 250px;
               width: 180px;
-              margin: 22px 43px;
+              margin: 22px 20px;
               box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
               cursor: pointer;
               &:hover {
@@ -445,7 +425,6 @@
 .footer_top {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753)); 
   height: 60px;
-  width: 100%;
   text-align: center;
   color: #363333;
   padding: 15px 0;
@@ -466,54 +445,6 @@
   display: flex;
 }
 
-.evaluation-box {
-  background-color: #ffffff;
-  height: fit-content;
-  width: fit-content;
-  margin: 0 0 0 200px;
-  padding: 10px;
-  border: outset thin rgb(180, 180, 180);
-  border-radius: 5px;
-  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-  .box-upper {
-    margin-bottom: 10px;
-    display: flex;
-  }
-  .box-lower {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.genre-box {
-  background-color: #ffffff;
-  height: fit-content;
-  width: fit-content;
-  margin: 0 0 0 120px;
-  padding: 10px;
-  border: outset thin rgb(180, 180, 180);
-  border-radius: 5px;
-  box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-  .box-upper {
-    margin-bottom: 10px;
-    display: flex;
-  }
-  .box-lower {
-    display: flex;
-  }
-}
-
-.eva-title {
-  background-color: #ffffff;
-  color: rgb(49, 80, 179);
-  font-weight: bold;
-  margin-right: px;
-  border: none;
-  box-shadow: none;
-  &:hover {
-    background-color: #ffffff;
-  } 
-}
 
 li.genre {
   width: 88px;
