@@ -2,7 +2,7 @@
 .MainHeader {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
   height: 110px;
-  padding: 0 60px;
+  padding: 0 16.7vw;
   border-bottom: solid 1px #eeeeee;                         
   .logo-box { 
     height: 50px;  
@@ -47,7 +47,7 @@
   display: flex;
   justify-content: space-around;
   border-bottom: solid 1px #eeeeee; 
-  line-height: 50px;;
+  line-height: 50px;
   .name-box {
     align-items: center;
     display: flex;
@@ -153,7 +153,7 @@
 .MypageHeader {
   background-color: #eaf6fd;;   
   height: 50px;
-  padding: 0 150px;
+  padding: 0 18vw;
   border-bottom: solid 1px #eeeeee;
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
   .content-title {
