@@ -10,11 +10,14 @@
     .register-name
       = link_to profile_edit_user_path(current_user) do
         = current_user.name
-    .count-box  
+    .count-area  
       .count-title
         書籍登録数
-      .count-books
-        = @book.count
+      .count-box
+        .count-books
+          = @book.count
+        .book-unit
+          冊
   .user-right-myinfo
     %ul.genre-left
       %li.genre-block

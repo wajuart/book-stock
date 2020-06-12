@@ -47,7 +47,7 @@
             &__item-top {
               background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
               color: #ffffff;
-              font-size: 0.9vw;
+              font-size: 14px;
               font-weight: bold;
               height: 48px;
               width: 100%;
@@ -60,7 +60,7 @@
             }  
             &__item {
               background-color: #ffffff;
-              font-size: 0.8vw;
+              font-size: 14px;
               height: 48px;
               width: 100%;
               color: #000;
@@ -74,7 +74,7 @@
                 background-color: #f8f8f8;
                 color: rgb(0, 190, 63);
                 font-weight: bold;
-                font-size: 16px;
+                font-size: 15px;
               }  
               .icon-arrow-right {
                 position: absolute;
@@ -149,19 +149,23 @@
                 }
               }
             }
-            .count-box  {
-              margin-left: 35px;
-              padding: 10px 10px 10px 0px;
-              display: flex;
-              justify-content: center;
+            .count-area  {
+              text-align: center;
               .count-title {
-                font-size: 1.2vw;
-                margin-right: 30px;
-              }  
-              .count-books  {
-                font-size: 1.2vw;
-                font-weight: bold;
-                margin-right: 30px;
+                font-size: 1.1vw;
+              }
+              .count-box { 
+                display: inline-flex;
+                .count-books  {
+                  font-size: 1.2vw;
+                  font-weight: bold;
+                  margin-right: 10px;
+                }
+                .book-unit {
+                  font-size: 1.2vw;
+                  font-weight: bold;
+                  display: inline-flex;
+                }
               }
             }  
           }
@@ -170,6 +174,7 @@
             font-size: 0.8vw;
             text-align: center;
             display: flex;
+            align-items: center;
             .genre-left {
               .genre-block {
                 display: flex;

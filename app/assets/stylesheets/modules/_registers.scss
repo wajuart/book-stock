@@ -11,7 +11,7 @@
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
     border: outset 2px; 
     height: 1320px;
-    width: 260px;
+    width: 13.7vw;
     overflow: scroll;
     .contents-var {
       height: 100%;
@@ -23,11 +23,11 @@
         a {
           text-decoration: none; 
           .content-btn_my {
-            height: 55px;
-            width: 180px;
+            height: auto;
+            width: 9.3vw;
             font-family: serif;
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
-            font-size: 22px;
+            font-size: 1vw;
             line-height: 48px;
             margin: 40px auto 92px;
             border: outset #ffffff ;
@@ -36,7 +36,7 @@
             &:hover {
               background-color: #FFF;
               color: #fff;
-              width: 190px;
+              width: 9.89vw;
               transition: .1s;
             }
           }
@@ -45,24 +45,25 @@
           color: black;
           .content-btn {
             height: auto;
-            width: 180px;
-            font-size: 20px;
+            width: 9.3vw;
+            font-size: 1vw;
             font-family: 游明朝体;
             border: outset white;
             border-radius: 15px;
             margin: 0 auto;
             margin-bottom: 92px;
+            padding: 5px 0;
             cursor: pointer;
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
             &:hover {
               background-color: #FFF;
               color: #fff;
-              width: 190px;
+              width: 9.89vw;
               transition: .1s;
             }
             .content-sub-name {
               color: #434A54;
-              font-size: 13px;
+              font-size: 0.67vw;
             } 
           }
         }       
@@ -70,7 +71,7 @@
     }
     }
     .MainDisplay {
-      width: calc(100vw - 260px);
+      width: calc(100vw - 13.5vw);
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
@@ -131,7 +132,7 @@
           }
           .user-name_ma {
             height: 35px;
-            width: 160px;
+            width: 8.3vw;
             font-size: 13px;
             line-height: 35px;
             text-align: center;
