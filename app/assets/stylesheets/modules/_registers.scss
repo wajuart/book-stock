@@ -74,7 +74,7 @@
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
-        padding: 0 240px;
+        padding: 0 40px;
         border-bottom: solid 1px #eeeeee;                         
         .logo-box { 
           height: 50px;  
@@ -131,13 +131,13 @@
           }
           .user-name_ma {
             height: 35px;
-            width: 180px;
-            font-size: 15px;
+            width: 160px;
+            font-size: 13px;
             line-height: 35px;
             text-align: center;
             border: inset 2px;
             border-radius: 5px;
-            padding: 0 15px;
+            padding: 0 10px;
           }
         }  
         .search-box_ma {
@@ -147,7 +147,7 @@
           &__input_ma {
             background-color: #ffffff;
             height: 35px;
-            width: 350px;
+            width: 330px;
             color: #555555;
             font-size: 14px;
             margin: 8px 0 5px;
@@ -167,7 +167,7 @@
             height: 24px;
             position: absolute;
             top: 15px;
-            left: 285px;
+            left: 265px;
             &:hover {
             opacity: 0.7;
             transition: .3s;
@@ -228,10 +228,10 @@
         background-image: url(https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_1280.jpg);
         background-size: cover;
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
-        .Registers-box_top {
+        .Registers-box_top-p {
           height: 100%;     
-          padding: 20px 100px;
-          .Registers-top {
+          padding: 20px 50px;
+          .Registers-upper {
             background-color: #ffffff;
             height: 40px;
             border: outset #FFF 1px;
@@ -278,7 +278,6 @@
           }
           .books-box {
             display: flex;
-            justify-content: space-evenly;
             flex-wrap: wrap;
             .book-list {
               background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));

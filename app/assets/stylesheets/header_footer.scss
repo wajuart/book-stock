@@ -2,7 +2,7 @@
 .MainHeader {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
   height: 110px;
-  padding: 0 340px;
+  padding: 0 60px;
   border-bottom: solid 1px #eeeeee;                         
   .logo-box { 
     height: 50px;  
@@ -44,7 +44,6 @@
 .MainSecondHeader {
   background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
   height: 50px;
-  padding: 0 100px;
   display: flex;
   justify-content: space-around;
   border-bottom: solid 1px #eeeeee; 
@@ -58,12 +57,13 @@
     }
     .user-name {
       height: 35px;
-      width: 180px;
-      font-size: 15px;
+      width: 160px;
+      font-size: 13px;
       line-height: 35px;
       text-align: center;
       border: inset 2px;
       border-radius: 5px;
+      padding: 0 10px;
     }
   }  
   .search-box {
@@ -73,7 +73,7 @@
     &__input {
       background-color: #ffffff;
       height: 35px;
-      width: 350px;
+      width: 330px;
       font-size: 14px;
       padding: 3px 90px 3px 20px;
       border: inset #eeeeee 2px;
@@ -90,7 +90,7 @@
       line-height: 24px;
       position: absolute;
       top: 15px;
-      left: 285px;
+      left: 265px;
       &:hover {
       opacity: 0.7;
       transition: .3s;
@@ -153,7 +153,7 @@
 .MypageHeader {
   background-color: #eaf6fd;;   
   height: 50px;
-  padding: 0 360px;
+  padding: 0 150px;
   border-bottom: solid 1px #eeeeee;
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
   .content-title {

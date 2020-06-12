@@ -6,50 +6,6 @@
   background-color: #ffffff;
   height: 100vh;
   width: 100vw;
-  .MainHeader {
-    background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-    height: 110px;
-    padding: 0 340px;
-    border-bottom: solid 1px #eeeeee;                         
-    .logo-box { 
-      height: 50px;  
-      width: 200px;
-      color: white;
-      font-size: 35px;
-      font-family: fantasy;
-      letter-spacing: 1px;
-      padding-top: 10px;
-      margin: 0 auto;
-      cursor: pointer;
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
-    }  
-    .conent-list {
-      margin-top: 28px;
-      font-size: 15px;
-      letter-spacing: 2px;
-      display: flex;
-      justify-content: center;
-      &__item {
-        color: silver;
-        margin: 0 70px;
-        cursor: pointer;
-        a {
-          color: silver;
-          &:hover {
-            color: black;
-            font-weight: bold;
-          }
-        }  
-        &:hover {
-          color: black;
-          font-weight: bold;
-        }
-      }  
-    }   
-  }
   .middle-display_h  {  
     height: inherit;
     background-image: url(https://cdn.pixabay.com/photo/2014/10/14/20/14/library-488678_1280.jpg);
