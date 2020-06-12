@@ -3,7 +3,7 @@
 }
  
 .MyBooksShow {
-  height: 100%;
+  height: calc(100vh -270px);
   width: 100vw;
   .title-box_mbs { 
     font-family: ヒラギノ明朝 ProN;
@@ -20,14 +20,17 @@
     height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
     font-size: 13px;
-    padding: 0 150px;
+    padding: 0 250px;
+    margin-bottom: 130px;
     .registers-box {
+      margin-top: 40px;
       display: flex;
+      justify-content: space-evenly;
       .Left-side { 
-        height: 650px;
-        width: 1200px;
-        padding: 30px 100px 0 270px;
+        padding: 30px 0 0 0;
         .Left-upper_form {
+          height: 270px;
+          margin-bottom: 30px;
           display: flex;
           .image_box {
             height: 270px;
@@ -41,8 +44,9 @@
             padding: 2px;
             box-shadow: 0 0 15px 0 rgba(85, 85, 85, 0.295); 
             img {
+              height: -webkit-fill-available;
               width: 100%;
-              height: 100%;
+              cursor: pointer;
               object-fit: cover;
               &:hover {
                 opacity: 0.6;
@@ -53,9 +57,7 @@
         }
       }  
       .Right-side { 
-        height: 650px;
-        width: 100%;
-        padding: 25px 70px 15px 50px;
+        margin-left: 30px;
         .upper-box_m {
           margin-bottom: 35px;
           display: flex;
@@ -71,23 +73,28 @@
       }
       .left-input_result {
         height: 50px;
-        width: 100%;
+        width: 300px;
         font-size: 20px;
-        text-align: center;
-        line-height: 50px;
         border-bottom: thin solid #cccccc;
+        border-top: none;
+        border-right: none;
+        border-left: none;
         margin-bottom: 30px;
-        padding: 0 15px;
+        padding: 0 20px;
+        line-height: 50px;
+        text-align: center;
       }
       .right-select_result {
+        background-color: #ffffff;
         height: 50px;
-        width: 220px;
-        font-size: 20px;
-        margin: 0 65px 0 0;
+        width: 250px;
+        font-size: 18px;
+        border: inset #dbedf0 2px;
+        border-radius: 2px;
+        margin: 0 35px 0 0;
         padding: 0 30px;
-        text-align: center;
         line-height: 50px;
-        border-bottom: thin solid #cccccc;
+        text-align: center;
       }
       .eva-select_result {
         height: 50px;
@@ -104,7 +111,7 @@
       }
       .area_result {
         height: 120px;
-        width: 550px;
+        width: 535px;
         font-size: 14px;
         border: inset #dbedf0 2px;
         border-radius: 2px;
@@ -114,7 +121,7 @@
       }
       .area_result_2 {
         height: 90px;
-        width: 264px;
+        width: 250px;
         font-size: 14px;
         border: inset #dbedf0 2px;
         border-radius: 2px;

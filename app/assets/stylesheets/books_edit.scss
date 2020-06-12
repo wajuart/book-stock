@@ -3,7 +3,7 @@
 }
  
 .BookEdit {
-  height: 100%;
+  height: calc(100vh -270px);
   width: 100vw;
   .title-box_be { 
     font-family: ヒラギノ明朝 ProN;
@@ -20,14 +20,17 @@
     height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
     font-size: 13px;
-    padding: 0 150px;
+    padding: 0 250px;
+    margin-bottom: 130px;
     .registers-box {
+      margin-top: 40px;
       display: flex;
+      justify-content: space-evenly;
       .Left-side { 
-        height: 650px;
-        width: 1200px;
-        padding: 30px 100px 0 270px;
+        padding: 30px 0 0 0;
         .Left-upper_form {
+          height: 270px;
+          margin-bottom: 30px;
           display: flex;
           .image-form {
             height: 270px;
@@ -71,10 +74,8 @@
           }
         }
       }  
-      .Right-side { 
-        height: 650px;
-        width: 100%;
-        padding: 25px 70px 15px 50px;
+      .Right-side {
+        margin-left: 30px;
         .upper-box_n {
           margin-bottom: 35px;
           display: flex;
@@ -90,7 +91,7 @@
       }
       .left-input_form {
         height: 50px;
-        width: 100%;
+        width: 300px;
         font-size: 20px;
         border-bottom: thin solid #cccccc;
         border-top: none;
@@ -109,6 +110,7 @@
         margin: 0 35px 0 0;
         padding: 0 30px;
       }
+    }
       .area_form {
         height: 120px;
         width: 535px;
@@ -209,7 +211,6 @@
           }
         }  
       }
-    }
   }  
 }
 
