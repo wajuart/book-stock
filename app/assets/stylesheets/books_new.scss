@@ -18,13 +18,13 @@
     height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
     font-size: 13px;
-    padding: 0 150px;
+    padding: 0 250px;
     .registers-box {
       margin-top: 40px;
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       .Left-side { 
-        padding: 30px 100px 0 0;
+        padding: 30px 0 0 0;
         .Left-upper_form {
           height: 270px;
           margin-bottom: 30px;

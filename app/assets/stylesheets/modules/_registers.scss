@@ -74,7 +74,7 @@
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
-        padding: 0 40px;
+        padding: 0 240px;
         border-bottom: solid 1px #eeeeee;                         
         .logo-box { 
           height: 50px;  
@@ -96,10 +96,9 @@
           font-size: 15px;
           letter-spacing: 2px;
           display: flex;
-          justify-content: center;
+          justify-content: space-evenly;
           &__item {
             color: silver;
-            margin: 0 70px;
             cursor: pointer;
             a {
               color: silver;
@@ -159,15 +158,16 @@
           }  
           .search-btn_ma {
             background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
-            font-size: 13px;
+            font-size: 14px;
             color: #ffffff;
-            margin-top: 15px;
             padding: 0 10px;
             border: outset thin;
             border-radius: 5px;
-            position: absolute;
-            left: 285px;
+            line-height: 24px;
             height: 24px;
+            position: absolute;
+            top: 15px;
+            left: 285px;
             &:hover {
             opacity: 0.7;
             transition: .3s;
@@ -176,6 +176,7 @@
         }
         .social-box_ma {          
           padding: 11px 0;
+          align-items: center;
           display: flex;
           .social-btn__facebook {
             color: #ffffff;
@@ -229,7 +230,7 @@
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box_top {
           height: 100%;     
-          padding: 20px 50px;
+          padding: 20px 100px;
           .Registers-top {
             background-color: #ffffff;
             height: 40px;
@@ -277,12 +278,12 @@
           }
           .books-box {
             display: flex;
+            justify-content: space-evenly;
             flex-wrap: wrap;
             .book-list {
               background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
               height: 250px;
               width: 180px;
-              margin: 22px 20px;
               box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
               cursor: pointer;
               &:hover {

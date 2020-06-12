@@ -2,26 +2,26 @@
   .logo-box
     = link_to home_index_path(current_user) do
       Book Stock     
-  %ul.conent-list
+  %ul.content-list
     - if user_signed_in?
-      %li.conent-list__item
+      %li.content-list__item
         = link_to books_path(current_user) do
           トップページ
-      %li.conent-list__item
+      %li.content-list__item
         = link_to edit_user_path(current_user) do
           アカウント編集    
-      %li.conent-list__item
+      %li.content-list__item
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log-out_btn'
-      %li.conent-list__item
+      %li.content-list__item
         = link_to app_description_home_index_path(current_user) do
           アプリについて
     - else
-      %li.conent-list__item
+      %li.content-list__item
         = link_to new_user_session_path do
           新規登録 
-      %li.conent-list__item
+      %li.content-list__item
         = link_to user_session_path do
           ログイン
-      %li.conent-list__item
+      %li.content-list__item
         = link_to app_description_home_index_path do
           アプリについて

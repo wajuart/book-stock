@@ -2,17 +2,17 @@
   .logo-box
     = link_to home_index_path(current_user) do
       Book Stock     
-  %ul.conent-list   
-    %li.conent-list__item
+  %ul.content-list   
+    %li.content-list__item
       - if user_signed_in?
         = link_to books_path(current_user) do
           トップページ
       - else
         = link_to books_path(current_user) do
           トップページ
-        %li.conent-list__item
+        %li.content-list__item
           = link_to new_user_session_path do
             新規登録 
-        %li.conent-list__item
+        %li.content-list__item
           = link_to user_session_path do
             ログイン

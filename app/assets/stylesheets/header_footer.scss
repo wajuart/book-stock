@@ -2,7 +2,7 @@
 .MainHeader {
   background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
   height: 110px;
-  padding: 0 40px;
+  padding: 0 340px;
   border-bottom: solid 1px #eeeeee;                         
   .logo-box { 
     height: 50px;  
@@ -19,15 +19,14 @@
       text-decoration: none;
     }
   }  
-  .conent-list {
+  .content-list {
     margin-top: 28px;
     font-size: 15px;
     letter-spacing: 2px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     &__item {
       color: silver;
-      margin: 0 70px;
       cursor: pointer;
       a {
         color: silver;
@@ -45,7 +44,7 @@
 .MainSecondHeader {
   background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
   height: 50px;
-  padding: 0 40px;
+  padding: 0 100px;
   display: flex;
   justify-content: space-around;
   border-bottom: solid 1px #eeeeee; 
@@ -73,22 +72,24 @@
     position: relative;
     &__input {
       background-color: #ffffff;
+      height: 35px;
       width: 350px;
+      font-size: 14px;
       padding: 3px 90px 3px 20px;
       border: inset #eeeeee 2px;
       border-radius: 20px;
-      line-height: initial;
     }  
     .search-btn {
       background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
       font-size: 13px;
       color: #ffffff;
-      margin-top: 15px;
       padding: 0 10px;
       border: outset thin;
       border-radius: 5px;
-      position: absolute;
       height: 24px;
+      line-height: 24px;
+      position: absolute;
+      top: 15px;
       left: 285px;
       &:hover {
       opacity: 0.7;
@@ -98,6 +99,7 @@
   }
   .social-btn {          
     padding: 11px 0;
+    align-items: center;
     display: flex;
     .social-btn__facebook {
       width: auto;
@@ -151,9 +153,7 @@
 .MypageHeader {
   background-color: #eaf6fd;;   
   height: 50px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: center;
+  padding: 0 360px;
   border-bottom: solid 1px #eeeeee;
   box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
   .content-title {
@@ -169,11 +169,11 @@
   }  
   .content-list {
     display: flex;
+    justify-content: space-evenly;
     a {
       color: #444444;
       font-size: 16px;
       line-height: 50px;
-      margin: 0 35px ;
       cursor: pointer;
       &:hover {
         color: #002491;
