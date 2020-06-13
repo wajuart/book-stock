@@ -26,8 +26,6 @@
         .title-icon_my {
           margin-right: 15px;
         }
-        .title-name_my {
-        }
       }
     }
     .MypageContainer {
@@ -35,7 +33,7 @@
       width: 85vw;
       display: flex;
       .Side-var {
-        width: 15vw;
+        width: 14vw;
         margin: 40px 40px 50px 0;
         .Mypage-nav {
           a {
@@ -75,7 +73,7 @@
                 background-color: #f8f8f8;
                 color: rgb(0, 190, 63);
                 font-weight: bold;
-                font-size: 1.1vw;
+                font-size: 1vw;
               }  
               .icon-arrow-right {
                 position: absolute;
@@ -245,16 +243,16 @@
 
         .books-area_mp {
           background-color: #ffffff;
-          padding: 20px 18px 30px;
+          padding: 20px 0 30px 20px;
           display: flex;
           flex-wrap: wrap;
-          box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+          box-shadow: 0 0 0px 0 rgba(85, 85, 85, 0.295);  
           .book-list { 
             background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
             background-color: rgb(223, 251, 252);
             height: 250px;
             width: 180px;
-            margin: 22px 1.75vw;
+            margin: 22px 1.4vw;
             box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
             cursor: pointer;
             &:hover {

@@ -107,15 +107,6 @@
                 その他
           .book-title
             = book.title
-  -# - @books.each do |book|
-  -#   .book-list_i
-  -#     = link_to book_path(book) do
-  -#       .book-image
-  -#         = image_tag book.image.to_s  
-  -#         .book-genre-tag
-  -#           = book.genre
-  -#       .book-title
-  -#         = book.title
 .bottom-space_sea
   .pagenation
     = paginate(@books)

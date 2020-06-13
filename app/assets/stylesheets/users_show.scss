@@ -181,14 +181,14 @@
 .books-area_i {
   background-color: #ffffff;
   margin-bottom: 50px;
-  padding: 20px 116px;
+  padding: 20px 70px 0 100px;
   display: flex;
   flex-wrap: wrap;
   .book-list_i {
     background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
     height: 250px;
     width: 180px;
-    margin: 30px 40px 15px;
+    margin: 30px 2.2vw 15px;
     box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
     cursor: pointer;
     &:hover {

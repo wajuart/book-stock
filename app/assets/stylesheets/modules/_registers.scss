@@ -7,12 +7,12 @@
   height: 100vh;
   .mypage-side {
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
-    width: 230px;
+    width: 210px;
     .contents-var {
       background-image: url(https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg);
       background-size: 400%;
       height: 100%;
-      width: 230px;
+      width: 210px;
       padding: 20px;
       position: fixed;
       text-align: center;
@@ -29,7 +29,7 @@
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
             font-size: 20px;
             line-height: 48px;
-            margin: 40px auto 79px;
+            margin: 40px auto 92px;
             border: outset #ffffff ;
             border-radius: 15px;
             cursor: pointer;
@@ -51,7 +51,7 @@
             border: outset white;
             border-radius: 15px;
             margin: 0 auto;
-            margin-bottom: 79px;
+            margin-bottom: 92px;
             padding: 3px 0;
             cursor: pointer;
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
@@ -71,7 +71,7 @@
     }
     }
     .MainDisplay {
-      width: calc(100vw - 230px);
+      width: calc(100vw - 210px);
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
@@ -231,7 +231,7 @@
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box_top-p {
           height: 100%;     
-          padding: 20px 80px;
+          padding: 20px 55px;
           .Registers-upper {
             background-color: #ffffff;
             height: 40px;
@@ -278,6 +278,7 @@
             }      
           }
           .books-box {
+            margin-bottom: 340px;
             padding: 0 20px;
             display: flex;
             flex-wrap: wrap;

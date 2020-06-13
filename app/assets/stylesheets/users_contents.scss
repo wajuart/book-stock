@@ -2,14 +2,24 @@
   box-sizing: border-box;
 }
 
-.content_keyword {
+.case-block { 
   background-color: #06ccab71;
   width: 100%;
   font-family: serif;
   font-weight: bold;
+  text-align: center;
   letter-spacing: 2px;
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0 16px 20px 0;
   padding: 2px 0;
   border: outset thin;
+  .case-info { 
+    display: inline-flex;
+    .content_keyword {
+      color: #001441;
+    }
+    .case_count {
+      margin: 0 10px 0 40px;
+    }
+  }
 }

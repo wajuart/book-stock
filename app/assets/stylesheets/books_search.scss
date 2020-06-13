@@ -20,9 +20,10 @@
       .search__count {
         margin-left: 15px;
       }
-      .pagination_sea {
+      .pagination {
         font-size: 20px;
-        margin-left: 750px;
+        margin: 0 auto;
+        display: block;
         letter-spacing: 0vmax;
       }
     }
@@ -30,14 +31,14 @@
       background-color: #ffffff;
       height: auto;
       margin-bottom: 300px;
-      padding: 50px 116px 20px;
+      padding: 50px 70px 20px 100px;
       display: flex;
       flex-wrap: wrap;
       .book-list_s {
         background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
         height: 250px;
         width: 180px;
-        margin: 30px 40px 15px;
+        margin: 30px 2.2vw 15px;
         box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
         cursor: pointer;
         &:hover {

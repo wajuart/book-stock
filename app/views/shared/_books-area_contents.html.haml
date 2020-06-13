@@ -1,6 +1,11 @@
-.books-area
-  .content_keyword
-    = @keyword
+.books-area_mp
+  .case-block
+    .case-info
+      .content_keyword
+        = @keyword
+      .case_count
+        = @books.count
+      .case_num 件
   - if @books.count == 0
     .contents-book-none
       該当する本はありません

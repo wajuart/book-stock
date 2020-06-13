@@ -10,9 +10,9 @@
       .search__count
         = @books.total_count
       .search__num 件
-      .bottom-space_sea2
-        .pagenation
-          = paginate(@books)
+    .bottom-space_sea2
+      .pagenation
+        = paginate(@books)
     .books-area_s
       - if @books.count == 0
         .search-book-none
