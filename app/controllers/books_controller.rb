@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
-    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
+    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(18)
     @books_all = Book.where(params[:id]).all
     @book = Book.new
   end
@@ -67,113 +67,113 @@ class BooksController < ApplicationController
 
   # ジャンル別
   def genre_all
-    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
+    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(18)
   end
 
   def business
     @keyword = "【 ビジネス 】"
-    @books = Book.where(genre: 'ビジネス').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: 'ビジネス').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def self_enlightenment
     @keyword = "【 自己啓発 】"
-    @books = Book.where(genre: '自己啓発').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '自己啓発').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def money
     @keyword = "【 マネー 】"
-    @books = Book.where(genre: 'マネー').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: 'マネー').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def politics_economy
     @keyword = "【 政治／経済 】"
-    @books = Book.where(genre: '政治／経済').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '政治／経済').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def study_skill
     @keyword = "【 勉強／スキル 】"
-    @books = Book.where(genre: '勉強／スキル').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '勉強／スキル').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def cooking
     @keyword = "【 料理 】"
-    @books = Book.where(genre: '料理').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '料理').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def hobby
     @keyword = "【 趣味 】"
-    @books = Book.where(genre: '趣味').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '趣味').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def health
     @keyword = "【 健康 】"
-    @books = Book.where(genre: '健康').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '健康').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def sports
     @keyword = "【 スポーツ 】"
-    @books = Book.where(genre: 'スポーツ').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: 'スポーツ').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def entertainment
     @keyword = "【 芸能 】"
-    @books = Book.where(genre: '芸能').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '芸能').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def parenting
     @keyword = "【 子育て 】"
-    @books = Book.where(genre: '子育て').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '子育て').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def novel
     @keyword = "【 小説 】"
-    @books = Book.where(genre: '小説').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '小説').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def comic
     @keyword = "【 漫画 】"
-    @books = Book.where(genre: '漫画').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '漫画').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def life
     @keyword = "【 生活 】"
-    @books = Book.where(genre: '生活').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: '生活').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def genre_etc
     @keyword = "【 その他 】"
-    @books = Book.where(genre: 'その他').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(genre: 'その他').page(params[:page]).per(18).order(created_at: :desc)
   end
 
 
   # ★評価別
   def evaluation_all
-    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(15)
+    @books = Book.includes(:user).order("created_at DESC").page(params[:page]).per(18)
   end
 
   def evaluation_five
     @keyword = "【 星5つ：⭐️⭐️⭐️⭐️⭐️ 】"
-    @books = Book.where(evaluation: '⭐️⭐️⭐️⭐️⭐️').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(evaluation: '⭐️⭐️⭐️⭐️⭐️').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def evaluation_four
     @keyword = "【 星4つ：⭐️⭐️⭐️⭐️☆ 】"
-    @books = Book.where(evaluation: '⭐️⭐️⭐️⭐️☆').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(evaluation: '⭐️⭐️⭐️⭐️☆').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def evaluation_three
     @keyword = "【 星3つ：⭐️⭐️⭐️☆☆ 】"
-    @books = Book.where(evaluation: '⭐️⭐️⭐️☆☆').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(evaluation: '⭐️⭐️⭐️☆☆').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def evaluation_two
     @keyword = "【 星2つ：⭐️⭐️☆☆☆ 】"
-    @books = Book.where(evaluation: '⭐️⭐️☆☆☆').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(evaluation: '⭐️⭐️☆☆☆').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   def evaluation_one
     @keyword = "【 星1つ：⭐️☆☆☆☆ 】"
-    @books = Book.where(evaluation: '⭐️☆☆☆☆').page(params[:page]).per(15).order(created_at: :desc)
+    @books = Book.where(evaluation: '⭐️☆☆☆☆').page(params[:page]).per(18).order(created_at: :desc)
   end
 
   private

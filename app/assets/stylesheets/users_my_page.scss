@@ -11,11 +11,12 @@
     box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
     .Mypage_top {
       font-family: ヒラギノ明朝 ProN;
+      width: 85vw;
+      margin: 0 auto;
       letter-spacing: 2px;
-      font-size: 26px;
+      font-size: 1.5vw;
       padding: 30px 0 5px ;
       .title-box_my {
-        width: 70vw;
         background-image: linear-gradient(rgba(209, 255, 247, 0.521), rgba(121, 205, 253, 0.671));
         margin: 0 auto -10px;
         padding: 5px 0;
@@ -31,7 +32,7 @@
     }
     .MypageContainer {
       margin: 0 auto;
-      width: 70vw;
+      width: 85vw;
       display: flex;
       .Side-var {
         width: 15vw;
@@ -47,7 +48,7 @@
             &__item-top {
               background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
               color: #ffffff;
-              font-size: 14px;
+              font-size: 0.9vw;
               font-weight: bold;
               height: 48px;
               width: 100%;
@@ -60,7 +61,7 @@
             }  
             &__item {
               background-color: #ffffff;
-              font-size: 14px;
+              font-size: 0.9vw;
               height: 48px;
               width: 100%;
               color: #000;
@@ -74,7 +75,7 @@
                 background-color: #f8f8f8;
                 color: rgb(0, 190, 63);
                 font-weight: bold;
-                font-size: 15px;
+                font-size: 1.1vw;
               }  
               .icon-arrow-right {
                 position: absolute;
@@ -88,7 +89,7 @@
           &__head {
             color: rgb(42, 84, 167);
             font-weight: bold;
-            font-size: 18px;
+            font-size: 1.05vw;
             height: 48px;
             width: 100%;
             margin-top: 18px;
@@ -97,7 +98,7 @@
         }  
       }
       .Main-content_my {
-        width: 55vw;
+        width: 70vw;
         margin-top: 40px;
         .user-top {
           background-image: linear-gradient(rgba(104, 99, 99, 0), rgba(204, 206, 203, 0.671));
@@ -209,6 +210,7 @@
         }
 
         ul.status-tab { 
+          width: 70vw;
           display: flex;
           a {
             text-decoration: none;
@@ -227,7 +229,7 @@
           background-color: rgb(130, 145, 211);
           box-shadow: 0 0 10px 2px rgba(85, 85, 85, 0.295);  
           height: 60px;
-          width: 11vw;
+          width: 14vw;
           color: #ffffff;
           font-size: 0.9vw;
           font-weight: bold;
@@ -241,7 +243,7 @@
           }
         }
 
-        .books-area {
+        .books-area_mp {
           background-color: #ffffff;
           padding: 20px 18px 30px;
           display: flex;
@@ -252,7 +254,7 @@
             background-color: rgb(223, 251, 252);
             height: 250px;
             width: 180px;
-            margin: 22px 43px;
+            margin: 22px 1.75vw;
             box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
             cursor: pointer;
             &:hover {

@@ -29,7 +29,7 @@
       - if user_signed_in? 
         = current_user.name
       - else
-        未ログインユーザー
+        未ログイン
   .search-box
     = form_tag(search_books_path, method: 'get') do      
       = text_field_tag :keyword, '', placeholder: "本を検索する", class: "search-box__input" 

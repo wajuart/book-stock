@@ -12,6 +12,20 @@
   }
 }
 
+.bottom-space_tp { 
+  margin-top: 240px;
+  .pagination {
+    background-color: #ffffff;
+    width: fit-content;
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+  }
+}
+
 .bottom-space_sea { 
   .pagination {
     background-color: #ffffff;
@@ -41,6 +55,7 @@
 }
 
 .bottom-space_myp { 
+  margin-bottom: 30px;
   .pagination {
     background-color: #ffffff;
     width: fit-content;

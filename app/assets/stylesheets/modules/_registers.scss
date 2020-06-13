@@ -6,37 +6,37 @@
   display: flex;
   height: 100vh;
   .mypage-side {
-    background-image: url(https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg);
-    background-size: 400%;
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
-    border: outset 2px; 
-    height: 1320px;
-    width: 13.7vw;
-    overflow: scroll;
+    width: 230px;
     .contents-var {
+      background-image: url(https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg);
+      background-size: 400%;
       height: 100%;
+      width: 230px;
       padding: 20px;
+      position: fixed;
       text-align: center;
+      border: outset 2px #fff;
       .contents {
         font-weight: bold;
         margin-bottom: 40px;
         a {
           text-decoration: none; 
           .content-btn_my {
-            height: auto;
-            width: 9.3vw;
+            height: 56px;
+            width: 160px;
             font-family: serif;
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
-            font-size: 1vw;
+            font-size: 20px;
             line-height: 48px;
-            margin: 40px auto 92px;
+            margin: 40px auto 79px;
             border: outset #ffffff ;
             border-radius: 15px;
             cursor: pointer;
             &:hover {
               background-color: #FFF;
               color: #fff;
-              width: 9.89vw;
+              width: 170px;
               transition: .1s;
             }
           }
@@ -45,20 +45,20 @@
           color: black;
           .content-btn {
             height: auto;
-            width: 9.3vw;
-            font-size: 1vw;
+            width: 160px;
+            font-size: 18px;
             font-family: 游明朝体;
             border: outset white;
             border-radius: 15px;
             margin: 0 auto;
-            margin-bottom: 92px;
-            padding: 5px 0;
+            margin-bottom: 79px;
+            padding: 3px 0;
             cursor: pointer;
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
             &:hover {
               background-color: #FFF;
               color: #fff;
-              width: 9.89vw;
+              width: 170px;
               transition: .1s;
             }
             .content-sub-name {
@@ -71,7 +71,7 @@
     }
     }
     .MainDisplay {
-      width: calc(100vw - 13.5vw);
+      width: calc(100vw - 230px);
       .MainHeader_top {
         background: linear-gradient(rgb(27, 53, 59), rgba(5, 81, 143, 0.753));
         height: 110px;
@@ -117,7 +117,6 @@
       .MainSecondHeader_ma {
         background: linear-gradient(rgba(248, 249, 250, 0.801), rgba(152, 160, 124, 0.575));     
         height: 50px;
-        padding: 0 60px;
         display: flex;
         justify-content: space-around;
         border-bottom: solid 1px #eeeeee; 
@@ -127,13 +126,14 @@
           margin: 7px 0 0 0;
           display: flex;
           .name-label {
+            font-size: 0.9vw;
             line-height: 36px;
             margin-right: 10px;
           }
           .user-name_ma {
             height: 35px;
             width: 8.3vw;
-            font-size: 13px;
+            font-size: 0.9vw;
             line-height: 35px;
             text-align: center;
             border: inset 2px;
@@ -225,13 +225,13 @@
         } 
       }
       .MainRegisters {
-        height: 1100px;
+        height: auto;
         background-image: url(https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_1280.jpg);
         background-size: cover;
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box_top-p {
           height: 100%;     
-          padding: 20px 50px;
+          padding: 20px 80px;
           .Registers-upper {
             background-color: #ffffff;
             height: 40px;
@@ -243,7 +243,7 @@
             .title {
               font-family: ヒラギノ明朝 ProN;
               letter-spacing: 5px;
-              font-size: 22px;
+              font-size: 1.3vw;
               line-height: 27px;
               margin: 0 auto;
               padding: 0 12px 0 12px;
@@ -253,37 +253,39 @@
               }
               &__sub {
                 color: #01355f;
-                font-size: 20px;
+                font-size: 1.2vw;
                 line-height: 30px;
                 line-height: 27px;
                 letter-spacing: 7px;
               }
               &__result {
-                font-size: 20px;
+                font-size: 1.2vw;
                 line-height: 27px;
                 letter-spacing: 3px;
                 margin-left: 20px;
               }
               &__count {
-                font-size: 20px;
+                font-size: 1.2vw;
                 line-height: 27px;
                 letter-spacing: 7px;
                 margin-left: 5px;
               }
               &__num {
-                font-size: 20px;
+                font-size: 1.2vw;
                 line-height: 27px;
                 letter-spacing: 7px;
               }
             }      
           }
           .books-box {
+            padding: 0 20px;
             display: flex;
             flex-wrap: wrap;
-            .book-list {
+            .book-list_tp {
               background: linear-gradient(rgba(186, 192, 199, 0.733), rgba(185, 205, 218, 0.575));
               height: 250px;
               width: 180px;
+              margin: 0 1.3vw 60px;
               box-shadow: 0 8px 15px 8px rgba(0, 0, 0, 0.295); 
               cursor: pointer;
               &:hover {
@@ -357,56 +359,57 @@
 }
 
 .mypage-side_2 {
-  background-image: url(https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg);
-  background-size: 400%;
   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
-  border: outset 2px; 
-  height: 1320px;
-  width: 260px;
-  overflow: scroll;
+  width: 230px;
   .contents-var_2 {
+    background-image: url(https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg);
+    background-size: 400%;
     height: 100%;
+    width: 230px;
     padding: 20px;
+    position: fixed;
     text-align: center;
+    border: outset 2px #fff;
     .contents_2 {
       font-weight: bold;
       margin-bottom: 40px;
       .content-btn_my_2 {
         position: relative;
         .item_my {
-          height: 55px;
-          width: 180px;
+          height: 56px;
+          width: 160px;
           font-family: serif;
           background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
-          font-size: 22px;
+          font-size: 20px;
           line-height: 48px;
-          margin: 40px auto 92px;
+          margin: 40px auto 79px;
           border: outset #ffffff ;
           border-radius: 15px;
           cursor: pointer;
           &:hover {
             background-color: #FFF;
             color: #fff;
-            width: 190px;
+            width: 170px;
             transition: .1s;
           }
         }
       }
       .content-btn_2 { 
-        height: 55px;
-        width: 180px;
-        font-size: 20px;
+        height: auto;
+        width: 160px;
+        font-size: 18px;
         font-family: 游明朝体;
         border: outset white;
         border-radius: 15px;
         margin: 0 auto;
-        margin-bottom: 92px;
+        margin-bottom: 79px;
+        padding: 3px 0;
         cursor: pointer;
         background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
         &:hover {
           background-color: #FFF;
           color: #fff;
-          width: 190px;
+          width: 170px;
           transition: .1s;
         }
         .content-name {
