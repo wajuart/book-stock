@@ -9,7 +9,7 @@
         = "' #{params[:keyword]} ' の検索結果 :"
       .search__count
         = @books.total_count
-      .search__num 件
+      .search__num 冊
     .bottom-space_sea2
       .pagenation
         = paginate(@books)

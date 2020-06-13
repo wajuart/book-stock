@@ -15,14 +15,14 @@
           .title__count
             = @books.count
           .title__num
-            件
+            冊
       .books-box
         - if @books.count == 0
           .book-none
             該当する本はありません
         - else
           - @books.each do |book|
-            %ul.book-list
+            %ul.book-list_tp
               = link_to book_path(book) do
                 .book-image
                   = image_tag book.image.to_s
@@ -73,8 +73,8 @@
                       その他
                 .book-title
                   = book.title
-      .bottom-space_sea
-        .pagenation
+      .bottom-space_tp
+        .pagination
           = paginate(@books)
           
   = render partial: 'shared/footer_top'
