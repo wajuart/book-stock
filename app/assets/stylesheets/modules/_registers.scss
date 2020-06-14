@@ -226,8 +226,8 @@
       }
       .MainRegisters {
         height: auto;
-        background-image: url(https://cdn.pixabay.com/photo/2012/12/24/08/39/backdrop-72250_1280.jpg);
-        background-size: cover;
+        background: image-url('mokume.jpeg');
+        background-size: 100vw;
         box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
         .Registers-box_top-p {
           height: 100%;     
@@ -278,7 +278,6 @@
             }      
           }
           .books-box {
-            // margin-bottom: 340px;
             padding: 0 20px;
             display: flex;
             flex-wrap: wrap;
