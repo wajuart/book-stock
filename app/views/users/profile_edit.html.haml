@@ -1,5 +1,24 @@
 = render partial: 'shared/header_1'
-
+.MypageHeader 
+  %ul.content-list    
+    = link_to my_page_user_path(current_user) do    
+      %li.content-list__item
+        マイページ
+    = link_to new_book_path(current_user) do
+      %li.content-list__item
+        本を登録
+    = link_to all_books_user_path(current_user) do
+      %li.content-list__item
+        マイブック
+    = link_to genre_all_book_path(current_user) do    
+      %li.content-list__item
+        ジャンル
+    = link_to evaluation_all_book_path(current_user) do
+      %li.content-list__item
+        ユーザー評価
+    = link_to item_all_user_path(current_user) do
+      %li.content-list__item
+        読書媒体
 .MainDisplay_pd
   .title-box
     .icon
@@ -43,5 +62,4 @@
             = f.text_area :introduction, class: "introduction", rows: "7", maxlength: "280", placeholder: "自己紹介（280文字以内）\n\n例）\nジャンル問わず、毎月10冊程度の本を読んでいます。おすすめの本があれば共有したいです。よろしくお願いします。"
         .btn-form
           = f.submit "更新する", class:"pro-edit_btn"
-
 = render partial: 'shared/footer_1'

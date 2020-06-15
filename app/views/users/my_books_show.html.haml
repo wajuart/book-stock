@@ -1,5 +1,24 @@
 = render partial: 'shared/header_1' 
-  
+.MypageHeader 
+  %ul.content-list    
+    = link_to my_page_user_path(current_user) do    
+      %li.content-list__item
+        マイページ
+    = link_to new_book_path(current_user) do
+      %li.content-list__item
+        本を登録
+    = link_to all_books_user_path(current_user) do
+      %li.content-list__item
+        マイブック
+    = link_to genre_all_book_path(current_user) do    
+      %li.content-list__item
+        ジャンル
+    = link_to evaluation_all_book_path(current_user) do
+      %li.content-list__item
+        ユーザー評価
+    = link_to item_all_user_path(current_user) do
+      %li.content-list__item
+        読書媒体
 .MyBooksShow
   .title-box_mbs
     .icon
