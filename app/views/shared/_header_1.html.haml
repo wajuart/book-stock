@@ -50,25 +50,3 @@
       = icon('fab', 'twitter', class: "content__btn__icon")
     = link_to "https://www.instagram.com/", class: "social-btn social-btn__instagram" do
       = icon('fab', 'instagram', class: "social-btn__icon")
-
-- if user_signed_in? 
-  .MypageHeader 
-    %ul.content-list    
-      = link_to my_page_user_path(current_user) do    
-        %li.content-list__item
-          マイページ
-      = link_to new_book_path(current_user) do
-        %li.content-list__item
-          本を登録
-      = link_to all_books_user_path(current_user) do
-        %li.content-list__item
-          マイブック
-      = link_to genre_all_book_path(current_user) do    
-        %li.content-list__item
-          ジャンル
-      = link_to evaluation_all_book_path(current_user) do
-        %li.content-list__item
-          ユーザー評価
-      = link_to item_all_user_path(current_user) do
-        %li.content-list__item
-          読書媒体 

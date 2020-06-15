@@ -1,3 +1,38 @@
 .wrapper
-  = render partial: 'shared/side_bar'
+  .mypage-side      
+    .contents-var
+      %ul.contents
+        = link_to my_page_user_path(current_user) do
+          %li.content-btn_my
+            My Page
+        = link_to new_book_path(current_user) do   
+          %li.content-btn
+            .content-name     
+              本を登録
+            .content-sub-name
+              Register Books
+        = link_to all_books_user_path(current_user) do      
+          %li.content-btn
+            .content-name
+              マイブック
+            .content-sub-name
+              My Books
+        = link_to genre_all_book_path(current_user) do      
+          %li.content-btn.active
+            .content-name
+              ジャンル
+            .content-sub-name
+              Genre of Books
+        = link_to evaluation_all_book_path(current_user) do
+          %li.content-btn
+            .content-name
+              ユーザー評価
+            .content-sub-name
+              User Rating
+        = link_to item_all_user_path(current_user) do                  
+          %li.content-btn
+            .content-name
+              読書媒体
+            .content-sub-name
+              Reading Item
   = render partial: 'shared/genre'

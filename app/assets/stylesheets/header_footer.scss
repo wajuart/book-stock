@@ -67,7 +67,7 @@
     }
   }  
   .search-box {
-    margin: -2px 0;
+    margin: -2px 135px 0 0;
     display: flex;
     position: relative;
     &__input {
@@ -169,6 +169,10 @@
         font-weight: bold;
       }     
     }    
+  }
+  .content-list .active {
+    color: #002491;
+    font-weight: bold;   
   }
 }
 .footer {
