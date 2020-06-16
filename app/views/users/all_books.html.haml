@@ -19,7 +19,7 @@
     = link_to item_all_user_path(current_user) do
       %li.content-list__item
         読書媒体
-.All_my-books
+.My-books-box
   .title-box_amb
     .icon
       .fa.fa-book
@@ -28,9 +28,9 @@
     .case_count
       = @books.count
     .case_num 冊
-    .bottom-space_sea2
-      .pagenation
-        = paginate(@books)
+  .bottom-space_sea
+    .pagenation
+      = paginate(@books)
   .books-area_amb
     - if @books.count == 0
       .book-none

@@ -21,9 +21,10 @@
     font-size: 20px;
     margin: 0 auto;
     padding: 0 15px;
+    border: outset thin;
     text-align: center;
     display: flex;
-    box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);  
+    box-shadow: 3px 0 10px 0 rgba(85, 85, 85, 0.295);  
   }
 }
 
@@ -40,7 +41,7 @@
   }
 }
 
-.bottom-space_sea2 { 
+.bottom-space_sea2 {
   .pagination {
     background-color: #ffffff;
     width: fit-content;
@@ -48,6 +49,7 @@
     font-family: auto;
     margin: 30px auto 0;
     padding: 0 25px;
+    border: outset thin #ffffff;
     text-align: center;
     display: flex;
     box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295);
