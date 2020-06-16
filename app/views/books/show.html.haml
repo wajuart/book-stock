@@ -1,24 +1,25 @@
-= render partial: 'shared/header_1' 
-.MypageHeader 
-  %ul.content-list    
-    = link_to my_page_user_path(current_user) do    
-      %li.content-list__item
-        マイページ
-    = link_to new_book_path(current_user) do
-      %li.content-list__item
-        本を登録
-    = link_to all_books_user_path(current_user) do
-      %li.content-list__item
-        マイブック
-    = link_to genre_all_book_path(current_user) do    
-      %li.content-list__item
-        ジャンル
-    = link_to evaluation_all_book_path(current_user) do
-      %li.content-list__item
-        ユーザー評価
-    = link_to item_all_user_path(current_user) do
-      %li.content-list__item
-        読書媒体
+= render partial: 'shared/header_1'
+- if user_signed_in?
+  .MypageHeader 
+    %ul.content-list    
+      = link_to my_page_user_path(current_user) do    
+        %li.content-list__item
+          マイページ
+      = link_to new_book_path(current_user) do
+        %li.content-list__item
+          本を登録
+      = link_to all_books_user_path(current_user) do
+        %li.content-list__item
+          マイブック
+      = link_to genre_all_book_path(current_user) do    
+        %li.content-list__item
+          ジャンル
+      = link_to evaluation_all_book_path(current_user) do
+        %li.content-list__item
+          ユーザー評価
+      = link_to item_all_user_path(current_user) do
+        %li.content-list__item
+          読書媒体
 .MainDisplay_bs
   .title-box_bs
     .icon
@@ -32,13 +33,25 @@
           .user-left
             .registant
               登録ユーザー
-            .name
-              = link_to @book.user.name, "/users/#{@book.user_id}"
-          .user-image_box
-            - if @user.user_image.present?
-              = image_tag @user.user_image.url
+            - if user_signed_in?
+              .name
+                = link_to @book.user.name, "/users/#{@book.user_id}"
             - else
-              = image_tag 'default_user.png', class: "user-icon"
+              .name
+                = @book.user.name
+          - if user_signed_in?
+            .user-image_box
+              = link_to @book.user do
+                - if @user.user_image.present?
+                  = image_tag @user.user_image.url
+                - else
+                  = image_tag 'default_user.png', class: "user-icon"
+          - else
+            .user-image_box_2
+              - if @user.user_image.present?
+                = image_tag @user.user_image.url
+              - else
+                = image_tag 'default_user.png', class: "user-icon"
         .Left-image_form
           .image-box_bs
             = image_tag @book.image

@@ -28,9 +28,9 @@
     
       li.serect-list.active {
         background-color: #000000;
-        width: 220px;
+        width: 200px;
         color: #fff;
-        font-size: 18px;
+        font-size: 22px;
         font-weight: bold;
         text-align: center;
         padding: 10px 25px;
@@ -39,14 +39,20 @@
       }
       li {
         background-color: #ffffff;
-        width: 220px;
-        color:  #000;
+        width: 180px;
+        color:  rgb(78, 78, 78);
         font-size: 18px;
         font-weight: bold;
         text-align: center;
         padding: 10px 25px;
         border: outset 2px rgb(233, 233, 233); 
         border-radius: 5px;
+        &:hover{
+          width: 200px;
+          color: #000;
+          font-size: 22px;
+          transition: .2s;
+        }
       }
     }
   }

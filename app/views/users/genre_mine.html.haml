@@ -24,15 +24,15 @@
     .icon
       .fa.fa-search
     .content-title
-      ジャンル別 検索
+      ジャンル別 検索／条件選択
   .select_area
     %ul.select-btn_area
       = link_to genre_all_book_path(current_user) do
         %li.serect-list
-          すべて
+          すべての本
       = link_to genre_mine_user_path(current_user) do
         %li.serect-list.active
-          自分のみ
+          マイブック
   .genre-area
     %ul.box-upper_gen
       = link_to business_user_path(current_user) do
