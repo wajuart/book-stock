@@ -1,4 +1,4 @@
-.MainDisplay
+.Item_all
   = render partial: 'shared/header_1'
   .MypageHeader 
     %ul.content-list    
@@ -20,35 +20,34 @@
       = link_to item_all_user_path(current_user) do
         %li.content-list__item.active
           読書媒体
-  .Item_all 
-    .title-box_item
-      .icon
-        .fa.fa-search
-      .content-title
-        読書媒体別 検索／マイブック
-    .item-area
-      %ul.box_item
-        = link_to real_book_user_path(current_user) do
-          %li.read-item.real_book
-            = image_tag @real_book
-        = link_to e_book_user_path(current_user) do
-          %li.read-item.e_book
-            = image_tag @e_book
-        = link_to paper_white_user_path(current_user) do
-          %li.read-item.paper_white
-            = image_tag @paper_white
-        = link_to audio_book_user_path(current_user) do
-          %li.read-item.audio_book
-            = image_tag @audio_book
-    .item-title_i
-      %ul.item-box_i 
-        %li.item.li
-          リアル書籍
-        %li.item.li
-          電子書籍
-        %li.item.li
-          Paperwhite
-        %li.item.li
-          オーディオブック
+  .title-box_item
+    .icon
+      .fa.fa-search
+    .content-title
+      読書媒体別 検索／マイブック
+  .item-area
+    %ul.box_item
+      = link_to real_book_user_path(current_user) do
+        %li.read-item.real_book
+          = image_tag @real_book
+      = link_to e_book_user_path(current_user) do
+        %li.read-item.e_book
+          = image_tag @e_book
+      = link_to paper_white_user_path(current_user) do
+        %li.read-item.paper_white
+          = image_tag @paper_white
+      = link_to audio_book_user_path(current_user) do
+        %li.read-item.audio_book
+          = image_tag @audio_book
+  .item-title_i
+    %ul.item-box_i 
+      %li.item.li
+        リアル書籍
+      %li.item.li
+        電子書籍
+      %li.item.li
+        Paperwhite
+      %li.item.li
+        オーディオブック
 
   = render partial: 'shared/footer_1'

@@ -2,12 +2,8 @@
   box-sizing: border-box;
 }
 
-.GenreDisplay {
-  display: block;
-}
-
 .Genre_all {
-  height: calc(100vh - 270px);
+  height: 100vh;
   width: 100vw;
   .title-box_gen { 
     font-family: ヒラギノ明朝 ProN;
@@ -60,10 +56,9 @@
 }
 
 .genre-area {
-  height: 100%;
   text-align: center;
   line-height: 100px;
-  margin: 120px auto 0;
+  margin: 120px auto;
   display: table;
   a {
     color: #fff;

@@ -1,4 +1,4 @@
-.GenreDisplay
+.Genre_all 
   = render partial: 'shared/header_1'
   .MypageHeader 
     %ul.content-list    
@@ -20,67 +20,66 @@
       = link_to item_all_user_path(current_user) do
         %li.content-list__item
           読書媒体
-  .Genre_all 
-    .title-box_gen
-      .icon
-        .fa.fa-search
-      .content-title
-        ジャンル別 検索／条件選択
-    .select_area
-      %ul.select-btn_area
-        = link_to genre_all_book_path(current_user) do
-          %li.serect-list.active
-            すべての本
-        = link_to genre_mine_user_path(current_user) do
-          %li.serect-list
-            マイブック
-    .genre-area
-      %ul.box-upper_gen
-        = link_to business_book_path(current_user) do
-          %li.genre_gen.business
-            ビジネス
-        = link_to self_enlightenment_book_path(current_user) do
-          %li.genre_gen.self_enlightenment
-            自己啓発
-        = link_to money_book_path(current_user) do
-          %li.genre_gen.money
-            マネー
-        = link_to politics_economy_book_path(current_user) do
-          %li.genre_gen.politics_economy
-            政治／経済
-        = link_to study_skill_book_path(current_user) do
-          %li.genre_gen.study_skill
-            勉強／スキル
-      %ul.box-middle_gen
-        = link_to cooking_book_path(current_user) do
-          %li.genre_gen.cooking
-            料理
-        = link_to hobby_book_path(current_user) do
-          %li.genre_gen.hobby
-            趣味
-        = link_to health_book_path(current_user) do
-          %li.genre_gen.health
-            健康
-        = link_to sports_book_path(current_user) do
-          %li.genre_gen.sports
-            スポーツ
-        = link_to entertainment_book_path(current_user) do
-          %li.genre_gen.entertainment
-            芸能
-      %ul.box-lower_gen
-        = link_to parenting_book_path(current_user) do
-          %li.genre_gen.parenting
-            子育て
-        = link_to novel_book_path(current_user) do
-          %li.genre_gen.novel
-            小説
-        = link_to comic_book_path(current_user) do
-          %li.genre_gen.comic
-            漫画
-        = link_to life_book_path(current_user) do
-          %li.genre_gen.life
-            生活
-        = link_to genre_etc_book_path(current_user) do
-          %li.genre_gen.genre_etc
-            その他
+  .title-box_gen
+    .icon
+      .fa.fa-search
+    .content-title
+      ジャンル別 検索／条件選択
+  .select_area
+    %ul.select-btn_area
+      = link_to genre_all_book_path(current_user) do
+        %li.serect-list.active
+          すべての本
+      = link_to genre_mine_user_path(current_user) do
+        %li.serect-list
+          マイブック
+  .genre-area
+    %ul.box-upper_gen
+      = link_to business_book_path(current_user) do
+        %li.genre_gen.business
+          ビジネス
+      = link_to self_enlightenment_book_path(current_user) do
+        %li.genre_gen.self_enlightenment
+          自己啓発
+      = link_to money_book_path(current_user) do
+        %li.genre_gen.money
+          マネー
+      = link_to politics_economy_book_path(current_user) do
+        %li.genre_gen.politics_economy
+          政治／経済
+      = link_to study_skill_book_path(current_user) do
+        %li.genre_gen.study_skill
+          勉強／スキル
+    %ul.box-middle_gen
+      = link_to cooking_book_path(current_user) do
+        %li.genre_gen.cooking
+          料理
+      = link_to hobby_book_path(current_user) do
+        %li.genre_gen.hobby
+          趣味
+      = link_to health_book_path(current_user) do
+        %li.genre_gen.health
+          健康
+      = link_to sports_book_path(current_user) do
+        %li.genre_gen.sports
+          スポーツ
+      = link_to entertainment_book_path(current_user) do
+        %li.genre_gen.entertainment
+          芸能
+    %ul.box-lower_gen
+      = link_to parenting_book_path(current_user) do
+        %li.genre_gen.parenting
+          子育て
+      = link_to novel_book_path(current_user) do
+        %li.genre_gen.novel
+          小説
+      = link_to comic_book_path(current_user) do
+        %li.genre_gen.comic
+          漫画
+      = link_to life_book_path(current_user) do
+        %li.genre_gen.life
+          生活
+      = link_to genre_etc_book_path(current_user) do
+        %li.genre_gen.genre_etc
+          その他
   = render partial: 'shared/footer_1'
