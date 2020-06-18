@@ -103,7 +103,9 @@
                 編集画面へ
             = link_to "戻る", :back, class: 'back_btn'
   .to-comment_view
-    = link_to book_path(@book) do
-      .to-comment_btn
-        コメント画面へ
+    = link_to book_path(@book), class:"to-comment_btn_" do
+      コメント画面へ
+    -# .to-comment_btn
+    -#   = link_to book_path(@book) do
+    -#     コメント画面へ
 = render partial: 'shared/footer_1'  

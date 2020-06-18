@@ -17,7 +17,6 @@
     }
   }
   .form {
-    height: calc(100vh - 270px);
     font-family: ヒラギノ明朝 ProN;
     font-size: 13px;
     padding: 0 220px 0 250px;
@@ -209,21 +208,18 @@
   letter-spacing: 3px;
   line-height: 50px;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px auto;
   a {
-    padding: 8px 30px;
-  }
-  .to-comment_btn {
     background-color: #d86100;
-    height: 50px;
-    width: 250px;
+    // height: 50px;
+    // width: 250px;
     color: #eeeeee;
-    letter-spacing: 3px;
+    // letter-spacing: 3px;
     border: outset 2px;
-    margin: 0 auto;
-    padding: 0 30px;
+    // margin: 0 auto;
+    padding: 10px 30px;
     box-shadow: 0 0 10px 0 rgba(85, 85, 85, 0.295); 
-    cursor: pointer;
+    // cursor: pointer;
     &:hover {
       background-color: #df6400b2;
       text-decoration: none;
