@@ -7,7 +7,6 @@
   height: 100vh;
   width: 100vw;
   .middle-display_h  {  
-    height: inherit;
     background-image: url(https://cdn.pixabay.com/photo/2014/10/14/20/14/library-488678_1280.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,6 +16,7 @@
       height: 500px;
       width: 490px;
       margin-left: 100px;
+      margin-bottom: 180px;
       padding: 20px;
       border: 1px;
       border-radius: 15px; 
