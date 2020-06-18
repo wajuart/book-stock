@@ -8,6 +8,7 @@
 
 .Genre_all {
   height: calc(100vh - 270px);
+  width: 100vw;
   .title-box_gen { 
     font-family: ヒラギノ明朝 ProN;
     letter-spacing: 5px;
@@ -20,7 +21,7 @@
     }
   }
   .select_area {
-    margin: 70px auto -20px;
+    margin: 70px auto;
     .select-btn_area {
       width: fit-content;
       margin: 0 auto;
@@ -59,9 +60,10 @@
 }
 
 .genre-area {
+  height: 100%;
   text-align: center;
   line-height: 100px;
-  margin: 120px auto;
+  margin: 120px auto 0;
   display: table;
   a {
     color: #fff;

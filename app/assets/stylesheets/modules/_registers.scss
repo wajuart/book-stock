@@ -8,6 +8,7 @@
   .mypage-side {
     box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2);
     width: 210px;
+    overflow: visible;
     .contents-var {
       background-image: url(https://cdn.pixabay.com/photo/2016/07/30/20/52/vintage-1557993_1280.jpg);
       background-size: 400%;
@@ -29,7 +30,7 @@
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
             font-size: 20px;
             line-height: 48px;
-            margin: 40px auto 92px;
+            margin: 4.3vh auto 9.2vh;
             border: outset #ffffff ;
             border-radius: 15px;
             cursor: pointer;
@@ -51,7 +52,7 @@
             border: outset white;
             border-radius: 15px;
             margin: 0 auto;
-            margin-bottom: 92px;
+            margin-bottom: 9.2vh;
             padding: 3px 0;
             cursor: pointer;
             background: linear-gradient(rgb(63, 152, 248), rgba(28, 233, 216, 0.815));
